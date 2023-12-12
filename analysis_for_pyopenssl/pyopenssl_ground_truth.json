@@ -1,0 +1,7 @@
+{
+    "tests.test_crypto.TestPKey.test_pregeneration": ["src.OpenSSL.crypto.PKey.type", "src.OpenSSL.crypto.PKey.bits", "src.OpenSSL.crypto.PKey.check"],
+    "tests.test_ssl.TestConnection.test_get_peer_cert_chain_none": ["src.OpenSSL.SSL.Connection.get_peer_cert_chain"],
+    "tests.test_ssl.TestMemoryBIO.test_socket_overrides_memory": ["src.OpenSSL.SSL.Connection.bio_read","src.OpenSSL.SSL.Connection.bio_write"],
+    "tests.test_ssl.TestServerNameCallback.test_no_servername": ["src.OpenSSL.SSL.Context.set_tlsext_servername_callback", "src.OpenSSL.SSL.Connection.get_servername"],
+    "tests.test_ssl.TestConnection.test_get_cipher_version": ["src.OpenSSL.SSL.Connection.get_cipher_version"]
+}
