@@ -1,0 +1,302 @@
+{
+    "tests.test_crypto.TestFunction.test_load_privatekey_passphrase_wrong_return_type": {
+        "True Positives": [
+            "src.OpenSSL.crypto.load_privatekey"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestConnection.test_connect_wrong_args": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection.connect"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestContextConnection.test_use_certificate": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Context.use_certificate",
+            "src.OpenSSL.SSL.Connection.use_certificate"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestRevoked.test_reason": {
+        "True Positives": [
+            "src.OpenSSL.crypto.Revoked.all_reasons",
+            "src.OpenSSL.crypto.Revoked.get_reason",
+            "src.OpenSSL.crypto.Revoked.set_reason"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestSignVerify.test_sign_with_large_key": {
+        "True Positives": [
+            "src.OpenSSL.crypto.sign"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestPKey.test_pregeneration": {
+        "True Positives": [
+            "src.OpenSSL.crypto.PKey.type"
+        ],
+        "False Positives": [
+            "src.OpenSSL.crypto.PKey.__init__"
+        ],
+        "False Negative": [
+            "src.OpenSSL.crypto.PKey.check",
+            "src.OpenSSL.crypto.PKey.bits"
+        ]
+    },
+    "tests.test_ssl.TestContext.test_fallback_path_is_not_file_or_dir": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Context._fallback_default_verify_paths"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestConnection.test_get_cipher_version": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection.get_cipher_version"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestCRL.test_dump_crl": {
+        "True Positives": [
+            "src.OpenSSL.crypto.dump_crl"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509Store.test_load_locations_fails_when_all_args_are_none": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509Store.load_locations"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509StoreContext.test_verify_with_ca_file_location": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509StoreContext.verify_certificate",
+            "src.OpenSSL.crypto.X509Store.load_locations"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509Req.test_convert_from_cryptography_unsupported_type": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509Req.from_cryptography"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestDTLS.test_timeout": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection.DTLSv1_handle_timeout",
+            "src.OpenSSL.SSL.Connection.DTLSv1_get_timeout"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestContext.test_set_verify_wrong_callable_arg": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Context.set_verify"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestContext.test_set_options": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Context.set_options"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509.test_invalid_digest_algorithm": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509.digest"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestServerNameCallback.test_no_servername": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Context.set_tlsext_servername_callback"
+        ],
+        "False Positives": [],
+        "False Negative": [
+            "src.OpenSSL.SSL.Connection.get_servername"
+        ]
+    },
+    "tests.test_crypto.TestX509Req.test_undef_oid": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509Extension.get_short_name"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestFunction.test_load_privatekey_wrongPassphrase": {
+        "True Positives": [
+            "src.OpenSSL.crypto.load_privatekey"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestMemoryBIO.test_socket_overrides_memory": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection.bio_read",
+            "src.OpenSSL.SSL.Connection.bio_write"
+        ],
+        "False Positives": [
+            "src.OpenSSL.SSL.Connection.bio_shutdown"
+        ],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509.test_set_notBefore": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509.set_notBefore"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestContext.test_set_session_id_unicode": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Context.set_session_id"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509Req.test_construction": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509Req.__init__"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509StoreContext.test_get_verified_chain_invalid_chain_no_root": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509StoreContext.get_verified_chain"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestContext.test_set_keylog_callback": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Context.set_keylog_callback"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestConnection.test_set_context": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection.set_context"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestContext.test_set_default_verify_paths": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Context.set_default_verify_paths"
+        ],
+        "False Positives": [],
+        "False Negative": [
+            "src.OpenSSL.SSL.Connection.send"
+        ]
+    },
+    "tests.test_crypto.TestX509.test_version": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509.set_version",
+            "src.OpenSSL.crypto.X509.get_version"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_util.TestErrors.test_exception_from_error_queue_nonexistent_reason": {
+        "True Positives": [
+            "src.OpenSSL._util.exception_from_error_queue"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestCRL.test_export_md5_digest": {
+        "True Positives": [
+            "src.OpenSSL.crypto.CRL.export"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestContext.test_set_timeout_wrong_args": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Context.set_timeout"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509.test_convert_to_cryptography_key": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509.to_cryptography"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestConnection.test_get_peer_cert_chain_none": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection.get_peer_cert_chain"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestPKey.test_check_pr_897": {
+        "True Positives": [
+            "src.OpenSSL.crypto.PKey.check"
+        ],
+        "False Positives": [],
+        "False Negative": [
+            "src.OpenSSL.crypto.load_privatekey"
+        ]
+    },
+    "tests.test_crypto.TestX509Name.test_only_string_attributes": {
+        "True Positives": [],
+        "False Positives": [
+            "src.OpenSSL.crypto.X509.__init__"
+        ],
+        "False Negative": [
+            "src.OpenSSL.crypto.X509.get_subject"
+        ]
+    },
+    "tests.test_ssl.TestContext.test_set_verify_callback_exception": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Context.set_verify"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestRevoked.test_set_reason_invalid_reason": {
+        "True Positives": [
+            "src.OpenSSL.crypto.Revoked.set_reason"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestConnection.test_set_verify_overrides_context": {
+        "True Positives": [],
+        "False Positives": [
+            "src.OpenSSL.SSL.Connection.set_verify",
+            "src.OpenSSL.SSL.Context.get_verify_mode"
+        ],
+        "False Negative": [
+            "src.OpenSSL.SSL.Context.set_verify"
+        ]
+    },
+    "tests.test_crypto.TestX509.test_convert_from_cryptography": {
+        "True Positives": [],
+        "False Positives": [
+            "src.OpenSSL.crypto.X509.from_cryptography"
+        ],
+        "False Negative": [
+            "src.OpenSSL.crypto.X509Req.from_cryptography"
+        ]
+    }
+}

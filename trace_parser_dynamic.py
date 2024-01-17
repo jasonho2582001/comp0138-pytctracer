@@ -2,50 +2,7 @@ from collections import defaultdict
 from typing import Optional, Set, List, Dict, Tuple
 from math import log
 import csv
-
-pyopenssl_ground_truth_dict_lists = {
-    "tests.test_crypto.TestPKey.test_pregeneration": ["src.OpenSSL.crypto.PKey.type", "src.OpenSSL.crypto.PKey.bits", "src.OpenSSL.crypto.PKey.check"],
-    "tests.test_ssl.TestConnection.test_get_peer_cert_chain_none": ["src.OpenSSL.SSL.Connection.get_peer_cert_chain"],
-    "tests.test_ssl.TestMemoryBIO.test_socket_overrides_memory": ["src.OpenSSL.SSL.Connection.bio_read","src.OpenSSL.SSL.Connection.bio_write"],
-    "tests.test_ssl.TestServerNameCallback.test_no_servername": ["src.OpenSSL.SSL.Context.set_tlsext_servername_callback", "src.OpenSSL.SSL.Connection.get_servername"],
-    "tests.test_ssl.TestConnection.test_get_cipher_version": ["src.OpenSSL.SSL.Connection.get_cipher_version"],
-    "tests.test_crypto.TestFunction.test_load_privatekey_passphrase_wrong_return_type": ["src.OpenSSL.crypto.load_privatekey"],
-    "tests.test_crypto.TestPKey.test_check_pr_897": ["src.OpenSSL.crypto.load_privatekey", "src.OpenSSL.crypto.PKey.check"],
-    "tests.test_ssl.TestDTLS.test_timeout": ["src.OpenSSL.SSL.Connection.DTLSv1_get_timeout", "src.OpenSSL.SSL.Connection.DTLSv1_handle_timeout"],
-    "tests.test_crypto.TestX509Req.test_construction": ["src.OpenSSL.crypto.X509Req.__init__"],
-    "tests.test_crypto.TestRevoked.test_set_reason_invalid_reason": ["src.OpenSSL.crypto.Revoked.set_reason"],
-    "tests.test_crypto.TestRevoked.test_reason": ["src.OpenSSL.crypto.Revoked.all_reasons", "src.OpenSSL.crypto.Revoked.set_reason", "src.OpenSSL.crypto.Revoked.get_reason"],
-    "tests.test_ssl.TestConnection.test_set_context": ["src.OpenSSL.SSL.Connection.set_context"],
-    "tests.test_crypto.TestX509Name.test_only_string_attributes": ["src.OpenSSL.crypto.X509.get_subject"],
-    "tests.test_crypto.TestCRL.test_dump_crl": ["src.OpenSSL.crypto.dump_crl"],
-    "tests.test_crypto.TestX509Req.test_undef_oid": ["src.OpenSSL.crypto.X509Extension.get_short_name"],
-    "tests.test_crypto.TestFunction.test_load_privatekey_wrongPassphrase": ["src.OpenSSL.crypto.load_privatekey"],
-    "tests.test_ssl.TestContext.test_set_timeout_wrong_args": ["src.OpenSSL.SSL.Context.set_timeout"],
-    "tests.test_ssl.TestContextConnection.test_use_certificate": ["src.OpenSSL.SSL.Context.use_certificate", "src.OpenSSL.SSL.Connection.use_certificate"],
-    "tests.test_ssl.TestConnection.test_connect_wrong_args": ["src.OpenSSL.SSL.Connection.connect"],
-    "tests.test_crypto.TestX509StoreContext.test_get_verified_chain_invalid_chain_no_root": ["src.OpenSSL.crypto.X509StoreContext.get_verified_chain"],
-    "tests.test_crypto.TestX509StoreContext.test_verify_with_ca_file_location": ["src.OpenSSL.crypto.X509Store.load_locations", "src.OpenSSL.crypto.X509StoreContext.verify_certificate"],
-    "tests.test_ssl.TestContext.test_set_default_verify_paths": ["src.OpenSSL.SSL.Context.set_default_verify_paths", "src.OpenSSL.SSL.Connection.send"],
-    "tests.test_ssl.TestContext.test_set_options": ["src.OpenSSL.SSL.Context.set_options"],
-    "tests.test_ssl.TestConnection.test_set_verify_overrides_context": ["src.OpenSSL.SSL.Context.set_verify"],
-    "tests.test_crypto.TestX509.test_convert_from_cryptography": ["src.OpenSSL.crypto.X509Req.from_cryptography"],
-    "tests.test_crypto.TestSignVerify.test_sign_with_large_key": ["src.OpenSSL.crypto.sign"],
-    "tests.test_crypto.TestX509.test_version": ["src.OpenSSL.crypto.X509.set_version", "src.OpenSSL.crypto.X509.get_version"],
-    "tests.test_ssl.TestContext.test_set_keylog_callback": ["src.OpenSSL.SSL.Context.set_keylog_callback"],
-    "tests.test_ssl.TestContext.test_set_verify_callback_exception": ["src.OpenSSL.SSL.Context.set_verify"],
-    "tests.test_ssl.TestContext.test_set_session_id_unicode": ["src.OpenSSL.SSL.Context.set_session_id"],
-    "tests.test_crypto.TestX509Store.test_load_locations_fails_when_all_args_are_none": ["src.OpenSSL.crypto.X509Store.load_locations"],
-    "tests.test_crypto.TestX509Req.test_convert_from_cryptography_unsupported_type": ["src.OpenSSL.crypto.X509Req.from_cryptography"],
-    "tests.test_crypto.TestX509.test_invalid_digest_algorithm": ["src.OpenSSL.crypto.X509.digest"],
-    "tests.test_util.TestErrors.test_exception_from_error_queue_nonexistent_reason": ["src.OpenSSL._util.exception_from_error_queue"],
-    "tests.test_crypto.TestX509.test_convert_to_cryptography_key": ["src.OpenSSL.crypto.X509.to_cryptography"],
-    "tests.test_crypto.TestCRL.test_export_md5_digest": ["src.OpenSSL.crypto.CRL.export"],
-    "tests.test_ssl.TestContext.test_fallback_path_is_not_file_or_dir": ["src.OpenSSL.SSL.Context._fallback_default_verify_paths"],
-    "tests.test_ssl.TestContext.test_set_verify_wrong_callable_arg": ["src.OpenSSL.SSL.Context.set_verify"],
-    "tests.test_crypto.TestX509.test_set_notBefore": ["src.OpenSSL.crypto.X509.set_notBefore"]
-}
-
-pyopenssl_ground_truth_dict = {test_name: set(links) for test_name, links in pyopenssl_ground_truth_dict_lists.items()}
+import json
 
 THRESHOLD_FOR_LCSU = 0.75
 THRESHOLD_FOR_LCSB = 0.55
@@ -85,7 +42,7 @@ def find_levenshtein_distance(s1: str, s2: str) -> int:
 
 def read_csv_log(file_path: str) -> Tuple[List[str], List[Dict[str, str]]]:
     data = []
-    with open(file_path) as file:
+    with open(file_path, encoding="utf8") as file:
         lines = csv.reader(file)
 
         # Iterate through each line in the CSV file, extract the fields
@@ -132,6 +89,28 @@ def find_tests_that_call_each_function(data: List[Dict[str, str]]) -> Dict[str, 
 
     return tests_that_call_each_function_dict
 
+def find_depths_of_functions_called_by_each_test(data: List[Dict[str, str]]) -> Dict[str, Dict[str, int]]:
+    # Each function appears once for a test, at the highest depth
+    depths_of_functions_called_by_each_test_dict = defaultdict(dict)
+    current_test = None
+    current_test_depth = 0
+
+    for record in data:
+        if record["Testing Method"] == "TEST METHOD CALL":
+            current_test = record["Fully Qualified Name"]
+            current_test_depth = int(record["Depth"])
+        elif record["Testing Method"] == "TEST METHOD RETURN":
+            current_test = None
+        elif current_test is not None and record["Function Type"] == "SOURCE":
+            function_name = record["Fully Qualified Name"]
+            function_depth = int(record["Depth"])
+            if current_test in depths_of_functions_called_by_each_test_dict and function_name in depths_of_functions_called_by_each_test_dict[current_test]:
+                function_depth = min(function_depth, depths_of_functions_called_by_each_test_dict[current_test][function_name])
+            depths_of_functions_called_by_each_test_dict[current_test][function_name] = function_depth - current_test_depth
+        
+    return depths_of_functions_called_by_each_test_dict
+
+
 def naming_conventions(function_names_tuple: Set[Tuple[str, str]], test_names_tuple: Set[Tuple[str, str]], functions_called_by_each_test_dict: Dict[str, Set[str]]) -> Dict[str, Dict[str, float]]:
     naming_conventions_dict = defaultdict(dict)
 
@@ -177,7 +156,18 @@ def normalise_dict(result_dict: Dict[str, Dict[str, float]], functions_called_by
 
     return normalised_result_dict
 
-def longest_common_subsequence_both(function_names_tuple: Set[Tuple[str, str]], test_names_tuple: Set[Tuple[str, str]], functions_called_by_each_test_dict: Dict[str, Set[str]]) -> Dict[str, Dict[str, float]]:
+def use_call_depth_discounting_dict(result_dict: Dict[str, Dict[str, float]], depths_of_functions_called_by_each_test_dict: Dict[str, Dict[str, int]]) -> Dict[str, Dict[str, float]]:
+    discounted_dict = {test: function_results.copy() for test, function_results in result_dict.items()}
+    for test_fully_qualified_name, result_for_each_test_dict in discounted_dict.items():
+        # We only do the discounting for the functions called by each test (the result_dict has scores of -1 for functions that don't get called by the test)
+        for function_fully_qualified_name in depths_of_functions_called_by_each_test_dict[test_fully_qualified_name]:
+            original_score = discounted_dict[test_fully_qualified_name][function_fully_qualified_name] 
+            depth = depths_of_functions_called_by_each_test_dict[test_fully_qualified_name][function_fully_qualified_name]
+            discounted_dict[test_fully_qualified_name][function_fully_qualified_name] = original_score * DISCOUNT_FACTOR**(depth-1)
+
+    return discounted_dict
+
+def longest_common_subsequence_both(function_names_tuple: Set[Tuple[str, str]], test_names_tuple: Set[Tuple[str, str]], functions_called_by_each_test_dict: Dict[str, Set[str]], depths_of_functions_called_by_each_test_dict: Dict[str, Dict[str, int]]) -> Dict[str, Dict[str, float]]:
     lcsb_dict = defaultdict(dict)
 
     for test_fully_qualified_name, test_function_name in test_names_tuple:
@@ -192,9 +182,9 @@ def longest_common_subsequence_both(function_names_tuple: Set[Tuple[str, str]], 
             lcsb_result = (find_lcs(stripped_test_function_name, function_name))/(max(len(stripped_test_function_name), len(function_name))) if function_fully_qualified_name in functions_called_by_test else -1
             lcsb_dict[test_fully_qualified_name][function_fully_qualified_name] = lcsb_result
 
-    return normalise_dict(lcsb_dict, functions_called_by_each_test_dict)
+    return normalise_dict(use_call_depth_discounting_dict(lcsb_dict, depths_of_functions_called_by_each_test_dict), functions_called_by_each_test_dict)
 
-def longest_common_subsequence_unit(function_names_tuple: Set[Tuple[str, str]], test_names_tuple: Set[Tuple[str, str]], functions_called_by_each_test_dict: Dict[str, Set[str]]) -> Dict[str, Dict[str, float]]:
+def longest_common_subsequence_unit(function_names_tuple: Set[Tuple[str, str]], test_names_tuple: Set[Tuple[str, str]], functions_called_by_each_test_dict: Dict[str, Set[str]], depths_of_functions_called_by_each_test_dict: Dict[str, Dict[str, int]]) -> Dict[str, Dict[str, float]]:
     lcsu_dict = defaultdict(dict)
 
     for test_fully_qualified_name, test_function_name in test_names_tuple:
@@ -209,9 +199,9 @@ def longest_common_subsequence_unit(function_names_tuple: Set[Tuple[str, str]], 
             lcsu_result = (find_lcs(stripped_test_function_name, function_name))/len(function_name) if function_fully_qualified_name in functions_called_by_test else -1
             lcsu_dict[test_fully_qualified_name][function_fully_qualified_name] = lcsu_result
 
-    return normalise_dict(lcsu_dict, functions_called_by_each_test_dict)
+    return normalise_dict(use_call_depth_discounting_dict(lcsu_dict, depths_of_functions_called_by_each_test_dict), functions_called_by_each_test_dict)
 
-def levenshtein_distance(function_names_tuple: Set[Tuple[str, str]], test_names_tuple: Set[Tuple[str, str]], functions_called_by_each_test_dict: Dict[str, Set[str]]) -> Dict[str, Dict[str, float]]:
+def levenshtein_distance(function_names_tuple: Set[Tuple[str, str]], test_names_tuple: Set[Tuple[str, str]], functions_called_by_each_test_dict: Dict[str, Set[str]], depths_of_functions_called_by_each_test_dict: Dict[str, Dict[str, int]]) -> Dict[str, Dict[str, float]]:
     levenshtein_dict = defaultdict(dict)
 
     for test_fully_qualified_name, test_function_name in test_names_tuple:
@@ -225,7 +215,7 @@ def levenshtein_distance(function_names_tuple: Set[Tuple[str, str]], test_names_
             levenshtein_result = (1 - (find_levenshtein_distance(stripped_test_function_name, function_name))/(max(len(stripped_test_function_name), len(function_name)))) if function_fully_qualified_name in functions_called_by_test else -1
             levenshtein_dict[test_fully_qualified_name][function_fully_qualified_name] = levenshtein_result
     
-    return normalise_dict(levenshtein_dict, functions_called_by_each_test_dict)
+    return normalise_dict(use_call_depth_discounting_dict(levenshtein_dict, depths_of_functions_called_by_each_test_dict), functions_called_by_each_test_dict)
 
 def last_call_before_assert(data: List[Dict[str, str]], function_names: Set[str], test_names: Set[str]) -> Dict[str, Set[str]]:
     """FIX TRACER BECAUSE IF FUNCTION RETURNS IN-LINE WITH AN ASSERT IT WILL NOT CATCH THE ASSERT"""
@@ -253,7 +243,7 @@ def last_call_before_assert(data: List[Dict[str, str]], function_names: Set[str]
     
     return lcba_dict
 
-def tarantula(functions_called_by_each_test_dict: Dict[str, Set[str]], tests_that_call_each_function_dict: Dict[str, Set[str]], function_names: Set[str], test_names: Set[str]) -> Dict[str, Dict[str, float]]:
+def tarantula(functions_called_by_each_test_dict: Dict[str, Set[str]], tests_that_call_each_function_dict: Dict[str, Set[str]], function_names: Set[str], test_names: Set[str], depths_of_functions_called_by_each_test_dict: Dict[str, Dict[str, int]]) -> Dict[str, Dict[str, float]]:
     number_of_tests = len(test_names)
     # number_of_functions = len(fully_qualified_function_names)
 
@@ -265,9 +255,9 @@ def tarantula(functions_called_by_each_test_dict: Dict[str, Set[str]], tests_tha
                 number_of_tests_that_call_function = len(tests_that_call_each_function_dict[function_name])
                 tarantula_dict[test_name][function_name] = 1/(((number_of_tests_that_call_function - 1)/(number_of_tests - 1))+1) 
     
-    return normalise_dict(tarantula_dict, functions_called_by_each_test_dict)
+    return normalise_dict(use_call_depth_discounting_dict(tarantula_dict, depths_of_functions_called_by_each_test_dict), functions_called_by_each_test_dict)
 
-def tfidf(functions_called_by_each_test_dict: Dict[str, Set[str]], tests_that_call_each_function_dict: Dict[str, Set[str]], function_names: Set[str], test_names: Set[str]) -> Dict[str, Dict[str, float]]:
+def tfidf(functions_called_by_each_test_dict: Dict[str, Set[str]], tests_that_call_each_function_dict: Dict[str, Set[str]], function_names: Set[str], test_names: Set[str], depths_of_functions_called_by_each_test_dict: Dict[str, Dict[str, int]]) -> Dict[str, Dict[str, float]]:
     number_of_tests = len(test_names)
     idf_set = {}
 
@@ -283,7 +273,7 @@ def tfidf(functions_called_by_each_test_dict: Dict[str, Set[str]], tests_that_ca
         for function_name in functions_called_by_each_test_dict[test_name]:
             tfidf_dict[test_name][function_name] = tf * idf_set[function_name]
     
-    return normalise_dict(tfidf_dict, functions_called_by_each_test_dict)
+    return normalise_dict(use_call_depth_discounting_dict(tfidf_dict, depths_of_functions_called_by_each_test_dict), functions_called_by_each_test_dict)
 
 def find_average_score(result_dicts: List[Dict[str, Dict[str, float]]], function_names: Set[str], test_names: Set[str], functions_called_by_each_test_dict: Dict[str, Set[str]]) -> Dict[str, Dict[str, float]]:
     average_score_dict = {test_name: {function_name: 0 for function_name in function_names} for test_name in test_names}
@@ -308,7 +298,8 @@ def generate_predicted_links(dict_result: Dict[str, Dict[str, float]], threshold
     
     return predicted_links_dict
 
-def calculate_evalution_measures(predicted_links: Dict[str, Set[str]], ground_truth_links: Dict[str, Set[str]]) -> Dict[str, float]:
+def calculate_evalution_measures(predicted_links: Dict[str, Set[str]], ground_truth_links: Dict[str, Set[str]]) -> Tuple[Dict[str, float], Dict[str, Dict[str, str]]]:
+    breakdown_dict = defaultdict(dict)
     found_true_positives = 0
     found_false_positives = 0
     found_false_negatives = 0
@@ -322,7 +313,9 @@ def calculate_evalution_measures(predicted_links: Dict[str, Set[str]], ground_tr
         found_true_positives += len(true_positive_set)
         found_false_positives += len(false_positive_set)
         found_false_negatives += len(false_negatives_set)
-
+        breakdown_dict[fully_qualified_test_name]["True Positives"] = list(true_positive_set)
+        breakdown_dict[fully_qualified_test_name]["False Positives"] = list(false_positive_set)
+        breakdown_dict[fully_qualified_test_name]["False Negative"] = list(false_negatives_set)
         total_true_links += len(ground_truth_links_for_test)
 
     evaluation_dict = {}
@@ -337,7 +330,7 @@ def calculate_evalution_measures(predicted_links: Dict[str, Set[str]], ground_tr
 
     recall = 100 * (found_true_positives)/(found_true_positives + found_false_negatives)
 
-    f1 = (2 * precision * recall)/(precision + recall)
+    f1 = (2 * precision * recall)/(precision + recall) if precision + recall > 0 else 0
 
     evaluation_dict["Recall"] = recall
 
@@ -349,14 +342,8 @@ def calculate_evalution_measures(predicted_links: Dict[str, Set[str]], ground_tr
 
     evaluation_dict["False Negatives"] = found_false_negatives
 
-    return evaluation_dict
+    return evaluation_dict, breakdown_dict
     
-    
-
-
-# p = {"1": set([1, 2, 3, 4, 5, 6])}
-# gt = {"1": set([1, 2, 3, 4, 5])}
-
 
 def write_evaluation_dict_to_csv(combined_evaluation_dict: Dict[str, Dict[str, float]], csv_name: str) -> None:
     csv_headers = ["Technique"] + list(list(combined_evaluation_dict.values())[0].keys())
@@ -407,8 +394,20 @@ def print_predicted_links(predicted_links: Dict[str, Set[str]], evaluation_dict,
     
     print("="*50 + "\n")
 
-def analyse_trace(file_path: str, ground_truth_dict: Dict[str, List[str]]) -> None:
+def write_breakdown_dict_to_json(breakdown_dict: Dict[str, Dict[str, str]], file_path: str) -> None:
+    with open(file_path, "w") as file:
+        json.dump(breakdown_dict, file, indent=4)
+
+def load_ground_truth(ground_truth_path: str) -> Dict[str, Set[str]]:
+    with open(ground_truth_path, "r") as file:
+        ground_truth_temp = json.load(file)
+
+    return {test_name: set(links) for test_name, links in ground_truth_temp.items()}
+    
+
+def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_path: str, breakdown_output_path: str) -> None:
     # PARSE DATA
+    ground_truth_dict = load_ground_truth(ground_truth_path)
     columns, data = read_csv_log(file_path)
     function_names_tuple, test_names_tuple = extract_function_and_test_names_tuple(data)
     fully_qualified_function_names = set(fully_qualified_function_name for fully_qualified_function_name, _ in function_names_tuple)
@@ -416,16 +415,17 @@ def analyse_trace(file_path: str, ground_truth_dict: Dict[str, List[str]]) -> No
     functions_called_by_each_test_dict = find_functions_called_by_each_test(data)
     tests_that_call_each_function_dict = find_tests_that_call_each_function(data)
     tests_to_create_links_for = set(ground_truth_dict.keys())
-    
+    depths_of_functions_called_by_each_test_dict = find_depths_of_functions_called_by_each_test(data)
+
     # TECHNIQUES
     naming_conventions_dict = naming_conventions(function_names_tuple, test_names_tuple, functions_called_by_each_test_dict)
     naming_convention_contains_dict = naming_convention_contains(function_names_tuple, test_names_tuple, functions_called_by_each_test_dict)
-    lcsb_dict = longest_common_subsequence_both(function_names_tuple, test_names_tuple, functions_called_by_each_test_dict)
-    lcsu_dict = longest_common_subsequence_unit(function_names_tuple, test_names_tuple, functions_called_by_each_test_dict)
-    levenshtein_dict = levenshtein_distance(function_names_tuple, test_names_tuple, functions_called_by_each_test_dict)
+    lcsb_dict = longest_common_subsequence_both(function_names_tuple, test_names_tuple, functions_called_by_each_test_dict, depths_of_functions_called_by_each_test_dict)
+    lcsu_dict = longest_common_subsequence_unit(function_names_tuple, test_names_tuple, functions_called_by_each_test_dict, depths_of_functions_called_by_each_test_dict)
+    levenshtein_dict = levenshtein_distance(function_names_tuple, test_names_tuple, functions_called_by_each_test_dict, depths_of_functions_called_by_each_test_dict)
     lcba_dict = last_call_before_assert(data, fully_qualified_function_names, fully_qualified_test_names)
-    tarantula_dict = tarantula(functions_called_by_each_test_dict, tests_that_call_each_function_dict, fully_qualified_function_names, fully_qualified_test_names)
-    tfidf_dict = tfidf(functions_called_by_each_test_dict, tests_that_call_each_function_dict, fully_qualified_function_names, fully_qualified_test_names)
+    tarantula_dict = tarantula(functions_called_by_each_test_dict, tests_that_call_each_function_dict, fully_qualified_function_names, fully_qualified_test_names, depths_of_functions_called_by_each_test_dict)
+    tfidf_dict = tfidf(functions_called_by_each_test_dict, tests_that_call_each_function_dict, fully_qualified_function_names, fully_qualified_test_names, depths_of_functions_called_by_each_test_dict)
 
     result_dicts = [naming_conventions_dict, naming_convention_contains_dict, lcsb_dict, lcsu_dict, levenshtein_dict, lcba_dict, tarantula_dict, tfidf_dict]
     average_dict = find_average_score(result_dicts, fully_qualified_function_names, fully_qualified_test_names, functions_called_by_each_test_dict)
@@ -453,15 +453,15 @@ def analyse_trace(file_path: str, ground_truth_dict: Dict[str, List[str]]) -> No
     predicted_links_for_tfidf = generate_predicted_links(tfidf_dict, THRESHOLD_FOR_TFIDF, tests_to_create_links_for)
     predicted_links_for_average = generate_predicted_links(average_dict, THRESHOLD_FOR_AVERAGE, tests_to_create_links_for)
 
-    evaluation_dict_for_naming_convention = calculate_evalution_measures(predicted_links_for_naming_convention, ground_truth_dict)
-    evaluation_dict_for_naming_convention_contains = calculate_evalution_measures(predicted_links_for_naming_convention_contains, ground_truth_dict)
-    evaluation_dict_for_lcsb = calculate_evalution_measures(predicted_links_for_lcsb, ground_truth_dict)
-    evaluation_dict_for_lcsu = calculate_evalution_measures(predicted_links_for_lcsu, ground_truth_dict)
-    evaluation_dict_for_levenshtein = calculate_evalution_measures(predicted_links_for_levenshtein, ground_truth_dict)
-    evaluation_dict_for_lcba = calculate_evalution_measures(predicted_links_for_lcba, ground_truth_dict)
-    evaluation_dict_for_tarauntula = calculate_evalution_measures(predicted_links_for_tarantula, ground_truth_dict)
-    evaluation_dict_for_tfidf = calculate_evalution_measures(predicted_links_for_tfidf, ground_truth_dict)
-    evaluation_dict_for_average = calculate_evalution_measures(predicted_links_for_average, ground_truth_dict)
+    evaluation_dict_for_naming_convention, _ = calculate_evalution_measures(predicted_links_for_naming_convention, ground_truth_dict)
+    evaluation_dict_for_naming_convention_contains, _  = calculate_evalution_measures(predicted_links_for_naming_convention_contains, ground_truth_dict)
+    evaluation_dict_for_lcsb, _  = calculate_evalution_measures(predicted_links_for_lcsb, ground_truth_dict)
+    evaluation_dict_for_lcsu, _  = calculate_evalution_measures(predicted_links_for_lcsu, ground_truth_dict)
+    evaluation_dict_for_levenshtein, _  = calculate_evalution_measures(predicted_links_for_levenshtein, ground_truth_dict)
+    evaluation_dict_for_lcba, _  = calculate_evalution_measures(predicted_links_for_lcba, ground_truth_dict)
+    evaluation_dict_for_tarauntula, _  = calculate_evalution_measures(predicted_links_for_tarantula, ground_truth_dict)
+    evaluation_dict_for_tfidf, _  = calculate_evalution_measures(predicted_links_for_tfidf, ground_truth_dict)
+    evaluation_dict_for_average, breakdown_dict = calculate_evalution_measures(predicted_links_for_average, ground_truth_dict)
 
     combined_evaluation_dict["Naming Conventions"] = evaluation_dict_for_naming_convention
     combined_evaluation_dict["Naming Conventions - Contains"] = evaluation_dict_for_naming_convention_contains
@@ -479,12 +479,29 @@ def analyse_trace(file_path: str, ground_truth_dict: Dict[str, List[str]]) -> No
     # print_predicted_links(predicted_links_for_levenshtein, evaluation_dict_for_levenshtein, "Predicted Links for Levenshtein Distance")
     
     print_combined_evaluation_results(combined_evaluation_dict, "Evaluation Metrics")
-    write_evaluation_dict_to_csv(combined_evaluation_dict, "pyopenssl_predictions_results.csv")
+    write_evaluation_dict_to_csv(combined_evaluation_dict, analysis_log_output_path)
+    write_breakdown_dict_to_json(breakdown_dict, breakdown_output_path)
 
-    print(THRESHOLD_FOR_AVERAGE)
 
-pyopen_ssl_path = "pyopenssl_pytest_tracer_logs.csv"
-factorial_path = "factorial_pytest_tracer_logs.csv"
+pyopen_ssl_path = "tracing_logs/pyopenssl_pytest_tracer_logs.csv"
+factorial_path = "tracing_logs/factorial_pytest_tracer_logs.csv"
+arrow_path = "tracing_logs/arrow_pytest_tracer_logs.csv"
+kedro_tracer_logs_path = "tracing_logs/kedro/kedro_pytest_tracer_logs.csv"
+kedro_ground_truth_path = "ground_truth_data/kedro/kedro_ground_truth.json"
+kedro_analysis_path = "analysis/kedro/kedro_predictions_results.csv"
+kedro_breakdown_path = "analysis/kedro/kedro_breakdown.json"
+
+arrow_tracer_logs_path = "tracing_logs/arrow/arrow_pytest_tracer_logs.csv"
+arrow_ground_truth_path = "ground_truth_data/arrow/arrow_ground_truth.json"
+arrow_analysis_path = "analysis/arrow/arrow_predictions_results.csv"
+arrow_breakdown_path = "analysis/arrow/arrow_breakdown.json"
+
+pyopenssl_tracer_logs_path = "tracing_logs/pyopenssl/pyopenssl_pytest_tracer_logs.csv"
+pyopenssl_ground_truth_path = "ground_truth_data/pyopenssl/pyopenssl_ground_truth.json"
+pyopenssl_analysis_path = "analysis/pyopenssl/pyopenssl_predictions_results.csv"
+pyopenssl_breakdown_path = "analysis/pyopenssl/pyopenssl_breakdown.json"
 
 if __name__ == "__main__":
-    analyse_trace(pyopen_ssl_path, pyopenssl_ground_truth_dict)
+    analyse_trace(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_path, pyopenssl_analysis_path, pyopenssl_breakdown_path)
+    analyse_trace(arrow_tracer_logs_path, arrow_ground_truth_path, arrow_analysis_path, arrow_breakdown_path)
+    analyse_trace(kedro_tracer_logs_path, kedro_ground_truth_path, kedro_analysis_path, kedro_breakdown_path)
