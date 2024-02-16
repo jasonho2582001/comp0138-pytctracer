@@ -1,0 +1,197 @@
+{
+    "tests.test_ssl.TestApplicationLayerProtoNegotiation": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection"
+        ],
+        "False Positives": [],
+        "False Negative": [
+            "src.OpenSSL.SSL.Context"
+        ]
+    },
+    "tests.test_crypto.TestPKey": {
+        "True Positives": [
+            "src.OpenSSL.crypto.PKey"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestConnectionRenegotiate": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509Store": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509Store"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestPKCS12": {
+        "True Positives": [
+            "src.OpenSSL.crypto.PKCS12"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509Ext": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509Extension"
+        ],
+        "False Positives": [
+            "src.OpenSSL.crypto.X509"
+        ],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509Name": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509Name"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestConnectionRecvInto": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestMemoryBIO": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection"
+        ],
+        "False Positives": [
+            "src.OpenSSL.SSL.Context"
+        ],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestRevoked": {
+        "True Positives": [
+            "src.OpenSSL.crypto.Revoked"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestEllipticCurveHash": {
+        "True Positives": [
+            "src.OpenSSL.crypto._EllipticCurve"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509StoreContext": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509StoreContext"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestConnectionGetCipherList": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestContext": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Context"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestContextConnection": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Context",
+            "src.OpenSSL.SSL.Connection"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestConnectionSend": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestCRL": {
+        "True Positives": [
+            "src.OpenSSL.crypto.CRL"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto._PKeyInteractionTestsMixin": {
+        "True Positives": [
+            "src.OpenSSL.crypto.NetscapeSPKI"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestServerNameCallback": {
+        "True Positives": [],
+        "False Positives": [
+            "src.OpenSSL.SSL.Connection"
+        ],
+        "False Negative": [
+            "src.OpenSSL.SSL.Context"
+        ]
+    },
+    "tests.test_ssl.TestOCSP": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection"
+        ],
+        "False Positives": [
+            "src.OpenSSL.SSL._OCSPClientCallbackHelper",
+            "src.OpenSSL.SSL._OCSPServerCallbackHelper",
+            "src.OpenSSL.SSL.Context"
+        ],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestConnection": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestX509Req": {
+        "True Positives": [
+            "src.OpenSSL.crypto.X509Req"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestNetscapeSPKI": {
+        "True Positives": [
+            "src.OpenSSL.crypto.NetscapeSPKI"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_ssl.TestConnectionSendall": {
+        "True Positives": [
+            "src.OpenSSL.SSL.Connection"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_crypto.TestEllipticCurve": {
+        "True Positives": [
+            "src.OpenSSL.crypto._EllipticCurve"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    }
+}
