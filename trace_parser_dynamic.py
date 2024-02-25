@@ -504,7 +504,6 @@ def load_ground_truth(ground_truth_path: str) -> Dict[str, Set[str]]:
         ground_truth_temp = json.load(file)
 
     return {test_name: set(links) for test_name, links in ground_truth_temp.items()}
-    
 
 def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_path: str, breakdown_output_path: str) -> None:
     # PARSE DATA
@@ -665,55 +664,56 @@ def analyse_trace_class_level(file_path: str, ground_truth_path: str, analysis_l
     write_breakdown_dict_to_json(breakdown_dict, breakdown_output_path)
 
 kedro_tracer_logs_path = "tracing_logs/kedro/kedro_pytest_tracer_logs.csv"
-kedro_ground_truth_path = "ground_truth_data/kedro/function/kedro_ground_truth.json"
+kedro_ground_truth_path = "ground-truth-data/kedro/function/kedro_ground_truth.json"
 kedro_analysis_path = "analysis/kedro/function/kedro_predictions_results.csv"
 kedro_breakdown_path = "analysis/kedro/function/kedro_breakdown.json"
 
-kedro_ground_truth_class_path = "ground_truth_data/kedro/class/kedro_ground_truth_classes.json"
+kedro_ground_truth_class_path = "ground-truth-data/kedro/class/kedro_ground_truth_classes.json"
 kedro_class_level_analysis_path = "analysis/kedro/class/kedro_class_predictions_results.csv"
 kedro_class_level_breakdown_path = "analysis/kedro/class/kedro_class_breakdown.json"
-kedro_ground_truth_function_class_path = "ground_truth_data/kedro/class/kedro_all_function_class_names.txt"
-kedro_ground_truth_test_class_path = "ground_truth_data/kedro/class/kedro_all_test_class_names.txt"
+kedro_ground_truth_function_class_path = "ground-truth-data/kedro/class/kedro_all_function_class_names.txt"
+kedro_ground_truth_test_class_path = "ground-truth-data/kedro/class/kedro_all_test_class_names.txt"
 
 arrow_tracer_logs_path = "tracing_logs/arrow/arrow_pytest_tracer_logs.csv"
-arrow_ground_truth_path = "ground_truth_data/arrow/function/arrow_ground_truth.json"
+arrow_ground_truth_path = "ground-truth-data/arrow/function/arrow_ground_truth.json"
 arrow_analysis_path = "analysis/arrow/function/arrow_predictions_results.csv"
 arrow_breakdown_path = "analysis/arrow/function/arrow_breakdown.json"
 
-arrow_ground_truth_class_path = "ground_truth_data/arrow/class/arrow_ground_truth_classes.json"
+arrow_ground_truth_class_path = "ground-truth-data/arrow/class/arrow_ground_truth_classes.json"
 arrow_class_level_analysis_path = "analysis/arrow/class/arrow_predictions_class_results.csv"
 arrow_class_level_breakdown_path = "analysis/arrow/class/arrow_class_breakdown.json"
-arrow_ground_truth_function_class_path = "ground_truth_data/arrow/class/arrow_all_function_class_names.txt"
-arrow_ground_truth_test_class_path = "ground_truth_data/arrow/class/arrow_all_test_class_names.txt"
+arrow_ground_truth_function_class_path = "ground-truth-data/arrow/class/arrow_all_function_class_names.txt"
+arrow_ground_truth_test_class_path = "ground-truth-data/arrow/class/arrow_all_test_class_names.txt"
 
 pyopenssl_tracer_logs_path = "tracing_logs/pyopenssl/pyopenssl_pytest_tracer_logs.csv"
-pyopenssl_ground_truth_path = "ground_truth_data/pyopenssl/function/pyopenssl_ground_truth.json"
+pyopenssl_ground_truth_path = "ground-truth-data/pyopenssl/function/pyopenssl_ground_truth.json"
 pyopenssl_analysis_path = "analysis/pyopenssl/function/pyopenssl_predictions_results.csv"
 pyopenssl_breakdown_path = "analysis/pyopenssl/function/pyopenssl_breakdown.json"
 
-pyopenssl_ground_truth_class_path = "ground_truth_data/pyopenssl/class/pyopenssl_ground_truth_classes.json"
+pyopenssl_ground_truth_class_path = "ground-truth-data/pyopenssl/class/pyopenssl_ground_truth_classes.json"
 pyopenssl_class_level_analysis_path = "analysis/pyopenssl/class/pyopenssl_predictions_class_results.csv"
 pyopenssl_class_level_breakdown_path = "analysis/pyopenssl/class/pyopenssl_class_breakdown.json"
-pyopenssl_ground_truth_function_class_path = "ground_truth_data/pyopenssl/class/pyopenssl_all_function_class_names.txt"
-pyopenssl_ground_truth_test_class_path = "ground_truth_data/pyopenssl/class/pyopenssl_all_test_class_names.txt"
+pyopenssl_ground_truth_function_class_path = "ground-truth-data/pyopenssl/class/pyopenssl_all_function_class_names.txt"
+pyopenssl_ground_truth_test_class_path = "ground-truth-data/pyopenssl/class/pyopenssl_all_test_class_names.txt"
 
 chartify_tracer_logs_path = "tracing_logs/chartify/chartify_pytest_tracer_logs.csv"
-chartify_ground_truth_path = "ground_truth_data/chartify/function/chartify_ground_truth.json"
+chartify_ground_truth_path = "ground-truth-data/chartify/function/chartify_ground_truth.json"
 chartify_analysis_path = "analysis/chartify/function/chartify_predictions_results.csv"
 chartify_breakdown_path = "analysis/chartify/function/chartify_breakdown.json"
 
-chartify_ground_truth_class_path = "ground_truth_data/chartify/class/chartify_ground_truth_classes.json"
+chartify_ground_truth_class_path = "ground-truth-data/chartify/class/chartify_ground_truth_classes.json"
 chartify_class_level_analysis_path = "analysis/chartify/class/chartify_predictions_class_results.csv"
 chartify_class_level_breakdown_path = "analysis/chartify/class/chartify_class_breakdown.json"
-chartify_ground_truth_function_class_path = "ground_truth_data/chartify/class/chartify_all_function_class_names.txt"
-chartify_ground_truth_test_class_path = "ground_truth_data/chartify/class/chartify_all_test_class_names.txt"
+chartify_ground_truth_function_class_path = "ground-truth-data/chartify/class/chartify_all_function_class_names.txt"
+chartify_ground_truth_test_class_path = "ground-truth-data/chartify/class/chartify_all_test_class_names.txt"
 
 if __name__ == "__main__":
-    analyse_trace_class_level(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_class_path, pyopenssl_class_level_analysis_path, pyopenssl_class_level_breakdown_path, pyopenssl_ground_truth_function_class_path, pyopenssl_ground_truth_test_class_path)
-    analyse_trace_class_level(arrow_tracer_logs_path, arrow_ground_truth_class_path, arrow_class_level_analysis_path, arrow_class_level_breakdown_path, arrow_ground_truth_function_class_path, arrow_ground_truth_test_class_path)
-    analyse_trace_class_level(kedro_tracer_logs_path, kedro_ground_truth_class_path, kedro_class_level_analysis_path, kedro_class_level_breakdown_path, kedro_ground_truth_function_class_path, kedro_ground_truth_test_class_path)
-    analyse_trace(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_path, pyopenssl_analysis_path, pyopenssl_breakdown_path)
+    # analyse_trace_class_level(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_class_path, pyopenssl_class_level_analysis_path, pyopenssl_class_level_breakdown_path, pyopenssl_ground_truth_function_class_path, pyopenssl_ground_truth_test_class_path)
+    # analyse_trace_class_level(arrow_tracer_logs_path, arrow_ground_truth_class_path, arrow_class_level_analysis_path, arrow_class_level_breakdown_path, arrow_ground_truth_function_class_path, arrow_ground_truth_test_class_path)
+    # analyse_trace_class_level(kedro_tracer_logs_path, kedro_ground_truth_class_path, kedro_class_level_analysis_path, kedro_class_level_breakdown_path, kedro_ground_truth_function_class_path, kedro_ground_truth_test_class_path)
+    # analyse_trace_class_level(chartify_tracer_logs_path, chartify_ground_truth_class_path, chartify_class_level_analysis_path, chartify_class_level_breakdown_path, chartify_ground_truth_function_class_path, chartify_ground_truth_test_class_path)
+    # analyse_trace(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_path, pyopenssl_analysis_path, pyopenssl_breakdown_path)
     analyse_trace(arrow_tracer_logs_path, arrow_ground_truth_path, arrow_analysis_path, arrow_breakdown_path)
-    analyse_trace(kedro_tracer_logs_path, kedro_ground_truth_path, kedro_analysis_path, kedro_breakdown_path)
-    analyse_trace(chartify_tracer_logs_path, chartify_ground_truth_path, chartify_analysis_path, chartify_breakdown_path)
-    analyse_trace_class_level(chartify_tracer_logs_path, chartify_ground_truth_class_path, chartify_class_level_analysis_path, chartify_class_level_breakdown_path, chartify_ground_truth_function_class_path, chartify_ground_truth_test_class_path)
+    # analyse_trace(kedro_tracer_logs_path, kedro_ground_truth_path, kedro_analysis_path, kedro_breakdown_path)
+    # analyse_trace(chartify_tracer_logs_path, chartify_ground_truth_path, chartify_analysis_path, chartify_breakdown_path)
+    

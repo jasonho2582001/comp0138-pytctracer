@@ -1,0 +1,1181 @@
+{
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.config.abstract_config.AbstractConfigLoader"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.config.abstract_config.AbstractConfigLoader"
+    ],
+    "tests.framework.cli.hooks.test_manager": [
+        "kedro.framework.cli.hooks.manager.CLIHooksManager"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand": [
+        "kedro.framework.cli.micropkg",
+        "kedro.framework.cli.pipeline",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageFromManifest": [
+        "kedro.framework.cli.micropkg",
+        "kedro.framework.cli.pipeline",
+        "kedro.framework.cli.utils"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand": [
+        "kedro.framework.cli.micropkg",
+        "kedro.io.core",
+        "kedro.framework.cli.pipeline",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullFromManifest": [
+        "kedro.framework.cli.micropkg",
+        "kedro.framework.cli.pipeline",
+        "kedro.io.core",
+        "kedro.framework.cli.utils"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_requirements.TestMicropkgRequirements": [
+        "kedro.framework.cli.micropkg",
+        "kedro.io.core",
+        "kedro.framework.cli.pipeline",
+        "kedro.framework.cli.micropkg._EquivalentRequirement",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineCreateCommand": [
+        "kedro.io.memory_dataset",
+        "kedro.framework.session.session",
+        "kedro.pipeline.pipeline",
+        "kedro.framework.context.context",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.config.abstract_config.AbstractConfigLoader",
+        "kedro.framework.hooks.manager",
+        "kedro.io.data_catalog",
+        "kedro.framework.cli.utils.KedroCliError",
+        "kedro.framework.session.session.KedroSession",
+        "kedro.io.core",
+        "kedro.framework.cli.pipeline",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.framework.cli.utils",
+        "kedro.framework.project.__init__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.utils",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.framework.session.store.BaseSessionStore",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.framework.context.context.KedroContext"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineDeleteCommand": [
+        "kedro.framework.cli.pipeline",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestSyncDirs": [
+        "kedro.framework.cli.pipeline"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogListCommand": [
+        "kedro.framework.session.session.KedroSession",
+        "kedro.io.core",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.framework.cli.utils",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.framework.project.__init__",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.framework.cli.catalog",
+        "kedro.framework.hooks.manager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.framework.session.store.BaseSessionStore",
+        "kedro.framework.session.session",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogCreateCommand": [
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.framework.session.session",
+        "kedro.pipeline.pipeline",
+        "kedro.framework.context.context",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.config.abstract_config.AbstractConfigLoader",
+        "kedro.framework.hooks.manager",
+        "kedro.io.data_catalog",
+        "kedro.framework.cli.utils.KedroCliError",
+        "kedro.framework.session.session.KedroSession",
+        "kedro.io.core",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.framework.cli.utils",
+        "kedro.framework.project.__init__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.utils",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.framework.session.store.BaseSessionStore",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.pipeline.node",
+        "kedro.framework.cli.catalog",
+        "kedro.pipeline.node.Node",
+        "kedro.framework.context.context.KedroContext"
+    ],
+    "tests.framework.cli.test_catalog": [
+        "kedro.io.core",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.framework.session.session.KedroSession",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.framework.project.__init__",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.utils",
+        "kedro.framework.cli.catalog",
+        "kedro.framework.hooks.manager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.framework.session.store.BaseSessionStore",
+        "kedro.framework.session.session"
+    ],
+    "tests.framework.cli.test_cli.TestCliCommands": [
+        "kedro.framework.cli.cli",
+        "kedro.framework.cli.utils"
+    ],
+    "tests.framework.cli.test_cli.TestCommandCollection": [
+        "kedro.framework.cli.cli",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.CommandCollection"
+    ],
+    "tests.framework.cli.test_cli.TestForwardCommand": [
+        "kedro.framework.cli.utils"
+    ],
+    "tests.framework.cli.test_cli.TestCliUtils": [
+        "kedro.framework.cli.utils"
+    ],
+    "tests.framework.cli.test_cli.TestEntryPoints": [
+        "kedro.framework.cli.cli",
+        "kedro.framework.cli.utils"
+    ],
+    "tests.framework.cli.test_cli.TestKedroCLI": [
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.CommandCollection",
+        "kedro.framework.cli.cli.KedroCLI",
+        "kedro.framework.cli.hooks.manager",
+        "kedro.framework.cli.hooks.manager.CLIHooksManager"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand": [
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.framework.session.session",
+        "kedro.pipeline.pipeline",
+        "kedro.runner.parallel_runner.ParallelRunner",
+        "kedro.runner.runner",
+        "kedro.framework.context.context",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.config.abstract_config.AbstractConfigLoader",
+        "kedro.framework.hooks.manager",
+        "kedro.io.data_catalog",
+        "kedro.framework.cli.project",
+        "kedro.framework.context.context.KedroContext",
+        "kedro.framework.session.session.KedroSession",
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.io.core",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.framework.cli.utils",
+        "kedro.framework.project.__init__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.utils",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.framework.session.store.BaseSessionStore",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.pipeline.node",
+        "kedro.pipeline.node.Node",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.test_cli_hooks.TestKedroCLIHooks": [
+        "kedro.framework.cli.cli",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.CommandCollection",
+        "kedro.framework.cli.cli.KedroCLI",
+        "kedro.framework.cli.hooks.manager",
+        "kedro.framework.cli.hooks.manager.CLIHooksManager"
+    ],
+    "tests.framework.cli.test_jupyter.TestJupyterSetupCommand": [
+        "kedro.framework.cli.jupyter",
+        "kedro.framework.project.__init__",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.test_jupyter.TestJupyterNotebookCommand": [
+        "kedro.framework.cli.jupyter",
+        "kedro.framework.project.__init__",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.test_jupyter.TestJupyterLabCommand": [
+        "kedro.framework.cli.jupyter",
+        "kedro.framework.project.__init__",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.test_jupyter.TestCreateKernel": [
+        "kedro.framework.cli.jupyter"
+    ],
+    "tests.framework.cli.test_project.TestIpythonCommand": [
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.project",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.test_project.TestPackageCommand": [
+        "kedro.framework.cli.project"
+    ],
+    "tests.framework.cli.test_registry": [
+        "kedro.framework.project.__init__",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.framework.cli.registry",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.framework.cli.test_registry.TestRegistryDescribeCommand": [
+        "kedro.framework.cli.utils",
+        "kedro.framework.project.__init__",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.framework.cli.registry",
+        "kedro.pipeline.node.Node",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.test_starters": [
+        "kedro.framework.cli.starters",
+        "kedro.framework.cli.utils"
+    ],
+    "tests.framework.cli.test_starters.TestParseToolsInput": [
+        "kedro.framework.cli.starters"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsValid": [
+        "kedro.framework.cli.starters",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.starters._Prompt"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsInvalid": [
+        "kedro.framework.cli.starters",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.starters._Prompt",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileValid": [
+        "kedro.framework.cli.starters",
+        "kedro.framework.cli.utils"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileInvalid": [
+        "kedro.framework.cli.starters",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.test_starters.TestNewWithStarterValid": [
+        "kedro.framework.cli.starters",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.starters._Prompt"
+    ],
+    "tests.framework.cli.test_starters.TestNewWithStarterInvalid": [
+        "kedro.framework.cli.starters",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.test_starters.TestFlagsNotAllowed": [
+        "kedro.framework.cli.starters",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromUserPrompts": [
+        "kedro.framework.cli.starters",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.starters._Prompt"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromConfigFile": [
+        "kedro.framework.cli.starters",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.KedroCliError"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromCLI": [
+        "kedro.framework.cli.starters",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.starters._Prompt"
+    ],
+    "tests.framework.cli.test_starters.TestNameFromCLI": [
+        "kedro.framework.cli.starters",
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.starters._Prompt"
+    ],
+    "tests.framework.cli.test_starters.TestValidateSelection": [
+        "kedro.framework.cli.starters"
+    ],
+    "tests.framework.cli.test_starters.TestConvertToolNamesToNumbers": [
+        "kedro.framework.cli.starters"
+    ],
+    "tests.framework.context.test_context.TestKedroContext": [
+        "kedro.io.core",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.framework.project.__init__._HasSharedParentClassValidator",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.framework.context.context",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.framework.project.__init__",
+        "kedro.utils",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.framework.project.__init__._IsSubclassValidator",
+        "kedro.framework.project.__init__._ProjectSettings",
+        "kedro.framework.context.context.KedroContext",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.framework.context.test_context": [
+        "kedro.framework.context.context"
+    ],
+    "tests.framework.hooks.test_manager": [
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.framework.hooks.manager"
+    ],
+    "tests.framework.project.test_logging": [
+        "kedro.framework.project.__init__._HasSharedParentClassValidator",
+        "kedro.framework.project.__init__",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.logging.RichHandler",
+        "kedro.framework.project.__init__._IsSubclassValidator",
+        "kedro.framework.project.__init__._ProjectLogging"
+    ],
+    "tests.framework.project.test_pipeline_discovery": [
+        "kedro.framework.project.__init__._HasSharedParentClassValidator",
+        "kedro.framework.project.__init__",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.logging.RichHandler",
+        "kedro.framework.project.__init__._IsSubclassValidator",
+        "kedro.framework.project.__init__._ProjectLogging",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.framework.project.test_pipeline_registry": [
+        "kedro.framework.project.__init__._HasSharedParentClassValidator",
+        "kedro.framework.project.__init__",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.framework.project.__init__._ProjectSettings",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.pipeline.node",
+        "kedro.logging.RichHandler",
+        "kedro.framework.project.__init__._IsSubclassValidator",
+        "kedro.framework.project.__init__._ProjectLogging",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.framework.project.test_settings": [
+        "kedro.framework.project.__init__._HasSharedParentClassValidator",
+        "kedro.framework.project.__init__",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.logging.RichHandler",
+        "kedro.framework.project.__init__._IsSubclassValidator",
+        "kedro.framework.project.__init__._ProjectLogging"
+    ],
+    "tests.framework.session.test_session.TestKedroSession": [
+        "kedro.framework.session.session.KedroSession",
+        "kedro.io.core",
+        "kedro.framework.project.__init__._HasSharedParentClassValidator",
+        "kedro.framework.session.shelvestore.ShelveStore",
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.framework.context.context",
+        "kedro.framework.project.__init__",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.config.abstract_config.AbstractConfigLoader",
+        "kedro.framework.hooks.manager",
+        "kedro.framework.project.__init__._IsSubclassValidator",
+        "kedro.framework.session.store.BaseSessionStore",
+        "kedro.framework.session.session",
+        "kedro.framework.project.__init__._ProjectSettings"
+    ],
+    "tests.framework.session.test_session": [
+        "kedro.framework.session.session.KedroSession",
+        "kedro.io.core",
+        "kedro.framework.cli.utils",
+        "kedro.framework.hooks.manager",
+        "kedro.framework.session.store.BaseSessionStore",
+        "kedro.framework.session.session"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestCatalogHooks": [
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline",
+        "kedro.runner.runner",
+        "kedro.framework.context.context",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.config.abstract_config.AbstractConfigLoader",
+        "kedro.io.data_catalog",
+        "kedro.framework.session.session.KedroSession",
+        "kedro.io.core",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.framework.project.__init__",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.utils",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.pipeline.node",
+        "kedro.pipeline.node.Node",
+        "kedro.framework.context.context.KedroContext"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestPipelineHooks": [
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline",
+        "kedro.runner.runner",
+        "kedro.framework.context.context",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.config.abstract_config.AbstractConfigLoader",
+        "kedro.io.data_catalog",
+        "kedro.framework.session.session.KedroSession",
+        "kedro.io.core",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.framework.project.__init__",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.utils",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.pipeline.node",
+        "kedro.pipeline.node.Node",
+        "kedro.framework.context.context.KedroContext"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestNodeHooks": [
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline",
+        "kedro.runner.parallel_runner.ParallelRunner",
+        "kedro.runner.runner",
+        "kedro.framework.context.context",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.config.abstract_config.AbstractConfigLoader",
+        "kedro.io.data_catalog",
+        "kedro.framework.session.session.KedroSession",
+        "kedro.io.core",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.framework.project.__init__",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.utils",
+        "kedro.io.shared_memory_dataset.SharedMemoryDataset",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.pipeline.node",
+        "kedro.pipeline.node.Node",
+        "kedro.framework.context.context.KedroContext"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestDatasetHooks": [
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline",
+        "kedro.runner.parallel_runner.ParallelRunner",
+        "kedro.runner.runner",
+        "kedro.framework.context.context",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.config.abstract_config.AbstractConfigLoader",
+        "kedro.io.data_catalog",
+        "kedro.framework.session.session.KedroSession",
+        "kedro.io.core",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.framework.project.__init__",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.utils",
+        "kedro.io.shared_memory_dataset.SharedMemoryDataset",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.pipeline.node",
+        "kedro.pipeline.node.Node",
+        "kedro.framework.context.context.KedroContext"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestBeforeNodeRunHookWithInputUpdates": [
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline",
+        "kedro.runner.parallel_runner.ParallelRunner",
+        "kedro.runner.runner",
+        "kedro.framework.context.context",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.config.abstract_config.AbstractConfigLoader",
+        "kedro.io.data_catalog",
+        "kedro.framework.session.session.KedroSession",
+        "kedro.io.core",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.framework.project.__init__",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.utils",
+        "kedro.io.shared_memory_dataset.SharedMemoryDataset",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.pipeline.node",
+        "kedro.pipeline.node.Node",
+        "kedro.framework.context.context.KedroContext"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestAsyncNodeDatasetHooks": [
+        "kedro.framework.session.session.KedroSession",
+        "kedro.runner.runner",
+        "kedro.framework.context.context",
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.pipeline.node",
+        "kedro.config.abstract_config.AbstractConfigLoader",
+        "kedro.pipeline.node.Node"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestKedroContextSpecsHook": [
+        "kedro.framework.session.session.KedroSession",
+        "kedro.framework.context.context",
+        "kedro.config.omegaconf_config.OmegaConfigLoader",
+        "kedro.config.abstract_config.AbstractConfigLoader"
+    ],
+    "tests.framework.session.test_session_hook_manager.TestSessionHookManager": [
+        "kedro.framework.session.session.KedroSession",
+        "kedro.framework.project.__init__._HasSharedParentClassValidator",
+        "kedro.io.core",
+        "kedro.framework.project.__init__",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.framework.hooks.manager",
+        "kedro.framework.project.__init__._IsSubclassValidator",
+        "kedro.framework.project.__init__._ProjectLogging",
+        "kedro.framework.session.store.BaseSessionStore",
+        "kedro.framework.session.session",
+        "kedro.framework.project.__init__._ProjectSettings"
+    ],
+    "tests.framework.session.test_store.TestBaseStore": [
+        "kedro.framework.session.store.BaseSessionStore"
+    ],
+    "tests.framework.session.test_store.TestShelveStore": [
+        "kedro.framework.session.shelvestore.ShelveStore",
+        "kedro.framework.session.store.BaseSessionStore"
+    ],
+    "tests.framework.test_startup.TestIsProject": [
+        "kedro.framework.startup"
+    ],
+    "tests.framework.test_startup.TestGetProjectMetadata": [
+        "kedro.framework.startup"
+    ],
+    "tests.framework.test_startup.TestValidateSourcePath": [
+        "kedro.framework.startup"
+    ],
+    "tests.framework.test_startup.TestBootstrapProject": [
+        "kedro.framework.project.__init__._HasSharedParentClassValidator",
+        "kedro.framework.project.__init__",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.logging.RichHandler",
+        "kedro.framework.project.__init__._IsSubclassValidator",
+        "kedro.framework.startup",
+        "kedro.framework.project.__init__._ProjectLogging"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset": [
+        "kedro.io.core",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.utils",
+        "kedro.io.cached_dataset.CachedDataset",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog"
+    ],
+    "tests.io.test_core.TestCoreFunctions": [
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.core",
+        "kedro.utils"
+    ],
+    "tests.io.test_core.TestAbstractVersionedDataset": [
+        "kedro.io.core",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.core.AbstractVersionedDataset"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog": [
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.io.core",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.lambda_dataset.LambdaDataset",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig": [
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.io.core",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.utils",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogVersioned": [
+        "kedro.io.core",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.utils",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories": [
+        "kedro.io.core",
+        "kedro.io.core.AbstractVersionedDataset",
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.utils",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog"
+    ],
+    "tests.io.test_lambda_dataset": [
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.lambda_dataset.LambdaDataset"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetLoad": [
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.lambda_dataset.LambdaDataset"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetSave": [
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.lambda_dataset.LambdaDataset"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetExists": [
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.lambda_dataset.LambdaDataset"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetRelease": [
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.lambda_dataset.LambdaDataset"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset": [
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset"
+    ],
+    "tests.io.test_memory_dataset": [
+        "kedro.io.memory_dataset"
+    ],
+    "tests.io.test_shared_memory_dataset.TestSharedMemoryDataset": [
+        "kedro.io.core.AbstractDataset",
+        "kedro.io.shared_memory_dataset.SharedMemoryDataset"
+    ],
+    "tests.ipython.test_ipython.TestLoadKedroObjects": [
+        "kedro.framework.cli.utils",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.framework.project.__init__",
+        "kedro.pipeline.node",
+        "kedro.framework.project.__init__._ProjectPipelines",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.framework.startup",
+        "kedro.ipython.__init__",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.ipython.test_ipython.TestLoadIPythonExtension": [
+        "kedro.ipython.__init__",
+        "kedro.framework.cli.utils",
+        "kedro.framework.startup"
+    ],
+    "tests.ipython.test_ipython.TestProjectPathResolution": [
+        "kedro.ipython.__init__",
+        "kedro.framework.startup"
+    ],
+    "tests.ipython.test_ipython.TestLoadNodeMagic": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.ipython.__init__",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_node.TestValidNode": [
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.node"
+    ],
+    "tests.pipeline.test_node.TestNodeComparisons": [
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.node"
+    ],
+    "tests.pipeline.test_node": [
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.node"
+    ],
+    "tests.pipeline.test_node.TestTag": [
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.node"
+    ],
+    "tests.pipeline.test_node.TestNames": [
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.node"
+    ],
+    "tests.pipeline.test_node_run": [
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.node"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidInput": [
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.node"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidOutput": [
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.node",
+        "kedro.io.lambda_dataset.LambdaDataset"
+    ],
+    "tests.pipeline.test_pipeline.TestTranscodeHelpers": [
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestValidPipeline": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestInvalidPipeline": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineDescribe": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineTags": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilter": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineRunnerHelpers": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline",
+        "kedro.pipeline.node"
+    ],
+    "tests.pipeline.test_pipeline": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineMissing": [
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.io.lambda_dataset.LambdaDataset",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineUnregistered": [
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.io.lambda_dataset.LambdaDataset",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline_integration.TestTransformPipelineIntegration": [
+        "kedro.io.core",
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.runner.runner",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.utils",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestValidPipeline": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestInvalidPipeline": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.pipeline.node",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestGetTranscodeCompatibleName": [
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_parallel_runner.TestValidParallelRunner": [
+        "kedro.io.core",
+        "kedro.runner.parallel_runner.ParallelRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.utils",
+        "kedro.io.shared_memory_dataset.SharedMemoryDataset",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.framework.hooks.manager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_parallel_runner.TestMaxWorkers": [
+        "kedro.io.core",
+        "kedro.runner.parallel_runner.ParallelRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.utils",
+        "kedro.io.shared_memory_dataset.SharedMemoryDataset",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_parallel_runner.TestInvalidParallelRunner": [
+        "kedro.io.core",
+        "kedro.runner.parallel_runner.ParallelRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.utils",
+        "kedro.io.shared_memory_dataset.SharedMemoryDataset",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.io.lambda_dataset.LambdaDataset",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_parallel_runner.TestParallelRunnerRelease": [
+        "kedro.runner.parallel_runner.ParallelRunner",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_parallel_runner.TestRunNodeSynchronisationHelper": [
+        "kedro.framework.project.__init__",
+        "kedro.framework.hooks.manager",
+        "kedro.runner.parallel_runner",
+        "kedro.framework.project.__init__._ProjectLogging"
+    ],
+    "tests.runner.test_run_node.TestRunGeneratorNode": [
+        "kedro.runner.runner",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.pipeline.node",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.pipeline.node.Node"
+    ],
+    "tests.runner.test_sequential_runner.TestValidSequentialRunner": [
+        "kedro.io.core",
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.runner.runner",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.utils",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.framework.hooks.manager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_sequential_runner.TestSeqentialRunnerBranchlessPipeline": [
+        "kedro.io.core",
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.runner.runner",
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.utils",
+        "kedro.io.lambda_dataset.LambdaDataset",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_sequential_runner.TestSequentialRunnerBranchedPipeline": [
+        "kedro.io.core",
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.runner.runner",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.utils",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_sequential_runner.TestSequentialRunnerRelease": [
+        "kedro.io.core",
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.runner.runner",
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.utils",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_sequential_runner.TestSuggestResumeScenario": [
+        "kedro.io.core",
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.runner.runner",
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.utils",
+        "kedro.io.lambda_dataset.LambdaDataset",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.framework.hooks.manager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_sequential_runner.TestMemoryDatasetBehaviour": [
+        "kedro.runner.sequential_runner.SequentialRunner",
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.runner.runner",
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.io.lambda_dataset.LambdaDataset",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_thread_runner.TestValidThreadRunner": [
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.runner.thread_runner.ThreadRunner",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.framework.hooks.manager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_thread_runner.TestMaxWorkers": [
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.runner.thread_runner.ThreadRunner",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_thread_runner.TestIsAsync": [
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.runner.thread_runner.ThreadRunner",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_thread_runner.TestInvalidThreadRunner": [
+        "kedro.io.memory_dataset.MemoryDataset",
+        "kedro.io.memory_dataset",
+        "kedro.runner.runner",
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.runner.thread_runner.ThreadRunner",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.runner.test_thread_runner.TestThreadRunnerRelease": [
+        "kedro.pipeline.pipeline.Pipeline",
+        "kedro.io.data_catalog._FrozenDatasets",
+        "kedro.runner.thread_runner.ThreadRunner",
+        "kedro.io.core.AbstractDataset",
+        "kedro.pipeline.node",
+        "kedro.pipeline.modular_pipeline",
+        "kedro.framework.hooks.manager._NullPluginManager",
+        "kedro.io.data_catalog.DataCatalog",
+        "kedro.io.data_catalog",
+        "kedro.runner.runner.AbstractRunner",
+        "kedro.pipeline.node.Node",
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.test_import": [
+        "kedro.__init__"
+    ],
+    "tests.test_utils.TestExtractObject": [
+        "kedro.utils"
+    ],
+    "tests.tools.test_cli.TestCLITools": [
+        "kedro.framework.cli.utils",
+        "kedro.framework.cli.utils.CommandCollection",
+        "kedro.framework.cli.jupyter.JupyterCommandGroup",
+        "kedro.framework.cli.cli.KedroCLI",
+        "kedro.framework.cli.hooks.manager"
+    ]
+}

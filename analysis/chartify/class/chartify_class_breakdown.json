@@ -1,31 +1,28 @@
 {
-    "tests.test_plots.TestAxisFormatPrecision": {
-        "True Positives": [
-            "chartify._core.plot.BasePlot"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_plots.TestCategoricalOrderBy": {
-        "True Positives": [
-            "chartify._core.plot.PlotMixedTypeXY"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_colors_config": {
-        "True Positives": [
-            "chartify._core.colors"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
     "tests.test_plots.TestHexbin": {
         "True Positives": [
             "chartify._core.plot.PlotDensityXY"
         ],
         "False Positives": [],
         "False Negative": []
+    },
+    "tests.test_plots.TestText": {
+        "True Positives": [],
+        "False Positives": [
+            "chartify._core.chart.Chart"
+        ],
+        "False Negative": [
+            "chartify._core.plot.PlotNumericXY"
+        ]
+    },
+    "tests.test_callout.TestBaseAxes": {
+        "True Positives": [
+            "chartify._core.axes.BaseAxes"
+        ],
+        "False Positives": [],
+        "False Negative": [
+            "chartify._core.callout.Callout"
+        ]
     },
     "tests.test_plots.TestBoxplot": {
         "True Positives": [
@@ -38,36 +35,27 @@
             "chartify._core.plot.BasePlot"
         ]
     },
-    "tests.test_plots.TestHistogram": {
+    "tests.test_colors.TestColorPalettes": {
         "True Positives": [
-            "chartify._core.plot.PlotNumericDensityXY"
+            "chartify._core.colors.ColorPalettes",
+            "chartify._core.colors.ColorPalette"
         ],
         "False Positives": [],
         "False Negative": []
     },
     "tests.test_plots.TestAreaPlot": {
         "True Positives": [
-            "chartify._core.plot.BasePlot",
-            "chartify._core.plot.PlotNumericXY"
+            "chartify._core.plot.PlotNumericXY",
+            "chartify._core.plot.BasePlot"
         ],
         "False Positives": [
             "chartify._core.chart.Chart"
         ],
         "False Negative": []
     },
-    "tests.test_plots.TestText": {
-        "True Positives": [],
-        "False Positives": [
-            "chartify._core.chart.Chart"
-        ],
-        "False Negative": [
-            "chartify._core.plot.PlotNumericXY"
-        ]
-    },
-    "tests.test_options_config": {
+    "tests.test_colors.TestColor": {
         "True Positives": [
-            "chartify._core.options.ChartifyOptions",
-            "chartify._core.options"
+            "chartify._core.colour.Color"
         ],
         "False Positives": [],
         "False Negative": []
@@ -83,34 +71,58 @@
             "chartify._core.plot.PlotMixedTypeXY"
         ]
     },
-    "tests.test_callout.TestBaseAxes": {
+    "tests.test_plots.TestBarLollipopParallel": {
         "True Positives": [
-            "chartify._core.axes.BaseAxes"
-        ],
-        "False Positives": [],
-        "False Negative": [
-            "chartify._core.callout.Callout"
-        ]
-    },
-    "tests.test_colors.TestColor": {
-        "True Positives": [
-            "chartify._core.colour.Color"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_plots.TestScatter": {
-        "True Positives": [
-            "chartify._core.plot.PlotNumericXY"
+            "chartify._core.plot.PlotMixedTypeXY"
         ],
         "False Positives": [
             "chartify._core.chart.Chart"
         ],
+        "False Negative": [
+            "chartify._core.plot.BasePlot"
+        ]
+    },
+    "tests.test_plots.TestLine": {
+        "True Positives": [
+            "chartify._core.plot.PlotNumericXY",
+            "chartify._core.style.Style"
+        ],
+        "False Positives": [],
         "False Negative": []
     },
-    "tests.test_chart.TestChart": {
+    "tests.test_color_palettes_config": {
+        "True Positives": [
+            "chartify._core.colors.ColorPalette"
+        ],
+        "False Positives": [],
+        "False Negative": [
+            "chartify._core.colors.ColorPalettes"
+        ]
+    },
+    "tests.test_plots.TestCategoricalOrderBy": {
+        "True Positives": [
+            "chartify._core.plot.PlotMixedTypeXY"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_colors_config": {
+        "True Positives": [
+            "chartify._core.colors"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_chart.TestSecondYChart": {
         "True Positives": [
             "chartify._core.chart.Chart"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_axes.TestBaseAxes": {
+        "True Positives": [
+            "chartify._core.axes.BaseAxes"
         ],
         "False Positives": [],
         "False Negative": []
@@ -126,6 +138,21 @@
             "chartify._core.chart.Chart"
         ]
     },
+    "tests.test_plots.TestHistogram": {
+        "True Positives": [
+            "chartify._core.plot.PlotNumericDensityXY"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_options_config": {
+        "True Positives": [
+            "chartify._core.options",
+            "chartify._core.options.ChartifyOptions"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
     "tests.test_plots.TestHeatmap": {
         "True Positives": [
             "chartify._core.plot.PlotCategoricalXY"
@@ -135,43 +162,23 @@
         ],
         "False Negative": []
     },
-    "tests.test_plots.TestBarLollipopParallel": {
+    "tests.test_plots.TestAxisFormatPrecision": {
         "True Positives": [
-            "chartify._core.plot.PlotMixedTypeXY"
-        ],
-        "False Positives": [
-            "chartify._core.chart.Chart"
-        ],
-        "False Negative": [
             "chartify._core.plot.BasePlot"
-        ]
-    },
-    "tests.test_axes.TestBaseAxes": {
-        "True Positives": [
-            "chartify._core.axes.BaseAxes"
         ],
         "False Positives": [],
         "False Negative": []
     },
-    "tests.test_colors.TestColorPalettes": {
-        "True Positives": [
-            "chartify._core.colors.ColorPalettes",
-            "chartify._core.colors.ColorPalette"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_plots.TestLine": {
-        "True Positives": [
-            "chartify._core.style.Style",
-            "chartify._core.plot.PlotNumericXY"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_chart.TestSecondYChart": {
+    "tests.test_chart.TestChart": {
         "True Positives": [
             "chartify._core.chart.Chart"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_examples": {
+        "True Positives": [
+            "chartify.examples"
         ],
         "False Positives": [],
         "False Negative": []
@@ -183,20 +190,13 @@
         "False Positives": [],
         "False Negative": []
     },
-    "tests.test_color_palettes_config": {
+    "tests.test_plots.TestScatter": {
         "True Positives": [
-            "chartify._core.colors.ColorPalette"
+            "chartify._core.plot.PlotNumericXY"
         ],
-        "False Positives": [],
-        "False Negative": [
-            "chartify._core.colors.ColorPalettes"
-        ]
-    },
-    "tests.test_examples": {
-        "True Positives": [
-            "chartify.examples"
+        "False Positives": [
+            "chartify._core.chart.Chart"
         ],
-        "False Positives": [],
         "False Negative": []
     }
 }

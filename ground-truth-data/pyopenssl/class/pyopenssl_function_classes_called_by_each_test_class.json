@@ -1,0 +1,293 @@
+{
+    "tests.test_crypto.TestX509Ext": [
+        "src.OpenSSL.crypto",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto.X509",
+        "src.OpenSSL.crypto.X509Extension"
+    ],
+    "tests.test_crypto.TestPKey": [
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL.crypto.PKey",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509"
+    ],
+    "tests.test_crypto.TestX509Name": [
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto.X509Name",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509"
+    ],
+    "tests.test_crypto._PKeyInteractionTestsMixin": [
+        "src.OpenSSL.crypto.X509Req",
+        "src.OpenSSL.crypto.NetscapeSPKI",
+        "src.OpenSSL.crypto.PKey",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto.X509"
+    ],
+    "tests.test_crypto.TestX509Req": [
+        "src.OpenSSL.crypto.X509Req",
+        "src.OpenSSL.crypto.PKey",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto.X509Name",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509Extension"
+    ],
+    "tests.test_crypto.TestX509": [
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto.X509Name",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509",
+        "src.OpenSSL.crypto.X509Extension"
+    ],
+    "tests.test_crypto.TestX509Store": [
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509Store",
+        "src.OpenSSL.crypto.X509"
+    ],
+    "tests.test_crypto.TestPKCS12": [
+        "src.OpenSSL.crypto.PKCS12",
+        "src.OpenSSL.crypto.PKey",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509"
+    ],
+    "tests.test_crypto.TestLoadPublicKey": [
+        "src.OpenSSL.crypto.PKey",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL._util"
+    ],
+    "tests.test_crypto.TestFunction": [
+        "src.OpenSSL.crypto.PKey",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509"
+    ],
+    "tests.test_crypto.TestLoadCertificate": [
+        "src.OpenSSL.crypto",
+        "src.OpenSSL._util"
+    ],
+    "tests.test_crypto.TestNetscapeSPKI": [
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto.NetscapeSPKI"
+    ],
+    "tests.test_crypto.TestRevoked": [
+        "src.OpenSSL.crypto.Revoked",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto.CRL"
+    ],
+    "tests.test_crypto.TestCRL": [
+        "src.OpenSSL.crypto.CRL",
+        "src.OpenSSL.crypto.X509StoreContext",
+        "src.OpenSSL.crypto.PKey",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto.X509Name",
+        "src.OpenSSL.crypto.Revoked",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509StoreContextError",
+        "src.OpenSSL.crypto.X509Store",
+        "src.OpenSSL.crypto.X509"
+    ],
+    "tests.test_crypto.TestX509StoreContext": [
+        "src.OpenSSL.crypto.X509StoreContext",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto.X509Name",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509StoreContextError",
+        "src.OpenSSL.crypto.X509Store",
+        "src.OpenSSL.crypto.X509"
+    ],
+    "tests.test_crypto.TestSignVerify": [
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509"
+    ],
+    "tests.test_crypto.TestEllipticCurve": [
+        "src.OpenSSL.crypto._EllipticCurve",
+        "src.OpenSSL.crypto"
+    ],
+    "tests.util.EqualityTestsMixin": [
+        "src.OpenSSL.crypto._EllipticCurve",
+        "src.OpenSSL.crypto"
+    ],
+    "tests.test_crypto.TestEllipticCurveHash": [
+        "src.OpenSSL.crypto._EllipticCurve",
+        "src.OpenSSL.crypto"
+    ],
+    "tests.test_rand.TestRand": [
+        "src.OpenSSL.rand"
+    ],
+    "tests.test_ssl.TestVersion": [
+        "src.OpenSSL.SSL"
+    ],
+    "tests.test_ssl.TestContext": [
+        "src.OpenSSL.crypto._EllipticCurve",
+        "src.OpenSSL.SSL.Connection",
+        "src.OpenSSL.crypto.PKey",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL._util",
+        "src.OpenSSL.SSL",
+        "src.OpenSSL.crypto.X509Name",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto.X509Extension",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509",
+        "src.OpenSSL.SSL._VerifyHelper",
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL._CallbackExceptionHelper"
+    ],
+    "tests.test_ssl.TestServerNameCallback": [
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL.Connection",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509"
+    ],
+    "tests.test_ssl.TestApplicationLayerProtoNegotiation": [
+        "src.OpenSSL.SSL.Connection",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.SSL._ALPNSelectHelper",
+        "src.OpenSSL.crypto.X509",
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL._CallbackExceptionHelper"
+    ],
+    "tests.test_ssl.TestContextConnection": [
+        "src.OpenSSL.SSL.Connection",
+        "src.OpenSSL.crypto.PKey",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509",
+        "src.OpenSSL.SSL.Context"
+    ],
+    "tests.test_ssl.TestConnection": [
+        "src.OpenSSL.SSL.Connection",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL.SSL",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto.PKey",
+        "src.OpenSSL.crypto.X509Name",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.SSL._CallbackExceptionHelper",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509",
+        "src.OpenSSL.SSL._VerifyHelper",
+        "src.OpenSSL.crypto.X509Store",
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.crypto.X509Extension"
+    ],
+    "tests.test_ssl.TestConnectionGetCipherList": [
+        "src.OpenSSL.SSL.Connection",
+        "src.OpenSSL._util",
+        "src.OpenSSL.SSL.Context"
+    ],
+    "tests.test_ssl.TestConnectionSend": [
+        "src.OpenSSL.SSL.Connection",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL.SSL",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509",
+        "src.OpenSSL.SSL.Context"
+    ],
+    "tests.test_ssl.TestConnectionRecvInto": [
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL.Connection",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL.SSL",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509"
+    ],
+    "tests.test_ssl.TestConnectionSendall": [
+        "src.OpenSSL.SSL.Connection",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL.SSL",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509",
+        "src.OpenSSL.SSL.Context"
+    ],
+    "tests.test_ssl.TestConnectionRenegotiate": [
+        "src.OpenSSL.SSL.Connection",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL.SSL",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509",
+        "src.OpenSSL.SSL.Context"
+    ],
+    "tests.test_ssl.TestMemoryBIO": [
+        "src.OpenSSL.SSL.Connection",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL.SSL",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto.X509Name",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509",
+        "src.OpenSSL.SSL._VerifyHelper",
+        "src.OpenSSL.crypto.X509Store",
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL._CallbackExceptionHelper"
+    ],
+    "tests.test_ssl.TestRequires": [
+        "src.OpenSSL.SSL"
+    ],
+    "tests.test_ssl.TestOCSP": [
+        "src.OpenSSL.SSL.Connection",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL._util",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.SSL._OCSPServerCallbackHelper",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509",
+        "src.OpenSSL.SSL._OCSPClientCallbackHelper",
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL._CallbackExceptionHelper"
+    ],
+    "tests.test_ssl.TestDTLS": [
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL.Connection",
+        "src.OpenSSL.crypto._PassphraseHelper",
+        "src.OpenSSL._util",
+        "src.OpenSSL.SSL._CookieGenerateCallbackHelper",
+        "src.OpenSSL.crypto._X509NameInvalidator",
+        "src.OpenSSL.crypto",
+        "src.OpenSSL.crypto.X509",
+        "src.OpenSSL.SSL._CookieVerifyCallbackHelper",
+        "src.OpenSSL.SSL._CallbackExceptionHelper"
+    ],
+    "tests.test_util.TestErrors": [
+        "src.OpenSSL._util"
+    ]
+}

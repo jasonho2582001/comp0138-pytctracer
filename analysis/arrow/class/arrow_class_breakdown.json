@@ -1,90 +1,91 @@
 {
-    "tests.test_locales.TestThaiLocale": {
-        "True Positives": [
-            "arrow.locales.ThaiLocale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestMarathiLocale": {
+    "tests.test_locales.TestSwedishLocale": {
         "True Positives": [
             "arrow.locales.Locale"
         ],
         "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestPortugueseLocale": {
-        "True Positives": [
-            "arrow.locales.Locale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestTurkishLocale": {
-        "True Positives": [
-            "arrow.locales.Locale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_arrow.TestArrowUtil": {
-        "True Positives": [
-            "arrow.arrow.Arrow"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestBulgarianLocale": {
-        "True Positives": [],
-        "False Positives": [
-            "arrow.locales.SlavicBaseLocale"
-        ],
         "False Negative": [
-            "arrow.locales.Locale"
+            "arrow.locales.SwedishLocale"
         ]
     },
-    "tests.test_locales.TestSamiLocale": {
+    "tests.test_locales.TestAlbanianLocale": {
         "True Positives": [
             "arrow.locales.Locale"
         ],
         "False Positives": [],
-        "False Negative": []
+        "False Negative": [
+            "arrow.locales.AlbanianLocale"
+        ]
     },
-    "tests.test_locales.TestFinnishLocale": {
+    "tests.test_parser.TestTzinfoParser": {
         "True Positives": [
-            "arrow.locales.FinnishLocale"
+            "arrow.parser.TzinfoParser"
         ],
         "False Positives": [],
         "False Negative": []
     },
-    "tests.test_factory.TestNow": {
+    "tests.test_locales.TestSinhalaLocale": {
         "True Positives": [
-            "arrow.factory.ArrowFactory"
+            "arrow.locales.SinhalaLocale"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_arrow.TestArrowComparison": {
+        "True Positives": [
+            "arrow.arrow.Arrow"
         ],
         "False Positives": [],
         "False Negative": []
     },
     "tests.test_locales.TestPolishLocale": {
-        "True Positives": [],
-        "False Positives": [
+        "True Positives": [
             "arrow.locales.SlavicBaseLocale"
         ],
+        "False Positives": [],
         "False Negative": [
-            "arrow.locales.Locale"
+            "arrow.locales.PortugueseLocale"
         ]
     },
-    "tests.test_arrow.TestArrowFalsePositiveDst": {
-        "True Positives": [],
-        "False Positives": [
-            "arrow.arrow.Arrow"
-        ],
-        "False Negative": [
-            "arrow.factory.ArrowFactory"
-        ]
-    },
-    "tests.test_locales.TestSinhalaLocale": {
+    "tests.test_locales.TestChineseTWLocale": {
         "True Positives": [
-            "arrow.locales.SinhalaLocale"
+            "arrow.locales.Locale"
+        ],
+        "False Positives": [],
+        "False Negative": [
+            "arrow.locales.ChineseTWLocale"
+        ]
+    },
+    "tests.test_locales.TestItalianLocale": {
+        "True Positives": [
+            "arrow.locales.ItalianLocale"
+        ],
+        "False Positives": [
+            "arrow.locales.Locale"
+        ],
+        "False Negative": []
+    },
+    "tests.test_locales.TestSwahiliLocale": {
+        "True Positives": [
+            "arrow.locales.Locale"
+        ],
+        "False Positives": [],
+        "False Negative": [
+            "arrow.locales.SwahiliLocale"
+        ]
+    },
+    "tests.test_locales.TestArmenianLocale": {
+        "True Positives": [
+            "arrow.locales.Locale"
+        ],
+        "False Positives": [],
+        "False Negative": [
+            "arrow.locales.ArmenianLocale"
+        ]
+    },
+    "tests.test_locales.TestLuxembourgishLocale": {
+        "True Positives": [
+            "arrow.locales.LuxembourgishLocale"
         ],
         "False Positives": [],
         "False Negative": []
@@ -98,209 +99,18 @@
         ],
         "False Negative": []
     },
-    "tests.test_arrow.TestArrowConversion": {
+    "tests.test_locales.TestFinnishLocale": {
         "True Positives": [
-            "arrow.arrow.Arrow"
+            "arrow.locales.FinnishLocale"
         ],
         "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_parser.TestDateTimeParserMeridians": {
-        "True Positives": [
-            "arrow.parser.DateTimeParser"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_arrow.TestArrowComparison": {
-        "True Positives": [
-            "arrow.arrow.Arrow"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestCustomLocale": {
-        "True Positives": [
+        "False Negative": [
             "arrow.locales.Locale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestSwedishLocale": {
-        "True Positives": [
-            "arrow.locales.Locale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestArmenianLocale": {
-        "True Positives": [
-            "arrow.locales.Locale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_arrow.TestTestArrowInit": {
-        "True Positives": [
-            "arrow.arrow.Arrow"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestCzechLocale": {
-        "True Positives": [
-            "arrow.locales.CzechLocale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestOdiaLocale": {
-        "True Positives": [
-            "arrow.locales.OdiaLocale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestDutchLocale": {
-        "True Positives": [
-            "arrow.locales.Locale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestCroatianLocale": {
-        "True Positives": [
-            "arrow.locales.CroatianLocale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_parser.TestTzinfoParser": {
-        "True Positives": [
-            "arrow.parser.TzinfoParser"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_arrow.TestArrowDatetimeInterface": {
-        "True Positives": [
-            "arrow.arrow.Arrow"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestSwahiliLocale": {
-        "True Positives": [
-            "arrow.locales.Locale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_arrow.TestArrowRange": {
-        "True Positives": [
-            "arrow.arrow.Arrow"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestDanishLocale": {
-        "True Positives": [
-            "arrow.locales.DanishLocale"
-        ],
-        "False Positives": [
-            "arrow.locales.Locale"
-        ],
-        "False Negative": []
-    },
-    "tests.test_arrow.TestArrowIsBetween": {
-        "True Positives": [
-            "arrow.arrow.Arrow"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_arrow.TestArrowReplace": {
-        "True Positives": [
-            "arrow.arrow.Arrow"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestLuxembourgishLocale": {
-        "True Positives": [
-            "arrow.locales.LuxembourgishLocale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestMalteseLocale": {
-        "True Positives": [
-            "arrow.locales.MalteseLocale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestItalianLocale": {
-        "True Positives": [
-            "arrow.locales.ItalianLocale"
-        ],
-        "False Positives": [
-            "arrow.locales.Locale"
-        ],
-        "False Negative": []
-    },
-    "tests.test_arrow.TestArrowHumanizeTestsWithLocale": {
-        "True Positives": [
-            "arrow.arrow.Arrow"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_locales.TestHungarianLocale": {
-        "True Positives": [
-            "arrow.locales.HungarianLocale"
-        ],
-        "False Positives": [],
-        "False Negative": []
+        ]
     },
     "tests.test_locales.TestKoreanLocale": {
         "True Positives": [
             "arrow.locales.KoreanLocale"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_arrow.TestArrowPickling": {
-        "True Positives": [
-            "arrow.arrow.Arrow"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_arrow.TestArrowDehumanize": {
-        "True Positives": [
-            "arrow.arrow.Arrow"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_factory.TestUtcNow": {
-        "True Positives": [
-            "arrow.factory.ArrowFactory"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_parser.TestFuzzInput": {
-        "True Positives": [
-            "arrow.parser.DateTimeParser"
-        ],
-        "False Positives": [],
-        "False Negative": []
-    },
-    "tests.test_parser.TestDateTimeParserSearchDate": {
-        "True Positives": [
-            "arrow.parser.DateTimeParser"
         ],
         "False Positives": [],
         "False Negative": []
@@ -314,25 +124,128 @@
         ],
         "False Negative": []
     },
-    "tests.test_locales.TestMacedonianLocale": {
+    "tests.test_arrow.TestArrowConversion": {
         "True Positives": [
-            "arrow.locales.Locale"
+            "arrow.arrow.Arrow"
         ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_locales.TestThaiLocale": {
+        "True Positives": [
+            "arrow.locales.ThaiLocale"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_arrow.TestArrowRange": {
+        "True Positives": [
+            "arrow.arrow.Arrow"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_locales.TestMalteseLocale": {
+        "True Positives": [
+            "arrow.locales.MalteseLocale"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_locales.TestHungarianLocale": {
+        "True Positives": [
+            "arrow.locales.HungarianLocale"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_factory.TestUtcNow": {
+        "True Positives": [
+            "arrow.factory.ArrowFactory"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_locales.TestBulgarianLocale": {
+        "True Positives": [],
         "False Positives": [
             "arrow.locales.SlavicBaseLocale"
         ],
+        "False Negative": [
+            "arrow.locales.Locale",
+            "arrow.locales.BulgarianLocale"
+        ]
+    },
+    "tests.test_formatter.TestFormatterBuiltinFormats": {
+        "True Positives": [
+            "arrow.formatter.DateTimeFormatter"
+        ],
+        "False Positives": [],
         "False Negative": []
     },
-    "tests.test_locales.TestAlbanianLocale": {
+    "tests.test_parser.TestDateTimeParserMeridians": {
+        "True Positives": [
+            "arrow.parser.DateTimeParser"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_locales.TestDanishLocale": {
+        "True Positives": [
+            "arrow.locales.DanishLocale"
+        ],
+        "False Positives": [
+            "arrow.locales.Locale"
+        ],
+        "False Negative": []
+    },
+    "tests.test_arrow.TestArrowDehumanize": {
+        "True Positives": [
+            "arrow.arrow.Arrow"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_locales.TestOdiaLocale": {
+        "True Positives": [
+            "arrow.locales.OdiaLocale"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_arrow.TestArrowIsBetween": {
+        "True Positives": [
+            "arrow.arrow.Arrow"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_parser.TestFuzzInput": {
+        "True Positives": [
+            "arrow.parser.DateTimeParser"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_locales.TestCustomLocale": {
+        "True Positives": [],
+        "False Positives": [
+            "arrow.locales"
+        ],
+        "False Negative": [
+            "arrow.locales.Locale"
+        ]
+    },
+    "tests.test_locales.TestPortugueseLocale": {
         "True Positives": [
             "arrow.locales.Locale"
         ],
         "False Positives": [],
         "False Negative": []
     },
-    "tests.test_formatter.TestFormatterBuiltinFormats": {
+    "tests.test_arrow.TestTestArrowInit": {
         "True Positives": [
-            "arrow.formatter.DateTimeFormatter"
+            "arrow.arrow.Arrow"
         ],
         "False Positives": [],
         "False Negative": []
@@ -344,11 +257,123 @@
         "False Positives": [],
         "False Negative": []
     },
-    "tests.test_locales.TestChineseTWLocale": {
+    "tests.test_locales.TestMarathiLocale": {
         "True Positives": [
             "arrow.locales.Locale"
         ],
         "False Positives": [],
+        "False Negative": [
+            "arrow.locales.MarathiLocale"
+        ]
+    },
+    "tests.test_locales.TestSamiLocale": {
+        "True Positives": [
+            "arrow.locales.Locale"
+        ],
+        "False Positives": [],
+        "False Negative": [
+            "arrow.locales.SamiLocale"
+        ]
+    },
+    "tests.test_locales.TestCroatianLocale": {
+        "True Positives": [
+            "arrow.locales.CroatianLocale"
+        ],
+        "False Positives": [],
         "False Negative": []
+    },
+    "tests.test_locales.TestDutchLocale": {
+        "True Positives": [
+            "arrow.locales.Locale"
+        ],
+        "False Positives": [],
+        "False Negative": [
+            "arrow.locales.DutchLocale"
+        ]
+    },
+    "tests.test_arrow.TestArrowUtil": {
+        "True Positives": [
+            "arrow.arrow.Arrow"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_arrow.TestArrowReplace": {
+        "True Positives": [
+            "arrow.arrow.Arrow"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_factory.TestNow": {
+        "True Positives": [
+            "arrow.factory.ArrowFactory"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_arrow.TestArrowHumanizeTestsWithLocale": {
+        "True Positives": [
+            "arrow.arrow.Arrow"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_arrow.TestArrowFalsePositiveDst": {
+        "True Positives": [],
+        "False Positives": [
+            "arrow.arrow.Arrow"
+        ],
+        "False Negative": [
+            "arrow.factory.ArrowFactory"
+        ]
+    },
+    "tests.test_locales.TestTurkishLocale": {
+        "True Positives": [
+            "arrow.locales.Locale"
+        ],
+        "False Positives": [],
+        "False Negative": [
+            "arrow.locales.TurkishLocale"
+        ]
+    },
+    "tests.test_locales.TestCzechLocale": {
+        "True Positives": [
+            "arrow.locales.CzechLocale"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_arrow.TestArrowPickling": {
+        "True Positives": [
+            "arrow.arrow.Arrow"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_parser.TestDateTimeParserSearchDate": {
+        "True Positives": [
+            "arrow.parser.DateTimeParser"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_arrow.TestArrowDatetimeInterface": {
+        "True Positives": [
+            "arrow.arrow.Arrow"
+        ],
+        "False Positives": [],
+        "False Negative": []
+    },
+    "tests.test_locales.TestMacedonianLocale": {
+        "True Positives": [
+            "arrow.locales.Locale"
+        ],
+        "False Positives": [
+            "arrow.locales.SlavicBaseLocale"
+        ],
+        "False Negative": [
+            "arrow.locales.MacedonianLocale"
+        ]
     }
 }
