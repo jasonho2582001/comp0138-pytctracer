@@ -98,7 +98,7 @@ def write_functions_called_by_each_test(data: List[Dict[str, str]], output_path:
     with open(output_path, "w") as file:
         json.dump(functions_called_by_each_test_dict, file, indent=4)
 
-pyopenssl_tracing_log_path = "tracing_logs/pyopenssl/pyopenssl_pytest_tracer_logs.csv"
+pyopenssl_tracing_log_path = "tracing-logs/pyopenssl/pyopenssl_pytest_tracer_logs.csv"
 pyopenssl_all_test_class_names_path = "ground-truth-data/pyopenssl/class/pyopenssl_all_test_class_names.txt"
 pyopenssl_all_function_class_names_path = "ground-truth-data/pyopenssl/class/pyopenssl_all_function_class_names.txt"
 pyopenssl_sample_test_class_names_path = "ground-truth-data/pyopenssl/class/pyopenssl_sample_test_class_names.txt"
@@ -109,7 +109,7 @@ pyopenssl_sample_test_names_path = "ground-truth-data/pyopenssl/function/pyopens
 pyopenssl_functions_called_by_each_test_path = "ground-truth-data/pyopenssl/function/pyopenssl_functions_called_by_each_test.json"
 pyopenssl_function_classes_called_by_each_test_class_path = "ground-truth-data/pyopenssl/class/pyopenssl_function_classes_called_by_each_test_class.json"
 
-arrow_tracing_log_path = "tracing_logs/arrow/arrow_pytest_tracer_logs.csv"
+arrow_tracing_log_path = "tracing-logs/arrow/arrow_pytest_tracer_logs.csv"
 arrow_all_test_class_names_path = "ground-truth-data/arrow/class/arrow_all_test_class_names.txt"
 arrow_all_function_class_names_path = "ground-truth-data/arrow/class/arrow_all_function_class_names.txt"
 arrow_sample_test_class_names_path = "ground-truth-data/arrow/class/arrow_sample_test_class_names.txt"
@@ -120,7 +120,7 @@ arrow_sample_test_names_path = "ground-truth-data/arrow/function/arrow_sample_te
 arrow_functions_called_by_each_test_path = "ground-truth-data/arrow/function/arrow_functions_called_by_each_test.json"
 arrow_function_classes_called_by_each_test_class_path = "ground-truth-data/arrow/class/arrow_function_classes_called_by_each_test_class.json"
 
-kedro_tracing_log_path = "tracing_logs/kedro/kedro_pytest_tracer_logs.csv"
+kedro_tracing_log_path = "tracing-logs/kedro/kedro_pytest_tracer_logs.csv"
 kedro_all_test_class_names_path = "ground-truth-data/kedro/class/kedro_all_test_class_names.txt"
 kedro_all_function_class_names_path = "ground-truth-data/kedro/class/kedro_all_function_class_names.txt"
 kedro_sample_test_class_names_path = "ground-truth-data/kedro/class/kedro_sample_test_class_names.txt"
@@ -131,7 +131,7 @@ kedro_sample_test_names_path = "ground-truth-data/kedro/function/kedro_sample_te
 kedro_functions_called_by_each_test_path = "ground-truth-data/kedro/function/kedro_functions_called_by_each_test.json"
 kedro_function_classes_called_by_each_test_class_path = "ground-truth-data/kedro/class/kedro_function_classes_called_by_each_test_class.json"
 
-chartify_tracing_log_path = "tracing_logs/chartify/chartify_pytest_tracer_logs.csv"
+chartify_tracing_log_path = "tracing-logs/chartify/chartify_pytest_tracer_logs.csv"
 chartify_all_test_class_names_path = "ground-truth-data/chartify/class/chartify_all_test_class_names.txt"
 chartify_all_function_class_names_path = "ground-truth-data/chartify/class/chartify_all_function_class_names.txt"
 chartify_sample_test_class_names_path = "ground-truth-data/chartify/class/chartify_sample_test_class_names.txt"

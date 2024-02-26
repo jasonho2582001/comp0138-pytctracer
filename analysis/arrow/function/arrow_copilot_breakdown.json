@@ -50,9 +50,7 @@
     },
     "tests.test_arrow.TestArrowRange.test_naive_tz": {
         "False Negative": [],
-        "False Positives": [
-            "arrow.arrow.Arrow.tzinfo"
-        ],
+        "False Positives": [],
         "True Positives": [
             "arrow.arrow.Arrow.range"
         ]
@@ -116,9 +114,7 @@
         "False Negative": [
             "arrow.arrow.Arrow.fromdatetime"
         ],
-        "False Positives": [
-            "arrow.parser.DateTimeParser.__init__"
-        ],
+        "False Positives": [],
         "True Positives": [
             "arrow.factory.ArrowFactory.get"
         ]
@@ -160,11 +156,11 @@
     },
     "tests.test_locales.TestEsperantoLocale.test_ordinal_number": {
         "False Negative": [
-            "arrow.locales.EsperantoLocale._ordinal_number"
+            "arrow.locales.Locale.ordinal_number"
         ],
         "False Positives": [],
         "True Positives": [
-            "arrow.locales.Locale.ordinal_number"
+            "arrow.locales.EsperantoLocale._ordinal_number"
         ]
     },
     "tests.test_locales.TestFinnishLocale.test_format_relative_future": {
@@ -176,11 +172,11 @@
     },
     "tests.test_locales.TestFrenchLocale.test_ordinal_number": {
         "False Negative": [
-            "arrow.locales.FrenchBaseLocale._ordinal_number"
+            "arrow.locales.Locale.ordinal_number"
         ],
         "False Positives": [],
         "True Positives": [
-            "arrow.locales.Locale.ordinal_number"
+            "arrow.locales.FrenchBaseLocale._ordinal_number"
         ]
     },
     "tests.test_locales.TestHindiLocale.test_format_relative_now": {
@@ -198,13 +194,10 @@
         ]
     },
     "tests.test_locales.TestLuxembourgishLocale.test_weekday": {
-        "False Negative": [
-            "arrow.locales.Locale.day_abbreviation"
-        ],
-        "False Positives": [
-            "arrow.arrow.Arrow.isoweekday"
-        ],
+        "False Negative": [],
+        "False Positives": [],
         "True Positives": [
+            "arrow.locales.Locale.day_abbreviation",
             "arrow.locales.Locale.day_name"
         ]
     },
@@ -289,13 +282,11 @@
         ]
     },
     "tests.test_parser.TestDateTimeParserMonthOrdinalDay.test_italian": {
-        "False Negative": [
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
             "arrow.parser.DateTimeParser.parse"
-        ],
-        "False Positives": [
-            "arrow.parser.DateTimeParser.__init__"
-        ],
-        "True Positives": []
+        ]
     },
     "tests.test_parser.TestDateTimeParserParse.test_parse_timestamp": {
         "False Negative": [

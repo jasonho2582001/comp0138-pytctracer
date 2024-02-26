@@ -14,13 +14,11 @@
         ]
     },
     "tests.test_crypto.TestEllipticCurveHash": {
-        "False Negative": [
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
             "src.OpenSSL.crypto._EllipticCurve"
-        ],
-        "False Positives": [
-            "src.OpenSSL.crypto"
-        ],
-        "True Positives": []
+        ]
     },
     "tests.test_crypto.TestNetscapeSPKI": {
         "False Negative": [],
@@ -59,9 +57,7 @@
     },
     "tests.test_crypto.TestX509Ext": {
         "False Negative": [],
-        "False Positives": [
-            "src.OpenSSL.crypto.X509"
-        ],
+        "False Positives": [],
         "True Positives": [
             "src.OpenSSL.crypto.X509Extension"
         ]
@@ -96,19 +92,22 @@
     },
     "tests.test_crypto._PKeyInteractionTestsMixin": {
         "False Negative": [],
-        "False Positives": [],
+        "False Positives": [
+            "src.OpenSSL.crypto.PKey",
+            "src.OpenSSL.crypto.X509",
+            "src.OpenSSL.crypto.X509Req"
+        ],
         "True Positives": [
             "src.OpenSSL.crypto.NetscapeSPKI"
         ]
     },
     "tests.test_ssl.TestApplicationLayerProtoNegotiation": {
-        "False Negative": [
-            "src.OpenSSL.SSL.Context",
-            "src.OpenSSL.SSL._ALPNSelectHelper"
-        ],
+        "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection"
+            "src.OpenSSL.SSL.Connection",
+            "src.OpenSSL.SSL.Context",
+            "src.OpenSSL.SSL._ALPNSelectHelper"
         ]
     },
     "tests.test_ssl.TestConnection": {
@@ -134,7 +133,9 @@
     },
     "tests.test_ssl.TestConnectionRenegotiate": {
         "False Negative": [],
-        "False Positives": [],
+        "False Positives": [
+            "src.OpenSSL.SSL.Context"
+        ],
         "True Positives": [
             "src.OpenSSL.SSL.Connection"
         ]
@@ -171,30 +172,31 @@
     "tests.test_ssl.TestMemoryBIO": {
         "False Negative": [],
         "False Positives": [
-            "src.OpenSSL.crypto"
+            "src.OpenSSL.SSL.Context"
         ],
         "True Positives": [
             "src.OpenSSL.SSL.Connection"
         ]
     },
     "tests.test_ssl.TestOCSP": {
-        "False Negative": [],
+        "False Negative": [
+            "src.OpenSSL.SSL._OCSPClientCallbackHelper",
+            "src.OpenSSL.SSL._OCSPServerCallbackHelper"
+        ],
         "False Positives": [
             "src.OpenSSL.SSL.Context"
         ],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection",
-            "src.OpenSSL.SSL._OCSPClientCallbackHelper",
-            "src.OpenSSL.SSL._OCSPServerCallbackHelper"
+            "src.OpenSSL.SSL.Connection"
         ]
     },
     "tests.test_ssl.TestServerNameCallback": {
-        "False Negative": [
-            "src.OpenSSL.SSL.Context"
-        ],
+        "False Negative": [],
         "False Positives": [
             "src.OpenSSL.SSL.Connection"
         ],
-        "True Positives": []
+        "True Positives": [
+            "src.OpenSSL.SSL.Context"
+        ]
     }
 }

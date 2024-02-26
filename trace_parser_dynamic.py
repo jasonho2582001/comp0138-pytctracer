@@ -495,19 +495,22 @@ def print_predicted_links(predicted_links: Dict[str, Set[str]], evaluation_dict,
     
     print("="*50 + "\n")
 
-def write_breakdown_dict_to_json(breakdown_dict: Dict[str, Dict[str, str]], file_path: str) -> None:
+def write_breakdown_dict_to_json(breakdown_dict: Dict[str, Dict[str, str]], file_path: str, sort_keys: bool = True) -> None:
     with open(file_path, "w") as file:
-        json.dump(breakdown_dict, file, indent=4)
+        json.dump(breakdown_dict, file, indent=4, sort_keys=sort_keys)
 
-def load_ground_truth(ground_truth_path: str) -> Dict[str, Set[str]]:
-    with open(ground_truth_path, "r") as file:
+def load_link_json(link_path: str) -> Dict[str, Set[str]]:
+    with open(link_path, "r") as file:
         ground_truth_temp = json.load(file)
 
     return {test_name: set(links) for test_name, links in ground_truth_temp.items()}
 
-def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_path: str, breakdown_output_path: str) -> None:
+
+def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_path: str, breakdown_output_path: str, copilot_prediction_path: str, copilot_breakdown_output_path: str) -> None:
     # PARSE DATA
-    ground_truth_dict = load_ground_truth(ground_truth_path)
+    ground_truth_dict = load_link_json(ground_truth_path)
+    copilot_prediction_dict = load_link_json(copilot_prediction_path)
+
     columns, data = read_csv_log(file_path)
     function_names_tuple, test_names_tuple = extract_function_and_test_names_tuple(data)
     fully_qualified_function_names = set(fully_qualified_function_name for fully_qualified_function_name, _ in function_names_tuple)
@@ -563,6 +566,8 @@ def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_pa
     evaluation_dict_for_tfidf, _  = calculate_evalution_measures(predicted_links_for_tfidf, ground_truth_dict)
     evaluation_dict_for_average, breakdown_dict = calculate_evalution_measures(predicted_links_for_average, ground_truth_dict)
 
+    evaluation_dict_for_copilot, copilot_breakdown_dict = calculate_evalution_measures(copilot_prediction_dict, ground_truth_dict)
+
     combined_evaluation_dict["Naming Conventions"] = evaluation_dict_for_naming_convention
     combined_evaluation_dict["Naming Conventions - Contains"] = evaluation_dict_for_naming_convention_contains
     combined_evaluation_dict["Longest Common Subsequence - Both"] = evaluation_dict_for_lcsb
@@ -572,6 +577,7 @@ def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_pa
     combined_evaluation_dict["Tarantula"] = evaluation_dict_for_tarauntula
     combined_evaluation_dict["TF-IDF"] = evaluation_dict_for_tfidf
     combined_evaluation_dict["Simple Average"] = evaluation_dict_for_average
+    combined_evaluation_dict["Copilot"] = evaluation_dict_for_copilot
 
     # OUTPUT
     # print_predicted_links(predicted_links_for_naming_convention, evaluation_dict_for_naming_convention, "Predicted Links for Naming Convention")
@@ -581,11 +587,13 @@ def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_pa
     print_combined_evaluation_results(combined_evaluation_dict, "Evaluation Metrics")
     write_evaluation_dict_to_csv(combined_evaluation_dict, analysis_log_output_path)
     write_breakdown_dict_to_json(breakdown_dict, breakdown_output_path)
+    write_breakdown_dict_to_json(copilot_breakdown_dict, copilot_breakdown_output_path)
     # write_breakdown_dict_to_json(t, "k.json")
     # write_breakdown_dict_to_json(a, "a.json")
 
-def analyse_trace_class_level(file_path: str, ground_truth_path: str, analysis_log_output_path: str, breakdown_output_path: str, ground_truth_function_class_path: str, ground_truth_test_class_path: str) -> None:
-    ground_truth_dict = load_ground_truth(ground_truth_path)
+def analyse_trace_class_level(file_path: str, ground_truth_path: str, analysis_log_output_path: str, breakdown_output_path: str, ground_truth_function_class_path: str, ground_truth_test_class_path: str, copilot_prediction_path: str, copilot_breakdown_output_path: str) -> None:
+    ground_truth_dict = load_link_json(ground_truth_path)
+    copilot_prediction_dict = load_link_json(copilot_prediction_path)
     columns, data = read_csv_log(file_path)
     ground_truth_function_class_names, ground_truth_test_class_names = extract_ground_truth_class_names(ground_truth_function_class_path, ground_truth_test_class_path)
     
@@ -643,6 +651,7 @@ def analyse_trace_class_level(file_path: str, ground_truth_path: str, analysis_l
     evaluation_dict_for_tarauntula, _  = calculate_evalution_measures(predicted_links_for_tarantula, ground_truth_dict)
     evaluation_dict_for_tfidf, _  = calculate_evalution_measures(predicted_links_for_tfidf, ground_truth_dict)
     evaluation_dict_for_average, breakdown_dict = calculate_evalution_measures(predicted_links_for_average, ground_truth_dict)
+    evaluation_dict_for_copilot, copilot_breakdown_dict = calculate_evalution_measures(copilot_prediction_dict, ground_truth_dict)
 
     combined_evaluation_dict["Naming Conventions"] = evaluation_dict_for_naming_convention
     combined_evaluation_dict["Naming Conventions - Contains"] = evaluation_dict_for_naming_convention_contains
@@ -653,6 +662,7 @@ def analyse_trace_class_level(file_path: str, ground_truth_path: str, analysis_l
     combined_evaluation_dict["Tarantula"] = evaluation_dict_for_tarauntula
     combined_evaluation_dict["TF-IDF"] = evaluation_dict_for_tfidf
     combined_evaluation_dict["Simple Average"] = evaluation_dict_for_average
+    combined_evaluation_dict["Copilot"] = evaluation_dict_for_copilot
 
     # OUTPUT
     # print_predicted_links(predicted_links_for_naming_convention, evaluation_dict_for_naming_convention, "Predicted Links for Naming Convention")
@@ -662,58 +672,76 @@ def analyse_trace_class_level(file_path: str, ground_truth_path: str, analysis_l
     print_combined_evaluation_results(combined_evaluation_dict, "Evaluation Metrics")
     write_evaluation_dict_to_csv(combined_evaluation_dict, analysis_log_output_path)
     write_breakdown_dict_to_json(breakdown_dict, breakdown_output_path)
+    write_breakdown_dict_to_json(copilot_breakdown_dict, copilot_breakdown_output_path)
 
-kedro_tracer_logs_path = "tracing_logs/kedro/kedro_pytest_tracer_logs.csv"
+kedro_tracer_logs_path = "tracing-logs/kedro/kedro_pytest_tracer_logs.csv"
 kedro_ground_truth_path = "ground-truth-data/kedro/function/kedro_ground_truth.json"
 kedro_analysis_path = "analysis/kedro/function/kedro_predictions_results.csv"
 kedro_breakdown_path = "analysis/kedro/function/kedro_breakdown.json"
+kedro_copilot_function_breakdown_path = "analysis/kedro/function/kedro_copilot_breakdown.json"
+kedro_copilot_class_breakdown_path = "analysis/kedro/class/kedro_copilot_class_breakdown.json"
 
 kedro_ground_truth_class_path = "ground-truth-data/kedro/class/kedro_ground_truth_classes.json"
 kedro_class_level_analysis_path = "analysis/kedro/class/kedro_class_predictions_results.csv"
 kedro_class_level_breakdown_path = "analysis/kedro/class/kedro_class_breakdown.json"
 kedro_ground_truth_function_class_path = "ground-truth-data/kedro/class/kedro_all_function_class_names.txt"
 kedro_ground_truth_test_class_path = "ground-truth-data/kedro/class/kedro_all_test_class_names.txt"
+kedro_copilot_function_prediction_path = "copilot-predictions/kedro/function/kedro_copilot_function_predictions.json"
+kedro_copilot_class_prediction_path = "copilot-predictions/kedro/class/kedro_copilot_class_predictions.json"
 
-arrow_tracer_logs_path = "tracing_logs/arrow/arrow_pytest_tracer_logs.csv"
+arrow_tracer_logs_path = "tracing-logs/arrow/arrow_pytest_tracer_logs.csv"
 arrow_ground_truth_path = "ground-truth-data/arrow/function/arrow_ground_truth.json"
 arrow_analysis_path = "analysis/arrow/function/arrow_predictions_results.csv"
 arrow_breakdown_path = "analysis/arrow/function/arrow_breakdown.json"
+arrow_copilot_function_breakdown_path = "analysis/arrow/function/arrow_copilot_breakdown.json"
+arrow_copilot_class_breakdown_path = "analysis/arrow/class/arrow_copilot_class_breakdown.json"
 
 arrow_ground_truth_class_path = "ground-truth-data/arrow/class/arrow_ground_truth_classes.json"
 arrow_class_level_analysis_path = "analysis/arrow/class/arrow_predictions_class_results.csv"
 arrow_class_level_breakdown_path = "analysis/arrow/class/arrow_class_breakdown.json"
 arrow_ground_truth_function_class_path = "ground-truth-data/arrow/class/arrow_all_function_class_names.txt"
 arrow_ground_truth_test_class_path = "ground-truth-data/arrow/class/arrow_all_test_class_names.txt"
+arrow_copilot_function_prediction_path = "copilot-predictions/arrow/function/arrow_copilot_function_predictions.json"
+arrow_copilot_class_prediction_path = "copilot-predictions/arrow/class/arrow_copilot_class_predictions.json"
 
-pyopenssl_tracer_logs_path = "tracing_logs/pyopenssl/pyopenssl_pytest_tracer_logs.csv"
+
+pyopenssl_tracer_logs_path = "tracing-logs/pyopenssl/pyopenssl_pytest_tracer_logs.csv"
 pyopenssl_ground_truth_path = "ground-truth-data/pyopenssl/function/pyopenssl_ground_truth.json"
 pyopenssl_analysis_path = "analysis/pyopenssl/function/pyopenssl_predictions_results.csv"
 pyopenssl_breakdown_path = "analysis/pyopenssl/function/pyopenssl_breakdown.json"
+pyopenssl_copilot_function_breakdown_path = "analysis/pyopenssl/function/pyopenssl_copilot_breakdown.json"
+pyopenssl_copilot_class_breakdown_path = "analysis/pyopenssl/class/pyopenssl_copilot_class_breakdown.json"
 
 pyopenssl_ground_truth_class_path = "ground-truth-data/pyopenssl/class/pyopenssl_ground_truth_classes.json"
 pyopenssl_class_level_analysis_path = "analysis/pyopenssl/class/pyopenssl_predictions_class_results.csv"
 pyopenssl_class_level_breakdown_path = "analysis/pyopenssl/class/pyopenssl_class_breakdown.json"
 pyopenssl_ground_truth_function_class_path = "ground-truth-data/pyopenssl/class/pyopenssl_all_function_class_names.txt"
 pyopenssl_ground_truth_test_class_path = "ground-truth-data/pyopenssl/class/pyopenssl_all_test_class_names.txt"
+pyopenssl_copilot_function_prediction_path = "copilot-predictions/pyopenssl/function/pyopenssl_copilot_function_predictions.json"
+pyopenssl_copilot_class_prediction_path = "copilot-predictions/pyopenssl/class/pyopenssl_copilot_class_predictions.json"
 
-chartify_tracer_logs_path = "tracing_logs/chartify/chartify_pytest_tracer_logs.csv"
+chartify_tracer_logs_path = "tracing-logs/chartify/chartify_pytest_tracer_logs.csv"
 chartify_ground_truth_path = "ground-truth-data/chartify/function/chartify_ground_truth.json"
 chartify_analysis_path = "analysis/chartify/function/chartify_predictions_results.csv"
 chartify_breakdown_path = "analysis/chartify/function/chartify_breakdown.json"
+chartify_copilot_function_breakdown_path = "analysis/chartify/function/chartify_copilot_breakdown.json"
+chartify_copilot_class_breakdown_path = "analysis/chartify/class/chartify_copilot_class_breakdown.json"
 
 chartify_ground_truth_class_path = "ground-truth-data/chartify/class/chartify_ground_truth_classes.json"
 chartify_class_level_analysis_path = "analysis/chartify/class/chartify_predictions_class_results.csv"
 chartify_class_level_breakdown_path = "analysis/chartify/class/chartify_class_breakdown.json"
 chartify_ground_truth_function_class_path = "ground-truth-data/chartify/class/chartify_all_function_class_names.txt"
 chartify_ground_truth_test_class_path = "ground-truth-data/chartify/class/chartify_all_test_class_names.txt"
+chartify_copilot_function_prediction_path = "copilot-predictions/chartify/function/chartify_copilot_function_predictions.json"
+chartify_copilot_class_prediction_path = "copilot-predictions/chartify/class/chartify_copilot_class_predictions.json"
 
 if __name__ == "__main__":
-    # analyse_trace_class_level(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_class_path, pyopenssl_class_level_analysis_path, pyopenssl_class_level_breakdown_path, pyopenssl_ground_truth_function_class_path, pyopenssl_ground_truth_test_class_path)
-    # analyse_trace_class_level(arrow_tracer_logs_path, arrow_ground_truth_class_path, arrow_class_level_analysis_path, arrow_class_level_breakdown_path, arrow_ground_truth_function_class_path, arrow_ground_truth_test_class_path)
-    # analyse_trace_class_level(kedro_tracer_logs_path, kedro_ground_truth_class_path, kedro_class_level_analysis_path, kedro_class_level_breakdown_path, kedro_ground_truth_function_class_path, kedro_ground_truth_test_class_path)
-    # analyse_trace_class_level(chartify_tracer_logs_path, chartify_ground_truth_class_path, chartify_class_level_analysis_path, chartify_class_level_breakdown_path, chartify_ground_truth_function_class_path, chartify_ground_truth_test_class_path)
-    # analyse_trace(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_path, pyopenssl_analysis_path, pyopenssl_breakdown_path)
-    analyse_trace(arrow_tracer_logs_path, arrow_ground_truth_path, arrow_analysis_path, arrow_breakdown_path)
-    # analyse_trace(kedro_tracer_logs_path, kedro_ground_truth_path, kedro_analysis_path, kedro_breakdown_path)
-    # analyse_trace(chartify_tracer_logs_path, chartify_ground_truth_path, chartify_analysis_path, chartify_breakdown_path)
+    # analyse_trace_class_level(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_class_path, pyopenssl_class_level_analysis_path, pyopenssl_class_level_breakdown_path, pyopenssl_ground_truth_function_class_path, pyopenssl_ground_truth_test_class_path, pyopenssl_copilot_class_prediction_path, pyopenssl_copilot_class_breakdown_path)
+    # analyse_trace_class_level(arrow_tracer_logs_path, arrow_ground_truth_class_path, arrow_class_level_analysis_path, arrow_class_level_breakdown_path, arrow_ground_truth_function_class_path, arrow_ground_truth_test_class_path, arrow_copilot_class_prediction_path, arrow_copilot_class_breakdown_path)
+    analyse_trace_class_level(kedro_tracer_logs_path, kedro_ground_truth_class_path, kedro_class_level_analysis_path, kedro_class_level_breakdown_path, kedro_ground_truth_function_class_path, kedro_ground_truth_test_class_path, kedro_copilot_class_prediction_path, kedro_copilot_class_breakdown_path)
+    # analyse_trace_class_level(chartify_tracer_logs_path, chartify_ground_truth_class_path, chartify_class_level_analysis_path, chartify_class_level_breakdown_path, chartify_ground_truth_function_class_path, chartify_ground_truth_test_class_path, chartify_copilot_class_prediction_path, chartify_copilot_class_breakdown_path)
+    # analyse_trace(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_path, pyopenssl_analysis_path, pyopenssl_breakdown_path, pyopenssl_copilot_function_prediction_path, pyopenssl_copilot_function_breakdown_path)
+    # analyse_trace(arrow_tracer_logs_path, arrow_ground_truth_path, arrow_analysis_path, arrow_breakdown_path, arrow_copilot_function_prediction_path, arrow_copilot_function_breakdown_path)
+    # analyse_trace(kedro_tracer_logs_path, kedro_ground_truth_path, kedro_analysis_path, kedro_breakdown_path, kedro_copilot_function_prediction_path, kedro_copilot_function_breakdown_path)
+    # analyse_trace(chartify_tracer_logs_path, chartify_ground_truth_path, chartify_analysis_path, chartify_breakdown_path, chartify_copilot_function_prediction_path, chartify_copilot_function_breakdown_path)
     
