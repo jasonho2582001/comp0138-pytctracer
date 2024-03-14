@@ -145,5 +145,8 @@
     ],
     "tests.test_arrow.TestArrowFalsePositiveDst": [
         "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowSpan": [
+        "arrow.arrow.Arrow"
     ]
 }

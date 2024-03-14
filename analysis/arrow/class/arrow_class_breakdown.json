@@ -71,6 +71,15 @@
             "arrow.arrow.Arrow"
         ]
     },
+    "tests.test_arrow.TestArrowSpan": {
+        "False Negative": [
+            "arrow.util"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.arrow.Arrow"
+        ]
+    },
     "tests.test_arrow.TestArrowUtil": {
         "False Negative": [],
         "False Positives": [],
@@ -259,9 +268,7 @@
     },
     "tests.test_locales.TestNorwegianLocale": {
         "False Negative": [],
-        "False Positives": [
-            "arrow.locales.Locale"
-        ],
+        "False Positives": [],
         "True Positives": [
             "arrow.locales.NorwegianLocale"
         ]
@@ -283,7 +290,9 @@
         ]
     },
     "tests.test_locales.TestPortugueseLocale": {
-        "False Negative": [],
+        "False Negative": [
+            "arrow.locales.PortugueseLocale"
+        ],
         "False Positives": [],
         "True Positives": [
             "arrow.locales.Locale"

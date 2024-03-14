@@ -103,8 +103,8 @@
     },
     "tests.test_ssl.TestApplicationLayerProtoNegotiation": {
         "False Negative": [
-            "src.OpenSSL.SSL.Context",
-            "src.OpenSSL.SSL._ALPNSelectHelper"
+            "src.OpenSSL.SSL._ALPNSelectHelper",
+            "src.OpenSSL.SSL.Context"
         ],
         "False Positives": [],
         "True Positives": [
@@ -179,9 +179,7 @@
     },
     "tests.test_ssl.TestOCSP": {
         "False Negative": [],
-        "False Positives": [
-            "src.OpenSSL.SSL.Context"
-        ],
+        "False Positives": [],
         "True Positives": [
             "src.OpenSSL.SSL.Connection",
             "src.OpenSSL.SSL._OCSPClientCallbackHelper",

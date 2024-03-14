@@ -41,8 +41,8 @@
             "src.OpenSSL.crypto.PKey.__init__"
         ],
         "True Positives": [
-            "src.OpenSSL.crypto.PKey.bits",
             "src.OpenSSL.crypto.PKey.type",
+            "src.OpenSSL.crypto.PKey.bits",
             "src.OpenSSL.crypto.PKey.check"
         ]
     },
@@ -157,8 +157,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.crypto.X509Store.load_locations",
-            "src.OpenSSL.crypto.X509StoreContext.verify_certificate"
+            "src.OpenSSL.crypto.X509StoreContext.verify_certificate",
+            "src.OpenSSL.crypto.X509Store.load_locations"
         ]
     },
     "tests.test_ssl.TestConnection.test_connect_wrong_args": {
@@ -260,16 +260,16 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Context.use_certificate",
-            "src.OpenSSL.SSL.Connection.use_certificate"
+            "src.OpenSSL.SSL.Connection.use_certificate",
+            "src.OpenSSL.SSL.Context.use_certificate"
         ]
     },
     "tests.test_ssl.TestDTLS.test_timeout": {
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection.DTLSv1_get_timeout",
-            "src.OpenSSL.SSL.Connection.DTLSv1_handle_timeout"
+            "src.OpenSSL.SSL.Connection.DTLSv1_handle_timeout",
+            "src.OpenSSL.SSL.Connection.DTLSv1_get_timeout"
         ]
     },
     "tests.test_ssl.TestMemoryBIO.test_socket_overrides_memory": {
@@ -277,16 +277,16 @@
         "False Positives": [],
         "True Positives": [
             "src.OpenSSL.SSL.Connection.bio_shutdown",
-            "src.OpenSSL.SSL.Connection.bio_write",
-            "src.OpenSSL.SSL.Connection.bio_read"
+            "src.OpenSSL.SSL.Connection.bio_read",
+            "src.OpenSSL.SSL.Connection.bio_write"
         ]
     },
     "tests.test_ssl.TestServerNameCallback.test_no_servername": {
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection.get_servername",
-            "src.OpenSSL.SSL.Context.set_tlsext_servername_callback"
+            "src.OpenSSL.SSL.Context.set_tlsext_servername_callback",
+            "src.OpenSSL.SSL.Connection.get_servername"
         ]
     },
     "tests.test_util.TestErrors.test_exception_from_error_queue_nonexistent_reason": {

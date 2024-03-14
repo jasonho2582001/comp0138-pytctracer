@@ -5,8 +5,8 @@
         ],
         "False Positives": [
             "kedro.config.omegaconf_config.OmegaConfigLoader.load_and_merge_dir_config",
-            "kedro.config.omegaconf_config.OmegaConfigLoader._register_runtime_params_resolver",
-            "kedro.config.omegaconf_config.OmegaConfigLoader._resolve_environment_variables"
+            "kedro.config.omegaconf_config.OmegaConfigLoader._resolve_environment_variables",
+            "kedro.config.omegaconf_config.OmegaConfigLoader._register_runtime_params_resolver"
         ],
         "True Positives": []
     },
@@ -24,12 +24,12 @@
     "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_globals_default_none": {
         "False Negative": [],
         "False Positives": [
-            "kedro.config.omegaconf_config.OmegaConfigLoader._get_globals_value",
-            "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
-            "kedro.config.omegaconf_config.OmegaConfigLoader.load_and_merge_dir_config"
+            "kedro.config.omegaconf_config.OmegaConfigLoader.load_and_merge_dir_config",
+            "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
         ],
         "True Positives": [
-            "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+            "kedro.config.omegaconf_config.OmegaConfigLoader.__init__",
+            "kedro.config.omegaconf_config.OmegaConfigLoader._get_globals_value"
         ]
     },
     "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_path_traversal": {
@@ -48,27 +48,27 @@
     },
     "tests.framework.cli.test_starters.TestFlagsNotAllowed.test_directory_flag_with_starter_alias": {
         "False Negative": [
-            "kedro.framework.cli.utils._update_verbose_flag",
-            "kedro.framework.cli.utils.KedroCliError.show"
+            "kedro.framework.cli.utils.KedroCliError.show",
+            "kedro.framework.cli.utils._update_verbose_flag"
         ],
         "False Positives": [],
         "True Positives": [
-            "kedro.framework.cli.starters._validate_flag_inputs",
-            "kedro.framework.cli.starters.new"
+            "kedro.framework.cli.starters.new",
+            "kedro.framework.cli.starters._validate_flag_inputs"
         ]
     },
     "tests.framework.cli.test_starters.TestNewFromConfigFileValid.test_no_prompts": {
         "False Negative": [],
         "False Positives": [
+            "kedro.framework.cli.starters._get_cookiecutter_dir",
+            "kedro.framework.cli.starters._validate_selected_tools",
+            "kedro.framework.cli.starters._fetch_validate_parse_config_from_file",
+            "kedro.framework.cli.starters._get_prompts_required_and_clear_from_CLI_provided",
+            "kedro.framework.cli.starters._get_extra_context",
             "kedro.framework.cli.starters._make_cookiecutter_args_and_fetch_template",
             "kedro.framework.cli.starters._convert_tool_numbers_to_readable_names",
             "kedro.framework.cli.starters._convert_tool_short_names_to_numbers",
-            "kedro.framework.cli.starters._fetch_validate_parse_config_from_file",
-            "kedro.framework.cli.starters._get_extra_context",
-            "kedro.framework.cli.starters._get_prompts_required_and_clear_from_CLI_provided",
             "kedro.framework.cli.starters._create_project",
-            "kedro.framework.cli.starters._get_cookiecutter_dir",
-            "kedro.framework.cli.starters._validate_selected_tools",
             "kedro.framework.cli.starters._parse_tools_input"
         ],
         "True Positives": [
@@ -83,8 +83,8 @@
         "False Positives": [],
         "True Positives": [
             "kedro.framework.cli.starters._fetch_validate_parse_config_from_user_prompts",
-            "kedro.framework.cli.starters.new",
-            "kedro.framework.cli.starters._Prompt.validate"
+            "kedro.framework.cli.starters._Prompt.validate",
+            "kedro.framework.cli.starters.new"
         ]
     },
     "tests.framework.cli.test_starters.TestParseToolsInput.test_parse_tools_invalid_selection": {
@@ -111,10 +111,10 @@
         "False Negative": [],
         "False Positives": [
             "kedro.pipeline.pipeline.Pipeline.__init__",
+            "kedro.pipeline.pipeline.Pipeline.__add__",
             "kedro.pipeline.pipeline.Pipeline.__radd__",
             "kedro.framework.project.__init__._create_pipeline",
-            "kedro.pipeline.node.Node.__init__",
-            "kedro.pipeline.pipeline.Pipeline.__add__"
+            "kedro.pipeline.node.Node.__init__"
         ],
         "True Positives": [
             "kedro.framework.project.__init__.find_pipelines"
@@ -123,9 +123,9 @@
     "tests.framework.session.test_session.TestKedroSession.test_default_store": {
         "False Negative": [],
         "False Positives": [
-            "kedro.framework.session.store.BaseSessionStore.read",
+            "kedro.framework.session.session.KedroSession._init_store",
             "kedro.framework.session.store.BaseSessionStore.save",
-            "kedro.framework.session.session.KedroSession._init_store"
+            "kedro.framework.session.store.BaseSessionStore.read"
         ],
         "True Positives": [
             "kedro.framework.session.session.KedroSession.store"
@@ -136,10 +136,10 @@
             "kedro.framework.session.session.KedroSession._get_config_loader"
         ],
         "False Positives": [
-            "kedro.framework.session.session.KedroSession.load_context",
+            "kedro.framework.context.context.KedroContext._get_catalog",
             "kedro.io.data_catalog.DataCatalog.from_config",
-            "kedro.io.data_catalog.DataCatalog.__init__",
-            "kedro.framework.context.context.KedroContext._get_catalog"
+            "kedro.framework.session.session.KedroSession.load_context",
+            "kedro.io.data_catalog.DataCatalog.__init__"
         ],
         "True Positives": [
             "kedro.framework.context.context.KedroContext.catalog"
@@ -158,8 +158,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "kedro.framework.startup._get_project_metadata",
-            "kedro.framework.startup._version_mismatch_error"
+            "kedro.framework.startup._version_mismatch_error",
+            "kedro.framework.startup._get_project_metadata"
         ]
     },
     "tests.framework.test_startup.TestGetProjectMetadata.test_source_dir_specified_in_toml": {
@@ -182,16 +182,16 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "kedro.io.data_catalog.DataCatalog.exists",
-            "kedro.io.core.AbstractVersionedDataset.exists"
+            "kedro.io.core.AbstractVersionedDataset.exists",
+            "kedro.io.data_catalog.DataCatalog.exists"
         ]
     },
     "tests.io.test_data_catalog.TestDataCatalog.test_feed_dict": {
         "False Negative": [],
         "False Positives": [
-            "kedro.io.memory_dataset.MemoryDataset._save",
             "kedro.io.data_catalog.DataCatalog.add",
-            "kedro.io.memory_dataset.MemoryDataset._load"
+            "kedro.io.memory_dataset.MemoryDataset._load",
+            "kedro.io.memory_dataset.MemoryDataset._save"
         ],
         "True Positives": [
             "kedro.io.data_catalog.DataCatalog.add_feed_dict",
@@ -202,12 +202,12 @@
         "False Negative": [],
         "False Positives": [
             "kedro.io.data_catalog.DataCatalog.__init__",
-            "kedro.io.data_catalog._resolve_credentials",
-            "kedro.io.core.AbstractVersionedDataset.__init__"
+            "kedro.io.core.AbstractVersionedDataset.__init__",
+            "kedro.io.data_catalog._resolve_credentials"
         ],
         "True Positives": [
-            "kedro.io.data_catalog.DataCatalog.from_config",
-            "kedro.io.core.AbstractDataset.from_config"
+            "kedro.io.core.AbstractDataset.from_config",
+            "kedro.io.data_catalog.DataCatalog.from_config"
         ]
     },
     "tests.io.test_lambda_dataset.TestLambdaDatasetExists.test_exists_raises_error": {
@@ -216,8 +216,8 @@
             "kedro.io.lambda_dataset.LambdaDataset.__init__"
         ],
         "True Positives": [
-            "kedro.io.lambda_dataset.LambdaDataset._exists",
-            "kedro.io.core.AbstractDataset.exists"
+            "kedro.io.core.AbstractDataset.exists",
+            "kedro.io.lambda_dataset.LambdaDataset._exists"
         ]
     },
     "tests.ipython.test_ipython.TestLoadKedroObjects.test_ipython_lazy_load_pipeline": {
@@ -227,8 +227,8 @@
             "kedro.framework.project.__init__._ProjectPipelines.configure"
         ],
         "True Positives": [
-            "kedro.ipython.__init__.reload_kedro",
-            "kedro.framework.project.__init__._ProjectPipelines._load_data"
+            "kedro.framework.project.__init__._ProjectPipelines._load_data",
+            "kedro.ipython.__init__.reload_kedro"
         ]
     },
     "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_parameters_updated_with_dict": {
@@ -236,13 +236,13 @@
             "kedro.pipeline.pipeline.Pipeline.nodes"
         ],
         "False Positives": [
+            "kedro.pipeline.modular_pipeline._validate_inputs_outputs",
             "kedro.pipeline.pipeline.Pipeline.__init__",
-            "kedro.pipeline.modular_pipeline._get_dataset_names_mapping",
-            "kedro.pipeline.node.Node.__init__",
-            "kedro.pipeline.modular_pipeline._get_param_names_mapping",
             "kedro.pipeline.modular_pipeline._is_all_parameters",
+            "kedro.pipeline.modular_pipeline._get_param_names_mapping",
             "kedro.pipeline.modular_pipeline._is_single_parameter",
-            "kedro.pipeline.modular_pipeline._validate_inputs_outputs"
+            "kedro.pipeline.modular_pipeline._get_dataset_names_mapping",
+            "kedro.pipeline.node.Node.__init__"
         ],
         "True Positives": [
             "kedro.pipeline.modular_pipeline.pipeline",
@@ -262,9 +262,9 @@
             "kedro.pipeline.node.Node.__init__"
         ],
         "True Positives": [
-            "kedro.pipeline.node.node",
+            "kedro.pipeline.node.Node.tags",
             "kedro.pipeline.node.Node.tag",
-            "kedro.pipeline.node.Node.tags"
+            "kedro.pipeline.node.node"
         ]
     },
     "tests.pipeline.test_node_run.TestNodeRunInvalidOutput.test_node_not_list_output": {
@@ -272,8 +272,8 @@
             "kedro.pipeline.node.node"
         ],
         "False Positives": [
-            "kedro.pipeline.node.Node._run_with_one_input",
-            "kedro.pipeline.node.Node._outputs_to_dictionary"
+            "kedro.pipeline.node.Node._outputs_to_dictionary",
+            "kedro.pipeline.node.Node._run_with_one_input"
         ],
         "True Positives": [
             "kedro.pipeline.node.Node.run"
@@ -309,8 +309,8 @@
             "kedro.pipeline.pipeline.Pipeline.__init__"
         ],
         "True Positives": [
-            "kedro.pipeline.pipeline.Pipeline.all_inputs",
             "kedro.pipeline.pipeline.Pipeline.all_outputs",
+            "kedro.pipeline.pipeline.Pipeline.all_inputs",
             "kedro.pipeline.pipeline.Pipeline.describe"
         ]
     },
@@ -346,9 +346,9 @@
         ],
         "True Positives": [
             "kedro.pipeline.pipeline.Pipeline._transcode_compatible_names",
+            "kedro.pipeline.pipeline.Pipeline.from_inputs",
             "kedro.pipeline.pipeline._validate_transcoded_inputs_outputs",
-            "kedro.pipeline.pipeline.Pipeline._get_nodes_with_inputs_transcode_compatible",
-            "kedro.pipeline.pipeline.Pipeline.from_inputs"
+            "kedro.pipeline.pipeline.Pipeline._get_nodes_with_inputs_transcode_compatible"
         ]
     },
     "tests.runner.test_parallel_runner.TestRunNodeSynchronisationHelper.test_package_name_and_logging_provided": {
@@ -366,14 +366,14 @@
             "kedro.runner.runner.AbstractRunner.run"
         ],
         "False Positives": [
-            "kedro.runner.parallel_runner.ParallelRunner._validate_nodes",
-            "kedro.runner.parallel_runner.ParallelRunner.__init__",
             "kedro.runner.parallel_runner.ParallelRunner._validate_catalog",
-            "kedro.runner.parallel_runner.ParallelRunner._set_manager_datasets"
+            "kedro.runner.parallel_runner.ParallelRunner.__init__",
+            "kedro.runner.parallel_runner.ParallelRunner._set_manager_datasets",
+            "kedro.runner.parallel_runner.ParallelRunner._validate_nodes"
         ],
         "True Positives": [
-            "kedro.framework.hooks.manager._create_hook_manager",
-            "kedro.runner.parallel_runner.ParallelRunner._run"
+            "kedro.runner.parallel_runner.ParallelRunner._run",
+            "kedro.framework.hooks.manager._create_hook_manager"
         ]
     }
 }

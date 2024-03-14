@@ -67,8 +67,8 @@
     "tests.test_colors_config": {
         "False Negative": [],
         "False Positives": [
-            "chartify._core.colour",
-            "chartify._core.options"
+            "chartify._core.options",
+            "chartify._core.colour"
         ],
         "True Positives": [
             "chartify._core.colors"

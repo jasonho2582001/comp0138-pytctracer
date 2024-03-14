@@ -1,6 +1,6 @@
 {
     "tests.test_arrow.TestArrowDehumanize": ["arrow.arrow.Arrow"],
-    "tests.test_locales.TestPortugueseLocale": ["arrow.locales.Locale"],
+    "tests.test_locales.TestPortugueseLocale": ["arrow.locales.Locale", "arrow.locales.PortugueseLocale"],
     "tests.test_arrow.TestArrowIsBetween": ["arrow.arrow.Arrow"],
     "tests.test_arrow.TestTestArrowInit": ["arrow.arrow.Arrow"],
     "tests.test_arrow.TestArrowComparison": ["arrow.arrow.Arrow"],
@@ -46,5 +46,6 @@
     "tests.test_locales.TestLuxembourgishLocale": ["arrow.locales.LuxembourgishLocale"],
     "tests.test_parser.TestDateTimeParserSearchDate": ["arrow.parser.DateTimeParser"],
     "tests.test_locales.TestSwahiliLocale": ["arrow.locales.Locale", "arrow.locales.SwahiliLocale"],
-    "tests.test_arrow.TestArrowFalsePositiveDst": ["arrow.factory.ArrowFactory"]
+    "tests.test_arrow.TestArrowFalsePositiveDst": ["arrow.factory.ArrowFactory"],
+    "tests.test_arrow.TestArrowSpan": ["arrow.util","arrow.arrow.Arrow"]
 }

@@ -4,6 +4,7 @@ from math import log
 import csv
 import json
 import sys
+from sklearn.metrics import precision_recall_curve, auc
 
 csv.field_size_limit(sys.maxsize)
 
@@ -12,7 +13,8 @@ THRESHOLD_FOR_LCSB = 0.65
 THRESHOLD_FOR_LEVENSHTEIN = 0.95
 THRESHOLD_FOR_TARANTULA = 0.95
 THRESHOLD_FOR_TFIDF = 0.9
-THRESHOLD_FOR_AVERAGE = sum(threshold_arr := [THRESHOLD_FOR_LCSU, THRESHOLD_FOR_LCSB, THRESHOLD_FOR_LEVENSHTEIN, THRESHOLD_FOR_TARANTULA, THRESHOLD_FOR_TFIDF])/len(threshold_arr)
+THRESHOLD_FOR_TFIDF_COUNT = 0.90
+THRESHOLD_FOR_AVERAGE = sum(threshold_arr := [THRESHOLD_FOR_LCSU, THRESHOLD_FOR_LCSB, THRESHOLD_FOR_TFIDF_COUNT, THRESHOLD_FOR_LEVENSHTEIN, THRESHOLD_FOR_TARANTULA, THRESHOLD_FOR_TFIDF])/len(threshold_arr)
 DISCOUNT_FACTOR = 0.5
 
 def find_lcs(s1: str, s2: str) -> int:
@@ -94,6 +96,22 @@ def find_function_classes_called_by_each_test_class(data: List[Dict[str, str]], 
     
     return function_classes_called_by_each_test_classes_dict
 
+
+def find_function_classes_called_by_each_test_class_count(data: List[Dict[str, str]], function_class_names: Set[str], test_class_names: Set[str]) -> Dict[str, Dict[str, int]]:
+    function_classes_called_by_each_test_classes_count_dict = defaultdict(lambda: defaultdict(int))
+    current_test = None
+
+    for record in data:
+        if record["Testing Method"] == "TEST METHOD CALL":
+            current_test = record["Fully Qualified Class Name"]
+        elif record["Testing Method"] == "TEST METHOD RETURN":
+            current_test = None
+        elif current_test and current_test in test_class_names and record["Function Type"] == "SOURCE" and record["Fully Qualified Class Name"] and record["Fully Qualified Class Name"] in function_class_names:
+            function_classes_called_by_each_test_classes_count_dict[current_test][record["Fully Qualified Class Name"]] += 1
+    
+    return function_classes_called_by_each_test_classes_count_dict
+
+
 def find_test_classes_that_call_each_function_class(data: List[Dict[str, str]], function_class_names: Set[str], test_class_names: Set[str]) -> Dict[str, Set[str]]:
     test_classes_that_call_each_function_class_dict = defaultdict(set)
     current_test = None
@@ -107,6 +125,7 @@ def find_test_classes_that_call_each_function_class(data: List[Dict[str, str]], 
             test_classes_that_call_each_function_class_dict[record["Fully Qualified Class Name"]].add(current_test)
 
     return test_classes_that_call_each_function_class_dict
+
 
 def find_depths_of_function_classes_called_by_each_test_class(data: List[Dict[str, str]], function_class_names: Set[str], test_class_names: Set[str]) -> Dict[str, Dict[str, int]]:
     # Each function appears once for a test, at the highest depth
@@ -148,6 +167,20 @@ def find_functions_called_by_each_test(data: List[Dict[str, str]]) -> Dict[str, 
             functions_called_by_each_test_dict[current_test].add(record["Fully Qualified Function Name"])
     
     return functions_called_by_each_test_dict
+
+def find_functions_called_by_each_test_count(data: List[Dict[str, str]]) -> Dict[str, Dict[str, int]]:
+    functions_called_by_each_test_dict_count = defaultdict(lambda: defaultdict(int))
+    current_test = None
+
+    for record in data:
+        if record["Testing Method"] == "TEST METHOD CALL":
+            current_test = record["Fully Qualified Function Name"]
+        elif record["Testing Method"] == "TEST METHOD RETURN":
+            current_test = None
+        elif current_test is not None and record["Function Type"] == "SOURCE":
+            functions_called_by_each_test_dict_count[current_test][record["Fully Qualified Function Name"]] += 1
+    
+    return functions_called_by_each_test_dict_count
 
 def find_tests_that_call_each_function(data: List[Dict[str, str]]) -> Dict[str, Set[str]]:
     tests_that_call_each_function_dict = defaultdict(set)
@@ -196,7 +229,7 @@ def naming_conventions(function_names_tuple: Set[Tuple[str, str]], test_names_tu
             else:
                 # assumption that all test functions must begin with test
                 stripped_test_function_name = test_function_name[4:]
-            naming_conventions_dict[test_fully_qualified_name][function_fully_qualified_name] = (1 if function_name == stripped_test_function_name else 0) if function_fully_qualified_name in functions_called_by_test else -1
+            naming_conventions_dict[test_fully_qualified_name][function_fully_qualified_name] = (1 if function_name == stripped_test_function_name else 0) if function_fully_qualified_name in functions_called_by_test else 0
     
     return naming_conventions_dict
 
@@ -211,7 +244,7 @@ def naming_convention_contains(function_names_tuple: Set[Tuple[str, str]], test_
             else:
                 # assumption that all test functions must begin with test
                 stripped_test_function_name = test_function_name[4:]
-            naming_conventions_contains_dict[test_fully_qualified_name][function_fully_qualified_name] = (1 if function_name in stripped_test_function_name else 0) if function_fully_qualified_name in functions_called_by_test else -1
+            naming_conventions_contains_dict[test_fully_qualified_name][function_fully_qualified_name] = (1 if function_name in stripped_test_function_name else 0) if function_fully_qualified_name in functions_called_by_test else 0
     
     return naming_conventions_contains_dict
 
@@ -253,7 +286,7 @@ def longest_common_subsequence_both(function_names_tuple: Set[Tuple[str, str]], 
                 # assumption that all test functions must begin with test
                 stripped_test_function_name = test_function_name[4:]
 
-            lcsb_result = (find_lcs(stripped_test_function_name, function_name))/(max(len(stripped_test_function_name), len(function_name))) if function_fully_qualified_name in functions_called_by_test else -1
+            lcsb_result = (find_lcs(stripped_test_function_name, function_name))/(max(len(stripped_test_function_name), len(function_name))) if function_fully_qualified_name in functions_called_by_test else 0
             lcsb_dict[test_fully_qualified_name][function_fully_qualified_name] = lcsb_result
 
     return normalise_dict(use_call_depth_discounting_dict(lcsb_dict, depths_of_functions_called_by_each_test_dict), functions_called_by_each_test_dict)
@@ -270,7 +303,7 @@ def longest_common_subsequence_unit(function_names_tuple: Set[Tuple[str, str]], 
                 # assumption that all test functions must begin with test
                 stripped_test_function_name = test_function_name[4:]
 
-            lcsu_result = (find_lcs(stripped_test_function_name, function_name))/len(function_name) if function_fully_qualified_name in functions_called_by_test else -1
+            lcsu_result = (find_lcs(stripped_test_function_name, function_name))/len(function_name) if function_fully_qualified_name in functions_called_by_test else 0
             lcsu_dict[test_fully_qualified_name][function_fully_qualified_name] = lcsu_result
 
     return normalise_dict(use_call_depth_discounting_dict(lcsu_dict, depths_of_functions_called_by_each_test_dict), functions_called_by_each_test_dict)
@@ -286,7 +319,7 @@ def levenshtein_distance(function_names_tuple: Set[Tuple[str, str]], test_names_
             else:
                 # assumption that all test functions must begin with test
                 stripped_test_function_name = test_function_name[4:]
-            levenshtein_result = (1 - (find_levenshtein_distance(stripped_test_function_name, function_name))/(max(len(stripped_test_function_name), len(function_name)))) if function_fully_qualified_name in functions_called_by_test else -1
+            levenshtein_result = (1 - (find_levenshtein_distance(stripped_test_function_name, function_name))/(max(len(stripped_test_function_name), len(function_name)))) if function_fully_qualified_name in functions_called_by_test else 0
             levenshtein_dict[test_fully_qualified_name][function_fully_qualified_name] = levenshtein_result
     
     return normalise_dict(use_call_depth_discounting_dict(levenshtein_dict, depths_of_functions_called_by_each_test_dict), functions_called_by_each_test_dict)
@@ -376,6 +409,26 @@ def tfidf(functions_called_by_each_test_dict: Dict[str, Set[str]], tests_that_ca
     
     return normalise_dict(use_call_depth_discounting_dict(tfidf_dict, depths_of_functions_called_by_each_test_dict), functions_called_by_each_test_dict)
 
+
+def tfidf_count(functions_called_by_each_test_count_dict: Dict[str, Dict[str, int]], tests_that_call_each_function_dict: Dict[str, Set[str]], function_names: Set[str], test_names: Set[str], depths_of_functions_called_by_each_test_dict: Dict[str, Dict[str, int]]) -> Dict[str, Dict[str, float]]:
+    number_of_tests = len(test_names)
+    idf_set = {}
+
+    tfidf_dict = {test_name: {function_name: 0 for function_name in function_names} for test_name in test_names}
+
+    for function_name in tests_that_call_each_function_dict:
+        number_of_tests_that_call_function = len(tests_that_call_each_function_dict[function_name])
+        idf_set[function_name] = log(1 + number_of_tests/(number_of_tests_that_call_function))
+    
+    for test_name in functions_called_by_each_test_count_dict:
+        for function_name in functions_called_by_each_test_count_dict[test_name]:
+            number_of_times_function_called = functions_called_by_each_test_count_dict[test_name][function_name]
+            tf = log(1+1/(number_of_times_function_called))
+            tfidf_dict[test_name][function_name] = tf * idf_set[function_name]
+    
+    return normalise_dict(use_call_depth_discounting_dict(tfidf_dict, depths_of_functions_called_by_each_test_dict), functions_called_by_each_test_count_dict)
+
+
 def find_average_score(result_dicts: List[Dict[str, Dict[str, float]]], function_names: Set[str], test_names: Set[str], functions_called_by_each_test_dict: Dict[str, Set[str]]) -> Dict[str, Dict[str, float]]:
     average_score_dict = {test_name: {function_name: 0 for function_name in function_names} for test_name in test_names}
     num_of_result_dicts = len(result_dicts)
@@ -390,24 +443,81 @@ def generate_predicted_links(dict_result: Dict[str, Dict[str, float]], threshold
     if tests_to_create_links_for is None:
         tests_to_create_links_for = set(dict_result.keys())
     
-    predicted_links_dict = {test_name: set() for test_name in tests_to_create_links_for}
+    predicted_links_dict = {test_name: [] for test_name in tests_to_create_links_for}
 
     for fully_qualified_test_name, results_for_test_dict in dict_result.items():
-        for fully_qualified_function_name, score in results_for_test_dict.items():
-            if fully_qualified_test_name in tests_to_create_links_for and score >= threshold:
-                predicted_links_dict[fully_qualified_test_name].add(fully_qualified_function_name)
+        predicted_functions_and_score = []
+        if fully_qualified_test_name in tests_to_create_links_for:
+            for fully_qualified_function_name, score in results_for_test_dict.items():
+                if score >= threshold:
+                    predicted_functions_and_score.append((fully_qualified_function_name, score))
+            predicted_functions_and_score.sort(key=lambda x: x[1], reverse=True)
+            predicted_functions_for_test = [function_name for function_name, _ in predicted_functions_and_score]
+            predicted_links_dict[fully_qualified_test_name] = predicted_functions_for_test
     
     return predicted_links_dict
 
-def calculate_evalution_measures(predicted_links: Dict[str, Set[str]], ground_truth_links: Dict[str, Set[str]]) -> Tuple[Dict[str, float], Dict[str, Dict[str, str]]]:
+def calculate_auc(dict_result: Dict[str, Dict[str, float]], ground_truth_links: Dict[str, List[str]]) -> float:
+    ground_truth_labels = []
+    predicted_labels = []
+
+    for test in ground_truth_links.keys():
+        ground_truth_set = set(ground_truth_links[test])
+        for function in dict_result[test]:
+            ground_truth_labels.append(1 if function in ground_truth_set else 0)
+            predicted_labels.append(dict_result[test][function])
+
+    precision, recall, _ = precision_recall_curve(ground_truth_labels, predicted_labels)
+
+    auc_score = 100 * auc(recall, precision)
+
+    return auc_score
+
+def calculate_map(predicted_links: Dict[str, List[str]], ground_truth_links: Dict[str, List[str]]) -> float:
+    # Initialize total AP
+    total_ap = 0
+
+    # For each test
+    for test in ground_truth_links.keys():
+        # Get the true links for this test
+        true_links = set(ground_truth_links[test])
+
+        # Get the predicted links for this test
+        predicted_links_for_test = predicted_links[test]
+
+        # Initialize count of true links and sum of precisions
+        count_true_links = 0
+        sum_precisions = 0
+
+        # For each link in the predicted links
+        for i, link in enumerate(predicted_links_for_test):
+            # If this link is a true link
+            if link in true_links:
+                # Increment count of true links
+                count_true_links += 1
+
+                # Calculate precision at this rank and add to sum of precisions
+                precision = count_true_links / (i + 1)
+                sum_precisions += precision
+
+        # Calculate AP for this test and add to total AP
+        ap = sum_precisions / len(true_links)
+        total_ap += ap
+
+    # Calculate MAP
+    map_score = 100 * total_ap / len(ground_truth_links)
+
+    return map_score
+
+def calculate_evalution_measures(predicted_links: Dict[str, List[str]], ground_truth_links: Dict[str, List[str]], result_dict: Optional[Dict[str, Dict[str, float]]] = None) -> Tuple[Dict[str, float], Dict[str, Dict[str, str]]]:
     breakdown_dict = defaultdict(dict)
     found_true_positives = 0
     found_false_positives = 0
     found_false_negatives = 0
     total_true_links = 0
     for fully_qualified_test_name in predicted_links:
-        predicted_links_for_test = predicted_links[fully_qualified_test_name]
-        ground_truth_links_for_test = ground_truth_links[fully_qualified_test_name]
+        predicted_links_for_test = set(predicted_links[fully_qualified_test_name])
+        ground_truth_links_for_test = set(ground_truth_links[fully_qualified_test_name])
         true_positive_set = predicted_links_for_test.intersection(ground_truth_links_for_test)
         false_positive_set = predicted_links_for_test - ground_truth_links_for_test
         false_negatives_set = ground_truth_links_for_test - predicted_links_for_test
@@ -437,11 +547,19 @@ def calculate_evalution_measures(predicted_links: Dict[str, Set[str]], ground_tr
 
     evaluation_dict["F1"] = f1
 
+    evaluation_dict["MAP"] = calculate_map(predicted_links, ground_truth_links)
+
+    if result_dict:
+        evaluation_dict["AUC"] = calculate_auc(result_dict, ground_truth_links)
+    else:
+        evaluation_dict["AUC"] = "-"
+
     evaluation_dict["True Positives"] = found_true_positives
 
     evaluation_dict["False Positives"] = found_false_positives
 
     evaluation_dict["False Negatives"] = found_false_negatives
+
 
     return evaluation_dict, breakdown_dict
     
@@ -455,7 +573,7 @@ def write_evaluation_dict_to_csv(combined_evaluation_dict: Dict[str, Dict[str, f
         for technique, evaluation_dict in combined_evaluation_dict.items():
             row = {"Technique": technique}
             for metric, score in evaluation_dict.items():
-                row[metric] = score if isinstance(score, int) else round(score, 3)
+                row[metric] = score if not isinstance(score, float) else round(score, 1)
             csv_writer.writerow(row)
 
 def print_combined_evaluation_results(combined_evaluation_dict: Dict[str, Dict[str, float]], title: str) -> None:
@@ -463,7 +581,10 @@ def print_combined_evaluation_results(combined_evaluation_dict: Dict[str, Dict[s
     for technique, evaluation_dict in combined_evaluation_dict.items():
         print(f"{'='*5} {technique} {'='*5}")
         for metric, score in evaluation_dict.items():
-            print(f"{metric}: {score:.5f}")
+            if isinstance(score, float):
+                print(f"{metric}: {score:.5f}")
+            else:
+                print(f"{metric}: {score}")
         print("\n")
     print("="*50 + "\n\n")
 
@@ -499,11 +620,11 @@ def write_breakdown_dict_to_json(breakdown_dict: Dict[str, Dict[str, str]], file
     with open(file_path, "w") as file:
         json.dump(breakdown_dict, file, indent=4, sort_keys=sort_keys)
 
-def load_link_json(link_path: str) -> Dict[str, Set[str]]:
+def load_link_json(link_path: str) -> Dict[str, List[str]]:
     with open(link_path, "r") as file:
-        ground_truth_temp = json.load(file)
+        link_dict = json.load(file)
 
-    return {test_name: set(links) for test_name, links in ground_truth_temp.items()}
+    return link_dict
 
 
 def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_path: str, breakdown_output_path: str, copilot_prediction_path: str, copilot_breakdown_output_path: str) -> None:
@@ -516,6 +637,7 @@ def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_pa
     fully_qualified_function_names = set(fully_qualified_function_name for fully_qualified_function_name, _ in function_names_tuple)
     fully_qualified_test_names = set(fully_qualified_test_name for fully_qualified_test_name, _ in test_names_tuple)
     functions_called_by_each_test_dict = find_functions_called_by_each_test(data)
+    functions_called_by_each_test_count_dict = find_functions_called_by_each_test_count(data)
     tests_that_call_each_function_dict = find_tests_that_call_each_function(data)
     tests_to_create_links_for = set(ground_truth_dict.keys())
     depths_of_functions_called_by_each_test_dict = find_depths_of_functions_called_by_each_test(data)
@@ -529,8 +651,9 @@ def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_pa
     lcba_dict = last_call_before_assert(data, fully_qualified_function_names, fully_qualified_test_names)
     tarantula_dict = tarantula(functions_called_by_each_test_dict, tests_that_call_each_function_dict, fully_qualified_function_names, fully_qualified_test_names, depths_of_functions_called_by_each_test_dict)
     tfidf_dict = tfidf(functions_called_by_each_test_dict, tests_that_call_each_function_dict, fully_qualified_function_names, fully_qualified_test_names, depths_of_functions_called_by_each_test_dict)
+    tfidf_count_dict = tfidf_count(functions_called_by_each_test_count_dict, tests_that_call_each_function_dict, fully_qualified_function_names, fully_qualified_test_names, depths_of_functions_called_by_each_test_dict)
 
-    result_dicts = [naming_conventions_dict, naming_convention_contains_dict, lcsb_dict, lcsu_dict, levenshtein_dict, lcba_dict, tarantula_dict, tfidf_dict]
+    result_dicts = [naming_conventions_dict, naming_convention_contains_dict, lcsb_dict, lcsu_dict, levenshtein_dict, lcba_dict, tarantula_dict, tfidf_dict, tfidf_count_dict]
     average_dict = find_average_score(result_dicts, fully_qualified_function_names, fully_qualified_test_names, functions_called_by_each_test_dict)
 
     # print_dict_results(naming_conventions_dict, "Results for Naming Convention", 10)
@@ -554,17 +677,19 @@ def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_pa
     predicted_links_for_lcba = generate_predicted_links(lcba_dict, 1, tests_to_create_links_for)
     predicted_links_for_tarantula = generate_predicted_links(tarantula_dict, THRESHOLD_FOR_TARANTULA, tests_to_create_links_for)
     predicted_links_for_tfidf = generate_predicted_links(tfidf_dict, THRESHOLD_FOR_TFIDF, tests_to_create_links_for)
+    predicted_links_for_tfidf_count = generate_predicted_links(tfidf_count_dict, THRESHOLD_FOR_TFIDF_COUNT, tests_to_create_links_for)
     predicted_links_for_average = generate_predicted_links(average_dict, THRESHOLD_FOR_AVERAGE, tests_to_create_links_for)
 
     evaluation_dict_for_naming_convention, _ = calculate_evalution_measures(predicted_links_for_naming_convention, ground_truth_dict)
     evaluation_dict_for_naming_convention_contains, _  = calculate_evalution_measures(predicted_links_for_naming_convention_contains, ground_truth_dict)
-    evaluation_dict_for_lcsb, t  = calculate_evalution_measures(predicted_links_for_lcsb, ground_truth_dict)
-    evaluation_dict_for_lcsu, a  = calculate_evalution_measures(predicted_links_for_lcsu, ground_truth_dict)
-    evaluation_dict_for_levenshtein, _  = calculate_evalution_measures(predicted_links_for_levenshtein, ground_truth_dict)
+    evaluation_dict_for_lcsb, t  = calculate_evalution_measures(predicted_links_for_lcsb, ground_truth_dict, lcsb_dict)
+    evaluation_dict_for_lcsu, a  = calculate_evalution_measures(predicted_links_for_lcsu, ground_truth_dict, lcsu_dict)
+    evaluation_dict_for_levenshtein, _  = calculate_evalution_measures(predicted_links_for_levenshtein, ground_truth_dict, levenshtein_dict)
     evaluation_dict_for_lcba, _  = calculate_evalution_measures(predicted_links_for_lcba, ground_truth_dict)
-    evaluation_dict_for_tarauntula, _  = calculate_evalution_measures(predicted_links_for_tarantula, ground_truth_dict)
-    evaluation_dict_for_tfidf, _  = calculate_evalution_measures(predicted_links_for_tfidf, ground_truth_dict)
-    evaluation_dict_for_average, breakdown_dict = calculate_evalution_measures(predicted_links_for_average, ground_truth_dict)
+    evaluation_dict_for_tarauntula, _  = calculate_evalution_measures(predicted_links_for_tarantula, ground_truth_dict, tarantula_dict)
+    evaluation_dict_for_tfidf, _  = calculate_evalution_measures(predicted_links_for_tfidf, ground_truth_dict, tfidf_dict)
+    evaluation_dict_for_tfidf_count, _ = calculate_evalution_measures(predicted_links_for_tfidf_count, ground_truth_dict, tfidf_count_dict)
+    evaluation_dict_for_average, breakdown_dict = calculate_evalution_measures(predicted_links_for_average, ground_truth_dict, average_dict)
 
     evaluation_dict_for_copilot, copilot_breakdown_dict = calculate_evalution_measures(copilot_prediction_dict, ground_truth_dict)
 
@@ -576,6 +701,7 @@ def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_pa
     combined_evaluation_dict["Last Call Before Assert"] = evaluation_dict_for_lcba
     combined_evaluation_dict["Tarantula"] = evaluation_dict_for_tarauntula
     combined_evaluation_dict["TF-IDF"] = evaluation_dict_for_tfidf
+    combined_evaluation_dict["TF-IDF (Multiset)"] = evaluation_dict_for_tfidf_count
     combined_evaluation_dict["Simple Average"] = evaluation_dict_for_average
     combined_evaluation_dict["Copilot"] = evaluation_dict_for_copilot
 
@@ -601,6 +727,7 @@ def analyse_trace_class_level(file_path: str, ground_truth_path: str, analysis_l
     fully_qualified_function_names = set(fully_qualified_function_name for fully_qualified_function_name, _ in function_names_tuple)
     fully_qualified_test_names = set(fully_qualified_test_name for fully_qualified_test_name, _ in test_names_tuple)
     functions_called_by_each_test_dict = find_function_classes_called_by_each_test_class(data, ground_truth_function_class_names, ground_truth_test_class_names)
+    functions_called_by_each_test_count_dict = find_function_classes_called_by_each_test_class_count(data, ground_truth_function_class_names, ground_truth_test_class_names)
     tests_that_call_each_function_dict = find_test_classes_that_call_each_function_class(data, ground_truth_function_class_names, ground_truth_test_class_names)
     tests_to_create_links_for = set(ground_truth_dict.keys())
     depths_of_functions_called_by_each_test_dict = find_depths_of_function_classes_called_by_each_test_class(data, ground_truth_function_class_names, ground_truth_test_class_names)
@@ -615,8 +742,8 @@ def analyse_trace_class_level(file_path: str, ground_truth_path: str, analysis_l
     lcba_dict = last_call_before_assert_class(data, fully_qualified_function_names, fully_qualified_test_names)
     tarantula_dict = tarantula(functions_called_by_each_test_dict, tests_that_call_each_function_dict, fully_qualified_function_names, fully_qualified_test_names, depths_of_functions_called_by_each_test_dict)
     tfidf_dict = tfidf(functions_called_by_each_test_dict, tests_that_call_each_function_dict, fully_qualified_function_names, fully_qualified_test_names, depths_of_functions_called_by_each_test_dict)
-
-    result_dicts = [naming_conventions_dict, naming_convention_contains_dict, lcsb_dict, lcsu_dict, levenshtein_dict, lcba_dict, tarantula_dict, tfidf_dict]
+    tfidf_count_dict = tfidf_count(functions_called_by_each_test_count_dict, tests_that_call_each_function_dict, fully_qualified_function_names, fully_qualified_test_names, depths_of_functions_called_by_each_test_dict)
+    result_dicts = [naming_conventions_dict, naming_convention_contains_dict, lcsb_dict, lcsu_dict, levenshtein_dict, lcba_dict, tarantula_dict, tfidf_dict, tfidf_count_dict]
     average_dict = find_average_score(result_dicts, fully_qualified_function_names, fully_qualified_test_names, functions_called_by_each_test_dict)
 
     # print_dict_results(naming_conventions_dict, "Results for Naming Convention", 10)
@@ -640,17 +767,19 @@ def analyse_trace_class_level(file_path: str, ground_truth_path: str, analysis_l
     predicted_links_for_lcba = generate_predicted_links(lcba_dict, 1, tests_to_create_links_for)
     predicted_links_for_tarantula = generate_predicted_links(tarantula_dict, THRESHOLD_FOR_TARANTULA, tests_to_create_links_for)
     predicted_links_for_tfidf = generate_predicted_links(tfidf_dict, THRESHOLD_FOR_TFIDF, tests_to_create_links_for)
+    predicted_links_for_tfidf_count = generate_predicted_links(tfidf_count_dict, THRESHOLD_FOR_TFIDF_COUNT, tests_to_create_links_for)
     predicted_links_for_average = generate_predicted_links(average_dict, THRESHOLD_FOR_AVERAGE, tests_to_create_links_for)
 
     evaluation_dict_for_naming_convention, _ = calculate_evalution_measures(predicted_links_for_naming_convention, ground_truth_dict)
     evaluation_dict_for_naming_convention_contains, _  = calculate_evalution_measures(predicted_links_for_naming_convention_contains, ground_truth_dict)
-    evaluation_dict_for_lcsb, _ = calculate_evalution_measures(predicted_links_for_lcsb, ground_truth_dict)
-    evaluation_dict_for_lcsu, _  = calculate_evalution_measures(predicted_links_for_lcsu, ground_truth_dict)
-    evaluation_dict_for_levenshtein, _  = calculate_evalution_measures(predicted_links_for_levenshtein, ground_truth_dict)
+    evaluation_dict_for_lcsb, _ = calculate_evalution_measures(predicted_links_for_lcsb, ground_truth_dict, lcsb_dict)
+    evaluation_dict_for_lcsu, _  = calculate_evalution_measures(predicted_links_for_lcsu, ground_truth_dict, lcsu_dict)
+    evaluation_dict_for_levenshtein, _  = calculate_evalution_measures(predicted_links_for_levenshtein, ground_truth_dict, levenshtein_dict)
     evaluation_dict_for_lcba, _  = calculate_evalution_measures(predicted_links_for_lcba, ground_truth_dict)
-    evaluation_dict_for_tarauntula, _  = calculate_evalution_measures(predicted_links_for_tarantula, ground_truth_dict)
-    evaluation_dict_for_tfidf, _  = calculate_evalution_measures(predicted_links_for_tfidf, ground_truth_dict)
-    evaluation_dict_for_average, breakdown_dict = calculate_evalution_measures(predicted_links_for_average, ground_truth_dict)
+    evaluation_dict_for_tarauntula, _  = calculate_evalution_measures(predicted_links_for_tarantula, ground_truth_dict, tarantula_dict)
+    evaluation_dict_for_tfidf, _  = calculate_evalution_measures(predicted_links_for_tfidf, ground_truth_dict, tfidf_dict)
+    evaluation_dict_for_tfidf_count, _  = calculate_evalution_measures(predicted_links_for_tfidf_count, ground_truth_dict, tfidf_count_dict)
+    evaluation_dict_for_average, breakdown_dict = calculate_evalution_measures(predicted_links_for_average, ground_truth_dict, average_dict)
     evaluation_dict_for_copilot, copilot_breakdown_dict = calculate_evalution_measures(copilot_prediction_dict, ground_truth_dict)
 
     combined_evaluation_dict["Naming Conventions"] = evaluation_dict_for_naming_convention
@@ -661,6 +790,7 @@ def analyse_trace_class_level(file_path: str, ground_truth_path: str, analysis_l
     combined_evaluation_dict["Last Call Before Assert"] = evaluation_dict_for_lcba
     combined_evaluation_dict["Tarantula"] = evaluation_dict_for_tarauntula
     combined_evaluation_dict["TF-IDF"] = evaluation_dict_for_tfidf
+    combined_evaluation_dict["TF-IDF (Multiset)"] = evaluation_dict_for_tfidf_count
     combined_evaluation_dict["Simple Average"] = evaluation_dict_for_average
     combined_evaluation_dict["Copilot"] = evaluation_dict_for_copilot
 
@@ -736,12 +866,13 @@ chartify_copilot_function_prediction_path = "copilot-predictions/chartify/functi
 chartify_copilot_class_prediction_path = "copilot-predictions/chartify/class/chartify_copilot_class_predictions.json"
 
 if __name__ == "__main__":
-    # analyse_trace_class_level(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_class_path, pyopenssl_class_level_analysis_path, pyopenssl_class_level_breakdown_path, pyopenssl_ground_truth_function_class_path, pyopenssl_ground_truth_test_class_path, pyopenssl_copilot_class_prediction_path, pyopenssl_copilot_class_breakdown_path)
-    # analyse_trace_class_level(arrow_tracer_logs_path, arrow_ground_truth_class_path, arrow_class_level_analysis_path, arrow_class_level_breakdown_path, arrow_ground_truth_function_class_path, arrow_ground_truth_test_class_path, arrow_copilot_class_prediction_path, arrow_copilot_class_breakdown_path)
-    analyse_trace_class_level(kedro_tracer_logs_path, kedro_ground_truth_class_path, kedro_class_level_analysis_path, kedro_class_level_breakdown_path, kedro_ground_truth_function_class_path, kedro_ground_truth_test_class_path, kedro_copilot_class_prediction_path, kedro_copilot_class_breakdown_path)
-    # analyse_trace_class_level(chartify_tracer_logs_path, chartify_ground_truth_class_path, chartify_class_level_analysis_path, chartify_class_level_breakdown_path, chartify_ground_truth_function_class_path, chartify_ground_truth_test_class_path, chartify_copilot_class_prediction_path, chartify_copilot_class_breakdown_path)
-    # analyse_trace(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_path, pyopenssl_analysis_path, pyopenssl_breakdown_path, pyopenssl_copilot_function_prediction_path, pyopenssl_copilot_function_breakdown_path)
-    # analyse_trace(arrow_tracer_logs_path, arrow_ground_truth_path, arrow_analysis_path, arrow_breakdown_path, arrow_copilot_function_prediction_path, arrow_copilot_function_breakdown_path)
-    # analyse_trace(kedro_tracer_logs_path, kedro_ground_truth_path, kedro_analysis_path, kedro_breakdown_path, kedro_copilot_function_prediction_path, kedro_copilot_function_breakdown_path)
-    # analyse_trace(chartify_tracer_logs_path, chartify_ground_truth_path, chartify_analysis_path, chartify_breakdown_path, chartify_copilot_function_prediction_path, chartify_copilot_function_breakdown_path)
+    analyse_trace(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_path, pyopenssl_analysis_path, pyopenssl_breakdown_path, pyopenssl_copilot_function_prediction_path, pyopenssl_copilot_function_breakdown_path)
+    analyse_trace(arrow_tracer_logs_path, arrow_ground_truth_path, arrow_analysis_path, arrow_breakdown_path, arrow_copilot_function_prediction_path, arrow_copilot_function_breakdown_path)
+    analyse_trace(kedro_tracer_logs_path, kedro_ground_truth_path, kedro_analysis_path, kedro_breakdown_path, kedro_copilot_function_prediction_path, kedro_copilot_function_breakdown_path)
+    analyse_trace(chartify_tracer_logs_path, chartify_ground_truth_path, chartify_analysis_path, chartify_breakdown_path, chartify_copilot_function_prediction_path, chartify_copilot_function_breakdown_path)
     
+    analyse_trace_class_level(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_class_path, pyopenssl_class_level_analysis_path, pyopenssl_class_level_breakdown_path, pyopenssl_ground_truth_function_class_path, pyopenssl_ground_truth_test_class_path, pyopenssl_copilot_class_prediction_path, pyopenssl_copilot_class_breakdown_path)
+    analyse_trace_class_level(arrow_tracer_logs_path, arrow_ground_truth_class_path, arrow_class_level_analysis_path, arrow_class_level_breakdown_path, arrow_ground_truth_function_class_path, arrow_ground_truth_test_class_path, arrow_copilot_class_prediction_path, arrow_copilot_class_breakdown_path)
+    analyse_trace_class_level(kedro_tracer_logs_path, kedro_ground_truth_class_path, kedro_class_level_analysis_path, kedro_class_level_breakdown_path, kedro_ground_truth_function_class_path, kedro_ground_truth_test_class_path, kedro_copilot_class_prediction_path, kedro_copilot_class_breakdown_path)
+    analyse_trace_class_level(chartify_tracer_logs_path, chartify_ground_truth_class_path, chartify_class_level_analysis_path, chartify_class_level_breakdown_path, chartify_ground_truth_function_class_path, chartify_ground_truth_test_class_path, chartify_copilot_class_prediction_path, chartify_copilot_class_breakdown_path)
+

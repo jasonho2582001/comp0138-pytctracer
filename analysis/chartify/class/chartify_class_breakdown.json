@@ -26,9 +26,7 @@
         "False Negative": [
             "chartify._core.chart.Chart"
         ],
-        "False Positives": [
-            "chartify.examples"
-        ],
+        "False Positives": [],
         "True Positives": [
             "chartify._core.plot.PlotMixedTypeXY"
         ]
@@ -79,10 +77,11 @@
         ]
     },
     "tests.test_options_config": {
-        "False Negative": [],
+        "False Negative": [
+            "chartify._core.options.ChartifyOptions"
+        ],
         "False Positives": [],
         "True Positives": [
-            "chartify._core.options.ChartifyOptions",
             "chartify._core.options"
         ]
     },
@@ -92,8 +91,8 @@
             "chartify._core.chart.Chart"
         ],
         "True Positives": [
-            "chartify._core.plot.BasePlot",
-            "chartify._core.plot.PlotNumericXY"
+            "chartify._core.plot.PlotNumericXY",
+            "chartify._core.plot.BasePlot"
         ]
     },
     "tests.test_plots.TestAxisFormatPrecision": {
@@ -119,7 +118,8 @@
             "chartify._core.plot.PlotMixedTypeXY"
         ],
         "False Positives": [
-            "chartify._core.chart.Chart"
+            "chartify._core.chart.Chart",
+            "chartify._core.axes.NumericalYAxis"
         ],
         "True Positives": [
             "chartify._core.plot.BasePlot"
@@ -145,9 +145,7 @@
     },
     "tests.test_plots.TestHeatmap": {
         "False Negative": [],
-        "False Positives": [
-            "chartify._core.chart.Chart"
-        ],
+        "False Positives": [],
         "True Positives": [
             "chartify._core.plot.PlotCategoricalXY"
         ]
@@ -167,10 +165,11 @@
         ]
     },
     "tests.test_plots.TestLine": {
-        "False Negative": [],
+        "False Negative": [
+            "chartify._core.style.Style"
+        ],
         "False Positives": [],
         "True Positives": [
-            "chartify._core.style.Style",
             "chartify._core.plot.PlotNumericXY"
         ]
     },
@@ -184,13 +183,13 @@
         ]
     },
     "tests.test_plots.TestText": {
-        "False Negative": [
-            "chartify._core.plot.PlotNumericXY"
-        ],
+        "False Negative": [],
         "False Positives": [
             "chartify._core.chart.Chart"
         ],
-        "True Positives": []
+        "True Positives": [
+            "chartify._core.plot.PlotNumericXY"
+        ]
     },
     "tests.test_style_settings_config": {
         "False Negative": [],

@@ -73,8 +73,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "kedro.framework.session.session.KedroSession",
-            "kedro.framework.hooks.manager"
+            "kedro.framework.hooks.manager",
+            "kedro.framework.session.session.KedroSession"
         ]
     },
     "tests.framework.session.test_store.TestBaseStore": {
@@ -89,6 +89,13 @@
         "False Positives": [],
         "True Positives": [
             "kedro.framework.session.shelvestore.ShelveStore"
+        ]
+    },
+    "tests.io.test_cached_dataset.TestCachedDataset": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.io.cached_dataset.CachedDataset"
         ]
     },
     "tests.io.test_core.TestAbstractVersionedDataset": {
@@ -200,8 +207,8 @@
     "tests.pipeline.test_pipeline_integration.TestTransformPipelineIntegration": {
         "False Negative": [],
         "False Positives": [
-            "kedro.io.data_catalog.DataCatalog",
-            "kedro.runner.sequential_runner.SequentialRunner"
+            "kedro.runner.sequential_runner.SequentialRunner",
+            "kedro.io.data_catalog.DataCatalog"
         ],
         "True Positives": [
             "kedro.runner.runner.AbstractRunner",

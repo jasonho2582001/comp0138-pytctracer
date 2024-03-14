@@ -106,8 +106,8 @@
         "False Positives": [],
         "True Positives": [
             "src.OpenSSL.SSL.Connection",
-            "src.OpenSSL.SSL.Context",
-            "src.OpenSSL.SSL._ALPNSelectHelper"
+            "src.OpenSSL.SSL._ALPNSelectHelper",
+            "src.OpenSSL.SSL.Context"
         ]
     },
     "tests.test_ssl.TestConnection": {

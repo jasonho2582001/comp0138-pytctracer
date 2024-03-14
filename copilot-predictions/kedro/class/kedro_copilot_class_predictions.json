@@ -106,5 +106,8 @@
     ],
     "tests.framework.session.test_session.TestKedroSession": [
         "kedro.framework.session.session.KedroSession"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset": [
+        "kedro.io.cached_dataset.CachedDataset"
     ]
 }

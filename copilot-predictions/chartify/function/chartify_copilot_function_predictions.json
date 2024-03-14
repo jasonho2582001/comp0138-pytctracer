@@ -14,6 +14,13 @@
         "chartify._core.chart.Chart.set_legend_location",
         "chartify._core.plot.PlotNumericXY.area"
     ],
+    "tests.test_plots.TestCategoricalOrderBy.test_order_by_count": [
+        "chartify._core.plot.PlotMixedTypeXY.scatter",
+        "chartify._core.plot.PlotMixedTypeXY._set_categorical_axis_default_factors",
+        "chartify._core.plot.BasePlot._get_color_and_order",
+        "chartify._core.plot.BasePlot._named_column_data_source",
+        "chartify._core.plot.BasePlot._cannonical_series_name"
+    ],
     "tests.test_axes.TestBaseAxes.test_numeric_set_xaxis_range": [
         "chartify._core.axes.NumericalXMixin.set_xaxis_range"
     ],

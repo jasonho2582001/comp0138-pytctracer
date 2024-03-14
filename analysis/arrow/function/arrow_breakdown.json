@@ -198,14 +198,13 @@
         ]
     },
     "tests.test_locales.TestLuxembourgishLocale.test_weekday": {
-        "False Negative": [
-            "arrow.locales.Locale.day_abbreviation"
-        ],
+        "False Negative": [],
         "False Positives": [
             "arrow.arrow.Arrow.isoweekday"
         ],
         "True Positives": [
-            "arrow.locales.Locale.day_name"
+            "arrow.locales.Locale.day_name",
+            "arrow.locales.Locale.day_abbreviation"
         ]
     },
     "tests.test_locales.TestMarathiLocale.test_format_timeframe": {
