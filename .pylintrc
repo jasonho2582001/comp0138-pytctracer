@@ -1,0 +1,8 @@
+ [MESSAGES CONTROL]
+ disable=
+    missing-function-docstring,
+    too-few-public-methods,
+    fixme,
+    too-many-arguments,
+    too-many-branches,
+    too-many-nested-blocks
