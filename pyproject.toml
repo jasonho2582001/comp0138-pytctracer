@@ -1,0 +1,23 @@
+[project]
+authors = [
+  {name = "Jason Ho"}
+]
+description = ""
+readme = "README.md"
+dynamic = ["dependencies"]
+name = "tctracer"
+version = "0.0.0"
+classifiers=[
+    'Natural Language :: English',
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent'",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+tctracer = "pytctracer.main:cli"

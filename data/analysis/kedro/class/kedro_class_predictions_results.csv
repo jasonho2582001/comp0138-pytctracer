@@ -1,0 +1,12 @@
+Technique,Precision,Recall,F1,MAP,AUC,True Positives,False Positives,False Negatives
+Naming Conventions,100.0,23.1,37.5,27.3,-,9,0,30
+Naming Conventions - Contains,85.2,59.0,69.7,68.2,-,23,4,16
+Longest Common Subsequence - Both,64.0,82.1,71.9,83.3,80.0,32,18,7
+Longest Common Subsequence - Unit,74.4,74.4,74.4,80.3,79.5,29,10,10
+Levenshtein Distance,85.3,74.4,79.5,79.5,80.1,29,5,10
+Last Call Before Assert,49.0,61.5,54.5,47.2,-,24,25,15
+Tarantula,56.2,69.2,62.1,66.9,67.1,27,21,12
+TF-IDF,60.5,66.7,63.4,65.9,67.4,26,17,13
+TF-IDF (Multiset),48.6,43.6,45.9,43.9,49.6,17,18,22
+Simple Average,88.6,79.5,83.8,83.3,84.0,31,4,8
+Copilot,77.8,89.7,83.3,92.4,-,35,10,4
