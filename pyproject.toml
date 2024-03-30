@@ -6,7 +6,7 @@ description = ""
 readme = "README.md"
 dynamic = ["dependencies"]
 name = "tctracer"
-version = "0.0.0"
+version = "0.1.0"
 classifiers=[
     'Natural Language :: English',
     "Intended Audience :: Science/Research",
