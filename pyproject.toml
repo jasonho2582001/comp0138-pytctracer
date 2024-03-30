@@ -2,7 +2,8 @@
 authors = [
   {name = "Jason Ho"}
 ]
-description = ""
+description = """CLI tool demonstrating test-to-code traceability techniques on Python codebases that 
+use the Pytest testing framework."""
 readme = "README.md"
 dynamic = ["dependencies"]
 name = "tctracer"
