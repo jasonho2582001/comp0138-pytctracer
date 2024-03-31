@@ -4,16 +4,15 @@ authors = [
 ]
 description = """CLI tool demonstrating test-to-code traceability techniques on Python codebases that use the Pytest testing framework."""
 readme = "README.md"
-dynamic = ["dependencies"]
 name = "tctracer"
 version = "0.1.0"
 classifiers=[
-    'Natural Language :: English',
+    "Natural Language :: English",
     "Intended Audience :: Science/Research",
-    "Operating System :: OS Independent'",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3.12",
 ]
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 
 [build-system]
 requires = ["setuptools >= 61.0"]
