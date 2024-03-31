@@ -42,6 +42,7 @@ class PytestTracer:
             os.path.normcase(os.path.join(self._project_root, source_folder))
             for source_folder in source_folders
         ]
+        self._pytest_path = os.path.normcase(os.path.dirname(inspect.getfile(pytest)))
         # Retrieves the absolute file path to the directory of the pytest module
         self._csv_headers = [header for header in TraceDataHeaders]
         self._csv_name = output_csv_file_name
