@@ -21,8 +21,8 @@ dependencies = [
   "pytest==8.1.1"
 ]
 
-[tool.setuptools]
-packages = ["pytctracer"]
+[tool.setuptools.packages.find]
+where = ["."] 
 
 [build-system]
 requires = ["setuptools >= 61.0"]
