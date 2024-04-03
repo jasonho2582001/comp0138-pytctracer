@@ -1,10 +1,10 @@
 from typing import Dict, List, Set
 from collections import defaultdict
 from pytctracer.config.constants import (
-    TraceDataHeaders,
-    TestingMethodTypes,
-    EventTypes,
-    FunctionTypes,
+    TraceDataHeader,
+    TestingMethodType,
+    EventType,
+    FunctionType,
 )
 
 
@@ -16,22 +16,22 @@ def find_function_classes_called_by_test(
 
     for record in data:
         if (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_CALL
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_CALL
         ):
-            current_test = record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME]
+            current_test = record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
         elif (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_RETURN
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_RETURN
         ):
             current_test = None
         elif (
             current_test
-            and record[TraceDataHeaders.FUNCTION_TYPE] == FunctionTypes.SOURCE
-            and record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME]
+            and record[TraceDataHeader.FUNCTION_TYPE] == FunctionType.SOURCE
+            and record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
         ):
             function_classes_called_by_test_dict[current_test].add(
-                record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME]
+                record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
             )
 
     return function_classes_called_by_test_dict
@@ -45,23 +45,23 @@ def find_function_classes_called_by_test_count(
 
     for record in data:
         if (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_CALL
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_CALL
         ):
-            current_test = record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME]
+            current_test = record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
         elif (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_RETURN
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_RETURN
         ):
             current_test = None
         elif (
             current_test
-            and record[TraceDataHeaders.FUNCTION_TYPE] == FunctionTypes.SOURCE
-            and record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME]
-            and record[TraceDataHeaders.EVENT_TYPE] == EventTypes.CALL
+            and record[TraceDataHeader.FUNCTION_TYPE] == FunctionType.SOURCE
+            and record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
+            and record[TraceDataHeader.EVENT_TYPE] == EventType.CALL
         ):
             function_classes_called_by_test_count_dict[current_test][
-                record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME]
+                record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
             ] += 1
 
     return function_classes_called_by_test_count_dict
@@ -75,22 +75,22 @@ def find_tests_that_call_function_classes(
 
     for record in data:
         if (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_CALL
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_CALL
         ):
-            current_test = record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME]
+            current_test = record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
         elif (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_RETURN
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_RETURN
         ):
             current_test = None
         elif (
             current_test
-            and record[TraceDataHeaders.FUNCTION_TYPE] == FunctionTypes.SOURCE
-            and record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME]
+            and record[TraceDataHeader.FUNCTION_TYPE] == FunctionType.SOURCE
+            and record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
         ):
             tests_that_call_function_classes_dict[
-                record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME]
+                record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
             ].add(current_test)
 
     return tests_that_call_function_classes_dict
@@ -106,23 +106,23 @@ def find_function_classes_called_by_test_depth(
 
     for record in data:
         if (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_CALL
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_CALL
         ):
-            current_test_class = record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME]
-            current_test_class_depth = int(record[TraceDataHeaders.DEPTH])
+            current_test_class = record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
+            current_test_class_depth = int(record[TraceDataHeader.DEPTH])
         elif (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_RETURN
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_RETURN
         ):
             current_test_class = None
         elif (
             current_test_class is not None
-            and record[TraceDataHeaders.FUNCTION_TYPE] == FunctionTypes.SOURCE
-            and record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME]
+            and record[TraceDataHeader.FUNCTION_TYPE] == FunctionType.SOURCE
+            and record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
         ):
-            function_class_name = record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME]
-            function_class_depth = int(record[TraceDataHeaders.DEPTH])
+            function_class_name = record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
+            function_class_depth = int(record[TraceDataHeader.DEPTH])
             if (
                 current_test_class in function_classes_called_by_test_depth_dict
                 and function_class_name

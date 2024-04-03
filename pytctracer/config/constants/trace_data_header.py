@@ -1,7 +1,7 @@
 from enum import StrEnum
 
 
-class TraceDataHeaders(StrEnum):
+class TraceDataHeader(StrEnum):
     DEPTH = "Depth"
     FUNCTION_TYPE = "Function Type"
     TESTNG_METHOD = "Testing Method"

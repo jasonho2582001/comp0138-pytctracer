@@ -1,5 +1,5 @@
 from typing import Dict, List, Optional
-from pytctracer.config.constants import MetricScoreTypes
+from pytctracer.config.constants import MetricScoreType
 from pytctracer.evaluation.metrics.metric import Metric
 from pytctracer.evaluation.metrics.precision import Precision
 from pytctracer.evaluation.metrics.recall import Recall
@@ -9,7 +9,7 @@ class F1(Metric):
     full_name = "F1"
     short_name = "F1"
     arg_name = "f1"
-    metric_type = MetricScoreTypes.CONTINUOUS
+    metric_type = MetricScoreType.CONTINUOUS
 
     def calculate(
         self,

@@ -1,6 +1,6 @@
 from enum import StrEnum
 
 
-class LevelTypes(StrEnum):
+class LevelType(StrEnum):
     FUNCTION = "function"
     CLASS = "class"

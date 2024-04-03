@@ -2,7 +2,7 @@ from typing import Dict, Union, List, Tuple, Set
 from math import log
 from collections import defaultdict
 from pytctracer.techniques.technique import Technique
-from pytctracer.config.constants import TechniqueParameters, TechniqueThresholds
+from pytctracer.config.constants import TechniqueParameter, TechniqueThreshold
 
 
 class TFIDF(Technique):
@@ -16,14 +16,14 @@ class TFIDF(Technique):
     arg_name = "tfidf"
     description = "TBC"
     required_parameters = {
-        TechniqueParameters.FUNCTION_NAMES_TUPLE,
-        TechniqueParameters.TEST_NAMES_TUPLE,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TESTS,
-        TechniqueParameters.TESTS_THAT_CALL_FUNCTIONS,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TEST_DEPTH,
+        TechniqueParameter.FUNCTION_NAMES_TUPLE,
+        TechniqueParameter.TEST_NAMES_TUPLE,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TESTS,
+        TechniqueParameter.TESTS_THAT_CALL_FUNCTIONS,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TEST_DEPTH,
     }
     uses_threshold = True
-    threshold = TechniqueThresholds.THRESHOLD_FOR_TFIDF
+    threshold = TechniqueThreshold.THRESHOLD_FOR_TFIDF
     normalise = True
     call_depth_discount = True
 
@@ -145,13 +145,13 @@ class TFIDFMultiset(TFIDF):
     description = "TBC"
     arg_name = "tfidf_multiset"
     required_parameters = {
-        TechniqueParameters.FUNCTION_NAMES_TUPLE,
-        TechniqueParameters.TEST_NAMES_TUPLE,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TEST_COUNT,
-        TechniqueParameters.TESTS_THAT_CALL_FUNCTIONS,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TEST_DEPTH,
+        TechniqueParameter.FUNCTION_NAMES_TUPLE,
+        TechniqueParameter.TEST_NAMES_TUPLE,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TEST_COUNT,
+        TechniqueParameter.TESTS_THAT_CALL_FUNCTIONS,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TEST_DEPTH,
     }
-    threshold = TechniqueThresholds.THRESHOLD_FOR_TFIDF_MULTISET
+    threshold = TechniqueThreshold.THRESHOLD_FOR_TFIDF_MULTISET
 
     def run(
         self,

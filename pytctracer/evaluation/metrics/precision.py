@@ -1,5 +1,5 @@
 from typing import Dict, List, Optional
-from pytctracer.config.constants import MetricScoreTypes
+from pytctracer.config.constants import MetricScoreType
 from pytctracer.evaluation.metrics.metric import Metric
 from pytctracer.evaluation.metrics.false_positives import FalsePositives
 from pytctracer.evaluation.metrics.true_positives import TruePositives
@@ -9,7 +9,7 @@ class Precision(Metric):
     full_name = "Precision"
     short_name = "Precision"
     arg_name = "precision"
-    metric_type = MetricScoreTypes.CONTINUOUS
+    metric_type = MetricScoreType.CONTINUOUS
 
     def calculate(
         self,

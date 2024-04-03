@@ -1,7 +1,7 @@
 from enum import StrEnum
 
 
-class TechniqueParameters(StrEnum):
+class TechniqueParameter(StrEnum):
     FUNCTION_NAMES_TUPLE = "function_names_tuple"
     TEST_NAMES_TUPLE = "test_names_tuple"
     TESTS_THAT_CALL_FUNCTIONS = "tests_that_call_functions"
@@ -11,4 +11,4 @@ class TechniqueParameters(StrEnum):
     FUNCTIONS_CALLED_BY_TEST_BEFORE_ASSERT = "functions_called_by_test_before_assert"
 
 
-__all__ = ["TechniqueParameters"]
+__all__ = ["TechniqueParameter"]

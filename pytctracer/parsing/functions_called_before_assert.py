@@ -1,10 +1,10 @@
 from collections import defaultdict
 from typing import Dict, List, Set
 from pytctracer.config.constants import (
-    TestingMethodTypes,
-    TraceDataHeaders,
-    EventTypes,
-    FunctionTypes,
+    TestingMethodType,
+    TraceDataHeader,
+    EventType,
+    FunctionType,
 )
 
 
@@ -17,28 +17,28 @@ def find_functions_called_before_assert_for_each_test(
 
     for record in trace_data:
         if (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_CALL
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_CALL
         ):
-            current_test = record[TraceDataHeaders.FULLY_QUALIFIED_FUNCTION_NAME]
+            current_test = record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
             last_returned_function = None
         elif (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_RETURN
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_RETURN
         ):
             current_test = None
         elif (
             current_test is not None
-            and record[TraceDataHeaders.EVENT_TYPE] == EventTypes.RETURN
-            and record[TraceDataHeaders.FUNCTION_TYPE] == FunctionTypes.SOURCE
+            and record[TraceDataHeader.EVENT_TYPE] == EventType.RETURN
+            and record[TraceDataHeader.FUNCTION_TYPE] == FunctionType.SOURCE
         ):
             last_returned_function = record[
-                TraceDataHeaders.FULLY_QUALIFIED_FUNCTION_NAME
+                TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME
             ]
         elif (
             current_test is not None
             and last_returned_function is not None
-            and record[TraceDataHeaders.FUNCTION_TYPE] == FunctionTypes.ASSERT
+            and record[TraceDataHeader.FUNCTION_TYPE] == FunctionType.ASSERT
         ):
             # Won't catch the last returned function if there was no return
             # before an assert in the current test
@@ -58,28 +58,28 @@ def find_classes_called_before_assert_for_each_test(
 
     for record in trace_data:
         if (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_CALL
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_CALL
         ):
-            current_test_class = record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME]
+            current_test_class = record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
             last_returned_function_class = None
         elif (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_RETURN
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_RETURN
         ):
             current_test_class = None
         elif (
             current_test_class
-            and record[TraceDataHeaders.EVENT_TYPE] == EventTypes.RETURN
-            and record[TraceDataHeaders.FUNCTION_TYPE] == FunctionTypes.SOURCE
+            and record[TraceDataHeader.EVENT_TYPE] == EventType.RETURN
+            and record[TraceDataHeader.FUNCTION_TYPE] == FunctionType.SOURCE
         ):
             last_returned_function_class = record[
-                TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME
+                TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME
             ]
         elif (
             current_test_class
             and last_returned_function_class
-            and record[TraceDataHeaders.FUNCTION_TYPE] == FunctionTypes.ASSERT
+            and record[TraceDataHeader.FUNCTION_TYPE] == FunctionType.ASSERT
         ):
             # Won't catch the last returned function if there was no return
             # before an assert in the current test

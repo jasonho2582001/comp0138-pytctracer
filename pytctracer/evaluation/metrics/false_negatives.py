@@ -1,5 +1,5 @@
 from typing import Dict, List, Optional
-from pytctracer.config.constants import MetricScoreTypes
+from pytctracer.config.constants import MetricScoreType
 from pytctracer.evaluation.metrics.metric import Metric
 
 
@@ -7,7 +7,7 @@ class FalseNegatives(Metric):
     full_name = "False Negatives"
     short_name = "FN"
     arg_name = "fn"
-    metric_type = MetricScoreTypes.INTEGER
+    metric_type = MetricScoreType.INTEGER
 
     def calculate(
         self,

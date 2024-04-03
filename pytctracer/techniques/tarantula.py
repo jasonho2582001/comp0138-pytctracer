@@ -1,7 +1,7 @@
 from typing import Dict, Union, List, Tuple, Set
 from collections import defaultdict
 from pytctracer.techniques.technique import Technique
-from pytctracer.config.constants import TechniqueParameters, TechniqueThresholds
+from pytctracer.config.constants import TechniqueParameter, TechniqueThreshold
 
 
 class Tarantula(Technique):
@@ -15,14 +15,14 @@ class Tarantula(Technique):
     description = "TBC"
     arg_name = "tarantula"
     required_parameters = {
-        TechniqueParameters.FUNCTION_NAMES_TUPLE,
-        TechniqueParameters.TEST_NAMES_TUPLE,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TESTS,
-        TechniqueParameters.TESTS_THAT_CALL_FUNCTIONS,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TEST_DEPTH,
+        TechniqueParameter.FUNCTION_NAMES_TUPLE,
+        TechniqueParameter.TEST_NAMES_TUPLE,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TESTS,
+        TechniqueParameter.TESTS_THAT_CALL_FUNCTIONS,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TEST_DEPTH,
     }
     uses_threshold = True
-    threshold = TechniqueThresholds.THRESHOLD_FOR_TARANTULA
+    threshold = TechniqueThreshold.THRESHOLD_FOR_TARANTULA
     normalise = True
     call_depth_discount = True
 

@@ -1,7 +1,7 @@
 from enum import StrEnum
 
 
-class FunctionTypes(StrEnum):
+class FunctionType(StrEnum):
     SOURCE = "SOURCE"
     TEST = "TEST"
     ASSERT = "ASSERT"

@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class TechniqueThresholds(float, Enum):
+class TechniqueThreshold(float, Enum):
     THRESHOLD_FOR_LCSU = 0.75
     THRESHOLD_FOR_LCSB = 0.65
     THRESHOLD_FOR_LEVENSHTEIN = 0.95

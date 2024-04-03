@@ -1,6 +1,6 @@
 from typing import Dict, List, Optional
 from sklearn.metrics import precision_recall_curve, auc
-from pytctracer.config.constants import MetricScoreTypes
+from pytctracer.config.constants import MetricScoreType
 from pytctracer.evaluation.metrics.metric import Metric
 
 
@@ -8,7 +8,7 @@ class AreaUnderCurve(Metric):
     full_name = "Area Under Curve"
     short_name = "AUC"
     arg_name = "auc"
-    metric_type = MetricScoreTypes.THRESHOLD_INDEPENDENT
+    metric_type = MetricScoreType.THRESHOLD_INDEPENDENT
 
     def calculate(
         self,

@@ -1,8 +1,8 @@
 from typing import List, Dict, Tuple, Set
 from pytctracer.config.constants import (
-    TraceDataHeaders,
-    FunctionTypes,
-    TestingMethodTypes,
+    TraceDataHeader,
+    FunctionType,
+    TestingMethodType,
 )
 
 
@@ -11,11 +11,11 @@ def find_function_class_names_tuple(
 ) -> Set[Tuple[str, str]]:
     function_class_names_tuple = set()
     for record in trace_data:
-        if record[TraceDataHeaders.FUNCTION_TYPE] == FunctionTypes.SOURCE:
+        if record[TraceDataHeader.FUNCTION_TYPE] == FunctionType.SOURCE:
             function_class_names_tuple.add(
                 (
-                    record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME],
-                    record[TraceDataHeaders.CLASS_NAME],
+                    record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME],
+                    record[TraceDataHeader.CLASS_NAME],
                 )
             )
 
@@ -28,13 +28,13 @@ def find_test_class_names_tuple(
     test_class_names_tuple = set()
     for record in trace_data:
         if (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_CALL
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_CALL
         ):
             test_class_names_tuple.add(
                 (
-                    record[TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME],
-                    record[TraceDataHeaders.CLASS_NAME],
+                    record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME],
+                    record[TraceDataHeader.CLASS_NAME],
                 )
             )
 

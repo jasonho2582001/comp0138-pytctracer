@@ -1,5 +1,5 @@
 from typing import Dict, List, Optional
-from pytctracer.config.constants import MetricScoreTypes
+from pytctracer.config.constants import MetricScoreType
 from pytctracer.evaluation.metrics.metric import Metric
 
 
@@ -7,7 +7,7 @@ class MeanAveragePrecision(Metric):
     full_name = "Mean Average Precision"
     short_name = "MAP"
     arg_name = "map"
-    metric_type = MetricScoreTypes.CONTINUOUS
+    metric_type = MetricScoreType.CONTINUOUS
 
     def calculate(
         self,

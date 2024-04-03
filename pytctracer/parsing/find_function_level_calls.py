@@ -1,10 +1,10 @@
 from typing import List, Dict, Set
 from collections import defaultdict
 from pytctracer.config.constants import (
-    TraceDataHeaders,
-    TestingMethodTypes,
-    EventTypes,
-    FunctionTypes,
+    TraceDataHeader,
+    TestingMethodType,
+    EventType,
+    FunctionType,
 )
 
 
@@ -14,21 +14,21 @@ def find_functions_called_by_test(data: List[Dict[str, str]]) -> Dict[str, Set[s
 
     for record in data:
         if (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_CALL
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_CALL
         ):
-            current_test = record[TraceDataHeaders.FULLY_QUALIFIED_FUNCTION_NAME]
+            current_test = record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
         elif (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_RETURN
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_RETURN
         ):
             current_test = None
         elif (
             current_test is not None
-            and record[TraceDataHeaders.FUNCTION_TYPE] == FunctionTypes.SOURCE
+            and record[TraceDataHeader.FUNCTION_TYPE] == FunctionType.SOURCE
         ):
             functions_called_by_test_dict[current_test].add(
-                record[TraceDataHeaders.FULLY_QUALIFIED_FUNCTION_NAME]
+                record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
             )
 
     return functions_called_by_test_dict
@@ -42,22 +42,22 @@ def find_functions_called_by_test_count(
 
     for record in data:
         if (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_CALL
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_CALL
         ):
-            current_test = record[TraceDataHeaders.FULLY_QUALIFIED_FUNCTION_NAME]
+            current_test = record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
         elif (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_RETURN
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_RETURN
         ):
             current_test = None
         elif (
             current_test is not None
-            and record[TraceDataHeaders.FUNCTION_TYPE] == FunctionTypes.SOURCE
-            and record[TraceDataHeaders.EVENT_TYPE] == EventTypes.CALL
+            and record[TraceDataHeader.FUNCTION_TYPE] == FunctionType.SOURCE
+            and record[TraceDataHeader.EVENT_TYPE] == EventType.CALL
         ):
             functions_called_by_test_count_dict[current_test][
-                record[TraceDataHeaders.FULLY_QUALIFIED_FUNCTION_NAME]
+                record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
             ] += 1
 
     return functions_called_by_test_count_dict
@@ -69,21 +69,21 @@ def find_tests_that_call_function(data: List[Dict[str, str]]) -> Dict[str, Set[s
 
     for record in data:
         if (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_CALL
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_CALL
         ):
-            current_test = record[TraceDataHeaders.FULLY_QUALIFIED_FUNCTION_NAME]
+            current_test = record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
         elif (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_RETURN
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_RETURN
         ):
             current_test = None
         elif (
             current_test is not None
-            and record[TraceDataHeaders.FUNCTION_TYPE] == FunctionTypes.SOURCE
+            and record[TraceDataHeader.FUNCTION_TYPE] == FunctionType.SOURCE
         ):
             tests_that_call_function_dict[
-                record[TraceDataHeaders.FULLY_QUALIFIED_FUNCTION_NAME]
+                record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
             ].add(current_test)
 
     return tests_that_call_function_dict
@@ -99,22 +99,22 @@ def find_functions_called_by_test_depth(
 
     for record in data:
         if (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_CALL
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_CALL
         ):
-            current_test = record[TraceDataHeaders.FULLY_QUALIFIED_FUNCTION_NAME]
-            current_test_depth = int(record[TraceDataHeaders.DEPTH])
+            current_test = record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
+            current_test_depth = int(record[TraceDataHeader.DEPTH])
         elif (
-            record[TraceDataHeaders.TESTNG_METHOD]
-            == TestingMethodTypes.TEST_METHOD_RETURN
+            record[TraceDataHeader.TESTNG_METHOD]
+            == TestingMethodType.TEST_METHOD_RETURN
         ):
             current_test = None
         elif (
             current_test is not None
-            and record[TraceDataHeaders.FUNCTION_TYPE] == FunctionTypes.SOURCE
+            and record[TraceDataHeader.FUNCTION_TYPE] == FunctionType.SOURCE
         ):
-            function_name = record[TraceDataHeaders.FULLY_QUALIFIED_FUNCTION_NAME]
-            function_depth = int(record[TraceDataHeaders.DEPTH])
+            function_name = record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
+            function_depth = int(record[TraceDataHeader.DEPTH])
             if (
                 current_test in functions_called_by_test_depth_dict
                 and function_name in functions_called_by_test_depth_dict[current_test]

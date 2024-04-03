@@ -1,7 +1,7 @@
 from enum import StrEnum
 
 
-class TraceDataVariables(StrEnum):
+class TraceDataVariable(StrEnum):
     DEPTH = "depth"
     FUNCTION_TYPE = "function_type"
     FUNCTION_NAME = "function_name"

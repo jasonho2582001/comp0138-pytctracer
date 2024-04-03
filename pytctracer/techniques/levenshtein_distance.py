@@ -1,7 +1,7 @@
 from typing import Dict, Union, List, Tuple, Set
 from collections import defaultdict
 from pytctracer.techniques.technique import Technique
-from pytctracer.config.constants import TechniqueParameters, TechniqueThresholds
+from pytctracer.config.constants import TechniqueParameter, TechniqueThreshold
 
 
 class LevenshteinDistance(Technique):
@@ -15,13 +15,13 @@ class LevenshteinDistance(Technique):
     arg_name = "leven"
     description = "TBC"
     required_parameters = {
-        TechniqueParameters.FUNCTION_NAMES_TUPLE,
-        TechniqueParameters.TEST_NAMES_TUPLE,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TESTS,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TEST_DEPTH,
+        TechniqueParameter.FUNCTION_NAMES_TUPLE,
+        TechniqueParameter.TEST_NAMES_TUPLE,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TESTS,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TEST_DEPTH,
     }
     uses_threshold = True
-    threshold = TechniqueThresholds.THRESHOLD_FOR_LEVENSHTEIN
+    threshold = TechniqueThreshold.THRESHOLD_FOR_LEVENSHTEIN
     normalise = True
     call_depth_discount = True
 

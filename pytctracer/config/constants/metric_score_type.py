@@ -1,7 +1,7 @@
 from enum import StrEnum
 
 
-class MetricScoreTypes(StrEnum):
+class MetricScoreType(StrEnum):
     BINARY = "BINARY"
     CONTINUOUS = "CONTINUOUS"
     THRESHOLD_INDEPENDENT = "THRESHOLD_INDEPENDENT"

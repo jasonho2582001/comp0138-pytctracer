@@ -1,13 +1,13 @@
 from abc import ABC, abstractmethod
 from typing import Dict, List, Optional
-from pytctracer.config.constants import MetricScoreTypes
+from pytctracer.config.constants import MetricScoreType
 
 
 class Metric(ABC):
     full_name = "Metric"
     short_name = "Metric"
     arg_name = "metric"
-    metric_type = MetricScoreTypes.NA
+    metric_type = MetricScoreType.NA
 
     @abstractmethod
     def calculate(

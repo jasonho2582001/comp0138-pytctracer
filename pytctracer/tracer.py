@@ -7,14 +7,14 @@ import csv
 import threading
 import dis
 from pytctracer.config.constants import (
-    TraceDataHeaders,
-    TestingMethodTypes,
-    TraceDataVariables,
-    EventTypes,
-    FunctionTypes,
-    InstructionOpnames,
-    SetProfileCEventTypes,
-    SetTraceEventTypes,
+    TraceDataHeader,
+    TestingMethodType,
+    TraceDataVariable,
+    EventType,
+    FunctionType,
+    InstructionOpname,
+    SetProfileCEventType,
+    SetTraceEventType,
 )
 
 TRACE_QUALIFIED_NAME = "PytestTracer.trace"
@@ -44,7 +44,7 @@ class PytestTracer:
         ]
         self._pytest_path = os.path.normcase(os.path.dirname(inspect.getfile(pytest)))
         # Retrieves the absolute file path to the directory of the pytest module
-        self._csv_headers = [header for header in TraceDataHeaders]
+        self._csv_headers = [header for header in TraceDataHeader]
         self._csv_name = output_csv_file_name
         self._test_function_stack = []
         self._function_stack = []
@@ -92,8 +92,8 @@ class PytestTracer:
                     function_type=function_type,
                 )
                 if (
-                    event == SetTraceEventTypes.LINE
-                    and function_type == FunctionTypes.ASSERT
+                    event == SetTraceEventType.LINE
+                    and function_type == FunctionType.ASSERT
                 ):
                     if self._check_in_line_functions_in_assert():
                         self._save_assert_line_values(
@@ -104,7 +104,7 @@ class PytestTracer:
                             class_name=class_name,
                             fully_qualified_class_name=fully_qualified_class_name,
                             line_number=line_number,
-                            event_type=EventTypes.LINE,
+                            event_type=EventType.LINE,
                             return_value=str(arg),
                             return_type=str(type(arg)),
                             testing_method="",
@@ -119,17 +119,17 @@ class PytestTracer:
                             class_name=class_name,
                             fully_qualified_class_name=fully_qualified_class_name,
                             line_number=line_number,
-                            event_type=EventTypes.LINE,
+                            event_type=EventType.LINE,
                             return_value=str(arg),
                             return_type=str(type(arg)),
                             testing_method="",
                             thread_id=current_thread_id,
                         )
 
-                elif event == SetTraceEventTypes.CALL:
+                elif event == SetTraceEventType.CALL:
                     testing_method = (
-                        TestingMethodTypes.TEST_METHOD_CALL
-                        if function_type == FunctionTypes.TEST_FUNCTION
+                        TestingMethodType.TEST_METHOD_CALL
+                        if function_type == FunctionType.TEST_FUNCTION
                         and len(self._test_function_stack) == 0
                         else ""
                     )  # Testing method is whether the actual function is a unit test or not
@@ -141,7 +141,7 @@ class PytestTracer:
                         class_name=class_name,
                         fully_qualified_class_name=fully_qualified_class_name,
                         line_number=line_number,
-                        event_type=EventTypes.CALL,
+                        event_type=EventType.CALL,
                         testing_method=testing_method,
                         thread_id=current_thread_id,
                     )
@@ -153,19 +153,19 @@ class PytestTracer:
 
                     self._current_depth += 1
 
-                elif event == SetTraceEventTypes.RETURN:
+                elif event == SetTraceEventType.RETURN:
                     # Keep track of the last function that was last returned
                     self._current_depth -= 1
                     self._function_stack.pop()
                     # print(f"{'  ' * (self._current_depth)}< {self._current_depth}: Function '{fully_qualified_function_name}()' returned at line {line_number} with value: '{arg}' of type {type(arg)}")
                     if (
                         function_type.startswith(TEST_PREFIX.upper())
-                        or function_type == FunctionTypes.ASSERT
+                        or function_type == FunctionType.ASSERT
                     ):
                         self._test_function_stack.pop()
                         # if len(self._test_function_stack) == 0:
                         #     print(f"=== EXITING TEST FUNCTION '{fully_qualified_function_name}\n")
-                    if function_type == FunctionTypes.ASSERT:
+                    if function_type == FunctionType.ASSERT:
                         # If an assert happens to be on the last line, it may get caught as a return event, so we add a duplicate entry to account for assert line and return
                         self._add_csv_row_data(
                             depth=self._current_depth + 1,
@@ -175,16 +175,16 @@ class PytestTracer:
                             class_name=class_name,
                             fully_qualified_class_name=fully_qualified_class_name,
                             line_number=line_number,
-                            event_type=EventTypes.RETURN,
+                            event_type=EventType.RETURN,
                             return_value=str(arg),
                             return_type=str(type(arg)),
                             testing_method="",
                             thread_id=current_thread_id,
                         )
-                        function_type = FunctionTypes.TEST_FUNCTION
+                        function_type = FunctionType.TEST_FUNCTION
                     testing_method = (
-                        TestingMethodTypes.TEST_METHOD_RETURN
-                        if function_type == FunctionTypes.TEST_FUNCTION
+                        TestingMethodType.TEST_METHOD_RETURN
+                        if function_type == FunctionType.TEST_FUNCTION
                         and len(self._test_function_stack) == 0
                         else ""
                     )
@@ -196,7 +196,7 @@ class PytestTracer:
                         class_name=class_name,
                         fully_qualified_class_name=fully_qualified_class_name,
                         line_number=line_number,
-                        event_type=EventTypes.RETURN,
+                        event_type=EventType.RETURN,
                         return_value=str(arg),
                         return_type=str(type(arg)),
                         testing_method=testing_method,
@@ -204,7 +204,7 @@ class PytestTracer:
                     )
                     self._check_remaining_in_line_functions(self._current_depth)
 
-                elif event == SetTraceEventTypes.EXCEPTION:
+                elif event == SetTraceEventType.EXCEPTION:
                     exc_type, exc_value, exc_traceback = arg
                     # print(f"{'  ' * (self._current_depth - 1)}- {self._current_depth}: Function '{fully_qualified_function_name}()' at line {line_number} has raised an Exception, with exception type: {exc_type} and message: '{str(exc_value)}'")
                     self._add_csv_row_data(
@@ -215,7 +215,7 @@ class PytestTracer:
                         class_name=class_name,
                         fully_qualified_class_name=fully_qualified_class_name,
                         line_number=line_number,
-                        event_type=EventTypes.EXCEPTION,
+                        event_type=EventType.EXCEPTION,
                         exception_type=exc_type,
                         exception_message=str(exc_value),
                     )
@@ -227,11 +227,11 @@ class PytestTracer:
         # For example, isinstance within an assert statement
         # These built in functions won't be caught by the sys.settrace function, so we need to check
         # for them here.
-        if event == SetProfileCEventTypes.C_CALL:
+        if event == SetProfileCEventType.C_CALL:
             self._current_depth += 1
         if (
-            event == SetProfileCEventTypes.C_RETURN
-            or event == SetProfileCEventTypes.C_EXCEPTION
+            event == SetProfileCEventType.C_RETURN
+            or event == SetProfileCEventType.C_EXCEPTION
         ):
             self._current_depth -= 1
             self._check_remaining_in_line_functions(self._current_depth)
@@ -265,20 +265,20 @@ class PytestTracer:
         thread_id: Optional[int] = None,
     ):
         data = {
-            TraceDataHeaders.DEPTH: depth,
-            TraceDataHeaders.FUNCTION_TYPE: function_type,
-            TraceDataHeaders.TESTNG_METHOD: testing_method,
-            TraceDataHeaders.FUNCTION_NAME: function_name,
-            TraceDataHeaders.FULLY_QUALIFIED_FUNCTION_NAME: fully_qualified_function_name,
-            TraceDataHeaders.CLASS_NAME: class_name,
-            TraceDataHeaders.FULLY_QUALIFIED_CLASS_NAME: fully_qualified_class_name,
-            TraceDataHeaders.LINE: line_number,
-            TraceDataHeaders.EVENT_TYPE: event_type,
-            TraceDataHeaders.RETURN_VALUE: return_value,
-            TraceDataHeaders.RETURN_TYPE: return_type,
-            TraceDataHeaders.EXCEPTION_TYPE: exception_type,
-            TraceDataHeaders.EXCEPTION_MESSAGE: exception_message,
-            TraceDataHeaders.THREAD_ID: thread_id,
+            TraceDataHeader.DEPTH: depth,
+            TraceDataHeader.FUNCTION_TYPE: function_type,
+            TraceDataHeader.TESTNG_METHOD: testing_method,
+            TraceDataHeader.FUNCTION_NAME: function_name,
+            TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME: fully_qualified_function_name,
+            TraceDataHeader.CLASS_NAME: class_name,
+            TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME: fully_qualified_class_name,
+            TraceDataHeader.LINE: line_number,
+            TraceDataHeader.EVENT_TYPE: event_type,
+            TraceDataHeader.RETURN_VALUE: return_value,
+            TraceDataHeader.RETURN_TYPE: return_type,
+            TraceDataHeader.EXCEPTION_TYPE: exception_type,
+            TraceDataHeader.EXCEPTION_MESSAGE: exception_message,
+            TraceDataHeader.THREAD_ID: thread_id,
         }
         self._csv_data.append(data)
 
@@ -340,11 +340,11 @@ class PytestTracer:
         call_line_numbers = []
         for instruction in byte_code_iterator:
             byte_code_line_number = instruction.positions.lineno
-            if InstructionOpnames.CALL in instruction.opname:
+            if InstructionOpname.CALL in instruction.opname:
                 call_line_numbers.append(byte_code_line_number)
             if (
                 line_number == byte_code_line_number
-                and instruction.opname == InstructionOpnames.LOAD_ASSERTION_ERROR
+                and instruction.opname == InstructionOpname.LOAD_ASSERTION_ERROR
                 and (
                     line_number != self._line_of_last_assert
                     or file_name != self._file_of_last_assert
@@ -379,12 +379,12 @@ class PytestTracer:
             byte_code_line_number = instruction.positions.lineno
             if (
                 line_number == byte_code_line_number
-                and InstructionOpnames.CALL in instruction.opname
+                and InstructionOpname.CALL in instruction.opname
             ):
                 calls += 1
             if (
                 line_number == byte_code_line_number
-                and instruction.opname == InstructionOpnames.LOAD_ASSERTION_ERROR
+                and instruction.opname == InstructionOpname.LOAD_ASSERTION_ERROR
                 and (
                     line_number != self._line_of_last_assert
                     or file_name != self._file_of_last_assert
@@ -420,16 +420,16 @@ class PytestTracer:
                     function_name == qualified_function_name
                     and qualified_function_name.startswith(TEST_CLASS_PREFIX)
                 ):
-                    return FunctionTypes.TEST_CLASS
+                    return FunctionType.TEST_CLASS
                 if self._check_is_assert(file_name, line_number, code):
-                    return FunctionTypes.ASSERT
+                    return FunctionType.ASSERT
                 if function_name.startswith(TEST_PREFIX):
-                    return FunctionTypes.TEST_FUNCTION
-                return FunctionTypes.TEST_HELPER
+                    return FunctionType.TEST_FUNCTION
+                return FunctionType.TEST_HELPER
 
         for source_folder in self._source_folders:
             if file_name.startswith(source_folder):
-                return FunctionTypes.SOURCE
+                return FunctionType.SOURCE
 
         return None
 
@@ -449,18 +449,18 @@ class PytestTracer:
         thread_id: int,
     ) -> None:
         assert_line_data = {
-            TraceDataVariables.DEPTH: depth,
-            TraceDataVariables.FUNCTION_TYPE: function_type,
-            TraceDataVariables.FUNCTION_NAME: function_name,
-            TraceDataVariables.FULLY_QUALIFIED_FUNCTION_NAME: fully_qualified_function_name,
-            TraceDataVariables.CLASS_NAME: class_name,
-            TraceDataVariables.FULLY_QUALIFIED_CLASS_NAME: fully_qualified_class_name,
-            TraceDataVariables.LINE_NUMBER: line_number,
-            TraceDataVariables.EVENT_TYPE: event_type,
-            TraceDataVariables.RETURN_VALUE: return_value,
-            TraceDataVariables.RETURN_TYPE: return_type,
-            TraceDataVariables.TESTING_METHOD: testing_method,
-            TraceDataVariables.THREAD_ID: thread_id,
+            TraceDataVariable.DEPTH: depth,
+            TraceDataVariable.FUNCTION_TYPE: function_type,
+            TraceDataVariable.FUNCTION_NAME: function_name,
+            TraceDataVariable.FULLY_QUALIFIED_FUNCTION_NAME: fully_qualified_function_name,
+            TraceDataVariable.CLASS_NAME: class_name,
+            TraceDataVariable.FULLY_QUALIFIED_CLASS_NAME: fully_qualified_class_name,
+            TraceDataVariable.LINE_NUMBER: line_number,
+            TraceDataVariable.EVENT_TYPE: event_type,
+            TraceDataVariable.RETURN_VALUE: return_value,
+            TraceDataVariable.RETURN_TYPE: return_type,
+            TraceDataVariable.TESTING_METHOD: testing_method,
+            TraceDataVariable.THREAD_ID: thread_id,
         }
         # Data of the line of trace occuring due to an in-line assert, so that we store
         # to add to the trace later
@@ -469,7 +469,7 @@ class PytestTracer:
 
     def _check_remaining_in_line_functions(self, depth: int) -> bool:
         if self._in_line_functions_left_list:
-            prev_assert_depth = self._assert_line_values[-1][TraceDataVariables.DEPTH]
+            prev_assert_depth = self._assert_line_values[-1][TraceDataVariable.DEPTH]
             if prev_assert_depth == depth:
                 self._in_line_functions_left_list[-1] -= 1
                 if self._in_line_functions_left_list[-1] == 0:

@@ -1,7 +1,7 @@
 from typing import Dict, Union, List, Tuple, Set
 from collections import defaultdict
 from pytctracer.techniques.technique import Technique
-from pytctracer.config.constants import TechniqueParameters
+from pytctracer.config.constants import TechniqueParameter
 
 
 class LastCallBeforeAssert(Technique):
@@ -14,10 +14,10 @@ class LastCallBeforeAssert(Technique):
     arg_name = "lcba"
     description = "TBC"
     required_parameters = {
-        TechniqueParameters.FUNCTION_NAMES_TUPLE,
-        TechniqueParameters.TEST_NAMES_TUPLE,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TESTS,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TEST_BEFORE_ASSERT,
+        TechniqueParameter.FUNCTION_NAMES_TUPLE,
+        TechniqueParameter.TEST_NAMES_TUPLE,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TESTS,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TEST_BEFORE_ASSERT,
     }
 
     def run(

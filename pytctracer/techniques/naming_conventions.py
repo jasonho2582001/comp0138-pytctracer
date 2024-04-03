@@ -1,7 +1,7 @@
 from typing import Dict, Union, List, Tuple, Set
 from collections import defaultdict
 from pytctracer.techniques.technique import Technique
-from pytctracer.config.constants import TechniqueParameters
+from pytctracer.config.constants import TechniqueParameter
 
 
 class NamingConventions(Technique):
@@ -14,9 +14,9 @@ class NamingConventions(Technique):
     description = "TBC"
     arg_name = "nc"
     required_parameters = {
-        TechniqueParameters.FUNCTION_NAMES_TUPLE,
-        TechniqueParameters.TEST_NAMES_TUPLE,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TESTS,
+        TechniqueParameter.FUNCTION_NAMES_TUPLE,
+        TechniqueParameter.TEST_NAMES_TUPLE,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TESTS,
     }
 
     def run(
@@ -94,9 +94,9 @@ class NamingConventionsContains(NamingConventions):
     description = "TBC"
     arg_name = "ncc"
     required_parameters = {
-        TechniqueParameters.FUNCTION_NAMES_TUPLE,
-        TechniqueParameters.TEST_NAMES_TUPLE,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TESTS,
+        TechniqueParameter.FUNCTION_NAMES_TUPLE,
+        TechniqueParameter.TEST_NAMES_TUPLE,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TESTS,
     }
 
     def run(

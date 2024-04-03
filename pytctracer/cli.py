@@ -2,7 +2,7 @@ from typing import Tuple, Optional
 import click
 from pytctracer import Analyser
 from pytctracer.config import Config
-from pytctracer.config.constants import LevelTypes
+from pytctracer.config.constants import LevelType
 
 
 @click.group(
@@ -36,8 +36,8 @@ def cli():
 )
 @click.option(
     "--level",
-    type=click.Choice([LevelTypes.FUNCTION, LevelTypes.CLASS]),
-    default=LevelTypes.FUNCTION,
+    type=click.Choice([LevelType.FUNCTION, LevelType.CLASS]),
+    default=LevelType.FUNCTION,
     help="""What level of traceability to produce links for (function or class). 
     If omitted, links are produced at the function level by default.""",
 )
@@ -106,8 +106,8 @@ def produce_links(
 )
 @click.option(
     "--level",
-    type=click.Choice([LevelTypes.FUNCTION, LevelTypes.CLASS]),
-    default=LevelTypes.FUNCTION,
+    type=click.Choice([LevelType.FUNCTION, LevelType.CLASS]),
+    default=LevelType.FUNCTION,
     help="""What level of traceability to produce links for (function or class).
     If omitted, links are produced at the function level by default.""",
 )
@@ -195,8 +195,8 @@ def evaluate_links(
 )
 @click.option(
     "--level",
-    type=click.Choice([LevelTypes.FUNCTION, LevelTypes.CLASS]),
-    default=LevelTypes.FUNCTION,
+    type=click.Choice([LevelType.FUNCTION, LevelType.CLASS]),
+    default=LevelType.FUNCTION,
     help="""What level of traceability to produce links for (function or class).
     If omitted, links are produced at the function level by default.""",
 )

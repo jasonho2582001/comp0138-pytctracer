@@ -2,7 +2,7 @@ from typing import Dict, Union, List, Tuple, Set
 from abc import ABC, abstractmethod
 from collections import defaultdict
 from pytctracer.techniques.technique import Technique
-from pytctracer.config.constants import TechniqueParameters, TechniqueThresholds
+from pytctracer.config.constants import TechniqueParameter, TechniqueThreshold
 
 
 class LongestCommonSubsequence(Technique, ABC):
@@ -14,10 +14,10 @@ class LongestCommonSubsequence(Technique, ABC):
     short_name = "LCS"
     description = "TBC"
     required_parameters = {
-        TechniqueParameters.FUNCTION_NAMES_TUPLE,
-        TechniqueParameters.TEST_NAMES_TUPLE,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TESTS,
-        TechniqueParameters.FUNCTIONS_CALLED_BY_TEST_DEPTH,
+        TechniqueParameter.FUNCTION_NAMES_TUPLE,
+        TechniqueParameter.TEST_NAMES_TUPLE,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TESTS,
+        TechniqueParameter.FUNCTIONS_CALLED_BY_TEST_DEPTH,
     }
     uses_threshold = True
     normalise = True
@@ -124,7 +124,7 @@ class LongestCommonSubsequenceUnit(LongestCommonSubsequence):
     short_name = "LCS-U"
     description = "TBC"
     arg_name = "lcsu"
-    threshold = TechniqueThresholds.THRESHOLD_FOR_LCSU
+    threshold = TechniqueThreshold.THRESHOLD_FOR_LCSU
 
     def run(
         self,
@@ -186,7 +186,7 @@ class LongestCommonSubsequenceBoth(LongestCommonSubsequence):
     short_name = "LCS-B"
     arg_name = "lcsb"
     description = "TBC"
-    threshold = TechniqueThresholds.THRESHOLD_FOR_LCSB
+    threshold = TechniqueThreshold.THRESHOLD_FOR_LCSB
 
     def run(
         self,

@@ -1,6 +1,6 @@
 from typing import List, Optional, Dict, Any, Tuple, Set
 from click import ClickException
-from pytctracer.config.constants import LevelTypes, TechniqueParameters
+from pytctracer.config.constants import LevelType, TechniqueParameter
 from pytctracer.config import Config
 from pytctracer.io.input import read_trace_csv_log, load_link_json
 from pytctracer.io.output import (
@@ -107,7 +107,7 @@ class Analyser:
         self,
         trace_csv_log_path: str,
         ground_truth_path: str,
-        traceability_level: LevelTypes,
+        traceability_level: LevelType,
         add_combined_technique: bool = False,
         chosen_technique_names: Optional[List[str]] = None,
         chosen_metric_names: Optional[List[str]] = None,
@@ -170,7 +170,7 @@ class Analyser:
     def produce_traceability_links_for_trace(
         self,
         trace_csv_log_path: str,
-        traceability_level: LevelTypes,
+        traceability_level: LevelType,
         add_combined_technique: bool = False,
         chosen_technique_names: Optional[List[str]] = None,
         prediction_output_directory_path: Optional[str] = None,
@@ -198,15 +198,15 @@ class Analyser:
         self,
         classifications_for_techniques: Dict[str, Dict[str, List[str]]],
         classifications_output_directory_path: str,
-        traceability_level: LevelTypes,
+        traceability_level: LevelType,
     ) -> None:
         for (
             technique_arg_name,
             classifications,
         ) in classifications_for_techniques.items():
             technique_arg_name = technique_arg_name.replace("-", "_")
-            file_path = f"""{classifications_output_directory_path}/
-            {technique_arg_name}_{traceability_level.lower()}_classifications.json"""
+            file_path = f"{classifications_output_directory_path}/
+            {technique_arg_name}_{traceability_level.lower()}_classifications.json"
             write_dict_to_json(classifications, file_path)
 
     def _display_classifications_for_techniques(
@@ -284,11 +284,11 @@ class Analyser:
         self,
         trace_csv_log_path: str,
         chosen_technique_names: List[str],
-        traceability_level: LevelTypes,
+        traceability_level: LevelType,
         add_combined_technique: bool,
         test_to_create_links_for: Optional[Set[str]] = None,
     ) -> Tuple[Dict[str, Dict[str, Dict[str, float]]], Dict[str, Dict[str, List[str]]]]:
-        if traceability_level == LevelTypes.FUNCTION:
+        if traceability_level == LevelType.FUNCTION:
             technique_parameter_map = self._parse_function_level_data(
                 trace_csv_log_path
             )
@@ -325,15 +325,15 @@ class Analyser:
         self,
         link_predictions_for_techniques: Dict[str, Dict[str, List[str]]],
         prediction_output_directory_path: str,
-        traceability_level: LevelTypes,
+        traceability_level: LevelType,
     ) -> None:
         for (
             technique_arg_name,
             link_predictions,
         ) in link_predictions_for_techniques.items():
             technique_arg_name = technique_arg_name.replace("-", "_")
-            file_path = f"""{prediction_output_directory_path}/
-            {technique_arg_name}_{traceability_level.lower()}_predicted_links.json"""
+            file_path = f"{prediction_output_directory_path}/
+            {technique_arg_name}_{traceability_level.lower()}_predicted_links.json"
             write_dict_to_json(link_predictions, file_path)
 
     def _display_predicted_links_for_techniques(
@@ -372,7 +372,7 @@ class Analyser:
     def _run_technique_scoring(
         self,
         chosen_technique_names: List[str],
-        technique_parameter_map: Dict[TechniqueParameters, Any],
+        technique_parameter_map: Dict[TechniqueParameter, Any],
     ) -> Dict[str, Dict[str, Dict[str, float]]]:
         traceability_scores_for_techniques = {}
         for technique_arg_name in chosen_technique_names:
@@ -392,7 +392,7 @@ class Analyser:
 
     def _parse_function_level_data(
         self, trace_csv_log_path: str
-    ) -> Dict[TechniqueParameters, Any]:
+    ) -> Dict[TechniqueParameter, Any]:
         trace_data = read_trace_csv_log(trace_csv_log_path)
         function_names_tuple = find_function_names_tuple(trace_data)
         test_names_tuple = find_test_names_tuple(trace_data)
@@ -405,18 +405,18 @@ class Analyser:
         tests_that_call_function = find_tests_that_call_function(trace_data)
 
         return {
-            TechniqueParameters.FUNCTION_NAMES_TUPLE: function_names_tuple,
-            TechniqueParameters.TEST_NAMES_TUPLE: test_names_tuple,
-            TechniqueParameters.FUNCTIONS_CALLED_BY_TESTS: functions_called_by_test,
-            TechniqueParameters.FUNCTIONS_CALLED_BY_TEST_COUNT: functions_called_by_test_count,
-            TechniqueParameters.FUNCTIONS_CALLED_BY_TEST_DEPTH: functions_called_by_test_depth,
-            TechniqueParameters.FUNCTIONS_CALLED_BY_TEST_BEFORE_ASSERT: functions_called_by_test_before_assert,
-            TechniqueParameters.TESTS_THAT_CALL_FUNCTIONS: tests_that_call_function,
+            TechniqueParameter.FUNCTION_NAMES_TUPLE: function_names_tuple,
+            TechniqueParameter.TEST_NAMES_TUPLE: test_names_tuple,
+            TechniqueParameter.FUNCTIONS_CALLED_BY_TESTS: functions_called_by_test,
+            TechniqueParameter.FUNCTIONS_CALLED_BY_TEST_COUNT: functions_called_by_test_count,
+            TechniqueParameter.FUNCTIONS_CALLED_BY_TEST_DEPTH: functions_called_by_test_depth,
+            TechniqueParameter.FUNCTIONS_CALLED_BY_TEST_BEFORE_ASSERT: functions_called_by_test_before_assert,
+            TechniqueParameter.TESTS_THAT_CALL_FUNCTIONS: tests_that_call_function,
         }
 
     def _parse_class_level_data(
         self, trace_csv_log_path: str
-    ) -> Dict[TechniqueParameters, Any]:
+    ) -> Dict[TechniqueParameter, Any]:
         trace_data = read_trace_csv_log(trace_csv_log_path)
         function_class_names_tuple = find_function_class_names_tuple(trace_data)
         test_class_names_tuple = find_test_class_names_tuple(trace_data)
@@ -437,13 +437,13 @@ class Analyser:
         )
 
         return {
-            TechniqueParameters.FUNCTION_NAMES_TUPLE: function_class_names_tuple,
-            TechniqueParameters.TEST_NAMES_TUPLE: test_class_names_tuple,
-            TechniqueParameters.FUNCTIONS_CALLED_BY_TESTS: functions_called_by_test_class,
-            TechniqueParameters.FUNCTIONS_CALLED_BY_TEST_COUNT: functions_called_by_test_class_count,
-            TechniqueParameters.FUNCTIONS_CALLED_BY_TEST_DEPTH: functions_called_by_test_class_depth,
-            TechniqueParameters.FUNCTIONS_CALLED_BY_TEST_BEFORE_ASSERT: functions_called_by_test_class_before_assert,
-            TechniqueParameters.TESTS_THAT_CALL_FUNCTIONS: tests_that_call_function_classes,
+            TechniqueParameter.FUNCTION_NAMES_TUPLE: function_class_names_tuple,
+            TechniqueParameter.TEST_NAMES_TUPLE: test_class_names_tuple,
+            TechniqueParameter.FUNCTIONS_CALLED_BY_TESTS: functions_called_by_test_class,
+            TechniqueParameter.FUNCTIONS_CALLED_BY_TEST_COUNT: functions_called_by_test_class_count,
+            TechniqueParameter.FUNCTIONS_CALLED_BY_TEST_DEPTH: functions_called_by_test_class_depth,
+            TechniqueParameter.FUNCTIONS_CALLED_BY_TEST_BEFORE_ASSERT: functions_called_by_test_class_before_assert,
+            TechniqueParameter.TESTS_THAT_CALL_FUNCTIONS: tests_that_call_function_classes,
         }
 
 

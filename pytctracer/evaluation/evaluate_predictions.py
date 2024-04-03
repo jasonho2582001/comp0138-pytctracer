@@ -1,6 +1,6 @@
 from typing import Dict, List, Optional
 from pytctracer.evaluation.metrics import Metric
-from pytctracer.config.constants import MetricScoreTypes
+from pytctracer.config.constants import MetricScoreType
 
 
 def evaluate_predictions(
@@ -13,7 +13,7 @@ def evaluate_predictions(
 ) -> Dict[str, float]:
     evaluation_dict = {}
     for metric in selected_metrics:
-        if metric.metric_type == MetricScoreTypes.THRESHOLD_INDEPENDENT and (
+        if metric.metric_type == MetricScoreType.THRESHOLD_INDEPENDENT and (
             not uses_threshold or traceability_score_dict is None
         ):
             metric_result = 0
@@ -22,8 +22,8 @@ def evaluate_predictions(
                 predicted_links, ground_truth_links, traceability_score_dict
             )
             if metric_as_percentage and metric.metric_type in [
-                MetricScoreTypes.CONTINUOUS,
-                MetricScoreTypes.THRESHOLD_INDEPENDENT,
+                MetricScoreType.CONTINUOUS,
+                MetricScoreType.THRESHOLD_INDEPENDENT,
             ]:
                 metric_result = metric.to_percentage(metric_result)
 

@@ -1,6 +1,6 @@
 from typing import Dict, List
 from collections import defaultdict
-from pytctracer.config.constants import ClassificationTypes
+from pytctracer.config.constants import ClassificationType
 
 
 def classify_predictions(
@@ -19,13 +19,13 @@ def classify_predictions(
         false_negatives_set = ground_truth_links_for_test - predicted_links_for_test
 
         classification_dict[fully_qualified_test_name][
-            ClassificationTypes.TRUE_POSITIVES
+            ClassificationType.TRUE_POSITIVES
         ] = list(true_positive_set)
         classification_dict[fully_qualified_test_name][
-            ClassificationTypes.FALSE_POSITIVES
+            ClassificationType.FALSE_POSITIVES
         ] = list(false_positive_set)
         classification_dict[fully_qualified_test_name][
-            ClassificationTypes.FALSE_NEGATIVES
+            ClassificationType.FALSE_NEGATIVES
         ] = list(false_negatives_set)
 
     return classification_dict

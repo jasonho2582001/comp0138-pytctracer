@@ -1,7 +1,7 @@
 from typing import Dict
 from collections import defaultdict
 from pytctracer.techniques.technique import Technique
-from pytctracer.config.constants import TechniqueThresholds
+from pytctracer.config.constants import TechniqueThreshold
 
 
 class Combined(Technique):
@@ -16,7 +16,7 @@ class Combined(Technique):
     description = "TBC"
     required_parameters = {}
     uses_threshold = True
-    threshold = TechniqueThresholds.THRESHOLD_FOR_COMBINED
+    threshold = TechniqueThreshold.THRESHOLD_FOR_COMBINED
     normalise = True
 
     def run(
