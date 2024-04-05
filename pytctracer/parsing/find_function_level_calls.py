@@ -13,10 +13,7 @@ def find_functions_called_by_test(data: List[Dict[str, str]]) -> Dict[str, Set[s
     current_test = None
 
     for record in data:
-        if (
-            record[TraceDataHeader.TESTNG_METHOD]
-            == TestingMethodType.TEST_METHOD_CALL
-        ):
+        if record[TraceDataHeader.TESTNG_METHOD] == TestingMethodType.TEST_METHOD_CALL:
             current_test = record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
         elif (
             record[TraceDataHeader.TESTNG_METHOD]
@@ -41,10 +38,7 @@ def find_functions_called_by_test_count(
     current_test = None
 
     for record in data:
-        if (
-            record[TraceDataHeader.TESTNG_METHOD]
-            == TestingMethodType.TEST_METHOD_CALL
-        ):
+        if record[TraceDataHeader.TESTNG_METHOD] == TestingMethodType.TEST_METHOD_CALL:
             current_test = record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
         elif (
             record[TraceDataHeader.TESTNG_METHOD]
@@ -68,10 +62,7 @@ def find_tests_that_call_function(data: List[Dict[str, str]]) -> Dict[str, Set[s
     current_test = None
 
     for record in data:
-        if (
-            record[TraceDataHeader.TESTNG_METHOD]
-            == TestingMethodType.TEST_METHOD_CALL
-        ):
+        if record[TraceDataHeader.TESTNG_METHOD] == TestingMethodType.TEST_METHOD_CALL:
             current_test = record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
         elif (
             record[TraceDataHeader.TESTNG_METHOD]
@@ -98,10 +89,7 @@ def find_functions_called_by_test_depth(
     current_test_depth = 0
 
     for record in data:
-        if (
-            record[TraceDataHeader.TESTNG_METHOD]
-            == TestingMethodType.TEST_METHOD_CALL
-        ):
+        if record[TraceDataHeader.TESTNG_METHOD] == TestingMethodType.TEST_METHOD_CALL:
             current_test = record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
             current_test_depth = int(record[TraceDataHeader.DEPTH])
         elif (

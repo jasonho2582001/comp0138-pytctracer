@@ -15,10 +15,7 @@ def find_function_classes_called_by_test(
     current_test = None
 
     for record in data:
-        if (
-            record[TraceDataHeader.TESTNG_METHOD]
-            == TestingMethodType.TEST_METHOD_CALL
-        ):
+        if record[TraceDataHeader.TESTNG_METHOD] == TestingMethodType.TEST_METHOD_CALL:
             current_test = record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
         elif (
             record[TraceDataHeader.TESTNG_METHOD]
@@ -44,10 +41,7 @@ def find_function_classes_called_by_test_count(
     current_test = None
 
     for record in data:
-        if (
-            record[TraceDataHeader.TESTNG_METHOD]
-            == TestingMethodType.TEST_METHOD_CALL
-        ):
+        if record[TraceDataHeader.TESTNG_METHOD] == TestingMethodType.TEST_METHOD_CALL:
             current_test = record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
         elif (
             record[TraceDataHeader.TESTNG_METHOD]
@@ -74,10 +68,7 @@ def find_tests_that_call_function_classes(
     current_test = None
 
     for record in data:
-        if (
-            record[TraceDataHeader.TESTNG_METHOD]
-            == TestingMethodType.TEST_METHOD_CALL
-        ):
+        if record[TraceDataHeader.TESTNG_METHOD] == TestingMethodType.TEST_METHOD_CALL:
             current_test = record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
         elif (
             record[TraceDataHeader.TESTNG_METHOD]
@@ -105,10 +96,7 @@ def find_function_classes_called_by_test_depth(
     current_test_class_depth = 0
 
     for record in data:
-        if (
-            record[TraceDataHeader.TESTNG_METHOD]
-            == TestingMethodType.TEST_METHOD_CALL
-        ):
+        if record[TraceDataHeader.TESTNG_METHOD] == TestingMethodType.TEST_METHOD_CALL:
             current_test_class = record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
             current_test_class_depth = int(record[TraceDataHeader.DEPTH])
         elif (

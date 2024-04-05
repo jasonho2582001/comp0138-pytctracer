@@ -189,7 +189,9 @@ def evaluate_links(
 @click.argument("predicted-links-path", type=click.Path(exists=True))
 @click.argument("ground-truth-path", type=click.Path(exists=True))
 @click.option(
-    "--metric", type=click.Choice(Config.SELECTABLE_METRIC_NAMES), multiple=True,
+    "--metric",
+    type=click.Choice(Config.SELECTABLE_METRIC_NAMES),
+    multiple=True,
     help="""Use a specified evaluation metric (can be multiple of this flag). If omitted,
     all selectable metrics are used by default.""",
 )

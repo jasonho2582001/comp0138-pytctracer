@@ -16,10 +16,7 @@ def find_functions_called_before_assert_for_each_test(
     last_returned_function = None
 
     for record in trace_data:
-        if (
-            record[TraceDataHeader.TESTNG_METHOD]
-            == TestingMethodType.TEST_METHOD_CALL
-        ):
+        if record[TraceDataHeader.TESTNG_METHOD] == TestingMethodType.TEST_METHOD_CALL:
             current_test = record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME]
             last_returned_function = None
         elif (
@@ -57,10 +54,7 @@ def find_classes_called_before_assert_for_each_test(
     last_returned_function_class = None
 
     for record in trace_data:
-        if (
-            record[TraceDataHeader.TESTNG_METHOD]
-            == TestingMethodType.TEST_METHOD_CALL
-        ):
+        if record[TraceDataHeader.TESTNG_METHOD] == TestingMethodType.TEST_METHOD_CALL:
             current_test_class = record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME]
             last_returned_function_class = None
         elif (

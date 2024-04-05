@@ -27,10 +27,7 @@ def find_test_class_names_tuple(
 ) -> Set[Tuple[str, str]]:
     test_class_names_tuple = set()
     for record in trace_data:
-        if (
-            record[TraceDataHeader.TESTNG_METHOD]
-            == TestingMethodType.TEST_METHOD_CALL
-        ):
+        if record[TraceDataHeader.TESTNG_METHOD] == TestingMethodType.TEST_METHOD_CALL:
             test_class_names_tuple.add(
                 (
                     record[TraceDataHeader.FULLY_QUALIFIED_CLASS_NAME],

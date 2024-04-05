@@ -23,10 +23,7 @@ def find_function_names_tuple(trace_data: List[Dict[str, str]]) -> Set[Tuple[str
 def find_test_names_tuple(trace_data: List[Dict[str, str]]) -> Set[Tuple[str, str]]:
     test_names_tuple = set()
     for record in trace_data:
-        if (
-            record[TraceDataHeader.TESTNG_METHOD]
-            == TestingMethodType.TEST_METHOD_CALL
-        ):
+        if record[TraceDataHeader.TESTNG_METHOD] == TestingMethodType.TEST_METHOD_CALL:
             test_names_tuple.add(
                 (
                     record[TraceDataHeader.FULLY_QUALIFIED_FUNCTION_NAME],

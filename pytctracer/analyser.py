@@ -205,8 +205,7 @@ class Analyser:
             classifications,
         ) in classifications_for_techniques.items():
             technique_arg_name = technique_arg_name.replace("-", "_")
-            file_path = f"{classifications_output_directory_path}/
-            {technique_arg_name}_{traceability_level.lower()}_classifications.json"
+            file_path = f"""{classifications_output_directory_path}/{technique_arg_name}_{traceability_level.lower()}_classifications.json"""
             write_dict_to_json(classifications, file_path)
 
     def _display_classifications_for_techniques(
@@ -332,8 +331,7 @@ class Analyser:
             link_predictions,
         ) in link_predictions_for_techniques.items():
             technique_arg_name = technique_arg_name.replace("-", "_")
-            file_path = f"{prediction_output_directory_path}/
-            {technique_arg_name}_{traceability_level.lower()}_predicted_links.json"
+            file_path = f"""{prediction_output_directory_path}/{technique_arg_name}_{traceability_level.lower()}_predicted_links.json"""
             write_dict_to_json(link_predictions, file_path)
 
     def _display_predicted_links_for_techniques(
