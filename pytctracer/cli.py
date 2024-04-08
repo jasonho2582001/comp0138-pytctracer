@@ -152,6 +152,7 @@ def evaluate_links(
     add_combined: bool,
     as_percentage: bool,
     classifications_output_directory: Optional[str],
+    display_classifications: bool,
     metrics_output_path: Optional[str],
 ):
     analyser = Analyser()
@@ -166,6 +167,7 @@ def evaluate_links(
         chosen_technique_names=chosen_technique_names,
         chosen_metric_names=chosen_metric_names,
         classifications_output_directory_path=classifications_output_directory,
+        display_classifications_to_stdout=display_classifications,
         evaluation_metrics_output_path=metrics_output_path,
     )
 
@@ -196,13 +198,6 @@ def evaluate_links(
     all selectable metrics are used by default.""",
 )
 @click.option(
-    "--level",
-    type=click.Choice([LevelType.FUNCTION, LevelType.CLASS]),
-    default=LevelType.FUNCTION,
-    help="""What level of traceability to produce links for (function or class).
-    If omitted, links are produced at the function level by default.""",
-)
-@click.option(
     "--as-percentage",
     is_flag=True,
     default=False,
@@ -223,7 +218,6 @@ def compare_links(
     predicted_links_path: str,
     ground_truth_path: str,
     metric: Optional[Tuple[str]],
-    level: str,
     as_percentage: bool,
     classifications_output_path: Optional[str],
     metrics_output_path: Optional[str],

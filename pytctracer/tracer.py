@@ -1,5 +1,5 @@
 from types import FrameType, CodeType
-from typing import List, Optional, Any, Tuple
+from typing import Callable, List, Optional, Any, Tuple
 import os
 import inspect
 import pytest
@@ -57,7 +57,7 @@ class PytestTracer:
         self._handle_in_line_functions = False
         self._in_line_function_calls = 0
 
-    def trace(self, frame: FrameType, event, arg=None):
+    def trace(self, frame: FrameType, event: str, arg: Optional[Any]=None) -> Callable:
         if not self.our_frame(frame):
             code_of_current_frame = frame.f_code
             file_name = os.path.normcase(code_of_current_frame.co_filename)
