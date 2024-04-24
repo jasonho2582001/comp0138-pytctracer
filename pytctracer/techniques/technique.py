@@ -10,7 +10,22 @@ TEST_NAME_PREFIX_UNDERSCORE = "test_"
 
 class Technique(ABC):
     """
-    Abstract class for implementing a traceability technique.
+    Abstract class for implementing a traceability technique. The Technique class
+    provides a common interface for all traceability techniques to implement. It
+    features a number of class attributes that subclasses may override to induce
+    specific behaviour.
+
+    Attributes:
+        full_name (str): The full name of the technique.
+        short_name (str): The short name of the technique.
+        arg_name (str): The argument name of the technique
+        (the string used to invoke the technique through the CLI).
+        description (str): A description of the technique.
+        required_parameters (Dict[str, str]): A dictionary of required parameters for the technique.
+        uses_threshold (bool): A boolean indicating whether the technique uses a threshold.
+        threshold (int): The threshold value for the technique.
+        normalise (bool): A boolean indicating whether the technique normalises scores.
+        call_depth_discount (bool): A boolean indicating whether the technique discounts scores based on call depth.
     """
 
     full_name = "Technique"
@@ -87,6 +102,21 @@ class Technique(ABC):
         traceability_score_dict: Dict[str, Dict[str, float]],
         tests_to_create_links_for: Optional[Set[str]] = None,
     ) -> Dict[str, Set[str]]:
+        """
+        Takes a dictionary traceability scores for each test and source code pair,
+        and returns a dictionary of predicted links for each test. The predicted links
+        are generated either using a threshold value, or from binary classification
+        depending on the technique.
+
+        Args:
+            traceability_score_dict (Dict[str, Dict[str, float]]): A dictionary of traceability
+                scores for each test and source code pair.
+            tests_to_create_links_for (Optional[Set[str]], optional): A set of test names to
+                generate links for. If None, links will be generated for all tests. Defaults to None.
+            
+        Returns:
+            Dict[str, Set[str]]: A dictionary of predicted links for each test.
+        """
         if not tests_to_create_links_for:
             tests_to_create_links_for = set(traceability_score_dict.keys())
 
@@ -120,16 +150,6 @@ class Technique(ABC):
         return predicted_links_dict
 
     def _strip_test_name(self, test_name: str) -> str:
-        """
-        Removes the `test_`, `test`, `Test` or `Test_` prefix
-        required for pytest test discovery from the given test name.
-
-        Args:
-            test_name (str): The name of the test function or test class.
-
-        Returns:
-            str: The test name with the `test_`, `test`, `Test` or `Test_` prefix removed.
-        """
         # Use lowercase since test class may be PascalCase by convention.
 
         lower_test_name = test_name.lower()

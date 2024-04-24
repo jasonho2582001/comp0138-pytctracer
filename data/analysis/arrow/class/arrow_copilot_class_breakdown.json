@@ -30,13 +30,11 @@
         ]
     },
     "tests.test_arrow.TestArrowFalsePositiveDst": {
-        "False Negative": [
-            "arrow.factory.ArrowFactory"
-        ],
-        "False Positives": [
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
             "arrow.arrow.Arrow"
-        ],
-        "True Positives": []
+        ]
     },
     "tests.test_arrow.TestArrowHumanizeTestsWithLocale": {
         "False Negative": [],
@@ -172,7 +170,9 @@
         ]
     },
     "tests.test_locales.TestCustomLocale": {
-        "False Negative": [],
+        "False Negative": [
+            "arrow.locales"
+        ],
         "False Positives": [],
         "True Positives": [
             "arrow.locales.Locale"
@@ -279,13 +279,12 @@
     },
     "tests.test_locales.TestPolishLocale": {
         "False Negative": [
-            "arrow.locales.SlavicBaseLocale",
-            "arrow.locales.PortugueseLocale"
+            "arrow.locales.SlavicBaseLocale"
         ],
-        "False Positives": [
+        "False Positives": [],
+        "True Positives": [
             "arrow.locales.PolishLocale"
-        ],
-        "True Positives": []
+        ]
     },
     "tests.test_locales.TestPortugueseLocale": {
         "False Negative": [],

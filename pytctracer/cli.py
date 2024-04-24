@@ -62,15 +62,18 @@ def produce_links(
     add_combined: bool,
     output_directory: Optional[str],
 ):
-    analyser = Analyser()
-    chosen_technique_names = list(technique)
-    analyser.produce_traceability_links_for_trace(
-        trace_csv_log_path=trace_csv_log_path,
-        traceability_level=level,
-        add_combined_technique=add_combined,
-        chosen_technique_names=chosen_technique_names,
-        prediction_output_directory_path=output_directory,
-    )
+    try:
+        analyser = Analyser()
+        chosen_technique_names = list(technique)
+        analyser.produce_traceability_links_for_trace(
+            trace_csv_log_path=trace_csv_log_path,
+            traceability_level=level,
+            add_combined_technique=add_combined,
+            chosen_technique_names=chosen_technique_names,
+            prediction_output_directory_path=output_directory,
+        )
+    except Exception as e:
+        click.ClickException(str(e))
 
 
 @cli.command(
@@ -140,7 +143,7 @@ def produce_links(
 )
 @click.option(
     "--metrics-output-path",
-    type=click.Path(exists=True),
+    type=click.Path(exists=False),
     help="""Path to write the CSV containing the evaluation metric results to.""",
 )
 def evaluate_links(
@@ -155,21 +158,24 @@ def evaluate_links(
     display_classifications: bool,
     metrics_output_path: Optional[str],
 ):
-    analyser = Analyser()
-    chosen_technique_names = list(technique)
-    chosen_metric_names = list(metric)
-    analyser.evaluate_traceability_links_for_trace(
-        trace_csv_log_path=trace_csv_log_path,
-        ground_truth_path=ground_truth_path,
-        traceability_level=level,
-        add_combined_technique=add_combined,
-        metric_as_percentage=as_percentage,
-        chosen_technique_names=chosen_technique_names,
-        chosen_metric_names=chosen_metric_names,
-        classifications_output_directory_path=classifications_output_directory,
-        display_classifications_to_stdout=display_classifications,
-        evaluation_metrics_output_path=metrics_output_path,
-    )
+    try:
+        analyser = Analyser()
+        chosen_technique_names = list(technique)
+        chosen_metric_names = list(metric)
+        analyser.evaluate_traceability_links_for_trace(
+            trace_csv_log_path=trace_csv_log_path,
+            ground_truth_path=ground_truth_path,
+            traceability_level=level,
+            add_combined_technique=add_combined,
+            metric_as_percentage=as_percentage,
+            chosen_technique_names=chosen_technique_names,
+            chosen_metric_names=chosen_metric_names,
+            classifications_output_directory_path=classifications_output_directory,
+            display_classifications_to_stdout=display_classifications,
+            evaluation_metrics_output_path=metrics_output_path,
+        )
+    except Exception as e:
+        click.ClickException(str(e))
 
 
 @cli.command(
@@ -211,7 +217,7 @@ def evaluate_links(
 )
 @click.option(
     "--metrics-output-path",
-    type=click.Path(exists=True),
+    type=click.Path(exists=False),
     help="""Path to write the CSV containing the evaluation metric results to.""",
 )
 def compare_links(
@@ -222,25 +228,19 @@ def compare_links(
     classifications_output_path: Optional[str],
     metrics_output_path: Optional[str],
 ):
-    analyser = Analyser()
-    chosen_metric_names = list(metric)
-    analyser.compare_traceability_links(
-        predicted_links_path=predicted_links_path,
-        ground_truth_path=ground_truth_path,
-        chosen_metric_names=chosen_metric_names,
-        metric_as_percentage=as_percentage,
-        classifications_output_path=classifications_output_path,
-        evaluation_metrics_output_path=metrics_output_path,
-    )
-    # predicted_links_path="copilot-predictions/pyopenssl/function/pyopenssl_copilot_function_predictions.json",
-    # ground_truth_path="ground-truth-data/pyopenssl/function/pyopenssl_ground_truth.json",
-
-
-# tracing-logs/pyopenssl/pyopenssl_pytest_tracer_logs.csv
-
-# trace_csv_log_path="tracing-logs/pyopenssl/pyopenssl_pytest_tracer_logs.csv",
-# ground_truth_path="ground-truth-data/pyopenssl/class/pyopenssl_ground_truth_classes.json",
-
+    try:
+        analyser = Analyser()
+        chosen_metric_names = list(metric)
+        analyser.compare_traceability_links(
+            predicted_links_path=predicted_links_path,
+            ground_truth_path=ground_truth_path,
+            chosen_metric_names=chosen_metric_names,
+            metric_as_percentage=as_percentage,
+            classifications_output_path=classifications_output_path,
+            evaluation_metrics_output_path=metrics_output_path,
+        )
+    except Exception as e:
+        click.ClickException(str(e))
 
 if __name__ == "__main__":
     cli()

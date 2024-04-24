@@ -84,8 +84,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "chartify._core.options.ChartifyOptions",
-            "chartify._core.options"
+            "chartify._core.options",
+            "chartify._core.options.ChartifyOptions"
         ]
     },
     "tests.test_plots.TestAreaPlot": {
@@ -188,7 +188,8 @@
             "chartify._core.plot.PlotNumericXY"
         ],
         "False Positives": [
-            "chartify._core.chart.Chart"
+            "chartify._core.chart.Chart",
+            "chartify._core.plot.BasePlot"
         ],
         "True Positives": []
     },

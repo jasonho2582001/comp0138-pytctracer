@@ -50,11 +50,23 @@ class TFIDF(Technique):
             (full path) name of a test or test class, and the second element
             is the short name of the test or test class.
 
+            functions_called_by_tests (Dict[str, Set[str]]): A dictionary where
+            the keys are the fully qualified names of the test or test classes,
+            and the values are sets containing the fully qualified names of each
+            function or function class called by the test or test class.
+
             tests_that_call_functions (Dict[str, Set[str]]): A dictionary
             where the keys are the fully qualified names of the function or
             function classes, and the values are sets containing the fully
             qualified names of each test or test class that invokes the
             function or function class.
+
+            functions_called_by_test_depth (Dict[str, Dict[str, int]]): A
+            dictionary where the keys are the fully qualified names of the test
+            or test classes, and the values are dictionaries containing the
+            fully qualified names of each function or function class called by
+            the test or test class and the call depth of the function or function
+            class.
 
         Returns:
             Dict[str, Dict[str, Union[int, float]]]: A dictionary where the
@@ -162,7 +174,7 @@ class TFIDFMultiset(TFIDF):
         functions_called_by_test_depth: Dict[str, Dict[str, int]],
     ) -> Dict[str, Dict[str, Union[int, float]]]:
         """
-        Invokes the TF-IDF traceability technique
+        Invokes the TF-IDF* (multiset) traceability technique
         to produce traceability scores for each test-to-code pair given.
 
         Args:
@@ -185,8 +197,14 @@ class TFIDFMultiset(TFIDF):
             tests_that_call_functions (Dict[str, Set[str]]): A dictionary
             where the keys are the fully qualified names of the function or
             function classes, and the values are sets containing each
-            test or test class that calls the function or function class
+            test or test class that calls the function or function class.
 
+            functions_called_by_test_depth (Dict[str, Dict[str, int]]): A
+            dictionary where the keys are the fully qualified names of the test
+            or test classes, and the values are dictionaries containing the
+            fully qualified names of each function or function class called by
+            the test or test class and the call depth of the function or function
+            class.
 
         Returns:
             Dict[str, Dict[str, Union[int, float]]]: A dictionary where the

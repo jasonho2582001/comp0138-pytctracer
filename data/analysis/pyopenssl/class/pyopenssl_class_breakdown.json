@@ -101,8 +101,8 @@
     },
     "tests.test_ssl.TestApplicationLayerProtoNegotiation": {
         "False Negative": [
-            "src.OpenSSL.SSL._ALPNSelectHelper",
-            "src.OpenSSL.SSL.Context"
+            "src.OpenSSL.SSL.Context",
+            "src.OpenSSL.SSL._ALPNSelectHelper"
         ],
         "False Positives": [],
         "True Positives": [
@@ -162,13 +162,15 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection",
-            "src.OpenSSL.SSL.Context"
+            "src.OpenSSL.SSL.Context",
+            "src.OpenSSL.SSL.Connection"
         ]
     },
     "tests.test_ssl.TestMemoryBIO": {
         "False Negative": [],
-        "False Positives": [],
+        "False Positives": [
+            "src.OpenSSL.crypto"
+        ],
         "True Positives": [
             "src.OpenSSL.SSL.Connection"
         ]

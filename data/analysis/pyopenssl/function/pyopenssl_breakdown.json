@@ -52,8 +52,8 @@
         ],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.crypto.Revoked.get_reason",
-            "src.OpenSSL.crypto.Revoked.set_reason"
+            "src.OpenSSL.crypto.Revoked.set_reason",
+            "src.OpenSSL.crypto.Revoked.get_reason"
         ]
     },
     "tests.test_crypto.TestRevoked.test_set_reason_invalid_reason": {
@@ -157,8 +157,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.crypto.X509StoreContext.verify_certificate",
-            "src.OpenSSL.crypto.X509Store.load_locations"
+            "src.OpenSSL.crypto.X509Store.load_locations",
+            "src.OpenSSL.crypto.X509StoreContext.verify_certificate"
         ]
     },
     "tests.test_ssl.TestConnection.test_connect_wrong_args": {
@@ -270,8 +270,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection.DTLSv1_get_timeout",
-            "src.OpenSSL.SSL.Connection.DTLSv1_handle_timeout"
+            "src.OpenSSL.SSL.Connection.DTLSv1_handle_timeout",
+            "src.OpenSSL.SSL.Connection.DTLSv1_get_timeout"
         ]
     },
     "tests.test_ssl.TestMemoryBIO.test_socket_overrides_memory": {

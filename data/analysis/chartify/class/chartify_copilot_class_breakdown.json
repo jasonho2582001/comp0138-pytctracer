@@ -25,8 +25,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "chartify._core.plot.PlotMixedTypeXY",
-            "chartify._core.chart.Chart"
+            "chartify._core.chart.Chart",
+            "chartify._core.plot.PlotMixedTypeXY"
         ]
     },
     "tests.test_chart.TestSecondYChart": {
@@ -44,8 +44,8 @@
             "chartify._core.colors.ColorPalette"
         ],
         "False Positives": [
-            "chartify._core.colors",
-            "chartify._core.options"
+            "chartify._core.options",
+            "chartify._core.colors"
         ],
         "True Positives": []
     },

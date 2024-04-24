@@ -52,6 +52,12 @@ class LevenshteinDistance(Technique):
             classes, and the values are sets containing the fully qualified
             names of each function or function class invoked.
 
+            functions_called_by_test_depth (Dict[str, Dict[str, int]]): A
+            dictionary where the keys are the fully qualified names of the test
+            or test classes, and the values are dictionaries containing the
+            fully qualified names of each function or function class invoked,
+            along with the call depth of each function or function class.
+
         Returns:
             Dict[str, Dict[str, Union[int, float]]]: A dictionary where the
             keys are the fully qualified names of the test or test classes,

@@ -86,7 +86,7 @@ class NamingConventions(Technique):
 
 class NamingConventionsContains(NamingConventions):
     """
-    Class implementing the Naming Conventions traceability technique.
+    Class implementing the Naming Conventions - Contains traceability technique.
     """
 
     full_name = "Naming Conventions - Contains"

@@ -17,8 +17,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "kedro.framework.cli.catalog",
-            "kedro.io.data_catalog.DataCatalog"
+            "kedro.io.data_catalog.DataCatalog",
+            "kedro.framework.cli.catalog"
         ]
     },
     "tests.framework.cli.test_cli.TestCliUtils": {
@@ -45,13 +45,11 @@
         ]
     },
     "tests.framework.cli.test_registry.TestRegistryDescribeCommand": {
-        "False Negative": [
-            "kedro.framework.project.__init__._ProjectLogging"
-        ],
-        "False Positives": [
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
             "kedro.framework.cli.registry"
-        ],
-        "True Positives": []
+        ]
     },
     "tests.framework.session.test_session.TestKedroSession": {
         "False Negative": [],
@@ -73,8 +71,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "kedro.framework.hooks.manager",
-            "kedro.framework.session.session.KedroSession"
+            "kedro.framework.session.session.KedroSession",
+            "kedro.framework.hooks.manager"
         ]
     },
     "tests.framework.session.test_store.TestBaseStore": {
@@ -211,8 +209,8 @@
             "kedro.io.data_catalog.DataCatalog"
         ],
         "True Positives": [
-            "kedro.runner.runner.AbstractRunner",
-            "kedro.pipeline.pipeline.Pipeline"
+            "kedro.pipeline.pipeline.Pipeline",
+            "kedro.runner.runner.AbstractRunner"
         ]
     },
     "tests.runner.test_parallel_runner.TestValidParallelRunner": {
@@ -225,10 +223,10 @@
     "tests.runner.test_sequential_runner.TestMemoryDatasetBehaviour": {
         "False Negative": [],
         "False Positives": [
-            "kedro.io.memory_dataset.MemoryDataset"
+            "kedro.runner.sequential_runner.SequentialRunner"
         ],
         "True Positives": [
-            "kedro.runner.sequential_runner.SequentialRunner"
+            "kedro.io.memory_dataset.MemoryDataset"
         ]
     },
     "tests.runner.test_sequential_runner.TestSeqentialRunnerBranchlessPipeline": {

@@ -6,6 +6,27 @@ from pytctracer.config.constants import ClassificationType
 def classify_predictions(
     predicted_links: Dict[str, List[str]], ground_truth_links: Dict[str, List[str]]
 ) -> Dict[str, Dict[str, List[str]]]:
+    """
+    Takes a dictionary of predicted links and a dictionary of ground truth links
+    and classifies the predictions into true positives, false positives, and
+    false negatives.
+
+    Args:
+        predicted_links (Dict[str, List[str]]): A dictionary where the keys are
+            the fully qualified names of the unit tests, and the values are lists
+            of fully qualified names of the functions predicted to be linked to
+            the unit test.
+        ground_truth_links (Dict[str, List[str]]): A dictionary where the keys are
+            the fully qualified names of the unit tests, and the values are lists
+            of fully qualified names of the functions that are actually linked
+            to the unit test.
+        
+    Returns:
+        Dict[str, Dict[str, List[str]]]: A dictionary where the keys are the fully
+        qualified names of the unit tests, and the values are dictionaries
+        containing the true positives, false positives, and false negatives for
+        each unit test.
+    """
     classification_dict = defaultdict(dict)
 
     for fully_qualified_test_name in ground_truth_links:

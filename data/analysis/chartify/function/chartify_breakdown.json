@@ -22,8 +22,8 @@
             "chartify.examples.example_data"
         ],
         "True Positives": [
-            "chartify._core.callout.Callout.line_segment",
-            "chartify._core.callout.Callout.text"
+            "chartify._core.callout.Callout.text",
+            "chartify._core.callout.Callout.line_segment"
         ]
     },
     "tests.test_chart.TestChart.test_data": {
@@ -50,8 +50,8 @@
         ],
         "False Positives": [],
         "True Positives": [
-            "chartify._core.chart.Chart.set_legend_location",
-            "chartify._core.plot.PlotMixedTypeXY.bar_stacked"
+            "chartify._core.plot.PlotMixedTypeXY.bar_stacked",
+            "chartify._core.chart.Chart.set_legend_location"
         ]
     },
     "tests.test_chart.TestLegend.test_set_legend_location": {
@@ -102,8 +102,8 @@
     },
     "tests.test_colors_config.test_colors_config": {
         "False Negative": [
-            "chartify._core.colors.ColorPalettes._from_yaml",
-            "chartify._core.colors.CustomColors.from_yaml"
+            "chartify._core.colors.CustomColors.from_yaml",
+            "chartify._core.colors.ColorPalettes._from_yaml"
         ],
         "False Positives": [
             "chartify._core.colors.<listcomp>"
@@ -114,9 +114,7 @@
     },
     "tests.test_options_config.test_options_config": {
         "False Negative": [],
-        "False Positives": [
-            "chartify._core.options.ChartifyOptions.__init__"
-        ],
+        "False Positives": [],
         "True Positives": [
             "chartify._core.options.ChartifyOptions.get_option"
         ]
@@ -148,9 +146,9 @@
     },
     "tests.test_plots.TestBarLollipopParallel.test_bar_color_column": {
         "False Negative": [
-            "chartify._core.plot.PlotMixedTypeXY._construct_source",
+            "chartify._core.plot.BasePlot._plot_with_legend",
             "chartify._core.plot.BasePlot._get_color_and_order",
-            "chartify._core.plot.BasePlot._plot_with_legend"
+            "chartify._core.plot.PlotMixedTypeXY._construct_source"
         ],
         "False Positives": [],
         "True Positives": [
@@ -267,8 +265,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "chartify._core.plot.PlotMixedTypeXY.bar",
-            "chartify._core.plot.PlotMixedTypeXY.bar_stacked"
+            "chartify._core.plot.PlotMixedTypeXY.bar_stacked",
+            "chartify._core.plot.PlotMixedTypeXY.bar"
         ]
     }
 }

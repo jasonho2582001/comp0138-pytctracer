@@ -50,6 +50,12 @@ class LongestCommonSubsequence(Technique, ABC):
             classes, and the values are sets containing the fully qualified
             names of each function or function class invoked.
 
+            functions_called_by_test_depth (Dict[str, Dict[str, int]]): A dictionary
+            where the keys are the fully qualified names of the test or test
+            classes, and the values are dictionaries containing the fully qualified
+            names of each function or function class invoked and the depth of the
+            call.
+
         Returns:
             Dict[str, Dict[str, Union[int, float]]]: A dictionary where the
             keys are the fully qualified names of the test or test classes,
@@ -96,8 +102,7 @@ class LongestCommonSubsequence(Technique, ABC):
     @abstractmethod
     def _compute_lcs_score(self, _function_name: str, _test_name: str) -> int:
         raise NotImplementedError(
-            """LCS classes must implement this method 
-                                  to compute the traceability score"""
+            """LCS classes must implement this method to compute the traceability score"""
         )
 
     def _compute_lcs(self, function_name: str, test_name: str) -> int:
@@ -152,6 +157,12 @@ class LongestCommonSubsequenceUnit(LongestCommonSubsequence):
             where the keys are the fully qualified names of the test or test
             classes, and the values are sets containing the fully qualified
             names of each function or function class invoked.
+
+            functions_called_by_test_depth (Dict[str, Dict[str, int]]): A dictionary
+            where the keys are the fully qualified names of the test or test
+            classes, and the values are dictionaries containing the fully qualified
+            names of each function or function class invoked and the depth of the
+            call.
 
         Returns:
             Dict[str, Dict[str, Union[int, float]]]: A dictionary where the
@@ -214,6 +225,12 @@ class LongestCommonSubsequenceBoth(LongestCommonSubsequence):
             where the keys are the fully qualified names of the test or test
             classes, and the values are sets containing the fully qualified
             names of each function or function class invoked.
+
+            functions_called_by_test_depth (Dict[str, Dict[str, int]]): A dictionary
+            where the keys are the fully qualified names of the test or test
+            classes, and the values are dictionaries containing the fully qualified
+            names of each function or function class invoked and the depth of the
+            call.
 
         Returns:
             Dict[str, Dict[str, Union[int, float]]]: A dictionary where the

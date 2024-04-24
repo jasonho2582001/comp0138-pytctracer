@@ -11,10 +11,10 @@ pyopenssl_class_level_analysis_path = "analysis/pyopenssl/class/pyopenssl_predic
 chartify_class_level_analysis_path = "analysis/chartify/class/chartify_predictions_class_results.csv"
 
 # Load the CSV files into DataFrames
-df1 = pd.read_csv(kedro_class_level_analysis_path)
-df2 = pd.read_csv(arrow_class_level_analysis_path)
-df3 = pd.read_csv(pyopenssl_class_level_analysis_path)
-df4 = pd.read_csv(chartify_class_level_analysis_path)
+df1 = pd.read_csv(kedro_analysis_path)
+df2 = pd.read_csv(arrow_analysis_path)
+df3 = pd.read_csv(pyopenssl_analysis_path)
+df4 = pd.read_csv(chartify_analysis_path)
 
 df1 = df1.replace({'-': 0})
 df2 = df2.replace({'-': 0})
@@ -36,7 +36,7 @@ for df in [df1, df2, df3, df4]:
             df[col] = df[col].round(3)
 
 # Ensure that all DataFrames have the same structure
-assert df1.columns.equals(df2.columns) and df1.columns.equals(df3.columns) and df1.columns.equals(df4.columns)
+assert df1.columns.equals(df2.columns) and df2.columns.equals(df3.columns) and df1.columns.equals(df4.columns)
 
 # Add the numeric columns in the DataFrames together and divide by the number of CSV files
 df_avg = df1.copy()
@@ -44,4 +44,4 @@ for column in numeric_columns:
     df_avg[column] = ((df1[column] + df2[column] + df3[column] + df4[column]) / 4).round(1)
 
 # Save the resulting DataFrame to a new CSV file
-df_avg.to_csv('average_class.csv', index=False)
+df_avg.to_csv('average_function.csv', index=False)

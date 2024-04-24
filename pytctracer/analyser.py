@@ -1,5 +1,4 @@
 from typing import List, Optional, Dict, Any, Tuple, Set
-from click import ClickException
 from pytctracer.config.constants import LevelType, TechniqueParameter
 from pytctracer.config import Config
 from pytctracer.io.input import read_trace_csv_log, load_link_json
@@ -32,6 +31,10 @@ from pytctracer.techniques import ArgNameToTechniqueMapper, Combined
 
 
 class Analyser:
+    """
+    Class which handles the the generation, evaluation and comparison
+    of test-to-code traceability links.
+    """
     def __init__(self) -> None:
         self.arg_name_to_technique_map = ArgNameToTechniqueMapper()
         self.arg_name_to_metric_map = ArgNameToMetricMapper()
@@ -99,7 +102,7 @@ class Analyser:
         tests_in_predicted_links = set(predicted_links.keys())
         for test in ground_truth_links:
             if test not in tests_in_predicted_links:
-                raise ClickException(
+                raise ValueError(
                     f"Test '{test}' in ground truth but not in predicted links"
                 )
 

@@ -6,10 +6,10 @@ import json
 import sys
 from sklearn.metrics import precision_recall_curve, auc
 
-csv.field_size_limit(sys.maxsize)
+csv.field_size_limit(int(1e9))
 
 THRESHOLD_FOR_LCSU = 0.75
-THRESHOLD_FOR_LCSB = 0.65
+THRESHOLD_FOR_LCSB = 0.55
 THRESHOLD_FOR_LEVENSHTEIN = 0.95
 THRESHOLD_FOR_TARANTULA = 0.95
 THRESHOLD_FOR_TFIDF = 0.9
@@ -437,7 +437,7 @@ def tfidf_count(functions_called_by_each_test_count_dict: Dict[str, Dict[str, in
 
 def find_average_score(result_dicts: List[Dict[str, Dict[str, float]]], function_names: Set[str], test_names: Set[str], functions_called_by_each_test_dict: Dict[str, Set[str]]) -> Dict[str, Dict[str, float]]:
     average_score_dict = None
-    num_of_result_dicts = 9
+    num_of_result_dicts = len(result_dicts)
     for result_dict in result_dicts:
         if average_score_dict is None:
             average_score_dict = defaultdict(lambda: defaultdict(float))
@@ -857,7 +857,7 @@ def vary_threshold():
         lcsb_dict = longest_common_subsequence_both(function_names_tuple, test_names_tuple, functions_called_by_each_test_dict, depths_of_functions_called_by_each_test_dict)
         lcsu_dict = longest_common_subsequence_unit(function_names_tuple, test_names_tuple, functions_called_by_each_test_dict, depths_of_functions_called_by_each_test_dict)
         levenshtein_dict = levenshtein_distance(function_names_tuple, test_names_tuple, functions_called_by_each_test_dict, depths_of_functions_called_by_each_test_dict)
-        lcba_dict = last_call_before_assert_class(data, fully_qualified_function_names, fully_qualified_test_names)
+        lcba_dict = last_call_before_assert(data, fully_qualified_function_names, fully_qualified_test_names)
         tarantula_dict = tarantula(functions_called_by_each_test_dict, tests_that_call_each_function_dict, fully_qualified_function_names, fully_qualified_test_names, depths_of_functions_called_by_each_test_dict)
         tfidf_dict = tfidf(functions_called_by_each_test_dict, tests_that_call_each_function_dict, fully_qualified_function_names, fully_qualified_test_names, depths_of_functions_called_by_each_test_dict)
         tfidf_count_dict = tfidf_count(functions_called_by_each_test_count_dict, tests_that_call_each_function_dict, fully_qualified_function_names, fully_qualified_test_names, depths_of_functions_called_by_each_test_dict)
@@ -957,7 +957,7 @@ def vary_threshold():
                 s /= len(res_lists)
                 final_res_dict[metric].append(s)
 
-        plt.figure(figsize=(10, 6))
+        plt.figure()
 
         # Use the 'seaborn' style
         plt.style.use('ggplot')
@@ -968,7 +968,7 @@ def vary_threshold():
             plt.plot(thresholds, final_res_dict[metric], label=metric, linewidth=2)
 
         # Add a vertical line at threshold 0.5
-        plt.axvline(x=normal_threshold, color='black', linestyle='--', label=f't = {normal_threshold}')
+        plt.axvline(x=normal_threshold, color='black', linestyle='--', label=f't = {normal_threshold:.2f}')
         # Set the x-axis range to [0, 1]
         plt.xlim([0, 1])
         font = {
@@ -985,7 +985,7 @@ def vary_threshold():
         plt.title(title, fontsize=16)
 
         # Add a legend
-        plt.legend()
+        plt.legend(fontsize=14)
 
         # Add a grid
         plt.grid(True)
@@ -993,13 +993,13 @@ def vary_threshold():
         # Show the plot
         plt.show()
     
-    plot_threshold_sensitivity(lcsb_dicts, THRESHOLD_FOR_LCSB, "Threshold Sensitivity for LCS-B (Function Level)")
-    plot_threshold_sensitivity(lcsu_dicts, THRESHOLD_FOR_LCSU, "Threshold Sensitivity for LCS-U (Function Level)")
-    plot_threshold_sensitivity(levenshtein_dicts, THRESHOLD_FOR_LEVENSHTEIN, "Threshold Sensitivity for Levenshtein (Function Level)")
-    plot_threshold_sensitivity(tarantula_dicts, THRESHOLD_FOR_TARANTULA, "Threshold Sensitivity for Tarantula (Function Level)")
-    plot_threshold_sensitivity(tfidf_dicts, THRESHOLD_FOR_TFIDF, "Threshold Sensitivity for TF-IDF (Function Level)")
-    plot_threshold_sensitivity(tfidf_count_dicts, THRESHOLD_FOR_TFIDF_COUNT, "Threshold Sensitivity for TF-IDF* (Function Level)")
-    plot_threshold_sensitivity(average_dicts, THRESHOLD_FOR_AVERAGE, "Threshold Sensitivity for Combined (Function Level)")
+    plot_threshold_sensitivity(lcsb_dicts, THRESHOLD_FOR_LCSB, "LCS-B (Function Level)")
+    plot_threshold_sensitivity(lcsu_dicts, THRESHOLD_FOR_LCSU, "LCS-U (Function Level)")
+    plot_threshold_sensitivity(levenshtein_dicts, THRESHOLD_FOR_LEVENSHTEIN, "Levenshtein (Function Level)")
+    plot_threshold_sensitivity(tarantula_dicts, THRESHOLD_FOR_TARANTULA, "Tarantula (Function Level)")
+    plot_threshold_sensitivity(tfidf_dicts, THRESHOLD_FOR_TFIDF, "TF-IDF (Function Level)")
+    plot_threshold_sensitivity(tfidf_count_dicts, THRESHOLD_FOR_TFIDF_COUNT, "TF-IDF* (Function Level)")
+    plot_threshold_sensitivity(average_dicts, THRESHOLD_FOR_AVERAGE, "Combined (Function Level)")
 
 
 def vary_threshold_class():
@@ -1011,15 +1011,7 @@ def vary_threshold_class():
                           "ground-truth-data/arrow/class/arrow_ground_truth_classes.json",
                           "ground-truth-data/kedro/class/kedro_ground_truth_classes.json",
                           "ground-truth-data/chartify/class/chartify_ground_truth_classes.json"]
-    ground_truth_function_class_paths = ["ground-truth-data/pyopenssl/class/pyopenssl_all_function_class_names.txt",
-                                            "ground-truth-data/arrow/class/arrow_all_function_class_names.txt",
-                                            "ground-truth-data/kedro/class/kedro_all_function_class_names.txt",
-                                            "ground-truth-data/chartify/class/chartify_all_function_class_names.txt"]
-    
-    ground_truth_test_class_paths = ["ground-truth-data/pyopenssl/class/pyopenssl_all_test_class_names.txt",
-                                        "ground-truth-data/arrow/class/arrow_all_test_class_names.txt",
-                                        "ground-truth-data/kedro/class/kedro_all_test_class_names.txt",
-                                        "ground-truth-data/chartify/class/chartify_all_test_class_names.txt"]
+
     lcsb_dicts = []
     lcsu_dicts = []
     levenshtein_dicts = []
@@ -1032,19 +1024,16 @@ def vary_threshold_class():
         file_path = file_paths[i]
         ground_truth_path = ground_truth_paths[i]
         ground_truth_dict = load_link_json(ground_truth_path)
-        ground_truth_function_class_path = ground_truth_function_class_paths[i]
-        ground_truth_test_class_path = ground_truth_test_class_paths[i]
         columns, data = read_csv_log(file_path)
-        ground_truth_function_class_names, ground_truth_test_class_names = extract_ground_truth_class_names(ground_truth_function_class_path, ground_truth_test_class_path)
         
-        function_names_tuple, test_names_tuple = extract_function_class_and_test_class_names_tuple(data, ground_truth_function_class_names, ground_truth_test_class_names)
+        function_names_tuple, test_names_tuple = extract_function_class_and_test_class_names_tuple(data)
         fully_qualified_function_names = set(fully_qualified_function_name for fully_qualified_function_name, _ in function_names_tuple)
         fully_qualified_test_names = set(fully_qualified_test_name for fully_qualified_test_name, _ in test_names_tuple)
-        functions_called_by_each_test_dict = find_function_classes_called_by_each_test_class(data, ground_truth_function_class_names, ground_truth_test_class_names)
-        functions_called_by_each_test_count_dict = find_function_classes_called_by_each_test_class_count(data, ground_truth_function_class_names, ground_truth_test_class_names)
-        tests_that_call_each_function_dict = find_test_classes_that_call_each_function_class(data, ground_truth_function_class_names, ground_truth_test_class_names)
+        functions_called_by_each_test_dict = find_function_classes_called_by_each_test_class(data)
+        functions_called_by_each_test_count_dict = find_function_classes_called_by_each_test_class_count(data)
+        tests_that_call_each_function_dict = find_test_classes_that_call_each_function_class(data)
         tests_to_create_links_for = set(ground_truth_dict.keys())
-        depths_of_functions_called_by_each_test_dict = find_depths_of_function_classes_called_by_each_test_class(data, ground_truth_function_class_names, ground_truth_test_class_names)
+        depths_of_functions_called_by_each_test_dict = find_depths_of_function_classes_called_by_each_test_class(data)
         
         # print(function_names_tuple)
 
@@ -1153,7 +1142,7 @@ def vary_threshold_class():
                 s /= len(res_lists)
                 final_res_dict[metric].append(s)
 
-        plt.figure(figsize=(10, 6))
+        plt.figure()
 
         # Use the 'seaborn' style
         plt.style.use('ggplot')
@@ -1164,7 +1153,7 @@ def vary_threshold_class():
             plt.plot(thresholds, final_res_dict[metric], label=metric, linewidth=2)
 
         # Add a vertical line at threshold 0.5
-        plt.axvline(x=normal_threshold, color='black', linestyle='--', label=f't = {normal_threshold}')
+        plt.axvline(x=normal_threshold, color='black', linestyle='--', label=f't = {normal_threshold:.2f}')
         # Set the x-axis range to [0, 1]
         plt.xlim([0, 1])
         font = {
@@ -1181,7 +1170,7 @@ def vary_threshold_class():
         plt.title(title, fontsize=16)
 
         # Add a legend
-        plt.legend()
+        plt.legend(fontsize=14)
 
         # Add a grid
         plt.grid(True)
@@ -1189,13 +1178,13 @@ def vary_threshold_class():
         # Show the plot
         plt.show()
     
-    plot_threshold_sensitivity(lcsb_dicts, THRESHOLD_FOR_LCSB, "Threshold Sensitivity for LCS-B (Class Level)")
-    plot_threshold_sensitivity(lcsu_dicts, THRESHOLD_FOR_LCSU, "Threshold Sensitivity for LCS-U (Class Level)")
-    plot_threshold_sensitivity(levenshtein_dicts, THRESHOLD_FOR_LEVENSHTEIN, "Threshold Sensitivity for Levenshtein (Class Level)")
-    plot_threshold_sensitivity(tarantula_dicts, THRESHOLD_FOR_TARANTULA, "Threshold Sensitivity for Tarantula (Class Level)")
-    plot_threshold_sensitivity(tfidf_dicts, THRESHOLD_FOR_TFIDF, "Threshold Sensitivity for TF-IDF (Class Level)")
-    plot_threshold_sensitivity(tfidf_count_dicts, THRESHOLD_FOR_TFIDF_COUNT, "Threshold Sensitivity for TF-IDF* (Class Level)")
-    plot_threshold_sensitivity(average_dicts, THRESHOLD_FOR_AVERAGE, "Threshold Sensitivity for Combined (Class Level)")
+    plot_threshold_sensitivity(lcsb_dicts, THRESHOLD_FOR_LCSB, "LCS-B (Class Level)")
+    plot_threshold_sensitivity(lcsu_dicts, THRESHOLD_FOR_LCSU, "LCS-U (Class Level)")
+    plot_threshold_sensitivity(levenshtein_dicts, THRESHOLD_FOR_LEVENSHTEIN, "Levenshtein (Class Level)")
+    plot_threshold_sensitivity(tarantula_dicts, THRESHOLD_FOR_TARANTULA, "Tarantula (Class Level)")
+    plot_threshold_sensitivity(tfidf_dicts, THRESHOLD_FOR_TFIDF, "TF-IDF (Class Level)")
+    plot_threshold_sensitivity(tfidf_count_dicts, THRESHOLD_FOR_TFIDF_COUNT, "TF-IDF* (Class Level)")
+    plot_threshold_sensitivity(average_dicts, THRESHOLD_FOR_AVERAGE, "Combined (Class Level)")
 
 
 
@@ -1266,10 +1255,10 @@ if __name__ == "__main__":
     # analyse_trace(kedro_tracer_logs_path, kedro_ground_truth_path, kedro_analysis_path, kedro_breakdown_path, kedro_copilot_function_prediction_path, kedro_copilot_function_breakdown_path)
     # analyse_trace(chartify_tracer_logs_path, chartify_ground_truth_path, chartify_analysis_path, chartify_breakdown_path, chartify_copilot_function_prediction_path, chartify_copilot_function_breakdown_path)
     
-    analyse_trace_class_level(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_class_path, pyopenssl_class_level_analysis_path, pyopenssl_class_level_breakdown_path, pyopenssl_ground_truth_function_class_path, pyopenssl_ground_truth_test_class_path, pyopenssl_copilot_class_prediction_path, pyopenssl_copilot_class_breakdown_path)
+    # analyse_trace_class_level(pyopenssl_tracer_logs_path, pyopenssl_ground_truth_class_path, pyopenssl_class_level_analysis_path, pyopenssl_class_level_breakdown_path, pyopenssl_ground_truth_function_class_path, pyopenssl_ground_truth_test_class_path, pyopenssl_copilot_class_prediction_path, pyopenssl_copilot_class_breakdown_path)
     # analyse_trace_class_level(arrow_tracer_logs_path, arrow_ground_truth_class_path, arrow_class_level_analysis_path, arrow_class_level_breakdown_path, arrow_ground_truth_function_class_path, arrow_ground_truth_test_class_path, arrow_copilot_class_prediction_path, arrow_copilot_class_breakdown_path)
     # analyse_trace_class_level(kedro_tracer_logs_path, kedro_ground_truth_class_path, kedro_class_level_analysis_path, kedro_class_level_breakdown_path, kedro_ground_truth_function_class_path, kedro_ground_truth_test_class_path, kedro_copilot_class_prediction_path, kedro_copilot_class_breakdown_path)
     # analyse_trace_class_level(chartify_tracer_logs_path, chartify_ground_truth_class_path, chartify_class_level_analysis_path, chartify_class_level_breakdown_path, chartify_ground_truth_function_class_path, chartify_ground_truth_test_class_path, chartify_copilot_class_prediction_path, chartify_copilot_class_breakdown_path)
 
-    # vary_threshold()
-    # vary_threshold_class()
+    vary_threshold()
+    vary_threshold_class()

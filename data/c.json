@@ -1,198 +1,250 @@
 {
-    "tests.test_crypto.TestCRL": {
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader": {
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.crypto.CRL"
+            "kedro.config.omegaconf_config.OmegaConfigLoader"
         ]
     },
-    "tests.test_crypto.TestEllipticCurve": {
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone": {
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.crypto._EllipticCurve"
+            "kedro.config.omegaconf_config.OmegaConfigLoader"
         ]
     },
-    "tests.test_crypto.TestEllipticCurveHash": {
-        "False Negative": [],
-        "False Positives": [],
-        "True Positives": [
-            "src.OpenSSL.crypto._EllipticCurve"
-        ]
-    },
-    "tests.test_crypto.TestNetscapeSPKI": {
-        "False Negative": [],
-        "False Positives": [],
-        "True Positives": [
-            "src.OpenSSL.crypto.NetscapeSPKI"
-        ]
-    },
-    "tests.test_crypto.TestPKCS12": {
-        "False Negative": [],
-        "False Positives": [],
-        "True Positives": [
-            "src.OpenSSL.crypto.PKCS12"
-        ]
-    },
-    "tests.test_crypto.TestPKey": {
-        "False Negative": [],
-        "False Positives": [],
-        "True Positives": [
-            "src.OpenSSL.crypto.PKey"
-        ]
-    },
-    "tests.test_crypto.TestRevoked": {
-        "False Negative": [],
-        "False Positives": [],
-        "True Positives": [
-            "src.OpenSSL.crypto.Revoked"
-        ]
-    },
-    "tests.test_crypto.TestX509": {
-        "False Negative": [],
-        "False Positives": [],
-        "True Positives": [
-            "src.OpenSSL.crypto.X509"
-        ]
-    },
-    "tests.test_crypto.TestX509Ext": {
+    "tests.framework.cli.test_catalog.TestCatalogListCommand": {
         "False Negative": [
-            "src.OpenSSL.crypto.X509Extension"
+            "kedro.io.data_catalog.DataCatalog"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.cli.catalog"
+        ]
+    },
+    "tests.framework.cli.test_cli.TestCliUtils": {
+        "False Negative": [
+            "kedro.framework.cli.cli.KedroCLI"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.cli.utils"
+        ]
+    },
+    "tests.framework.cli.test_cli.TestCommandCollection": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.cli.utils.CommandCollection"
+        ]
+    },
+    "tests.framework.cli.test_cli.TestKedroCLI": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.cli.cli.KedroCLI"
+        ]
+    },
+    "tests.framework.cli.test_registry.TestRegistryDescribeCommand": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.cli.registry"
+        ]
+    },
+    "tests.framework.session.test_session.TestKedroSession": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.session.session.KedroSession"
+        ]
+    },
+    "tests.framework.session.test_session_extension_hooks.TestNodeHooks": {
+        "False Negative": [
+            "kedro.framework.session.session.KedroSession"
         ],
         "False Positives": [
-            "src.OpenSSL.crypto.X509"
+            "kedro.pipeline.node.Node"
         ],
         "True Positives": []
     },
-    "tests.test_crypto.TestX509Name": {
-        "False Negative": [],
-        "False Positives": [],
-        "True Positives": [
-            "src.OpenSSL.crypto.X509Name"
-        ]
-    },
-    "tests.test_crypto.TestX509Req": {
-        "False Negative": [],
-        "False Positives": [],
-        "True Positives": [
-            "src.OpenSSL.crypto.X509Req"
-        ]
-    },
-    "tests.test_crypto.TestX509Store": {
-        "False Negative": [],
-        "False Positives": [],
-        "True Positives": [
-            "src.OpenSSL.crypto.X509Store"
-        ]
-    },
-    "tests.test_crypto.TestX509StoreContext": {
-        "False Negative": [],
-        "False Positives": [],
-        "True Positives": [
-            "src.OpenSSL.crypto.X509StoreContext"
-        ]
-    },
-    "tests.test_crypto._PKeyInteractionTestsMixin": {
-        "False Negative": [],
-        "False Positives": [],
-        "True Positives": [
-            "src.OpenSSL.crypto.NetscapeSPKI"
-        ]
-    },
-    "tests.test_ssl.TestApplicationLayerProtoNegotiation": {
+    "tests.framework.session.test_session_hook_manager.TestSessionHookManager": {
         "False Negative": [
-            "src.OpenSSL.SSL._ALPNSelectHelper",
-            "src.OpenSSL.SSL.Context"
+            "kedro.framework.session.session.KedroSession"
         ],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection"
+            "kedro.framework.hooks.manager"
         ]
     },
-    "tests.test_ssl.TestConnection": {
+    "tests.framework.session.test_store.TestBaseStore": {
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection"
+            "kedro.framework.session.store.BaseSessionStore"
         ]
     },
-    "tests.test_ssl.TestConnectionGetCipherList": {
+    "tests.framework.session.test_store.TestShelveStore": {
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection"
+            "kedro.framework.session.shelvestore.ShelveStore"
         ]
     },
-    "tests.test_ssl.TestConnectionRecvInto": {
+    "tests.io.test_cached_dataset.TestCachedDataset": {
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection"
+            "kedro.io.cached_dataset.CachedDataset"
         ]
     },
-    "tests.test_ssl.TestConnectionRenegotiate": {
+    "tests.io.test_core.TestAbstractVersionedDataset": {
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection"
+            "kedro.io.core.AbstractVersionedDataset"
         ]
     },
-    "tests.test_ssl.TestConnectionSend": {
+    "tests.io.test_data_catalog.TestDataCatalogVersioned": {
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection"
+            "kedro.io.data_catalog.DataCatalog"
         ]
     },
-    "tests.test_ssl.TestConnectionSendall": {
+    "tests.io.test_lambda_dataset.TestLambdaDatasetLoad": {
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection"
+            "kedro.io.lambda_dataset.LambdaDataset"
         ]
     },
-    "tests.test_ssl.TestContext": {
+    "tests.io.test_lambda_dataset.TestLambdaDatasetRelease": {
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Context"
+            "kedro.io.lambda_dataset.LambdaDataset"
         ]
     },
-    "tests.test_ssl.TestContextConnection": {
+    "tests.io.test_memory_dataset.TestMemoryDataset": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.io.memory_dataset.MemoryDataset"
+        ]
+    },
+    "tests.io.test_shared_memory_dataset.TestSharedMemoryDataset": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.io.shared_memory_dataset.SharedMemoryDataset"
+        ]
+    },
+    "tests.ipython.test_ipython.TestLoadKedroObjects": {
         "False Negative": [
-            "src.OpenSSL.SSL.Context"
-        ],
-        "False Positives": [],
-        "True Positives": [
-            "src.OpenSSL.SSL.Connection"
-        ]
-    },
-    "tests.test_ssl.TestMemoryBIO": {
-        "False Negative": [
-            "src.OpenSSL.SSL.Connection"
+            "kedro.ipython.__init__",
+            "kedro.pipeline.pipeline.Pipeline"
         ],
         "False Positives": [
-            "src.OpenSSL.crypto"
+            "kedro.pipeline.modular_pipeline"
         ],
         "True Positives": []
     },
-    "tests.test_ssl.TestOCSP": {
+    "tests.pipeline.test_node.TestNames": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.pipeline.node.Node"
+        ]
+    },
+    "tests.pipeline.test_node.TestNodeComparisons": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.pipeline.node.Node"
+        ]
+    },
+    "tests.pipeline.test_node.TestValidNode": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.pipeline.node.Node"
+        ]
+    },
+    "tests.pipeline.test_node_run.TestNodeRunInvalidOutput": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.pipeline.node.Node"
+        ]
+    },
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.pipeline.pipeline.Pipeline"
+        ]
+    },
+    "tests.pipeline.test_pipeline.TestPipelineOperators": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.pipeline.pipeline.Pipeline"
+        ]
+    },
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineUnregistered": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.pipeline.pipeline.Pipeline"
+        ]
+    },
+    "tests.pipeline.test_pipeline_integration.TestTransformPipelineIntegration": {
         "False Negative": [
-            "src.OpenSSL.SSL.Connection"
+            "kedro.runner.runner.AbstractRunner"
+        ],
+        "False Positives": [
+            "kedro.pipeline.modular_pipeline"
+        ],
+        "True Positives": [
+            "kedro.pipeline.pipeline.Pipeline"
+        ]
+    },
+    "tests.runner.test_parallel_runner.TestValidParallelRunner": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.runner.parallel_runner.ParallelRunner"
+        ]
+    },
+    "tests.runner.test_sequential_runner.TestMemoryDatasetBehaviour": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.io.memory_dataset.MemoryDataset"
+        ]
+    },
+    "tests.runner.test_sequential_runner.TestSeqentialRunnerBranchlessPipeline": {
+        "False Negative": [
+            "kedro.runner.runner.AbstractRunner"
         ],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL._OCSPServerCallbackHelper",
-            "src.OpenSSL.SSL._OCSPClientCallbackHelper"
+            "kedro.runner.sequential_runner.SequentialRunner"
         ]
     },
-    "tests.test_ssl.TestServerNameCallback": {
-        "False Negative": [
-            "src.OpenSSL.SSL.Context"
-        ],
-        "False Positives": [
-            "src.OpenSSL.crypto._X509NameInvalidator"
-        ],
-        "True Positives": []
+    "tests.runner.test_sequential_runner.TestSequentialRunnerBranchedPipeline": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.runner.sequential_runner.SequentialRunner"
+        ]
+    },
+    "tests.runner.test_thread_runner.TestThreadRunnerRelease": {
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.runner.thread_runner.ThreadRunner"
+        ]
     }
 }

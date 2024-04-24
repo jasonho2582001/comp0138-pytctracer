@@ -1,12 +1,12 @@
 Technique,Precision,Recall,F1,MAP,AUC,True Positives,False Positives,False Negatives
-Naming Conventions,100.0,23.4,38.0,29.6,-,15,0,49
-Naming Conventions - Contains,76.4,65.6,70.6,67.3,-,42,13,22
-Longest Common Subsequence - Both,80.7,71.9,76.0,77.0,86.7,46,11,18
-Longest Common Subsequence - Unit,71.2,65.6,68.3,65.3,79.2,42,17,22
-Levenshtein Distance,86.3,68.8,76.5,74.0,86.6,44,7,20
-Last Call Before Assert,69.5,64.1,66.7,65.3,-,41,18,23
-Tarantula,73.5,56.2,63.7,64.3,79.9,36,13,28
-TF-IDF,74.5,64.1,68.9,71.4,81.2,41,14,23
-TF-IDF (Multiset),83.7,64.1,72.6,70.4,85.0,41,8,23
-Simple Average,85.2,71.9,78.0,76.0,88.1,46,8,18
-Copilot,90.4,73.4,81.0,80.6,-,47,5,17
+Naming Conventions,100.0,23.1,37.5,29.6,-,15,0,50
+Naming Conventions - Contains,78.2,66.2,71.7,65.3,-,43,12,22
+Longest Common Subsequence - Both,80.3,75.4,77.8,81.1,90.2,49,12,16
+Longest Common Subsequence - Unit,74.6,67.7,71.0,68.4,82.5,44,15,21
+Levenshtein Distance,90.2,70.8,79.3,77.6,90.2,46,5,19
+Last Call Before Assert,72.9,66.2,69.4,62.2,-,43,16,22
+Tarantula,77.6,58.5,66.7,67.3,83.6,38,11,27
+TF-IDF,78.2,66.2,71.7,74.5,84.8,43,12,22
+TF-IDF (Multiset),87.8,66.2,75.4,73.5,88.6,43,6,22
+Simple Average,88.9,73.8,80.7,79.1,91.7,48,6,17
+Copilot,94.2,75.4,83.8,82.7,-,49,3,16

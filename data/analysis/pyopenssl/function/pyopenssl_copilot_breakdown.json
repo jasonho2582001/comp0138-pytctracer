@@ -31,8 +31,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.crypto.load_privatekey",
-            "src.OpenSSL.crypto.PKey.check"
+            "src.OpenSSL.crypto.PKey.check",
+            "src.OpenSSL.crypto.load_privatekey"
         ]
     },
     "tests.test_crypto.TestPKey.test_pregeneration": {
@@ -42,17 +42,17 @@
         ],
         "True Positives": [
             "src.OpenSSL.crypto.PKey.check",
-            "src.OpenSSL.crypto.PKey.bits",
-            "src.OpenSSL.crypto.PKey.type"
+            "src.OpenSSL.crypto.PKey.type",
+            "src.OpenSSL.crypto.PKey.bits"
         ]
     },
     "tests.test_crypto.TestRevoked.test_reason": {
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.crypto.Revoked.get_reason",
             "src.OpenSSL.crypto.Revoked.all_reasons",
-            "src.OpenSSL.crypto.Revoked.set_reason"
+            "src.OpenSSL.crypto.Revoked.set_reason",
+            "src.OpenSSL.crypto.Revoked.get_reason"
         ]
     },
     "tests.test_crypto.TestRevoked.test_set_reason_invalid_reason": {
@@ -157,8 +157,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.crypto.X509StoreContext.verify_certificate",
-            "src.OpenSSL.crypto.X509Store.load_locations"
+            "src.OpenSSL.crypto.X509Store.load_locations",
+            "src.OpenSSL.crypto.X509StoreContext.verify_certificate"
         ]
     },
     "tests.test_ssl.TestConnection.test_connect_wrong_args": {
@@ -268,16 +268,16 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection.DTLSv1_get_timeout",
-            "src.OpenSSL.SSL.Connection.DTLSv1_handle_timeout"
+            "src.OpenSSL.SSL.Connection.DTLSv1_handle_timeout",
+            "src.OpenSSL.SSL.Connection.DTLSv1_get_timeout"
         ]
     },
     "tests.test_ssl.TestMemoryBIO.test_socket_overrides_memory": {
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection.bio_read",
             "src.OpenSSL.SSL.Connection.bio_write",
+            "src.OpenSSL.SSL.Connection.bio_read",
             "src.OpenSSL.SSL.Connection.bio_shutdown"
         ]
     },
@@ -285,8 +285,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "src.OpenSSL.SSL.Connection.get_servername",
-            "src.OpenSSL.SSL.Context.set_tlsext_servername_callback"
+            "src.OpenSSL.SSL.Context.set_tlsext_servername_callback",
+            "src.OpenSSL.SSL.Connection.get_servername"
         ]
     },
     "tests.test_util.TestErrors.test_exception_from_error_queue_nonexistent_reason": {

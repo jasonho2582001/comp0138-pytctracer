@@ -201,8 +201,8 @@
     },
     "tests.test_locales.TestLuxembourgishLocale.test_weekday": {
         "False Negative": [
-            "arrow.locales.Locale.day_name",
-            "arrow.locales.Locale.day_abbreviation"
+            "arrow.locales.Locale.day_abbreviation",
+            "arrow.locales.Locale.day_name"
         ],
         "False Positives": [
             "arrow.arrow.Arrow.isoweekday"

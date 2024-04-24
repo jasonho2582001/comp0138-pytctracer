@@ -46,13 +46,11 @@
         ]
     },
     "tests.framework.cli.test_registry.TestRegistryDescribeCommand": {
-        "False Negative": [
-            "kedro.framework.project.__init__._ProjectLogging"
-        ],
-        "False Positives": [
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
             "kedro.framework.cli.registry"
-        ],
-        "True Positives": []
+        ]
     },
     "tests.framework.session.test_session.TestKedroSession": {
         "False Negative": [],
@@ -74,8 +72,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "kedro.framework.hooks.manager",
-            "kedro.framework.session.session.KedroSession"
+            "kedro.framework.session.session.KedroSession",
+            "kedro.framework.hooks.manager"
         ]
     },
     "tests.framework.session.test_store.TestBaseStore": {
@@ -217,13 +215,11 @@
         ]
     },
     "tests.runner.test_sequential_runner.TestMemoryDatasetBehaviour": {
-        "False Negative": [
-            "kedro.runner.sequential_runner.SequentialRunner"
-        ],
-        "False Positives": [
+        "False Negative": [],
+        "False Positives": [],
+        "True Positives": [
             "kedro.io.memory_dataset.MemoryDataset"
-        ],
-        "True Positives": []
+        ]
     },
     "tests.runner.test_sequential_runner.TestSeqentialRunnerBranchlessPipeline": {
         "False Negative": [],

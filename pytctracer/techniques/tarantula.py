@@ -58,7 +58,13 @@ class Tarantula(Technique):
             tests_that_call_functions (Dict[str, Set[str]]): A dictionary
             where the keys are the fully qualified names of the function or
             function classes, and the values are sets containing each
-            test or test class that calls the function or function class
+            test or test class that calls the function or function class.
+
+            functions_called_by_test_depth (Dict[str, Dict[str, int]]): A
+            dictionary where the keys are the fully qualified names of the
+            test or test classes, and the values are dictionaries containing
+            the fully qualified names of each function or function class
+            that the test invokes, and the depth of the call.
 
         Returns:
             Dict[str, Dict[str, Union[int, float]]]: A dictionary where the

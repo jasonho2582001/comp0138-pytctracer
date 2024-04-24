@@ -11,6 +11,19 @@ from pytctracer.config.constants import (
 def find_functions_called_before_assert_for_each_test(
     trace_data: List[Dict[str, str]]
 ) -> Dict[str, Set[str]]:
+    """
+    Finds the fully qualified names of the functions called before an
+    assert statement for each test.
+
+    Args:
+        trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
+    
+    Returns:
+        Dict[str, Set[str]]: A dictionary where the keys are the fully qualified
+        names of the unit test, and the values are sets containing the
+        fully qualified names of each function invoked before
+        an assert statement.
+    """
     functions_called_before_assert_for_each_test = defaultdict(set)
     current_test = None
     last_returned_function = None
@@ -49,6 +62,19 @@ def find_functions_called_before_assert_for_each_test(
 def find_classes_called_before_assert_for_each_test(
     trace_data: List[Dict[str, str]]
 ) -> Dict[str, Set[str]]:
+    """
+    Finds the fully qualified names of the classes called before an assert
+    statement for each test class.
+    
+    Args:
+        trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
+    
+    Returns:
+        Dict[str, Set[str]]: A dictionary where the keys are the fully qualified
+        names of thetest class, and the values are sets containing the
+        fully qualified names function class invoked before
+        an assert statement.
+    """
     function_classes_called_before_assert_for_each_test = defaultdict(set)
     current_test_class = None
     last_returned_function_class = None

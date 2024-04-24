@@ -25,6 +25,11 @@ MODULE = "<module>"
 
 
 class PytestTracer:
+    """
+    Class which allows for the tracing of a Pytest test suite invocation,
+    capturing and storing dynamic information, and writing of the information
+    to a CSV format.
+    """
     def __init__(
         self,
         project_root: str,
@@ -32,6 +37,18 @@ class PytestTracer:
         source_folders: List[str],
         output_csv_file_name: str,
     ) -> None:
+        """
+        Class which allows for the tracing of a Pytest test suite invocation,
+        capturing and storing dynamic information, and writing of the information
+        to a CSV format.
+
+        Args:
+            project_root (str): The root directory of the project.
+            test_folders (List[str]): A list of directories containing test files.
+            source_folders (List[str]): A list of directories containing source files.
+            output_csv_file_name (str): The name of the output CSV file.
+        """
+
         project_root = os.path.normcase(project_root)
         self._project_root = os.path.normcase(os.path.abspath(project_root))
         self._test_folders = [
@@ -58,6 +75,18 @@ class PytestTracer:
         self._in_line_function_calls = 0
 
     def trace(self, frame: FrameType, event: str, arg: Optional[Any]=None) -> Callable:
+        """
+        Trace function to be used by `sys.settrace` to capture the tracing of Python code
+        during a Pytest test suite invocation.
+
+        Args:
+            frame (FrameType): The current frame.
+            event (str): The event type.
+            arg (Optional[Any]): The argument associated with the event.
+        
+        Returns:
+            Callable: The trace function.
+        """
         if not self.our_frame(frame):
             code_of_current_frame = frame.f_code
             file_name = os.path.normcase(code_of_current_frame.co_filename)
@@ -79,17 +108,14 @@ class PytestTracer:
                     code_qualified_name=qualified_function_name,
                     function_name=function_name,
                     file_name=file_name,
-                    function_type=function_type,
                 )
                 fully_qualified_function_name = self._get_fully_qualified_name(
                     file_name=file_name,
                     code_qualified_name=qualified_function_name,
-                    function_type=function_type,
                 )
                 fully_qualified_class_name = self._get_fully_qualified_name(
                     file_name=file_name,
                     code_qualified_name=qualified_class_name,
-                    function_type=function_type,
                 )
                 if (
                     event == SetTraceEventType.LINE
@@ -157,16 +183,14 @@ class PytestTracer:
                     # Keep track of the last function that was last returned
                     self._current_depth -= 1
                     self._function_stack.pop()
-                    # print(f"{'  ' * (self._current_depth)}< {self._current_depth}: Function '{fully_qualified_function_name}()' returned at line {line_number} with value: '{arg}' of type {type(arg)}")
+                    
                     if (
                         function_type.startswith(TEST_PREFIX.upper())
                         or function_type == FunctionType.ASSERT
                     ):
                         self._test_function_stack.pop()
-                        # if len(self._test_function_stack) == 0:
-                        #     print(f"=== EXITING TEST FUNCTION '{fully_qualified_function_name}\n")
+
                     if function_type == FunctionType.ASSERT:
-                        # If an assert happens to be on the last line, it may get caught as a return event, so we add a duplicate entry to account for assert line and return
                         self._add_csv_row_data(
                             depth=self._current_depth + 1,
                             function_type=function_type,
@@ -206,7 +230,7 @@ class PytestTracer:
 
                 elif event == SetTraceEventType.EXCEPTION:
                     exc_type, exc_value, exc_traceback = arg
-                    # print(f"{'  ' * (self._current_depth - 1)}- {self._current_depth}: Function '{fully_qualified_function_name}()' at line {line_number} has raised an Exception, with exception type: {exc_type} and message: '{str(exc_value)}'")
+            
                     self._add_csv_row_data(
                         depth=self._current_depth,
                         function_type=function_type,
@@ -223,10 +247,12 @@ class PytestTracer:
         return self.trace
 
     def trace_in_built(self, _frame: FrameType, event, _arg=None):
-        # Handle in-line function returns that don't get captured by sys.settrace, for assert checking
-        # For example, isinstance within an assert statement
-        # These built in functions won't be caught by the sys.settrace function, so we need to check
-        # for them here.
+        """
+        Handle in-line function returns that don't get captured by sys.settrace, for assert checking
+        For example, `isinstance` within an assert statement
+        These built in functions won't be caught by the sys.settrace function, so we need to check
+        for them here.
+        """
         if event == SetProfileCEventType.C_CALL:
             self._current_depth += 1
         if (
@@ -237,6 +263,11 @@ class PytestTracer:
             self._check_remaining_in_line_functions(self._current_depth)
 
     def write_to_csv(self) -> None:
+        """
+        Write stored trace data to a CSV file. The CSV is written to
+        the file specified in the `output_csv_file_name` parameter the
+        class was initialised with.
+        """
         with open(self._csv_name, "w", newline="") as csv_file:
             csv_writer = csv.DictWriter(csv_file, fieldnames=self._csv_headers)
             csv_writer.writeheader()
@@ -244,7 +275,16 @@ class PytestTracer:
                 csv_writer.writerow(data_row)
 
     def our_frame(self, frame: FrameType) -> bool:
-        """Return true if `frame` is in the current (inspecting) class."""
+        """
+        Checks whether the current code being traced is the PytestTracer class itself.
+        
+        Args:
+            frame (FrameType): The current frame.
+        
+        Returns:
+            bool: True if the current code being traced is the PytestTracer class itself,
+            False otherwise.
+        """
         return frame.f_code.co_qualname == TRACE_QUALIFIED_NAME
 
     def _add_csv_row_data(
@@ -258,10 +298,10 @@ class PytestTracer:
         line_number: int,
         event_type: str,
         return_value: Optional[Any] = "",
-        return_type: Optional[str] = "",
-        exception_type: Optional[str] = "",
-        exception_message: Optional[str] = "",
-        testing_method: Optional[str] = "",
+        return_type: str = "",
+        exception_type: str = "",
+        exception_message: str = "",
+        testing_method: str = "",
         thread_id: Optional[int] = None,
     ):
         data = {
@@ -287,7 +327,6 @@ class PytestTracer:
         code_qualified_name: str,
         function_name: str,
         file_name: str,
-        function_type: str,
     ) -> Tuple[str, str]:
         if code_qualified_name != function_name and not code_qualified_name.startswith(
             LOCALS
@@ -297,7 +336,8 @@ class PytestTracer:
             # Remove last element, which should be the function name
             class_name_list.pop()
 
-            # Check current last element is not <locals>. If it is, we need to remove it, and the previous element
+            # Check current last element is not <locals>. If it is, we need to remove it, 
+            # and the previous element.
             # This represents an inner function, so we need to remove it as well to get the actual class
             while class_name_list and class_name_list[-1] == LOCALS:
                 class_name_list.pop()
@@ -306,11 +346,11 @@ class PytestTracer:
             if class_name_list:
                 return ".".join(class_name_list), class_name_list[-1]
 
-        module_name = self._get_module_name(file_name, function_type)
+        module_name = self._get_module_name(file_name)
 
         return "", module_name.split(".")[-1]
 
-    def _get_module_name(self, file_name: str, function_type: str) -> str:
+    def _get_module_name(self, file_name: str) -> str:
         relative_file_path = os.path.relpath(file_name, self._project_root)
         relative_file_path = relative_file_path.replace(os.path.sep, "/")
 
@@ -322,9 +362,9 @@ class PytestTracer:
         return module_name
 
     def _get_fully_qualified_name(
-        self, file_name: str, code_qualified_name: str, function_type: str
+        self, file_name: str, code_qualified_name: str
     ) -> str:
-        module_name = self._get_module_name(file_name, function_type)
+        module_name = self._get_module_name(file_name)
 
         return (
             (module_name + "." + code_qualified_name)

@@ -197,8 +197,8 @@
         "False Negative": [],
         "False Positives": [],
         "True Positives": [
-            "arrow.locales.Locale.day_name",
-            "arrow.locales.Locale.day_abbreviation"
+            "arrow.locales.Locale.day_abbreviation",
+            "arrow.locales.Locale.day_name"
         ]
     },
     "tests.test_locales.TestMarathiLocale.test_format_timeframe": {
