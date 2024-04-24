@@ -5,7 +5,7 @@ authors = [
 description = """Research library demonstrating test-to-code traceability techniques on Python codebases that use the Pytest testing framework."""
 readme = "README.md"
 name = "pytctracer"
-version = "0.1.11"
+version = "0.2.0"
 classifiers=[
     "Natural Language :: English",
     "Intended Audience :: Science/Research",
