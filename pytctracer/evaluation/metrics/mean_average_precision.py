@@ -4,6 +4,9 @@ from pytctracer.evaluation.metrics.metric import Metric
 
 
 class MeanAveragePrecision(Metric):
+    """
+    Class implementing the Mean Average Precision (mAP) metric.
+    """
     full_name = "Mean Average Precision"
     short_name = "MAP"
     arg_name = "map"
@@ -15,6 +18,23 @@ class MeanAveragePrecision(Metric):
         ground_truth_links: Dict[str, List[str]],
         _: Optional[Dict[str, Dict[str, float]]] = None,
     ) -> float:
+        """
+        Calculate the Mean Average Precision (mAP) metric score given 
+        the predicted links and ground truth links.
+
+        Args:
+            predicted_links (Dict[str, List[str]]): A dictionary where the keys are
+                the fully qualified names of the unit tests, and the values are lists
+                of fully qualified names of the functions predicted to be linked to
+                the unit test.
+            ground_truth_links (Dict[str, List[str]]): A dictionary where the keys are
+                the fully qualified names of the unit tests, and the values are lists
+                of fully qualified names of the functions that are actually linked
+                to the unit test.
+
+        Returns:
+            float: The Mean Average Precision (mAP) metric score.
+        """
         total_ap = 0
 
         for fully_qualified_test_name in ground_truth_links:

@@ -6,6 +6,9 @@ from pytctracer.evaluation.metrics.true_positives import TruePositives
 
 
 class Precision(Metric):
+    """
+    Class implementing the Precision metric.
+    """
     full_name = "Precision"
     short_name = "Precision"
     arg_name = "precision"
@@ -17,6 +20,22 @@ class Precision(Metric):
         ground_truth_links: Dict[str, List[str]],
         _: Optional[Dict[str, Dict[str, float]]] = None,
     ) -> float:
+        """
+        Calculate the Precision metric score given the predicted links and ground truth links.
+        
+        Args:
+            predicted_links (Dict[str, List[str]]): A dictionary where the keys are
+                the fully qualified names of the unit tests, and the values are lists
+                of fully qualified names of the functions predicted to be linked to
+                the unit test.
+            ground_truth_links (Dict[str, List[str]]): A dictionary where the keys are
+                the fully qualified names of the unit tests, and the values are lists
+                of fully qualified names of the functions that are actually linked
+                to the unit test.
+        
+        Returns:
+            float: The Precision metric score.
+        """
         true_positives = TruePositives().calculate(
             predicted_links, ground_truth_links, _
         )

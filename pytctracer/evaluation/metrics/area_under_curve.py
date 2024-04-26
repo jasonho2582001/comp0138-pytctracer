@@ -5,6 +5,9 @@ from pytctracer.evaluation.metrics.metric import Metric
 
 
 class AreaUnderCurve(Metric):
+    """
+    Class implementing the Area Under Curve (AUC) metric.
+    """
     full_name = "Area Under Curve"
     short_name = "AUC"
     arg_name = "auc"
@@ -16,6 +19,27 @@ class AreaUnderCurve(Metric):
         ground_truth_links: Dict[str, List[str]],
         traceability_score_dict: Optional[Dict[str, Dict[str, float]]] = None,
     ) -> float:
+        """
+        Calculate the Area Under Curve (AUC) metric score given the ground truth links and the 
+        traceability score dictionary. This is the precision-recall curve variant of AUC. 
+        This metric is also threshold independent, and doesn't require the predicted links, 
+        as they were created with the traceability score. 
+        
+        Args:
+            _: A dictionary where the keys are the fully qualified names of the unit tests,
+                and the values are lists of fully qualified names of the functions predicted
+                to be linked to the unit test. This argument is not used in this metric.
+            ground_truth_links (Dict[str, List[str]]): A dictionary where the keys are the
+                fully qualified names of the unit tests, and the values are lists of fully
+                qualified names of the functions that are actually linked to the unit test.
+            traceability_score_dict (Optional[Dict[str, Dict[str, float]]]): A dictionary
+                where the keys are the fully qualified names of the unit tests, and the values
+                are dictionaries where the keys are the fully qualified names of the functions
+                and the values are the traceability scores between the unit test and the function.
+        
+        Returns:
+            float: The Area Under Curve metric score.
+        """
         ground_truth_labels = []
         predicted_labels = []
 
