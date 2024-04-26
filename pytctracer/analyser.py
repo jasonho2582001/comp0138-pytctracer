@@ -41,6 +41,133 @@ class Analyser:
         self.default_technique_names = Config.DEFAULT_CHOSEN_TECHNIQUE_NAMES
         self.default_metric_names = Config.DEFAULT_CHOSEN_METRIC_NAMES
 
+    def produce_traceability_links_for_trace(
+        self,
+        trace_csv_log_path: str,
+        traceability_level: LevelType,
+        add_combined_technique: bool = False,
+        chosen_technique_names: Optional[List[str]] = None,
+        prediction_output_directory_path: Optional[str] = None,
+    ) -> None:
+        """
+        Produces traceability links for a given dynamic trace log. The
+        chosen technique names, whether to add a combined technique, the
+        level to produce links at, and an output output directory path can
+        be specified. If no directory is specified, the links are printed to
+        standard output.
+
+        Args:
+            trace_csv_log_path (str): The path to the dynamic trace log CSV file.
+            traceability_level (LevelType): The level of traceability to produce links for.
+            add_combined_technique (bool): Whether to produce links with the combined technique.
+            chosen_technique_names (Optional[List[str]]): The arg names of the techniques to use.
+            prediction_output_directory_path (Optional[str]): The directory to write the output links to.
+        """
+        if not chosen_technique_names:
+            chosen_technique_names = self.default_technique_names
+        _, link_predictions_for_techniques = self._predict_links(
+            trace_csv_log_path=trace_csv_log_path,
+            chosen_technique_names=chosen_technique_names,
+            traceability_level=traceability_level,
+            add_combined_technique=add_combined_technique,
+        )
+        if not prediction_output_directory_path:
+            self._display_predicted_links_for_techniques(
+                link_predictions_for_techniques
+            )
+        else:
+            self._write_predicted_links_for_techniques(
+                link_predictions_for_techniques,
+                prediction_output_directory_path,
+                traceability_level,
+            )
+
+    def evaluate_traceability_links_for_trace(
+        self,
+        trace_csv_log_path: str,
+        ground_truth_path: str,
+        traceability_level: LevelType,
+        add_combined_technique: bool = False,
+        chosen_technique_names: Optional[List[str]] = None,
+        chosen_metric_names: Optional[List[str]] = None,
+        classifications_output_directory_path: Optional[str] = None,
+        evaluation_metrics_output_path: Optional[str] = None,
+        display_classifications_to_stdout: bool = False,
+        metric_as_percentage: bool = False,
+    ) -> None:
+        """
+        Produces traceability links for a given dynamic trace log, and then
+        evaluates them against a specified ground truth. Allows for choosing 
+        the technique names to evaluate predictions for, the metric names to
+        compute, and whether to add a combined technique as well as output 
+        paths for the classifications and metrics. 
+
+        Args:
+            trace_csv_log_path (str): The path to the dynamic trace log CSV file.
+            ground_truth_path (str): The path to the ground truth JSON file.
+            traceability_level (LevelType): The level of traceability to produce links for.
+            add_combined_technique (bool): Whether to produce links with the combined technique.
+            chosen_technique_names (Optional[List[str]]): The arg names of the techniques to use.
+            chosen_metric_names (Optional[List[str]]): The arg names of the metrics to use.
+            classifications_output_directory_path (Optional[str]): The directory to write the output
+            classifications to.
+            evaluation_metrics_output_path (Optional[str]): The path to write the CSV containing the
+            evaluation metric results to.
+            display_classifications_to_stdout (bool): Whether to display the classifications to
+            standard output.
+            metric_as_percentage (bool): Whether to report metrics as percentages.
+        """
+        if not chosen_technique_names:
+            chosen_technique_names = self.default_technique_names
+
+        if not chosen_metric_names:
+            chosen_metric_names = self.default_metric_names
+
+        ground_truth_links = load_link_json(ground_truth_path)
+        ground_truth_tests = set(ground_truth_links.keys())
+
+        traceability_scores_for_techniques, link_predictions_for_techniques = (
+            self._predict_links(
+                trace_csv_log_path=trace_csv_log_path,
+                chosen_technique_names=chosen_technique_names,
+                traceability_level=traceability_level,
+                add_combined_technique=add_combined_technique,
+                test_to_create_links_for=ground_truth_tests,
+            )
+        )
+
+        evaluation_metrics_for_techniques = self._compute_metrics(
+            link_predictions_for_techniques=link_predictions_for_techniques,
+            ground_truth_links=ground_truth_links,
+            traceability_scores_for_techniques=traceability_scores_for_techniques,
+            chosen_metric_names=chosen_metric_names,
+            metric_as_percentage=metric_as_percentage,
+        )
+        classifications_for_techniques = self._compute_classifications(
+            link_predictions_for_techniques=link_predictions_for_techniques,
+            ground_truth_links=ground_truth_links,
+        )
+        if display_classifications_to_stdout:
+            self._display_classifications_for_techniques(classifications_for_techniques)
+
+        display_evaluation_results(
+            evaluation_metric_dict=evaluation_metrics_for_techniques,
+            title=Config.EVALUATION_METRICS_TITLE,
+        )
+
+        if classifications_output_directory_path:
+            self._write_classifications_for_techniques(
+                classifications_for_techniques=classifications_for_techniques,
+                classifications_output_directory_path=classifications_output_directory_path,
+                traceability_level=traceability_level,
+            )
+
+        if evaluation_metrics_output_path:
+            write_evaluation_metrics_to_csv(
+                combined_evaluation_dict=evaluation_metrics_for_techniques,
+                csv_name=evaluation_metrics_output_path,
+            )
+
     def compare_traceability_links(
         self,
         predicted_links_path: str,
@@ -50,7 +177,23 @@ class Analyser:
         evaluation_metrics_output_path: Optional[str] = None,
         display_classifications_to_stdout: bool = False,
         metric_as_percentage: bool = False,
-    ) -> int:
+    ) -> None:
+        """
+        Compare a JSON of predicted traceability links against a JSON of ground truth links.
+        Allows for choosing the metric names to compute, and output paths for the classifications
+        and metrics.
+
+        Args:
+            predicted_links_path (str): The path to the JSON file containing the predicted links.
+            ground_truth_path (str): The path to the JSON file containing the ground truth links.
+            chosen_metric_names (Optional[List[str]]): The arg names of the metrics to use.
+            classifications_output_path (Optional[str]): The path to write the output classifications to.
+            evaluation_metrics_output_path (Optional[str]): The path to write the CSV containing the
+            evaluation metric results to.
+            display_classifications_to_stdout (bool): Whether to display the classifications to
+            standard output.
+            metric_as_percentage (bool): Whether to report metrics as percentages.
+        """
         predicted_links = load_link_json(predicted_links_path)
         ground_truth_links = load_link_json(ground_truth_path)
 
@@ -106,96 +249,6 @@ class Analyser:
                     f"Test '{test}' in ground truth but not in predicted links"
                 )
 
-    def evaluate_traceability_links_for_trace(
-        self,
-        trace_csv_log_path: str,
-        ground_truth_path: str,
-        traceability_level: LevelType,
-        add_combined_technique: bool = False,
-        chosen_technique_names: Optional[List[str]] = None,
-        chosen_metric_names: Optional[List[str]] = None,
-        classifications_output_directory_path: Optional[str] = None,
-        evaluation_metrics_output_path: Optional[str] = None,
-        display_classifications_to_stdout: bool = False,
-        metric_as_percentage: bool = False,
-    ) -> int:
-        if not chosen_technique_names:
-            chosen_technique_names = self.default_technique_names
-
-        if not chosen_metric_names:
-            chosen_metric_names = self.default_metric_names
-
-        ground_truth_links = load_link_json(ground_truth_path)
-        ground_truth_tests = set(ground_truth_links.keys())
-
-        traceability_scores_for_techniques, link_predictions_for_techniques = (
-            self._predict_links(
-                trace_csv_log_path=trace_csv_log_path,
-                chosen_technique_names=chosen_technique_names,
-                traceability_level=traceability_level,
-                add_combined_technique=add_combined_technique,
-                test_to_create_links_for=ground_truth_tests,
-            )
-        )
-
-        evaluation_metrics_for_techniques = self._compute_metrics(
-            link_predictions_for_techniques=link_predictions_for_techniques,
-            ground_truth_links=ground_truth_links,
-            traceability_scores_for_techniques=traceability_scores_for_techniques,
-            chosen_metric_names=chosen_metric_names,
-            metric_as_percentage=metric_as_percentage,
-        )
-        classifications_for_techniques = self._compute_classifications(
-            link_predictions_for_techniques=link_predictions_for_techniques,
-            ground_truth_links=ground_truth_links,
-        )
-        if display_classifications_to_stdout:
-            self._display_classifications_for_techniques(classifications_for_techniques)
-
-        display_evaluation_results(
-            evaluation_metric_dict=evaluation_metrics_for_techniques,
-            title=Config.EVALUATION_METRICS_TITLE,
-        )
-
-        if classifications_output_directory_path:
-            self._write_classifications_for_techniques(
-                classifications_for_techniques=classifications_for_techniques,
-                classifications_output_directory_path=classifications_output_directory_path,
-                traceability_level=traceability_level,
-            )
-
-        if evaluation_metrics_output_path:
-            write_evaluation_metrics_to_csv(
-                combined_evaluation_dict=evaluation_metrics_for_techniques,
-                csv_name=evaluation_metrics_output_path,
-            )
-
-    def produce_traceability_links_for_trace(
-        self,
-        trace_csv_log_path: str,
-        traceability_level: LevelType,
-        add_combined_technique: bool = False,
-        chosen_technique_names: Optional[List[str]] = None,
-        prediction_output_directory_path: Optional[str] = None,
-    ) -> int:
-        if not chosen_technique_names:
-            chosen_technique_names = self.default_technique_names
-        _, link_predictions_for_techniques = self._predict_links(
-            trace_csv_log_path=trace_csv_log_path,
-            chosen_technique_names=chosen_technique_names,
-            traceability_level=traceability_level,
-            add_combined_technique=add_combined_technique,
-        )
-        if not prediction_output_directory_path:
-            self._display_predicted_links_for_techniques(
-                link_predictions_for_techniques
-            )
-        else:
-            self._write_predicted_links_for_techniques(
-                link_predictions_for_techniques,
-                prediction_output_directory_path,
-                traceability_level,
-            )
 
     def _write_classifications_for_techniques(
         self,

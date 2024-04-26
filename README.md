@@ -3,7 +3,6 @@ PyTCTracer is a test-to-code traceability approach and library, which allows for
 
 This library forms part of an undergraduate research project for a Masters of Engineering in Computer Science at UCL (University College London). PyTCTracer follows from TCTracer, which is an approach and implementation for test-to-code traceability for Java projects. This was developed by Robert White, Jens Krinke and Raymond Tan in 2020, and the research expanded on in 2022. The extended research paper introducing TCTracer can be found [here](https://link.springer.com/article/10.1007/s10664-021-10079-1).
 
-
 There are two core components in the library:
 - `PytestTracer`: A class that is used to trace the execution of Pytest unit tests and record dynamic tracing information to a CSV log file.
 - `pytctracer` CLI: A CLI tool which can read and parse the dynamic information from the log file, apply traceability techniques to generate link predictions, and evaluate the predictions against a ground truth.

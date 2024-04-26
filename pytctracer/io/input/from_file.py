@@ -27,7 +27,6 @@ def read_trace_csv_log(file_path: str) -> List[Dict[str, str]]:
     try:
         with open(file_path, encoding="utf8") as file:
             lines = csv.reader(file)
-
             # Iterate through each line in the CSV file, extract the fields
             for index, record in enumerate(lines):
                 # Extract column names from first row

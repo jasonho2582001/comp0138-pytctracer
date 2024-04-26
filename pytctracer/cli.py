@@ -73,7 +73,7 @@ def produce_links(
             prediction_output_directory_path=output_directory,
         )
     except Exception as e:
-        click.ClickException(str(e))
+        raise click.ClickException(str(e))
 
 
 @cli.command(
@@ -175,7 +175,7 @@ def evaluate_links(
             evaluation_metrics_output_path=metrics_output_path,
         )
     except Exception as e:
-        click.ClickException(str(e))
+        raise click.ClickException(str(e))
 
 
 @cli.command(
@@ -240,7 +240,7 @@ def compare_links(
             evaluation_metrics_output_path=metrics_output_path,
         )
     except Exception as e:
-        click.ClickException(str(e))
+        raise click.ClickException(str(e))
 
 if __name__ == "__main__":
     cli()
