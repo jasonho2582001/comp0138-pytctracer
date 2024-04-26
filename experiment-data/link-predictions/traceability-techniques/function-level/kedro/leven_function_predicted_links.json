@@ -1,0 +1,2725 @@
+{
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_adding_extra_keys_to_confloader": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_bad_config_syntax": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_bad_globals_underscore": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_globals_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_bypass_catalog_config_loading": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_cannot_load_non_yaml_or_json_files": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.load_and_merge_dir_config"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_custom_resolvers": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_new_resolvers"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_customised_config_patterns": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_default_destructive_merging_strategy": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._destructive_merge"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_destructive_merging_strategy": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._destructive_merge"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_duplicate_patterns": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_empty_catalog_file": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_env_resolver_is_cleared_after_loading": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_env_resolver_is_registered_after_loading": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_env_resolver_not_used_for_catalog": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_globals": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_globals_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_globals_across_env": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_globals_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_globals_default": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_globals_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_globals_default_none": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_globals_missing_default": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_globals_nested": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_globals_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_globals_resolution": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_globals_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_ignore_hidden_keys": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_ignore_ipynb_checkpoints": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_is_hidden_config": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._is_hidden"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_load_base_config": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.load_and_merge_dir_config"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_load_config_from_tar_file": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_load_config_from_zip_file": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_load_core_config_dict_syntax": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_load_core_config_get_syntax": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_load_credentials_from_env_variables": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_load_local_config_overrides_base": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_lots_of_duplicates": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_multiple_nested_subdirs_duplicates": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_nested": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_nested_subdirs_duplicate": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_runtime_params_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_no_files_found": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_not_hidden_config": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._is_hidden"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_overlapping_patterns": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_override_globals": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_globals_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_pattern_key_not_found": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_runtime_params_default_global": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_runtime_params_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_runtime_params_default_none": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_runtime_params_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_runtime_params_in_globals_not_allowed": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_globals_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_runtime_params_missing_default": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_runtime_params_not_propogate_non_parameters_config": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.load_and_merge_dir_config"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_runtime_params_override_interpolated_value": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_runtime_params_resolution": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_runtime_params_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_same_key_in_same_dir": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_soft_merging_strategy": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._soft_merge"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_subdirs_dont_exist": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_unsupported_interpolation_globals": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_unsupported_merge_strategy": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_variable_interpolation_in_catalog_with_separate_templates_file": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_runtime_params_resolver",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_variable_interpolation_in_catalog_with_templates": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_runtime_params_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_variable_interpolation_with_correct_env": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_yaml_parser_error": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_runtime_params_resolver",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.load_and_merge_dir_config",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_globals": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_globals_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_globals_default": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_globals_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_globals_default_none": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_globals_nested": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_globals_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_globals_resolution": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_globals_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_load_config_only_base_environment": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.load_and_merge_dir_config"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_load_config_only_default_run_environment": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.load_and_merge_dir_config",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_load_config_without_environment": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_runtime_params_default_global": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__",
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_runtime_params_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_runtime_params_in_globals_not_allowed": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_globals_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_runtime_params_resolution": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_runtime_params_resolver"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_variable_interpolation_in_catalog_with_separate_templates_file": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_runtime_params_resolver",
+        "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_variable_interpolation_in_catalog_with_templates": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader._register_runtime_params_resolver"
+    ],
+    "tests.framework.cli.hooks.test_manager.test_hook_manager_can_call_hooks_defined_in_specs": [
+        "kedro.framework.cli.hooks.manager.CLIHooksManager.__init__"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_micropkg_package_default": [
+        "kedro.framework.cli.micropkg.micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_micropkg_package_nested_module": [
+        "kedro.framework.cli.micropkg.package_micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_micropkg_package_overwrites_sdist": [
+        "kedro.framework.cli.micropkg.package_micropkg",
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_micropkg_package_same_name_as_package_name": [
+        "kedro.framework.cli.micropkg.package_micropkg",
+        "kedro.framework.cli.pipeline._check_pipeline_name"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_micropkg_package_same_name_as_package_name_alias": [
+        "kedro.framework.cli.micropkg.package_micropkg",
+        "kedro.framework.cli.pipeline._check_pipeline_name"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_micropkg_package_to_destination": [
+        "kedro.framework.cli.micropkg.package_micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_package_empty_micropkg_dir": [
+        "kedro.framework.cli.micropkg.package_micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_package_micropkg": [
+        "kedro.framework.cli.micropkg.package_micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_package_micropkg_bad_alias": [
+        "kedro.framework.cli.micropkg.micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_package_micropkg_invalid_module_path": [
+        "kedro.framework.cli.micropkg._check_module_path"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_package_micropkg_no_config": [
+        "kedro.framework.cli.micropkg.package_micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_package_modular_pipeline_with_nested_parameters": [
+        "kedro.framework.cli.pipeline._check_pipeline_name"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_package_non_existing_micropkg_dir": [
+        "kedro.framework.cli.micropkg.package_micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand.test_package_pipeline_with_deep_nested_parameters": [
+        "kedro.framework.cli.pipeline._check_pipeline_name"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageFromManifest.test_invalid_toml": [
+        "kedro.framework.cli.pipeline._check_pipeline_name"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageFromManifest.test_micropkg_package_all": [
+        "kedro.framework.cli.micropkg.micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageFromManifest.test_micropkg_package_all_empty_toml": [
+        "kedro.framework.cli.micropkg.package_micropkg",
+        "kedro.framework.cli.pipeline._check_pipeline_name"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageFromManifest.test_micropkg_package_no_arg_provided": [
+        "kedro.framework.cli.micropkg.package_micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_invalid_pull_from_pypi": [
+        "kedro.framework.cli.micropkg.pull_package"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_micropkg_alias_refactors_imports": [
+        "kedro.framework.cli.micropkg.micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_micropkg_pull_as_aliased_pipeline_conflicting_name": [
+        "kedro.framework.cli.micropkg._get_sdist_name"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_micropkg_pull_from_aliased_pipeline_conflicting_name": [
+        "kedro.framework.cli.micropkg._get_sdist_name"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_micropkg_pull_invalid_package_contents": [
+        "kedro.framework.cli.micropkg.pull_package"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_micropkg_pull_invalid_sdist": [
+        "kedro.framework.cli.micropkg.micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_micropkg_pull_nested_destination": [
+        "kedro.framework.cli.micropkg.micropkg",
+        "kedro.framework.cli.micropkg._get_sdist_name"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_micropkg_pull_same_alias_package_name": [
+        "kedro.framework.cli.micropkg.pull_package"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_path_traversal": [
+        "kedro.framework.cli.micropkg.safe_extract"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_pull_config_missing": [
+        "kedro.framework.cli.micropkg.pull_package"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_pull_from_pypi": [
+        "kedro.framework.cli.micropkg.pull_package"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_pull_from_pypi_more_than_one_sdist_file": [
+        "kedro.framework.cli.micropkg.pull_package",
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_pull_local_sdist": [
+        "kedro.framework.cli.micropkg.pull_package"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_pull_local_sdist_compare": [
+        "kedro.framework.cli.micropkg._get_sdist_name"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_pull_sdist_fs_args": [
+        "kedro.framework.cli.micropkg._get_sdist_name"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_pull_tests_missing": [
+        "kedro.framework.cli.micropkg.pull_package"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_pull_unsupported_protocol_by_fsspec": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullFromManifest.test_invalid_toml": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullFromManifest.test_micropkg_pull_all": [
+        "kedro.framework.cli.micropkg.micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullFromManifest.test_micropkg_pull_all_empty_toml": [
+        "kedro.framework.cli.micropkg.micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullFromManifest.test_micropkg_pull_no_arg_provided": [
+        "kedro.framework.cli.micropkg.micropkg"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_requirements.TestMicropkgRequirements.test_all_requirements_already_covered": [
+        "kedro.framework.cli.pipeline.delete_pipeline",
+        "kedro.framework.cli.micropkg._get_sdist_name",
+        "kedro.framework.cli.utils._update_verbose_flag",
+        "kedro.framework.cli.pipeline.create_pipeline",
+        "kedro.framework.cli.pipeline._check_pipeline_name"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_requirements.TestMicropkgRequirements.test_complex_requirements": [
+        "kedro.framework.cli.micropkg._check_module_path"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_requirements.TestMicropkgRequirements.test_empty_pipeline_requirements_txt": [
+        "kedro.framework.cli.pipeline._check_pipeline_name"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_requirements.TestMicropkgRequirements.test_existing_complex_project_requirements_txt": [
+        "kedro.framework.cli.micropkg._safe_parse_requirements"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_requirements.TestMicropkgRequirements.test_existing_project_requirements_txt": [
+        "kedro.framework.cli.micropkg._safe_parse_requirements"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_requirements.TestMicropkgRequirements.test_missing_project_requirements_txt": [
+        "kedro.framework.cli.micropkg._safe_parse_requirements"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_requirements.TestMicropkgRequirements.test_no_pipeline_requirements_txt": [
+        "kedro.framework.cli.pipeline._check_pipeline_name",
+        "kedro.framework.cli.pipeline.pipeline"
+    ],
+    "tests.framework.cli.micropkg.test_micropkg_requirements.TestMicropkgRequirements.test_no_requirements": [
+        "kedro.framework.cli.pipeline.delete_pipeline",
+        "kedro.framework.cli.pipeline.create_pipeline",
+        "kedro.framework.cli.pipeline._check_pipeline_name",
+        "kedro.framework.cli.pipeline.pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineCreateCommand.test_bad_env": [
+        "kedro.framework.cli.pipeline.create_pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineCreateCommand.test_bad_pipeline_name": [
+        "kedro.framework.cli.pipeline._check_pipeline_name"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineCreateCommand.test_catalog_and_params": [
+        "kedro.framework.context.context.KedroContext.catalog"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineCreateCommand.test_create_pipeline": [
+        "kedro.framework.cli.pipeline.create_pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineCreateCommand.test_create_pipeline_skip_config": [
+        "kedro.framework.cli.pipeline.create_pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineCreateCommand.test_create_pipeline_template": [
+        "kedro.framework.cli.pipeline.create_pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineCreateCommand.test_create_pipeline_template_command_line_override": [
+        "kedro.framework.cli.pipeline.create_pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineCreateCommand.test_duplicate_pipeline_name": [
+        "kedro.framework.cli.pipeline._check_pipeline_name"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineCreateCommand.test_failed_copy": [
+        "kedro.framework.cli.pipeline.pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineCreateCommand.test_no_pipeline_arg_error": [
+        "kedro.framework.cli.pipeline.pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineCreateCommand.test_skip_copy": [
+        "kedro.framework.cli.pipeline.pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineDeleteCommand.test_bad_env": [
+        "kedro.framework.cli.pipeline.delete_pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineDeleteCommand.test_bad_pipeline_name": [
+        "kedro.framework.cli.pipeline._check_pipeline_name"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineDeleteCommand.test_delete_pipeline": [
+        "kedro.framework.cli.pipeline.delete_pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineDeleteCommand.test_delete_pipeline_fail": [
+        "kedro.framework.cli.pipeline.delete_pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineDeleteCommand.test_delete_pipeline_skip": [
+        "kedro.framework.cli.pipeline.delete_pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineDeleteCommand.test_pipeline_delete_confirmation": [
+        "kedro.framework.cli.pipeline.delete_pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineDeleteCommand.test_pipeline_delete_confirmation_skip": [
+        "kedro.framework.cli.pipeline.delete_pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineDeleteCommand.test_pipeline_not_found": [
+        "kedro.framework.cli.pipeline.pipeline"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestSyncDirs.test_sync_no_target": [
+        "kedro.framework.cli.pipeline._sync_dirs"
+    ],
+    "tests.framework.cli.pipeline.test_pipeline.TestSyncDirs.test_sync_target_exists": [
+        "kedro.framework.cli.pipeline._sync_dirs"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogCreateCommand.test_bad_env": [
+        "kedro.framework.session.session.KedroSession.load_context",
+        "kedro.framework.cli.utils.split_string"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogCreateCommand.test_catalog_is_created_in_base_by_default": [
+        "kedro.framework.cli.catalog.create_catalog"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogCreateCommand.test_catalog_is_created_in_correct_env": [
+        "kedro.framework.cli.catalog.create_catalog"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogCreateCommand.test_missing_datasets_appended": [
+        "kedro.framework.cli.catalog._add_missing_datasets_to_catalog"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogCreateCommand.test_no_missing_datasets": [
+        "kedro.pipeline.node.node",
+        "kedro.io.core.AbstractVersionedDataset.__init__",
+        "kedro.io.data_catalog.DataCatalog.__init__",
+        "kedro.framework.cli.catalog.create_catalog",
+        "kedro.pipeline.pipeline.Pipeline.datasets"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogCreateCommand.test_not_found_pipeline": [
+        "kedro.framework.cli.catalog.catalog",
+        "kedro.framework.cli.catalog.create_catalog"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogCreateCommand.test_pipeline_argument_is_required": [
+        "kedro.framework.cli.catalog.catalog"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogListCommand.test_default_dataset": [
+        "kedro.framework.cli.catalog.list_datasets"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogListCommand.test_list_all_pipelines": [
+        "kedro.framework.cli.catalog.list_datasets"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogListCommand.test_list_factory_generated_datasets": [
+        "kedro.framework.cli.catalog.list_datasets"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogListCommand.test_list_specific_pipelines": [
+        "kedro.framework.cli.catalog.list_datasets"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogListCommand.test_no_param_datasets_in_respose": [
+        "kedro.framework.cli.catalog.list_datasets"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogListCommand.test_not_found_pipeline": [
+        "kedro.framework.cli.utils.split_string",
+        "kedro.framework.cli.catalog.list_datasets"
+    ],
+    "tests.framework.cli.test_catalog.test_catalog_resolve": [
+        "kedro.framework.cli.catalog.catalog"
+    ],
+    "tests.framework.cli.test_catalog.test_no_overwrite": [
+        "kedro.framework.cli.catalog.resolve_patterns"
+    ],
+    "tests.framework.cli.test_catalog.test_no_param_datasets_in_resolve": [
+        "kedro.framework.cli.catalog.resolve_patterns"
+    ],
+    "tests.framework.cli.test_catalog.test_rank_catalog_factories": [
+        "kedro.framework.cli.catalog.rank_catalog_factories"
+    ],
+    "tests.framework.cli.test_catalog.test_rank_catalog_factories_with_no_factories": [
+        "kedro.framework.cli.catalog.rank_catalog_factories"
+    ],
+    "tests.framework.cli.test_cli.TestCliCommands.test_cli": [],
+    "tests.framework.cli.test_cli.TestCliCommands.test_help": [],
+    "tests.framework.cli.test_cli.TestCliCommands.test_info_contains_plugin_versions": [
+        "kedro.framework.cli.cli.info",
+        "kedro.framework.cli.utils._get_entry_points"
+    ],
+    "tests.framework.cli.test_cli.TestCliCommands.test_info_no_plugins": [
+        "kedro.framework.cli.cli.info"
+    ],
+    "tests.framework.cli.test_cli.TestCliCommands.test_print_version": [],
+    "tests.framework.cli.test_cli.TestCliUtils.test_clean_pycache": [
+        "kedro.framework.cli.utils._clean_pycache"
+    ],
+    "tests.framework.cli.test_cli.TestCliUtils.test_get_pkg_version": [
+        "kedro.framework.cli.utils.get_pkg_version"
+    ],
+    "tests.framework.cli.test_cli.TestCommandCollection.test_found": [
+        "kedro.framework.cli.utils.CommandCollection.resolve_command"
+    ],
+    "tests.framework.cli.test_cli.TestCommandCollection.test_found_reverse": [
+        "kedro.framework.cli.utils.CommandCollection.resolve_command"
+    ],
+    "tests.framework.cli.test_cli.TestCommandCollection.test_help": [
+        "kedro.framework.cli.utils.CommandCollection.__init__.<locals>.<genexpr>"
+    ],
+    "tests.framework.cli.test_cli.TestCommandCollection.test_not_found": [
+        "kedro.framework.cli.utils.CommandCollection.resolve_command"
+    ],
+    "tests.framework.cli.test_cli.TestCommandCollection.test_not_found_closest_match": [
+        "kedro.framework.cli.utils.CommandCollection.resolve_command"
+    ],
+    "tests.framework.cli.test_cli.TestCommandCollection.test_not_found_closet_match_singular": [
+        "kedro.framework.cli.utils.CommandCollection.resolve_command"
+    ],
+    "tests.framework.cli.test_cli.TestEntryPoints.test_global_error_is_caught": [
+        "kedro.framework.cli.utils.load_entry_points"
+    ],
+    "tests.framework.cli.test_cli.TestEntryPoints.test_global_groups": [
+        "kedro.framework.cli.utils.load_entry_points"
+    ],
+    "tests.framework.cli.test_cli.TestEntryPoints.test_init": [
+        "kedro.framework.cli.cli._init_plugins"
+    ],
+    "tests.framework.cli.test_cli.TestEntryPoints.test_init_error_is_caught": [
+        "kedro.framework.cli.cli._init_plugins"
+    ],
+    "tests.framework.cli.test_cli.TestEntryPoints.test_project_error_is_caught": [
+        "kedro.framework.cli.utils.load_entry_points"
+    ],
+    "tests.framework.cli.test_cli.TestEntryPoints.test_project_groups": [
+        "kedro.framework.cli.utils.load_entry_points"
+    ],
+    "tests.framework.cli.test_cli.TestForwardCommand.test_forwarded_help": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_cli.TestForwardCommand.test_help": [],
+    "tests.framework.cli.test_cli.TestForwardCommand.test_regular": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_cli.TestForwardCommand.test_unnamed": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_cli.TestKedroCLI.test_kedro_cli_no_project": [
+        "kedro.framework.cli.cli.KedroCLI.global_groups"
+    ],
+    "tests.framework.cli.test_cli.TestKedroCLI.test_kedro_cli_with_project": [
+        "kedro.framework.cli.cli.KedroCLI.project_groups"
+    ],
+    "tests.framework.cli.test_cli.TestKedroCLI.test_project_commands_invalid_clipy": [
+        "kedro.framework.cli.cli.KedroCLI.__init__"
+    ],
+    "tests.framework.cli.test_cli.TestKedroCLI.test_project_commands_no_clipy": [
+        "kedro.framework.cli.cli.KedroCLI.project_groups"
+    ],
+    "tests.framework.cli.test_cli.TestKedroCLI.test_project_commands_no_project": [
+        "kedro.framework.cli.cli.KedroCLI.project_groups"
+    ],
+    "tests.framework.cli.test_cli.TestKedroCLI.test_project_commands_valid_clipy": [
+        "kedro.framework.cli.cli.KedroCLI.project_groups"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_bad_extra_params": [
+        "kedro.framework.cli.utils._split_params"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_bad_params_key": [
+        "kedro.framework.cli.utils._split_params"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_fail_split_load_versions": [
+        "kedro.framework.cli.utils._split_load_versions"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_run_async": [
+        "kedro.framework.cli.project.run"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_run_extra_params": [
+        "kedro.framework.cli.utils._split_params"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_run_specific_nodes": [
+        "kedro.framework.cli.utils._split_params"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_run_successfully": [
+        "kedro.framework.cli.project.run"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_run_successfully_parallel": [
+        "kedro.framework.cli.utils._split_params"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_run_with_alternative_conf_source": [
+        "kedro.framework.cli.utils._split_load_versions"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_run_with_config": [
+        "kedro.framework.cli.utils.split_string"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_run_with_invalid_config": [
+        "kedro.framework.cli.utils._config_file_callback"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_run_with_non_existent_conf_source": [],
+    "tests.framework.cli.test_cli.TestRunCommand.test_run_with_params_in_config": [
+        "kedro.framework.cli.utils._split_params"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_run_with_pipeline_filters": [
+        "kedro.framework.cli.utils.split_node_names"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_run_with_tags": [
+        "kedro.framework.cli.utils.split_node_names",
+        "kedro.framework.cli.utils._config_file_callback"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_safe_split_option_arguments": [
+        "kedro.framework.cli.utils._split_params"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand.test_split_load_versions": [
+        "kedro.framework.cli.utils._split_load_versions"
+    ],
+    "tests.framework.cli.test_cli_hooks.TestKedroCLIHooks.test_kedro_cli_should_invoke_cli_hooks_from_plugin": [
+        "kedro.framework.cli.cli.KedroCLI.__init__"
+    ],
+    "tests.framework.cli.test_jupyter.TestCreateKernel.test_create_new_kernel": [
+        "kedro.framework.cli.jupyter._create_kernel"
+    ],
+    "tests.framework.cli.test_jupyter.TestCreateKernel.test_error": [
+        "kedro.framework.cli.jupyter._create_kernel"
+    ],
+    "tests.framework.cli.test_jupyter.TestCreateKernel.test_kernel_install_replaces": [
+        "kedro.framework.cli.jupyter._create_kernel"
+    ],
+    "tests.framework.cli.test_jupyter.TestJupyterLabCommand.test_env": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_jupyter.TestJupyterLabCommand.test_fail_no_jupyter": [
+        "kedro.framework.cli.jupyter.jupyter"
+    ],
+    "tests.framework.cli.test_jupyter.TestJupyterLabCommand.test_happy_path": [
+        "kedro.framework.cli.jupyter.jupyter"
+    ],
+    "tests.framework.cli.test_jupyter.TestJupyterNotebookCommand.test_env": [
+        "kedro.framework.cli.jupyter.jupyter_notebook"
+    ],
+    "tests.framework.cli.test_jupyter.TestJupyterNotebookCommand.test_fail_no_jupyter": [
+        "kedro.framework.cli.jupyter.jupyter"
+    ],
+    "tests.framework.cli.test_jupyter.TestJupyterNotebookCommand.test_happy_path": [
+        "kedro.framework.cli.jupyter.jupyter"
+    ],
+    "tests.framework.cli.test_jupyter.TestJupyterSetupCommand.test_fail_no_jupyter": [
+        "kedro.framework.cli.jupyter.jupyter"
+    ],
+    "tests.framework.cli.test_jupyter.TestJupyterSetupCommand.test_happy_path": [
+        "kedro.framework.cli.jupyter.jupyter"
+    ],
+    "tests.framework.cli.test_project.TestIpythonCommand.test_env": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_project.TestIpythonCommand.test_fail_no_ipython": [
+        "kedro.framework.cli.project.ipython"
+    ],
+    "tests.framework.cli.test_project.TestIpythonCommand.test_happy_path": [
+        "kedro.framework.cli.project.ipython"
+    ],
+    "tests.framework.cli.test_project.TestPackageCommand.test_happy_path": [
+        "kedro.framework.cli.project.package"
+    ],
+    "tests.framework.cli.test_project.TestPackageCommand.test_no_pyproject_toml": [
+        "kedro.framework.cli.project.package"
+    ],
+    "tests.framework.cli.test_registry.TestRegistryDescribeCommand.test_describe_registered_pipeline": [
+        "kedro.framework.cli.registry.describe_registered_pipeline"
+    ],
+    "tests.framework.cli.test_registry.TestRegistryDescribeCommand.test_describe_registered_pipeline_default": [
+        "kedro.framework.cli.registry.describe_registered_pipeline"
+    ],
+    "tests.framework.cli.test_registry.TestRegistryDescribeCommand.test_registered_pipeline_not_found": [
+        "kedro.framework.cli.registry.describe_registered_pipeline"
+    ],
+    "tests.framework.cli.test_registry.test_list_registered_pipelines": [
+        "kedro.framework.cli.registry.list_registered_pipelines"
+    ],
+    "tests.framework.cli.test_starters.TestConvertToolNamesToNumbers.test_convert_tool_short_names_to_numbers_with_all_string": [
+        "kedro.framework.cli.starters._convert_tool_short_names_to_numbers"
+    ],
+    "tests.framework.cli.test_starters.TestConvertToolNamesToNumbers.test_convert_tool_short_names_to_numbers_with_case_insensitive_tools": [
+        "kedro.framework.cli.starters._convert_tool_short_names_to_numbers"
+    ],
+    "tests.framework.cli.test_starters.TestConvertToolNamesToNumbers.test_convert_tool_short_names_to_numbers_with_duplicates": [
+        "kedro.framework.cli.starters._convert_tool_short_names_to_numbers"
+    ],
+    "tests.framework.cli.test_starters.TestConvertToolNamesToNumbers.test_convert_tool_short_names_to_numbers_with_empty_string": [
+        "kedro.framework.cli.starters._convert_tool_short_names_to_numbers"
+    ],
+    "tests.framework.cli.test_starters.TestConvertToolNamesToNumbers.test_convert_tool_short_names_to_numbers_with_invalid_tools": [
+        "kedro.framework.cli.starters._convert_tool_short_names_to_numbers"
+    ],
+    "tests.framework.cli.test_starters.TestConvertToolNamesToNumbers.test_convert_tool_short_names_to_numbers_with_mixed_valid_invalid_tools": [
+        "kedro.framework.cli.starters._convert_tool_short_names_to_numbers"
+    ],
+    "tests.framework.cli.test_starters.TestConvertToolNamesToNumbers.test_convert_tool_short_names_to_numbers_with_none_string": [
+        "kedro.framework.cli.starters._convert_tool_short_names_to_numbers"
+    ],
+    "tests.framework.cli.test_starters.TestConvertToolNamesToNumbers.test_convert_tool_short_names_to_numbers_with_valid_tools": [
+        "kedro.framework.cli.starters._convert_tool_short_names_to_numbers"
+    ],
+    "tests.framework.cli.test_starters.TestConvertToolNamesToNumbers.test_convert_tool_short_names_to_numbers_with_whitespace": [
+        "kedro.framework.cli.starters._convert_tool_short_names_to_numbers"
+    ],
+    "tests.framework.cli.test_starters.TestFlagsNotAllowed.test_checkout_flag_without_starter": [
+        "kedro.framework.cli.starters._validate_flag_inputs",
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestFlagsNotAllowed.test_directory_flag_with_starter_alias": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestFlagsNotAllowed.test_directory_flag_without_starter": [
+        "kedro.framework.cli.starters._validate_flag_inputs",
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestFlagsNotAllowed.test_starter_flag_with_example_flag": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestFlagsNotAllowed.test_starter_flag_with_tools_flag": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNameFromCLI.test_invalid_names": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestNameFromCLI.test_valid_names": [
+        "kedro.framework.cli.starters._validate_flag_inputs",
+        "kedro.framework.cli.starters.new"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileInvalid.test_config_bad_yaml": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileInvalid.test_config_does_not_exist": [],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileInvalid.test_config_empty": [
+        "kedro.framework.cli.starters.new"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileInvalid.test_config_missing_key": [
+        "kedro.framework.cli.starters.new"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileInvalid.test_invalid_project_name_special_characters": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileInvalid.test_invalid_project_name_too_short": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileInvalid.test_output_dir_does_not_exist": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileValid.test_config_with_no_tools_example": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileValid.test_custom_kedro_version": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileValid.test_custom_output_dir": [
+        "kedro.framework.cli.starters._get_cookiecutter_dir"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileValid.test_custom_required_keys": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileValid.test_empty_prompts": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileValid.test_extra_keys_allowed": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileValid.test_no_prompts": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileValid.test_required_keys_only": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsInvalid.test_custom_prompt_invalid_input": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsInvalid.test_fail_if_dir_exists": [
+        "kedro.framework.cli.utils._update_verbose_flag",
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsInvalid.test_invalid_project_name_special_characters": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsInvalid.test_invalid_project_name_too_short": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsInvalid.test_prompt_bad_yaml": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsInvalid.test_prompt_no_title": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsValid.test_custom_project_name": [
+        "kedro.framework.cli.starters._create_project"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsValid.test_custom_project_name_with_hyphen_and_underscore_and_number": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsValid.test_custom_prompt_for_essential_variable": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsValid.test_custom_prompt_valid_input": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsValid.test_default": [
+        "kedro.framework.cli.utils._update_verbose_flag",
+        "kedro.framework.cli.starters.new"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsValid.test_empty_prompts": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsValid.test_fetch_validate_parse_config_from_user_prompts_without_context": [
+        "kedro.framework.cli.starters._fetch_validate_parse_config_from_user_prompts"
+    ],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsValid.test_no_prompts": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewWithStarterInvalid.test_invalid_checkout": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestNewWithStarterInvalid.test_invalid_starter": [
+        "kedro.framework.cli.starters._validate_flag_inputs",
+        "kedro.framework.cli.starters._get_starters_dict"
+    ],
+    "tests.framework.cli.test_starters.TestNewWithStarterValid.test_absolute_path": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewWithStarterValid.test_alias": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestNewWithStarterValid.test_alias_custom_checkout": [
+        "kedro.framework.cli.starters._get_extra_context",
+        "kedro.framework.cli.starters._make_cookiecutter_context_for_prompts"
+    ],
+    "tests.framework.cli.test_starters.TestNewWithStarterValid.test_git_repo": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewWithStarterValid.test_git_repo_custom_checkout": [
+        "kedro.framework.cli.starters._get_extra_context"
+    ],
+    "tests.framework.cli.test_starters.TestNewWithStarterValid.test_git_repo_custom_directory": [
+        "kedro.framework.cli.starters._get_starters_dict",
+        "kedro.framework.cli.starters._get_cookiecutter_dir"
+    ],
+    "tests.framework.cli.test_starters.TestNewWithStarterValid.test_no_hint": [
+        "kedro.framework.cli.starters.new"
+    ],
+    "tests.framework.cli.test_starters.TestNewWithStarterValid.test_relative_path": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestNewWithStarterValid.test_relative_path_directory": [
+        "kedro.framework.cli.starters._create_project",
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestParseToolsInput.test_parse_tools_invalid_range": [
+        "kedro.framework.cli.starters._parse_tools_input"
+    ],
+    "tests.framework.cli.test_starters.TestParseToolsInput.test_parse_tools_invalid_selection": [
+        "kedro.framework.cli.starters._parse_tools_input"
+    ],
+    "tests.framework.cli.test_starters.TestParseToolsInput.test_parse_tools_range_too_high": [
+        "kedro.framework.cli.starters._parse_tools_input"
+    ],
+    "tests.framework.cli.test_starters.TestParseToolsInput.test_parse_tools_valid": [
+        "kedro.framework.cli.starters._parse_tools_input"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromCLI.test_flags_skip_interactive_flow": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromCLI.test_invalid_tools_flag": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromCLI.test_invalid_tools_flag_combination": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromCLI.test_valid_tools_flag": [
+        "kedro.framework.cli.utils._update_verbose_flag"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromConfigFile.test_invalid_example": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromConfigFile.test_invalid_tools": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromConfigFile.test_invalid_tools_flag_combination": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromConfigFile.test_invalid_tools_with_starter": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromConfigFile.test_valid_example": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromConfigFile.test_valid_tools_and_example": [
+        "kedro.framework.cli.starters._convert_tool_short_names_to_numbers"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromUserPrompts.test_invalid_example": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromUserPrompts.test_invalid_tools": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromUserPrompts.test_invalid_tools_range": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromUserPrompts.test_invalid_tools_selection": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromUserPrompts.test_valid_example": [
+        "kedro.framework.cli.starters._validate_flag_inputs"
+    ],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromUserPrompts.test_valid_tools_and_example": [
+        "kedro.framework.cli.starters._parse_tools_input"
+    ],
+    "tests.framework.cli.test_starters.TestValidateSelection.test_validate_tool_selection_empty_list": [
+        "kedro.framework.cli.starters._validate_tool_selection"
+    ],
+    "tests.framework.cli.test_starters.TestValidateSelection.test_validate_tool_selection_invalid_multiple_tools": [
+        "kedro.framework.cli.starters._validate_tool_selection"
+    ],
+    "tests.framework.cli.test_starters.TestValidateSelection.test_validate_tool_selection_invalid_single_tool": [
+        "kedro.framework.cli.starters._validate_tool_selection"
+    ],
+    "tests.framework.cli.test_starters.TestValidateSelection.test_validate_tool_selection_mix_valid_invalid_tools": [
+        "kedro.framework.cli.starters._validate_tool_selection"
+    ],
+    "tests.framework.cli.test_starters.TestValidateSelection.test_validate_tool_selection_valid": [
+        "kedro.framework.cli.starters._validate_tool_selection"
+    ],
+    "tests.framework.cli.test_starters.test_starter_list": [
+        "kedro.framework.cli.starters.starter"
+    ],
+    "tests.framework.cli.test_starters.test_starter_list_with_invalid_starter_plugin": [
+        "kedro.framework.cli.starters.list_starters"
+    ],
+    "tests.framework.cli.test_starters.test_starter_list_with_starter_plugin": [
+        "kedro.framework.cli.starters.list_starters"
+    ],
+    "tests.framework.context.test_context.TestKedroContext.test_attributes": [],
+    "tests.framework.context.test_context.TestKedroContext.test_catalog": [
+        "kedro.framework.context.context.KedroContext.catalog"
+    ],
+    "tests.framework.context.test_context.TestKedroContext.test_custom_env": [],
+    "tests.framework.context.test_context.TestKedroContext.test_get_catalog_always_using_absolute_path": [
+        "kedro.framework.context.context.KedroContext._get_catalog"
+    ],
+    "tests.framework.context.test_context.TestKedroContext.test_get_catalog_validates_transcoded_datasets": [
+        "kedro.framework.context.context._validate_transcoded_datasets",
+        "kedro.framework.context.context.KedroContext.catalog"
+    ],
+    "tests.framework.context.test_context.TestKedroContext.test_missing_credentials": [
+        "kedro.framework.context.context.KedroContext.catalog",
+        "kedro.framework.context.context.KedroContext._get_config_credentials"
+    ],
+    "tests.framework.context.test_context.TestKedroContext.test_missing_parameters": [
+        "kedro.framework.context.context.KedroContext.catalog"
+    ],
+    "tests.framework.context.test_context.TestKedroContext.test_nested_params": [
+        "kedro.framework.context.context.KedroContext.catalog"
+    ],
+    "tests.framework.context.test_context.TestKedroContext.test_params": [
+        "kedro.framework.context.context.KedroContext.params"
+    ],
+    "tests.framework.context.test_context.TestKedroContext.test_params_missing": [
+        "kedro.framework.context.context.KedroContext.params"
+    ],
+    "tests.framework.context.test_context.TestKedroContext.test_set_new_attribute": [],
+    "tests.framework.context.test_context.TestKedroContext.test_wrong_catalog_type": [
+        "kedro.framework.project.__init__._HasSharedParentClassValidator.validate",
+        "kedro.framework.project.__init__._IsSubclassValidator.validate"
+    ],
+    "tests.framework.context.test_context.test_convert_paths_raises_error_on_relative_project_path": [
+        "kedro.framework.context.context._convert_paths_to_absolute_posix"
+    ],
+    "tests.framework.context.test_context.test_convert_paths_to_absolute_posix_converts_full_windows_path_to_posix": [
+        "kedro.framework.context.context._convert_paths_to_absolute_posix"
+    ],
+    "tests.framework.context.test_context.test_convert_paths_to_absolute_posix_for_all_known_filepath_keys": [
+        "kedro.framework.context.context._convert_paths_to_absolute_posix"
+    ],
+    "tests.framework.context.test_context.test_convert_paths_to_absolute_posix_not_changing_non_relative_path": [
+        "kedro.framework.context.context._convert_paths_to_absolute_posix"
+    ],
+    "tests.framework.context.test_context.test_is_relative_path": [
+        "kedro.framework.context.context._is_relative_path"
+    ],
+    "tests.framework.hooks.test_manager.test_hook_manager_can_call_hooks_defined_in_specs": [
+        "kedro.framework.hooks.manager._create_hook_manager"
+    ],
+    "tests.framework.hooks.test_manager.test_null_plugin_manager_returns_none_when_called": [
+        "kedro.framework.hooks.manager._NullPluginManager.__getattr__"
+    ],
+    "tests.framework.project.test_logging.test_configure_logging": [
+        "kedro.framework.project.__init__.configure_logging"
+    ],
+    "tests.framework.project.test_logging.test_default_logging_config": [],
+    "tests.framework.project.test_logging.test_environment_variable_logging_config": [
+        "kedro.framework.project.__init__._ProjectLogging.__init__"
+    ],
+    "tests.framework.project.test_logging.test_project_logging_in_default_logging_config": [
+        "kedro.framework.project.__init__.configure_project"
+    ],
+    "tests.framework.project.test_logging.test_rich_traceback_configuration": [
+        "kedro.framework.project.__init__._ProjectLogging.configure"
+    ],
+    "tests.framework.project.test_logging.test_rich_traceback_configuration_extend_suppress": [
+        "kedro.framework.project.__init__._ProjectLogging.configure"
+    ],
+    "tests.framework.project.test_logging.test_rich_traceback_disabled_on_databricks": [
+        "kedro.framework.project.__init__._ProjectLogging.configure"
+    ],
+    "tests.framework.project.test_logging.test_rich_traceback_enabled": [
+        "kedro.framework.project.__init__._ProjectLogging.configure"
+    ],
+    "tests.framework.project.test_logging.test_rich_traceback_not_installed": [
+        "kedro.framework.project.__init__._ProjectLogging.configure"
+    ],
+    "tests.framework.project.test_pipeline_discovery.test_find_pipelines": [
+        "kedro.framework.project.__init__.find_pipelines"
+    ],
+    "tests.framework.project.test_pipeline_discovery.test_find_pipelines_handles_project_structure_without_pipelines_dir": [
+        "kedro.framework.project.__init__.find_pipelines"
+    ],
+    "tests.framework.project.test_pipeline_discovery.test_find_pipelines_handles_simplified_project_structure": [
+        "kedro.framework.project.__init__.find_pipelines"
+    ],
+    "tests.framework.project.test_pipeline_discovery.test_find_pipelines_skips_hidden_modules": [
+        "kedro.framework.project.__init__.find_pipelines"
+    ],
+    "tests.framework.project.test_pipeline_discovery.test_find_pipelines_skips_modules_that_cause_exceptions_upon_import": [
+        "kedro.framework.project.__init__.find_pipelines"
+    ],
+    "tests.framework.project.test_pipeline_discovery.test_find_pipelines_skips_modules_with_unexpected_return_value_type": [
+        "kedro.framework.project.__init__.find_pipelines"
+    ],
+    "tests.framework.project.test_pipeline_discovery.test_find_pipelines_skips_modules_without_create_pipelines_function": [
+        "kedro.framework.project.__init__.find_pipelines"
+    ],
+    "tests.framework.project.test_pipeline_discovery.test_find_pipelines_skips_regular_files_within_the_pipelines_folder": [
+        "kedro.framework.project.__init__.find_pipelines"
+    ],
+    "tests.framework.project.test_pipeline_discovery.test_find_pipelines_skips_unimportable_pipeline_module": [
+        "kedro.framework.project.__init__.find_pipelines"
+    ],
+    "tests.framework.project.test_pipeline_registry.test_configure_project_should_not_raise_for_unimportable_pipelines": [
+        "kedro.framework.project.__init__.configure_project"
+    ],
+    "tests.framework.project.test_pipeline_registry.test_pipelines_after_configuring_project_shows_updated_values": [
+        "kedro.framework.project.__init__.configure_project"
+    ],
+    "tests.framework.project.test_pipeline_registry.test_pipelines_without_configure_project_is_empty": [
+        "kedro.framework.project.__init__._load_data_wrapper.<locals>.inner"
+    ],
+    "tests.framework.project.test_settings.test_settings_after_configuring_project_shows_updated_values": [
+        "kedro.framework.project.__init__.configure_project"
+    ],
+    "tests.framework.project.test_settings.test_settings_without_configure_project_shows_default_values": [],
+    "tests.framework.project.test_settings.test_validate_settings_with_empty_package_name": [
+        "kedro.framework.project.__init__.validate_settings"
+    ],
+    "tests.framework.project.test_settings.test_validate_settings_without_settings_file": [
+        "kedro.framework.project.__init__.validate_settings"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_broken_config_loader": [
+        "kedro.framework.project.__init__._ProjectSettings.__init__"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_config_loader_args_no_env_overwrites_env": [
+        "kedro.framework.session.session.KedroSession._get_config_loader"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_config_loader_args_overwrite_env": [
+        "kedro.framework.session.session.KedroSession._get_config_loader"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_create": [
+        "kedro.framework.session.session.KedroSession.create"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_create_multiple_sessions": [
+        "kedro.framework.session.session.KedroSession.create"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_create_no_env_extra_params": [
+        "kedro.framework.session.session.KedroSession._get_config_loader",
+        "kedro.framework.session.session.KedroSession.load_context"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_default_store": [
+        "kedro.framework.session.session.KedroSession.store"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_get_username_error": [
+        "kedro.framework.session.session.KedroSession.store",
+        "kedro.framework.session.session.KedroSession.create"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_git_describe": [
+        "kedro.framework.session.session.KedroSession.store"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_git_describe_error": [
+        "kedro.framework.session.session._describe_git"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_load_config_loader_args": [
+        "kedro.framework.session.session.KedroSession._get_config_loader"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_load_config_loader_custom_config_loader_class": [
+        "kedro.framework.session.session.KedroSession._get_config_loader"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_load_config_loader_with_envvar": [
+        "kedro.framework.session.session.KedroSession._get_config_loader"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_load_context_custom_context_class": [
+        "kedro.framework.session.session.KedroSession.load_context"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_load_context_with_envvar": [
+        "kedro.framework.session.session.KedroSession.load_context"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_log_error": [
+        "kedro.framework.session.session.KedroSession._log_exception"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_logging_is_not_reconfigure": [
+        "kedro.framework.session.session.KedroSession.close",
+        "kedro.framework.session.session.KedroSession.create"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_run": [
+        "kedro.framework.session.session.KedroSession.run"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_run_broken_pipeline_multiple_times": [
+        "kedro.framework.session.session.KedroSession.create"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_run_exception": [
+        "kedro.framework.session.session.KedroSession._log_exception"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_run_multiple_times": [
+        "kedro.framework.session.session.KedroSession.create",
+        "kedro.framework.session.session.KedroSession.run",
+        "kedro.framework.session.session.KedroSession.__enter__",
+        "kedro.framework.session.session.KedroSession.__exit__"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_run_non_existent_pipeline": [
+        "kedro.framework.session.session.KedroSession.__exit__"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_session_raise_error_with_invalid_runner_instance": [
+        "kedro.io.core.generate_timestamp"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_shelve_store": [
+        "kedro.framework.session.session.KedroSession.close",
+        "kedro.framework.session.session.KedroSession.create"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_store_uncaught_error": [
+        "kedro.framework.session.session.KedroSession.create"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_wrong_store_args": [
+        "kedro.framework.session.session.KedroSession.create"
+    ],
+    "tests.framework.session.test_session.TestKedroSession.test_wrong_store_type": [
+        "kedro.framework.project.__init__._ProjectSettings.__init__"
+    ],
+    "tests.framework.session.test_session.test_no_DictConfig_in_store": [
+        "kedro.framework.cli.utils._split_params",
+        "kedro.framework.session.session.KedroSession.__init__",
+        "kedro.framework.session.session.KedroSession.create"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestAsyncNodeDatasetHooks.test_after_dataset_load_hook_async": [
+        "kedro.runner.runner._run_node_async"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestAsyncNodeDatasetHooks.test_after_dataset_load_hook_async_multiple_outputs": [
+        "kedro.runner.runner._run_node_async"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestBeforeNodeRunHookWithInputUpdates.test_broken_input_update": [
+        "kedro.framework.session.session.KedroSession.load_context"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestBeforeNodeRunHookWithInputUpdates.test_broken_input_update_parallel": [
+        "kedro.runner.parallel_runner.ParallelRunner.__init__"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestBeforeNodeRunHookWithInputUpdates.test_correct_input_update": [
+        "kedro.framework.session.session.KedroSession.load_context"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestBeforeNodeRunHookWithInputUpdates.test_correct_input_update_parallel": [
+        "kedro.runner.parallel_runner.ParallelRunner.__init__"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestCatalogHooks.test_after_catalog_created_hook": [
+        "kedro.framework.context.context._convert_paths_to_absolute_posix",
+        "kedro.framework.session.session.KedroSession._get_config_loader",
+        "kedro.framework.context.context.KedroContext.catalog"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestCatalogHooks.test_after_catalog_created_hook_on_session_run": [
+        "kedro.framework.session.session.KedroSession._get_config_loader",
+        "kedro.framework.context.context._convert_paths_to_absolute_posix"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestDatasetHooks.test_before_and_after_dataset_loaded_hooks_parallel_runner": [
+        "kedro.runner.parallel_runner.ParallelRunner.__del__",
+        "kedro.framework.session.session.KedroSession.load_context"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestDatasetHooks.test_before_and_after_dataset_loaded_hooks_sequential_runner": [
+        "kedro.framework.session.session.KedroSession.load_context"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestDatasetHooks.test_before_and_after_dataset_saved_hooks_parallel_runner": [
+        "kedro.runner.parallel_runner.ParallelRunner.__del__",
+        "kedro.framework.session.session.KedroSession.load_context"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestDatasetHooks.test_before_and_after_dataset_saved_hooks_sequential_runner": [
+        "kedro.framework.session.session.KedroSession.load_context"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestKedroContextSpecsHook.test_after_context_created_hook": [
+        "kedro.framework.session.session.KedroSession.load_context"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestNodeHooks.test_before_and_after_node_run_hooks_parallel_runner": [
+        "kedro.framework.session.session.KedroSession.load_context"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestNodeHooks.test_before_and_after_node_run_hooks_sequential_runner": [
+        "kedro.framework.session.session.KedroSession.load_context"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestNodeHooks.test_on_node_error_hook_parallel_runner": [
+        "kedro.runner.parallel_runner.ParallelRunner.__init__"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestPipelineHooks.test_before_and_after_pipeline_run_hooks": [
+        "kedro.framework.session.session.KedroSession.load_context"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestPipelineHooks.test_on_node_error_hook_sequential_runner": [
+        "kedro.framework.session.session.KedroSession.run",
+        "kedro.framework.context.context.KedroContext._get_catalog",
+        "kedro.pipeline.pipeline.Pipeline.__repr__"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestPipelineHooks.test_on_pipeline_error_hook": [
+        "kedro.runner.sequential_runner.SequentialRunner.__init__",
+        "kedro.pipeline.pipeline.Pipeline.__repr__"
+    ],
+    "tests.framework.session.test_session_hook_manager.TestSessionHookManager.test_assert_register_hooks": [],
+    "tests.framework.session.test_session_hook_manager.TestSessionHookManager.test_calling_register_hooks_twice": [
+        "kedro.framework.hooks.manager._register_hooks"
+    ],
+    "tests.framework.session.test_session_hook_manager.TestSessionHookManager.test_disabling_auto_discovered_hooks": [
+        "kedro.io.core.generate_timestamp",
+        "kedro.framework.session.session._describe_git",
+        "kedro.framework.session.session.KedroSession.create"
+    ],
+    "tests.framework.session.test_session_hook_manager.TestSessionHookManager.test_hooks_registered_when_session_created": [
+        "kedro.framework.project.__init__._ProjectSettings.__init__"
+    ],
+    "tests.framework.session.test_store.TestBaseStore.test_init": [
+        "kedro.framework.session.store.BaseSessionStore.__init__"
+    ],
+    "tests.framework.session.test_store.TestBaseStore.test_save": [
+        "kedro.framework.session.store.BaseSessionStore.save"
+    ],
+    "tests.framework.session.test_store.TestShelveStore.test_empty": [
+        "kedro.framework.session.store.BaseSessionStore.__init__"
+    ],
+    "tests.framework.session.test_store.TestShelveStore.test_save": [
+        "kedro.framework.session.shelvestore.ShelveStore.save"
+    ],
+    "tests.framework.session.test_store.TestShelveStore.test_update": [
+        "kedro.framework.session.shelvestore.ShelveStore.save"
+    ],
+    "tests.framework.test_startup.TestBootstrapProject.test_bootstrap_project": [
+        "kedro.framework.startup.bootstrap_project"
+    ],
+    "tests.framework.test_startup.TestGetProjectMetadata.test_invalid_version": [
+        "kedro.framework.startup._version_mismatch_error"
+    ],
+    "tests.framework.test_startup.TestGetProjectMetadata.test_invalid_version_for_kedro_version": [
+        "kedro.framework.startup._version_mismatch_error"
+    ],
+    "tests.framework.test_startup.TestGetProjectMetadata.test_no_config_files": [
+        "kedro.framework.startup._get_project_metadata"
+    ],
+    "tests.framework.test_startup.TestGetProjectMetadata.test_source_dir_specified_in_toml": [
+        "kedro.framework.startup._get_project_metadata"
+    ],
+    "tests.framework.test_startup.TestGetProjectMetadata.test_toml_file_has_missing_mandatory_keys": [
+        "kedro.framework.startup._get_project_metadata"
+    ],
+    "tests.framework.test_startup.TestGetProjectMetadata.test_toml_file_with_extra_keys": [
+        "kedro.framework.startup._get_project_metadata"
+    ],
+    "tests.framework.test_startup.TestGetProjectMetadata.test_toml_file_without_kedro_section": [
+        "kedro.framework.startup._get_project_metadata"
+    ],
+    "tests.framework.test_startup.TestGetProjectMetadata.test_toml_invalid_format": [
+        "kedro.framework.startup._get_project_metadata"
+    ],
+    "tests.framework.test_startup.TestGetProjectMetadata.test_valid_toml_file": [
+        "kedro.framework.startup._get_project_metadata.<locals>.<listcomp>"
+    ],
+    "tests.framework.test_startup.TestGetProjectMetadata.test_valid_toml_file_with_project_version": [
+        "kedro.framework.startup._get_project_metadata"
+    ],
+    "tests.framework.test_startup.TestIsProject.test_no_metadata_file": [
+        "kedro.framework.startup._is_project"
+    ],
+    "tests.framework.test_startup.TestIsProject.test_non_kedro_project": [
+        "kedro.framework.startup._is_project"
+    ],
+    "tests.framework.test_startup.TestIsProject.test_toml_bad_encoding": [
+        "kedro.framework.startup._is_project"
+    ],
+    "tests.framework.test_startup.TestIsProject.test_toml_invalid_format": [
+        "kedro.framework.startup._is_project"
+    ],
+    "tests.framework.test_startup.TestIsProject.test_valid_toml_file": [
+        "kedro.framework.startup._is_project"
+    ],
+    "tests.framework.test_startup.TestValidateSourcePath.test_invalid_source_path": [
+        "kedro.framework.startup._validate_source_path"
+    ],
+    "tests.framework.test_startup.TestValidateSourcePath.test_non_existent_source_path": [
+        "kedro.framework.startup._validate_source_path"
+    ],
+    "tests.framework.test_startup.TestValidateSourcePath.test_valid_source_path": [
+        "kedro.framework.startup._validate_source_path"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_bad_argument": [
+        "kedro.io.cached_dataset.CachedDataset.__init__"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_config_bad_version": [
+        "kedro.io.data_catalog.DataCatalog._is_pattern",
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_config_good_version": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_copy_mode": [],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_ephemeral_attribute": [],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_exists": [
+        "kedro.io.core.AbstractDataset.exists"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_from_yaml": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_load_empty": [
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_load_empty_cache": [
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_pickle": [
+        "kedro.io.cached_dataset.CachedDataset._describe"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_release": [
+        "kedro.io.core.AbstractDataset.release"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_save_load": [
+        "kedro.io.core.AbstractDataset.save",
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_save_load_caching": [
+        "kedro.io.core.AbstractDataset.save",
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_cached_dataset.TestCachedDataset.test_str": [
+        "kedro.io.core.AbstractDataset.__str__"
+    ],
+    "tests.io.test_core.TestAbstractVersionedDataset.test_cache_release": [
+        "kedro.io.core.AbstractVersionedDataset._release"
+    ],
+    "tests.io.test_core.TestAbstractVersionedDataset.test_exists": [
+        "kedro.io.core.AbstractVersionedDataset.exists"
+    ],
+    "tests.io.test_core.TestAbstractVersionedDataset.test_exists_general_exception": [
+        "kedro.io.core.AbstractVersionedDataset.exists"
+    ],
+    "tests.io.test_core.TestAbstractVersionedDataset.test_local_exists": [
+        "kedro.io.core.AbstractVersionedDataset.exists"
+    ],
+    "tests.io.test_core.TestAbstractVersionedDataset.test_no_versions": [
+        "kedro.io.core.AbstractVersionedDataset.load"
+    ],
+    "tests.io.test_core.TestAbstractVersionedDataset.test_prevent_overwrite": [
+        "kedro.io.core.AbstractVersionedDataset.resolve_save_version",
+        "kedro.io.core.AbstractVersionedDataset.resolve_load_version"
+    ],
+    "tests.io.test_core.TestAbstractVersionedDataset.test_resolve_save_version": [
+        "kedro.io.core.AbstractVersionedDataset.resolve_save_version"
+    ],
+    "tests.io.test_core.TestAbstractVersionedDataset.test_save_and_load": [
+        "kedro.io.core.AbstractVersionedDataset.load",
+        "kedro.io.core.AbstractVersionedDataset.save"
+    ],
+    "tests.io.test_core.TestAbstractVersionedDataset.test_save_version_warning": [
+        "kedro.io.core.AbstractVersionedDataset.save"
+    ],
+    "tests.io.test_core.TestAbstractVersionedDataset.test_version_str_repr": [
+        "kedro.io.core.AbstractDataset.__str__"
+    ],
+    "tests.io.test_core.TestAbstractVersionedDataset.test_versioning_existing_dataset": [
+        "kedro.io.core.AbstractVersionedDataset.exists",
+        "kedro.io.core.AbstractDataset.exists"
+    ],
+    "tests.io.test_core.TestCoreFunctions.test_dataset_missing_dependencies": [
+        "kedro.io.core.parse_dataset_definition"
+    ],
+    "tests.io.test_core.TestCoreFunctions.test_dataset_name_typo": [
+        "kedro.io.core.parse_dataset_definition"
+    ],
+    "tests.io.test_core.TestCoreFunctions.test_get_filepath_str": [
+        "kedro.io.core.get_filepath_str"
+    ],
+    "tests.io.test_core.TestCoreFunctions.test_get_protocol_and_path": [
+        "kedro.io.core.get_protocol_and_path"
+    ],
+    "tests.io.test_core.TestCoreFunctions.test_get_protocol_and_path_http_with_version": [
+        "kedro.io.core.get_protocol_and_path"
+    ],
+    "tests.io.test_core.TestCoreFunctions.test_parse_dataset_definition": [
+        "kedro.io.core.parse_dataset_definition"
+    ],
+    "tests.io.test_core.TestCoreFunctions.test_str_representation": [
+        "kedro.io.core.AbstractDataset.__str__"
+    ],
+    "tests.io.test_core.TestCoreFunctions.test_str_representation_none": [
+        "kedro.io.core.AbstractDataset.__str__"
+    ],
+    "tests.io.test_core.TestCoreFunctions.test_test_parse_dataset_definition_with_python_class_type": [
+        "kedro.io.core.parse_dataset_definition"
+    ],
+    "tests.io.test_core.TestCoreFunctions.test_validate_forbidden_chars": [
+        "kedro.io.core.validate_on_forbidden_chars"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_add_all_save_and_load": [
+        "kedro.io.data_catalog.DataCatalog.add_all"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_add_dataset_twice": [
+        "kedro.io.data_catalog.DataCatalog.add"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_add_feed_dict_should_grow_linearly": [
+        "kedro.io.data_catalog.DataCatalog.add_feed_dict"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_add_save_and_load": [
+        "kedro.io.data_catalog.DataCatalog.save",
+        "kedro.io.data_catalog.DataCatalog.load"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_adding_datasets_not_allowed": [
+        "kedro.io.data_catalog._FrozenDatasets.__setattr__"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_bad_confirm": [
+        "kedro.io.data_catalog.DataCatalog.confirm"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_confirm": [
+        "kedro.io.data_catalog.DataCatalog.confirm"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_datasets_on_add": [
+        "kedro.io.core.get_protocol_and_path"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_datasets_on_init": [],
+    "tests.io.test_data_catalog.TestDataCatalog.test_eq": [
+        "kedro.io.data_catalog.DataCatalog.__eq__"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_exists": [
+        "kedro.io.data_catalog.DataCatalog.exists"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_exists_invalid": [
+        "kedro.io.data_catalog.DataCatalog.exists"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_exists_not_implemented": [
+        "kedro.io.data_catalog.DataCatalog.exists"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_feed_dict": [
+        "kedro.io.data_catalog.DataCatalog.add_feed_dict"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_load_error": [
+        "kedro.io.data_catalog.DataCatalog.load"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_load_from_unregistered": [
+        "kedro.io.data_catalog.DataCatalog.__init__"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_multi_catalog_list": [
+        "kedro.io.data_catalog.DataCatalog.list"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_multi_catalog_list_bad_regex": [
+        "kedro.io.data_catalog.DataCatalog.list"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_multi_catalog_list_regex": [
+        "kedro.io.data_catalog.DataCatalog.list"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_mutating_datasets_not_allowed": [
+        "kedro.io.data_catalog._FrozenDatasets.__setattr__"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_release_unregistered": [
+        "kedro.io.data_catalog.DataCatalog.release"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_release_unregistered_typo": [
+        "kedro.io.data_catalog.DataCatalog.release"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_save_and_load": [
+        "kedro.io.data_catalog.DataCatalog.save",
+        "kedro.io.data_catalog.DataCatalog.load"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalog.test_save_to_unregistered": [
+        "kedro.io.data_catalog.DataCatalog.__init__"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories.test_dataset_not_in_catalog_when_no_pattern_match": [
+        "kedro.io.data_catalog.DataCatalog._get_dataset"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories.test_default_dataset": [
+        "kedro.io.data_catalog.DataCatalog._get_dataset"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories.test_exists_in_catalog_config": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories.test_explicit_entry_not_overwritten": [
+        "kedro.io.data_catalog.DataCatalog._get_dataset"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories.test_factory_config_versioned": [
+        "kedro.io.core.AbstractVersionedDataset.resolve_load_version"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories.test_factory_nested_config": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories.test_match_added_to_datasets_on_get": [
+        "kedro.io.data_catalog.DataCatalog._get_dataset"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories.test_patterns_not_in_catalog_datasets": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories.test_runner_default_overwrites_user_default": [
+        "kedro.io.core.generate_timestamp",
+        "kedro.io.data_catalog._resolve_credentials",
+        "kedro.io.data_catalog.DataCatalog.shallow_copy"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories.test_sorting_order_patterns": [
+        "kedro.io.data_catalog.DataCatalog._sort_patterns"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories.test_sorting_order_with_default_and_other_dataset_through_extra_pattern": [
+        "kedro.io.data_catalog.DataCatalog.shallow_copy"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories.test_unmatched_key_error_when_parsing_config": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories.test_user_default_overwrites_runner_default_alphabetically": [
+        "kedro.io.data_catalog.DataCatalog.shallow_copy"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_bad_confirm": [
+        "kedro.io.data_catalog.DataCatalog.confirm"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_config_import_extras": [
+        "kedro.io.data_catalog.DataCatalog._sort_patterns",
+        "kedro.io.data_catalog.DataCatalog._is_pattern",
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_config_import_kedro_datasets": [
+        "kedro.io.core.parse_dataset_definition"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_config_invalid_arguments": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_config_invalid_dataset": [
+        "kedro.io.data_catalog.DataCatalog._is_pattern"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_config_invalid_module": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_config_missing_class": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_config_missing_type": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_config_relative_import": [
+        "kedro.io.core.generate_timestamp",
+        "kedro.io.data_catalog.DataCatalog._is_pattern",
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_confirm": [
+        "kedro.io.data_catalog.DataCatalog.confirm"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_empty_config": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_error_dataset_init": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_from_sane_config": [
+        "kedro.io.data_catalog.DataCatalog.save"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_idempotent_catalog": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_link_credentials": [
+        "kedro.io.data_catalog._resolve_credentials"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_missing_credentials": [
+        "kedro.io.data_catalog._resolve_credentials"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_missing_dependency": [
+        "kedro.io.core.parse_dataset_definition.<locals>.<genexpr>"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_missing_nested_credentials": [
+        "kedro.io.data_catalog._resolve_credentials"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig.test_nested_credentials": [
+        "kedro.io.data_catalog._resolve_credentials"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogVersioned.test_compare_tracking_and_other_dataset_versioned": [
+        "kedro.io.core.AbstractVersionedDataset.resolve_save_version"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogVersioned.test_from_sane_config_load_versions_warn": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogVersioned.test_from_sane_config_versioned": [
+        "kedro.io.core.AbstractVersionedDataset.resolve_load_version"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogVersioned.test_from_sane_config_versioned_warn": [
+        "kedro.io.data_catalog.DataCatalog.from_config"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogVersioned.test_load_version": [
+        "kedro.io.data_catalog.DataCatalog.load"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogVersioned.test_load_version_on_unversioned_dataset": [
+        "kedro.io.data_catalog.DataCatalog.from_config",
+        "kedro.io.data_catalog.DataCatalog._get_dataset"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogVersioned.test_no_versions_with_cloud_protocol": [
+        "kedro.io.core.get_protocol_and_path",
+        "kedro.io.core.AbstractVersionedDataset.__init__"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogVersioned.test_replacing_nonword_characters": [
+        "kedro.io.core.get_protocol_and_path"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetExists.test_exists_invocation": [
+        "kedro.io.core.AbstractDataset.exists"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetExists.test_exists_not_callable": [
+        "kedro.io.lambda_dataset.LambdaDataset.__init__"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetExists.test_exists_not_implemented": [
+        "kedro.io.core.AbstractDataset.exists"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetExists.test_exists_raises_error": [
+        "kedro.io.core.AbstractDataset.exists"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetLoad.test_load_invocation": [
+        "kedro.io.core.AbstractDataset.load",
+        "kedro.io.lambda_dataset.LambdaDataset.__init__"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetLoad.test_load_not_callable": [
+        "kedro.io.lambda_dataset.LambdaDataset.__init__"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetLoad.test_load_raises_error": [
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetLoad.test_load_undefined": [
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetRelease.test_release_invocation": [
+        "kedro.io.core.AbstractDataset.release"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetRelease.test_release_not_callable": [
+        "kedro.io.lambda_dataset.LambdaDataset.__init__"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetRelease.test_release_not_implemented": [
+        "kedro.io.core.AbstractDataset.release"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetRelease.test_release_raises_error": [
+        "kedro.io.core.AbstractDataset.release"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetSave.test_save_invocation": [
+        "kedro.io.core.AbstractDataset.save"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetSave.test_save_none": [
+        "kedro.io.core.AbstractDataset.save"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetSave.test_save_not_callable": [
+        "kedro.io.lambda_dataset.LambdaDataset.__init__"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetSave.test_save_raises_error": [
+        "kedro.io.core.AbstractDataset.save"
+    ],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetSave.test_save_undefined": [
+        "kedro.io.core.AbstractDataset.save"
+    ],
+    "tests.io.test_lambda_dataset.test_dataset_describe": [
+        "kedro.io.lambda_dataset.LambdaDataset._describe"
+    ],
+    "tests.io.test_lambda_dataset.test_ephemeral_attribute": [],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_create_without_data": [
+        "kedro.io.memory_dataset.MemoryDataset.__init__"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_ephemeral_attribute": [],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_exists": [
+        "kedro.io.core.AbstractDataset.exists"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_load": [
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_load_infer_mode": [
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_load_modify_original_data": [
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_load_none": [
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_load_returns_new_object": [
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_loading_none": [
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_save": [
+        "kedro.io.core.AbstractDataset.save"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_save_infer_mode": [
+        "kedro.io.core.AbstractDataset.save"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_save_modify_original_data": [
+        "kedro.io.core.AbstractDataset.save"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_saving_none": [
+        "kedro.io.core.AbstractDataset.save"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset.test_str_representation": [
+        "kedro.io.core.AbstractDataset.__str__"
+    ],
+    "tests.io.test_memory_dataset.test_copy_mode_assign": [
+        "kedro.io.memory_dataset._copy_with_mode"
+    ],
+    "tests.io.test_memory_dataset.test_copy_mode_copy": [
+        "kedro.io.memory_dataset._copy_with_mode"
+    ],
+    "tests.io.test_memory_dataset.test_copy_mode_deepcopy": [
+        "kedro.io.memory_dataset._copy_with_mode"
+    ],
+    "tests.io.test_memory_dataset.test_copy_mode_invalid_string": [
+        "kedro.io.memory_dataset._copy_with_mode"
+    ],
+    "tests.io.test_memory_dataset.test_infer_mode_assign": [
+        "kedro.io.memory_dataset._infer_copy_mode"
+    ],
+    "tests.io.test_memory_dataset.test_infer_mode_copy": [
+        "kedro.io.memory_dataset._infer_copy_mode"
+    ],
+    "tests.io.test_memory_dataset.test_infer_mode_deepcopy": [
+        "kedro.io.memory_dataset._infer_copy_mode"
+    ],
+    "tests.io.test_shared_memory_dataset.TestSharedMemoryDataset.test_create_without_data": [
+        "kedro.io.shared_memory_dataset.SharedMemoryDataset.__init__"
+    ],
+    "tests.io.test_shared_memory_dataset.TestSharedMemoryDataset.test_ephemeral_attribute": [],
+    "tests.io.test_shared_memory_dataset.TestSharedMemoryDataset.test_load_modify_original_data": [
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_shared_memory_dataset.TestSharedMemoryDataset.test_load_returns_new_object": [
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_shared_memory_dataset.TestSharedMemoryDataset.test_loading_none": [
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_shared_memory_dataset.TestSharedMemoryDataset.test_save": [
+        "kedro.io.core.AbstractDataset.save"
+    ],
+    "tests.io.test_shared_memory_dataset.TestSharedMemoryDataset.test_save_and_load": [
+        "kedro.io.core.AbstractDataset.save",
+        "kedro.io.core.AbstractDataset.load"
+    ],
+    "tests.io.test_shared_memory_dataset.TestSharedMemoryDataset.test_save_modify_original_data": [
+        "kedro.io.core.AbstractDataset.save"
+    ],
+    "tests.io.test_shared_memory_dataset.TestSharedMemoryDataset.test_saving_none": [
+        "kedro.io.core.AbstractDataset.save"
+    ],
+    "tests.io.test_shared_memory_dataset.TestSharedMemoryDataset.test_str_representation": [
+        "kedro.io.core.AbstractDataset.__str__"
+    ],
+    "tests.ipython.test_ipython.TestLoadIPythonExtension.test_line_magic_with_invalid_arguments": [
+        "kedro.ipython.__init__.magic_reload_kedro"
+    ],
+    "tests.ipython.test_ipython.TestLoadIPythonExtension.test_line_magic_with_valid_arguments": [
+        "kedro.ipython.__init__.magic_reload_kedro"
+    ],
+    "tests.ipython.test_ipython.TestLoadIPythonExtension.test_load_extension_missing_dependency": [
+        "kedro.ipython.__init__.load_ipython_extension"
+    ],
+    "tests.ipython.test_ipython.TestLoadIPythonExtension.test_load_extension_not_in_kedro_project": [
+        "kedro.ipython.__init__.load_ipython_extension"
+    ],
+    "tests.ipython.test_ipython.TestLoadIPythonExtension.test_load_extension_register_line_magic": [
+        "kedro.ipython.__init__.load_ipython_extension"
+    ],
+    "tests.ipython.test_ipython.TestLoadIPythonExtension.test_load_ipython_extension": [
+        "kedro.ipython.__init__.load_ipython_extension"
+    ],
+    "tests.ipython.test_ipython.TestLoadKedroObjects.test_ipython_lazy_load_pipeline": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.ipython.test_ipython.TestLoadKedroObjects.test_ipython_load_entry_points": [
+        "kedro.ipython.__init__.reload_kedro"
+    ],
+    "tests.ipython.test_ipython.TestLoadKedroObjects.test_ipython_load_objects": [
+        "kedro.ipython.__init__.reload_kedro"
+    ],
+    "tests.ipython.test_ipython.TestLoadKedroObjects.test_ipython_load_objects_with_args": [
+        "kedro.ipython.__init__.reload_kedro"
+    ],
+    "tests.ipython.test_ipython.TestLoadNodeMagic.test_find_node": [
+        "kedro.ipython.__init__._find_node"
+    ],
+    "tests.ipython.test_ipython.TestLoadNodeMagic.test_get_function_with_loop_body": [
+        "kedro.ipython.__init__._prepare_function_body"
+    ],
+    "tests.ipython.test_ipython.TestLoadNodeMagic.test_get_nested_function_body": [
+        "kedro.ipython.__init__._prepare_function_body"
+    ],
+    "tests.ipython.test_ipython.TestLoadNodeMagic.test_load_node": [
+        "kedro.ipython.__init__._load_node"
+    ],
+    "tests.ipython.test_ipython.TestLoadNodeMagic.test_load_node_magic": [
+        "kedro.ipython.__init__._load_node"
+    ],
+    "tests.ipython.test_ipython.TestLoadNodeMagic.test_node_not_found": [
+        "kedro.ipython.__init__._find_node"
+    ],
+    "tests.ipython.test_ipython.TestLoadNodeMagic.test_prepare_function_body": [
+        "kedro.ipython.__init__._prepare_function_body"
+    ],
+    "tests.ipython.test_ipython.TestLoadNodeMagic.test_prepare_imports": [
+        "kedro.ipython.__init__._prepare_imports"
+    ],
+    "tests.ipython.test_ipython.TestLoadNodeMagic.test_prepare_imports_func_not_found": [
+        "kedro.ipython.__init__._prepare_imports"
+    ],
+    "tests.ipython.test_ipython.TestLoadNodeMagic.test_prepare_node_inputs": [
+        "kedro.ipython.__init__._prepare_node_inputs"
+    ],
+    "tests.ipython.test_ipython.TestProjectPathResolution.test_no_path_no_local_namespace_specified": [
+        "kedro.ipython.__init__._resolve_project_path"
+    ],
+    "tests.ipython.test_ipython.TestProjectPathResolution.test_only_local_namespace_specified": [
+        "kedro.ipython.__init__._resolve_project_path"
+    ],
+    "tests.ipython.test_ipython.TestProjectPathResolution.test_only_path_specified": [
+        "kedro.ipython.__init__._resolve_project_path"
+    ],
+    "tests.ipython.test_ipython.TestProjectPathResolution.test_project_path_unresolvable": [
+        "kedro.ipython.__init__._resolve_project_path"
+    ],
+    "tests.ipython.test_ipython.TestProjectPathResolution.test_project_path_unresolvable_warning": [
+        "kedro.ipython.__init__.load_ipython_extension"
+    ],
+    "tests.ipython.test_ipython.TestProjectPathResolution.test_project_path_update": [
+        "kedro.ipython.__init__._resolve_project_path"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_bad_inputs_mapping": [
+        "kedro.pipeline.modular_pipeline._validate_inputs_outputs",
+        "kedro.pipeline.modular_pipeline._get_param_names_mapping",
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_bad_outputs_mapping": [
+        "kedro.pipeline.modular_pipeline._get_dataset_names_mapping"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_dataset_transcoding_mapping_base_name": [
+        "kedro.pipeline.modular_pipeline._get_dataset_names_mapping",
+        "kedro.pipeline.modular_pipeline._get_param_names_mapping"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_dataset_transcoding_mapping_full_dataset": [
+        "kedro.pipeline.modular_pipeline._get_dataset_names_mapping",
+        "kedro.pipeline.modular_pipeline._get_param_names_mapping"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_default_node_name_is_namespaced": [
+        "kedro.pipeline.node.Node.namespace"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_empty_input": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_empty_output": [
+        "kedro.pipeline.modular_pipeline._validate_inputs_outputs"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_expose_intermediate_output": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_missing_dataset_name": [
+        "kedro.pipeline.modular_pipeline._validate_datasets_exist",
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_node_properties_preserved": [
+        "kedro.pipeline.modular_pipeline.pipeline",
+        "kedro.pipeline.pipeline.Pipeline.nodes"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_non_existent_parameters_mapped": [
+        "kedro.pipeline.modular_pipeline._get_param_names_mapping"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_parameters_defined_with_params_prefix": [
+        "kedro.pipeline.modular_pipeline._get_dataset_names_mapping",
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_parameters_left_intact_when_defined_as_": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_parameters_left_intact_when_defined_as_str": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_parameters_specified_under_inputs": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_parameters_updated_with_dict": [
+        "kedro.pipeline.modular_pipeline._validate_datasets_exist"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_pipeline_always_copies": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_pipeline_tags": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_prefix_dataset_names": [
+        "kedro.pipeline.modular_pipeline.pipeline",
+        "kedro.pipeline.modular_pipeline._get_dataset_names_mapping"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_prefix_exclude_free_inputs": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_prefixing_and_renaming": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_transform_dataset_names": [
+        "kedro.pipeline.pipeline.Pipeline.nodes",
+        "kedro.pipeline.modular_pipeline._validate_datasets_exist"
+    ],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_transform_params_prefix_and_parameters": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_node.TestNames.test_function": [
+        "kedro.pipeline.node.Node._func_name"
+    ],
+    "tests.pipeline.test_node.TestNames.test_invalid_name": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node.TestNames.test_lambda": [
+        "kedro.pipeline.node.Node.name"
+    ],
+    "tests.pipeline.test_node.TestNames.test_named": [
+        "kedro.pipeline.node.Node.name"
+    ],
+    "tests.pipeline.test_node.TestNames.test_named_and_namespaced": [
+        "kedro.pipeline.node.Node.short_name"
+    ],
+    "tests.pipeline.test_node.TestNames.test_namespaced": [
+        "kedro.pipeline.node.Node.namespace"
+    ],
+    "tests.pipeline.test_node.TestNames.test_partial": [
+        "kedro.pipeline.node.Node.short_name"
+    ],
+    "tests.pipeline.test_node.TestNames.test_updated_partial": [
+        "kedro.pipeline.node.Node.short_name"
+    ],
+    "tests.pipeline.test_node.TestNames.test_updated_partial_dict_inputs": [
+        "kedro.pipeline.node.Node.__str__",
+        "kedro.pipeline.node.Node.short_name"
+    ],
+    "tests.pipeline.test_node.TestNodeComparisons.test_different_input_dict_order_equal": [
+        "kedro.pipeline.node.Node.__eq__",
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node.TestNodeComparisons.test_different_input_list_order_not_equal": [
+        "kedro.pipeline.node.Node.__eq__"
+    ],
+    "tests.pipeline.test_node.TestNodeComparisons.test_different_output_dict_order_equal": [
+        "kedro.pipeline.node.Node.__eq__",
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node.TestNodeComparisons.test_different_output_list_order_not_equal": [
+        "kedro.pipeline.node.Node.__eq__"
+    ],
+    "tests.pipeline.test_node.TestNodeComparisons.test_input_dict_list_not_equal": [
+        "kedro.pipeline.node.Node.__eq__"
+    ],
+    "tests.pipeline.test_node.TestNodeComparisons.test_node_equals": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node.TestNodeComparisons.test_node_invalid_equals": [
+        "kedro.pipeline.node.Node.__eq__",
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node.TestNodeComparisons.test_node_invalid_less_than": [
+        "kedro.pipeline.node.node",
+        "kedro.pipeline.node.Node.__lt__"
+    ],
+    "tests.pipeline.test_node.TestNodeComparisons.test_node_less_than": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node.TestNodeComparisons.test_output_dict_list_not_equal": [
+        "kedro.pipeline.node.Node.__eq__"
+    ],
+    "tests.pipeline.test_node.TestTag.test_invalid_tag": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node.TestTag.test_tag_nodes": [
+        "kedro.pipeline.node.node",
+        "kedro.pipeline.node.Node.tags"
+    ],
+    "tests.pipeline.test_node.TestTag.test_tag_nodes_single_tag": [
+        "kedro.pipeline.node.node",
+        "kedro.pipeline.node.Node.tags"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_call": [
+        "kedro.pipeline.node.Node.__call__"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_call_with_non_keyword_arguments": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_confirms": [
+        "kedro.pipeline.node.Node.confirms"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_get_node_func": [
+        "kedro.pipeline.node.Node.func",
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_inputs_dict": [
+        "kedro.pipeline.node.Node.inputs"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_inputs_list": [
+        "kedro.pipeline.node.Node.inputs"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_inputs_none": [
+        "kedro.pipeline.node.Node.inputs"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_inputs_str": [
+        "kedro.pipeline.node.Node.inputs"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_labelled": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_no_input": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_no_output": [
+        "kedro.pipeline.node.Node.__str__",
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_outputs_dict": [
+        "kedro.pipeline.node.Node.outputs"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_outputs_list": [
+        "kedro.pipeline.node.Node.outputs"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_outputs_none": [
+        "kedro.pipeline.node.Node.outputs"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_outputs_str": [
+        "kedro.pipeline.node.Node.outputs"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_run_with_duplicate_inputs_dict": [
+        "kedro.pipeline.node.Node._run_with_dict"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_run_with_duplicate_inputs_list": [
+        "kedro.pipeline.node.Node._run_with_list"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_set_node_func": [
+        "kedro.pipeline.node.Node.func",
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node.TestValidNode.test_valid": [
+        "kedro.pipeline.node.Node._validate_inputs"
+    ],
+    "tests.pipeline.test_node.test_bad_input": [
+        "kedro.pipeline.node.Node._validate_inputs"
+    ],
+    "tests.pipeline.test_node.test_bad_node": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidInput.test_no_inputs_node_error": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidInput.test_one_input_error": [
+        "kedro.pipeline.node.Node.__init__"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidInput.test_run_dict_diff_size": [
+        "kedro.pipeline.node.Node._run_with_dict"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidInput.test_run_dict_unavailable": [
+        "kedro.pipeline.node.Node._run_with_dict",
+        "kedro.pipeline.node.node",
+        "kedro.pipeline.node.Node.run"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidInput.test_run_diff_size_list_dict": [
+        "kedro.pipeline.node.Node._run_with_list"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidInput.test_run_diff_size_lists": [
+        "kedro.pipeline.node.Node._run_with_list"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidInput.test_run_list_dict_unavailable": [
+        "kedro.pipeline.node.Node._run_with_list"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidInput.test_unresolved": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidOutput.test_miss_matching_output_keys": [
+        "kedro.pipeline.node.Node._run_with_one_input"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidOutput.test_miss_matching_output_types": [
+        "kedro.pipeline.node.Node._run_with_one_input"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidOutput.test_node_not_list_output": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidOutput.test_node_wrong_num_of_outputs": [
+        "kedro.pipeline.node.node",
+        "kedro.pipeline.node.Node._run_with_one_input"
+    ],
+    "tests.pipeline.test_node_run.test_run_got_dataframe": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_node_run.test_valid_nodes": [
+        "kedro.pipeline.node.Node.run",
+        "kedro.pipeline.node.Node._logger"
+    ],
+    "tests.pipeline.test_pipeline.TestInvalidPipeline.test_bad_combine_int": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestInvalidPipeline.test_bad_combine_node": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_pipeline.TestInvalidPipeline.test_circle_case": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestInvalidPipeline.test_conflicting_names": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestInvalidPipeline.test_conflicting_outputs": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestInvalidPipeline.test_duplicate_free_nodes": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestInvalidPipeline.test_duplicate_node_confirms": [
+        "kedro.pipeline.modular_pipeline.pipeline",
+        "kedro.pipeline.node.node",
+        "kedro.pipeline.pipeline._validate_unique_confirms"
+    ],
+    "tests.pipeline.test_pipeline.TestInvalidPipeline.test_duplicate_nodes_in_pipelines": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestInvalidPipeline.test_none_case": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestInvalidPipeline.test_unique_outputs": [
+        "kedro.pipeline.pipeline._validate_unique_outputs",
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineDescribe.test_full": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineDescribe.test_names_only": [
+        "kedro.pipeline.modular_pipeline.pipeline",
+        "kedro.pipeline.pipeline.Pipeline.describe"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilter.test_filter_no_nodes": [
+        "kedro.pipeline.pipeline.Pipeline.filter"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilter.test_namespace_filter": [
+        "kedro.pipeline.pipeline.Pipeline.filter"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilter.test_no_filters": [
+        "kedro.pipeline.pipeline.Pipeline.filter"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilter.test_one_filter": [
+        "kedro.pipeline.pipeline.Pipeline.filter"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilter.test_three_filters": [
+        "kedro.pipeline.pipeline.Pipeline.filter"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilter.test_two_filters": [
+        "kedro.pipeline.pipeline.Pipeline.filter"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_from_inputs": [
+        "kedro.pipeline.pipeline.Pipeline.from_inputs"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_from_inputs_unknown_raises_value_error": [
+        "kedro.pipeline.pipeline.Pipeline.from_inputs"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_from_nodes": [
+        "kedro.pipeline.pipeline.Pipeline.from_nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_from_nodes_unknown_raises_value_error": [
+        "kedro.pipeline.pipeline.Pipeline.from_nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_only_nodes_filtering": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_only_nodes_unknown": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_only_nodes_with_namespace": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_namespace"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_only_nodes_with_namespacing": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_only_nodes_with_namespacing_and_invalid_args": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_only_nodes_with_namespacing_multiple_args": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_only_nodes_with_tags": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_tags"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_only_nodes_with_unknown_namespace_raises_value_error": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_namespace"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_to_nodes": [
+        "kedro.pipeline.pipeline.Pipeline.to_nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_to_nodes_unknown_raises_value_error": [
+        "kedro.pipeline.pipeline.Pipeline.to_nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_to_outputs": [
+        "kedro.pipeline.pipeline.Pipeline.to_outputs"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_to_outputs_unknown_raises_value_error": [
+        "kedro.pipeline.pipeline.Pipeline.to_outputs"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_combine_add": [
+        "kedro.pipeline.modular_pipeline.pipeline",
+        "kedro.pipeline.pipeline.Pipeline.nodes",
+        "kedro.pipeline.node.node",
+        "kedro.pipeline.pipeline.Pipeline.inputs",
+        "kedro.pipeline.pipeline.Pipeline.__add__"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_combine_same_node": [
+        "kedro.pipeline.modular_pipeline.pipeline",
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_combine_sum": [
+        "kedro.pipeline.pipeline.Pipeline.nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_connected_pipeline": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_intersection": [
+        "kedro.pipeline.pipeline.Pipeline.inputs"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_invalid_intersection": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_invalid_remove": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_invalid_union": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_node_unique_confirms": [
+        "kedro.pipeline.pipeline.Pipeline.nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_remove": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_remove_all_nodes": [
+        "kedro.pipeline.pipeline.Pipeline.nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_remove_empty_from_pipeline": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_remove_from_empty_pipeline": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_remove_with_partial_intersection": [
+        "kedro.pipeline.modular_pipeline.pipeline",
+        "kedro.pipeline.pipeline.Pipeline._remove_intermediates"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineOperators.test_union": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineRunnerHelpers.test_only_nodes_with_inputs": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_inputs"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineRunnerHelpers.test_only_nodes_with_inputs_unknown": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_inputs"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineRunnerHelpers.test_only_nodes_with_outputs_on_specific_node_output": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_outputs"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineRunnerHelpers.test_only_nodes_with_outputs_unknown": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_outputs"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineTags.test_pipeline_single_tag": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestPipelineTags.test_tag_existing_pipeline": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestTranscodeHelpers.test_get_transcode_compatible_name": [
+        "kedro.pipeline.pipeline._strip_transcoding"
+    ],
+    "tests.pipeline.test_pipeline.TestTranscodeHelpers.test_split_no_transcode_part": [
+        "kedro.pipeline.pipeline._transcode_split"
+    ],
+    "tests.pipeline.test_pipeline.TestTranscodeHelpers.test_split_too_many_parts": [
+        "kedro.pipeline.pipeline._transcode_split"
+    ],
+    "tests.pipeline.test_pipeline.TestTranscodeHelpers.test_split_with_transcode": [
+        "kedro.pipeline.pipeline._transcode_split"
+    ],
+    "tests.pipeline.test_pipeline.TestValidPipeline.test_empty_case": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestValidPipeline.test_free_input": [
+        "kedro.pipeline.pipeline.Pipeline.inputs"
+    ],
+    "tests.pipeline.test_pipeline.TestValidPipeline.test_grouped_nodes": [
+        "kedro.pipeline.pipeline.Pipeline.grouped_nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestValidPipeline.test_initialized_with_tags": [
+        "kedro.pipeline.pipeline.Pipeline.grouped_nodes",
+        "kedro.pipeline.modular_pipeline.pipeline",
+        "kedro.pipeline.node.Node.tags"
+    ],
+    "tests.pipeline.test_pipeline.TestValidPipeline.test_node_dependencies": [
+        "kedro.pipeline.pipeline.Pipeline.node_dependencies"
+    ],
+    "tests.pipeline.test_pipeline.TestValidPipeline.test_nodes": [
+        "kedro.pipeline.pipeline.Pipeline.nodes"
+    ],
+    "tests.pipeline.test_pipeline.TestValidPipeline.test_outputs": [
+        "kedro.pipeline.pipeline.Pipeline.outputs"
+    ],
+    "tests.pipeline.test_pipeline.test_pipeline_to_json": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineMissing.test_all_missing": [
+        "kedro.runner.runner.AbstractRunner.run_only_missing"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineMissing.test_all_no_exists_method": [
+        "kedro.runner.sequential_runner.SequentialRunner.__init__",
+        "kedro.io.data_catalog.DataCatalog.__init__",
+        "kedro.io.lambda_dataset.LambdaDataset.__init__"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineMissing.test_catalog_and_feed_dict": [
+        "kedro.io.data_catalog.DataCatalog.add_feed_dict"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineMissing.test_first_missing": [
+        "kedro.runner.runner.AbstractRunner.run_only_missing"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineMissing.test_last_missing": [
+        "kedro.runner.runner.AbstractRunner.run_only_missing"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineMissing.test_missing_and_no_exists": [
+        "kedro.runner.sequential_runner.SequentialRunner.__init__",
+        "kedro.pipeline.pipeline.Pipeline.nodes",
+        "kedro.io.data_catalog.DataCatalog.__init__",
+        "kedro.runner.runner.AbstractRunner.run_only_missing",
+        "kedro.io.lambda_dataset.LambdaDataset.__init__"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineMissing.test_none_missing": [
+        "kedro.runner.runner.AbstractRunner.run_only_missing"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineMissing.test_none_missing_feeddict_only": [
+        "kedro.runner.runner.AbstractRunner.run_only_missing"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineMissing.test_only_left_missing": [
+        "kedro.runner.runner.AbstractRunner.run_only_missing"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineUnregistered.test_free_output": [
+        "kedro.pipeline.pipeline.Pipeline.to_outputs"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineUnregistered.test_ignore_unneccessary_unreg": [
+        "kedro.runner.runner.AbstractRunner.run_only_missing"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineUnregistered.test_partial_non_existent_propagation": [
+        "kedro.runner.runner.AbstractRunner.run_only_missing"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineUnregistered.test_partial_propagation": [
+        "kedro.runner.sequential_runner.SequentialRunner.__init__",
+        "kedro.pipeline.pipeline.Pipeline.from_inputs",
+        "kedro.io.data_catalog.DataCatalog.__init__",
+        "kedro.pipeline.pipeline.Pipeline.to_outputs",
+        "kedro.runner.runner.AbstractRunner.run_only_missing",
+        "kedro.pipeline.pipeline.Pipeline.datasets",
+        "kedro.io.lambda_dataset.LambdaDataset.__init__"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineUnregistered.test_propagate_down_then_up": [
+        "kedro.pipeline.node.Node.__eq__",
+        "kedro.runner.sequential_runner.SequentialRunner.__init__",
+        "kedro.io.data_catalog.DataCatalog.__init__",
+        "kedro.io.lambda_dataset.LambdaDataset.__init__"
+    ],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineUnregistered.test_propagate_up": [
+        "kedro.runner.sequential_runner.SequentialRunner.__init__",
+        "kedro.pipeline.pipeline.Pipeline.nodes",
+        "kedro.io.data_catalog.DataCatalog.__init__",
+        "kedro.io.lambda_dataset.LambdaDataset.__init__"
+    ],
+    "tests.pipeline.test_pipeline_integration.TestTransformPipelineIntegration.test_connect_existing_pipelines": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline_integration.TestTransformPipelineIntegration.test_reuse_same_pipeline": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_from_inputs": [
+        "kedro.pipeline.pipeline.Pipeline.from_inputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_from_inputs_duplicate_transcoded_names": [
+        "kedro.pipeline.pipeline.Pipeline.from_inputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_from_inputs_inexistent_inputs": [
+        "kedro.pipeline.pipeline.Pipeline.from_inputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_from_inputs_transcode_compatible_name": [
+        "kedro.pipeline.pipeline.Pipeline.from_inputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_from_inputs_traverses_transcoded": [
+        "kedro.pipeline.pipeline.Pipeline.from_inputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_from_inputs_traverses_transcoded_on_correct_branch": [
+        "kedro.pipeline.pipeline.Pipeline.from_inputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_from_nodes_transcoded_names": [
+        "kedro.pipeline.pipeline.Pipeline.from_nodes"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_only_nodes_with_inputs": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_inputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_only_nodes_with_inputs_duplicate_transcoded_names": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_inputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_only_nodes_with_inputs_inexistent_inputs": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_inputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_only_nodes_with_inputs_transcoded_name": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_inputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_only_nodes_with_outputs": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_outputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_only_nodes_with_outputs_duplicate_transcoded_names": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_outputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_only_nodes_with_outputs_inexistent_outputs": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_outputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_only_nodes_with_outputs_transcode_compatible_name": [
+        "kedro.pipeline.pipeline.Pipeline.only_nodes_with_outputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_to_nodes_transcoded_names": [
+        "kedro.pipeline.pipeline.Pipeline.to_nodes"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_to_outputs": [
+        "kedro.pipeline.pipeline.Pipeline.to_outputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_to_outputs_duplicate_transcoded_names": [
+        "kedro.pipeline.pipeline.Pipeline.to_outputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_to_outputs_inexistent_outputs": [
+        "kedro.pipeline.pipeline.Pipeline.to_outputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_to_outputs_transcoded_name": [
+        "kedro.pipeline.pipeline.Pipeline.to_outputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_to_outputs_traverses_transcoded": [
+        "kedro.pipeline.pipeline.Pipeline.to_outputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestGetTranscodeCompatibleName.test_get_transcode_compatible_name": [
+        "kedro.pipeline.pipeline._strip_transcoding"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestGetTranscodeCompatibleName.test_get_transcode_compatible_name_multiple_separators": [
+        "kedro.pipeline.pipeline._strip_transcoding"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestGetTranscodeCompatibleName.test_get_transcode_compatible_name_no_separator": [
+        "kedro.pipeline.pipeline._strip_transcoding"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestInvalidPipeline.test_duplicates_in_transcoded_outputs": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestInvalidPipeline.test_transcoded_inputs_outputs": [
+        "kedro.pipeline.pipeline._validate_transcoded_inputs_outputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestValidPipeline.test_free_input": [
+        "kedro.pipeline.pipeline.Pipeline.inputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestValidPipeline.test_grouped_nodes": [
+        "kedro.pipeline.pipeline.Pipeline.grouped_nodes"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestValidPipeline.test_outputs": [
+        "kedro.pipeline.pipeline.Pipeline.outputs"
+    ],
+    "tests.pipeline.test_pipeline_with_transcoding.TestValidPipeline.test_pipeline_to_json": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.runner.test_parallel_runner.TestInvalidParallelRunner.test_dataset_not_serialisable": [
+        "kedro.pipeline.pipeline.Pipeline.datasets",
+        "kedro.pipeline.modular_pipeline.pipeline",
+        "kedro.runner.parallel_runner.ParallelRunner.__del__",
+        "kedro.io.data_catalog.DataCatalog.__init__",
+        "kedro.runner.parallel_runner.ParallelRunner.__init__",
+        "kedro.io.lambda_dataset.LambdaDataset.__init__"
+    ],
+    "tests.runner.test_parallel_runner.TestInvalidParallelRunner.test_memory_dataset_not_serialisable": [
+        "kedro.pipeline.modular_pipeline.pipeline",
+        "kedro.io.data_catalog.DataCatalog.add_feed_dict",
+        "kedro.pipeline.pipeline.Pipeline.datasets",
+        "kedro.runner.parallel_runner.ParallelRunner.__init__"
+    ],
+    "tests.runner.test_parallel_runner.TestInvalidParallelRunner.test_memory_dataset_output": [
+        "kedro.runner.parallel_runner.ParallelRunner.__del__"
+    ],
+    "tests.runner.test_parallel_runner.TestInvalidParallelRunner.test_node_returning_none": [
+        "kedro.pipeline.modular_pipeline.pipeline",
+        "kedro.pipeline.node.node",
+        "kedro.io.memory_dataset.MemoryDataset.__init__",
+        "kedro.io.data_catalog.DataCatalog.__init__",
+        "kedro.runner.parallel_runner.ParallelRunner.__init__"
+    ],
+    "tests.runner.test_parallel_runner.TestInvalidParallelRunner.test_task_dataset_validation": [
+        "kedro.runner.parallel_runner.ParallelRunner.__del__",
+        "kedro.runner.parallel_runner.ParallelRunner.__init__"
+    ],
+    "tests.runner.test_parallel_runner.TestInvalidParallelRunner.test_task_exception": [
+        "kedro.io.data_catalog.DataCatalog.add_feed_dict"
+    ],
+    "tests.runner.test_parallel_runner.TestInvalidParallelRunner.test_task_node_validation": [
+        "kedro.io.data_catalog.DataCatalog.add_feed_dict"
+    ],
+    "tests.runner.test_parallel_runner.TestInvalidParallelRunner.test_unable_to_schedule_all_nodes": [
+        "kedro.pipeline.pipeline.Pipeline.node_dependencies"
+    ],
+    "tests.runner.test_parallel_runner.TestMaxWorkers.test_max_worker_windows": [
+        "kedro.runner.parallel_runner.ParallelRunner.__init__"
+    ],
+    "tests.runner.test_parallel_runner.TestMaxWorkers.test_specified_max_workers_bellow_cpu_cores_count": [
+        "kedro.io.data_catalog.DataCatalog.add_feed_dict"
+    ],
+    "tests.runner.test_parallel_runner.TestParallelRunnerRelease.test_count_multiple_loads": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.runner.test_parallel_runner.TestParallelRunnerRelease.test_dont_release_inputs_and_outputs": [
+        "kedro.io.data_catalog.DataCatalog.__init__",
+        "kedro.runner.parallel_runner.ParallelRunner.__init__"
+    ],
+    "tests.runner.test_parallel_runner.TestParallelRunnerRelease.test_release_at_earliest_opportunity": [
+        "kedro.io.data_catalog.DataCatalog.__init__",
+        "kedro.runner.parallel_runner.ParallelRunner.__init__"
+    ],
+    "tests.runner.test_parallel_runner.TestParallelRunnerRelease.test_release_transcoded": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.runner.test_parallel_runner.TestRunNodeSynchronisationHelper.test_package_name_and_logging_provided": [
+        "kedro.runner.parallel_runner._run_node_synchronization"
+    ],
+    "tests.runner.test_parallel_runner.TestRunNodeSynchronisationHelper.test_package_name_not_provided": [
+        "kedro.runner.parallel_runner._run_node_synchronization"
+    ],
+    "tests.runner.test_parallel_runner.TestValidParallelRunner.test_log_not_using_async": [
+        "kedro.runner.parallel_runner.ParallelRunner.__init__"
+    ],
+    "tests.runner.test_parallel_runner.TestValidParallelRunner.test_memory_dataset_input": [
+        "kedro.runner.parallel_runner.ParallelRunner.__del__"
+    ],
+    "tests.runner.test_parallel_runner.TestValidParallelRunner.test_parallel_run": [
+        "kedro.runner.parallel_runner.ParallelRunner.__del__",
+        "kedro.runner.runner.AbstractRunner.run"
+    ],
+    "tests.runner.test_parallel_runner.TestValidParallelRunner.test_parallel_run_with_plugin_manager": [
+        "kedro.framework.hooks.manager._create_hook_manager"
+    ],
+    "tests.runner.test_run_node.TestRunGeneratorNode.test_generator_fail_async": [
+        "kedro.framework.hooks.manager._NullPluginManager.__init__"
+    ],
+    "tests.runner.test_run_node.TestRunGeneratorNode.test_generator_node_dict": [
+        "kedro.runner.runner.run_node"
+    ],
+    "tests.runner.test_run_node.TestRunGeneratorNode.test_generator_node_list": [
+        "kedro.runner.runner.run_node"
+    ],
+    "tests.runner.test_run_node.TestRunGeneratorNode.test_generator_node_one": [
+        "kedro.runner.runner.run_node"
+    ],
+    "tests.runner.test_run_node.TestRunGeneratorNode.test_generator_node_tuple": [
+        "kedro.runner.runner.run_node"
+    ],
+    "tests.runner.test_sequential_runner.TestMemoryDatasetBehaviour.test_run_includes_memory_datasets": [
+        "kedro.runner.sequential_runner.SequentialRunner.__init__",
+        "kedro.io.memory_dataset.MemoryDataset.__init__",
+        "kedro.io.data_catalog.DataCatalog.__init__",
+        "kedro.io.lambda_dataset.LambdaDataset.__init__"
+    ],
+    "tests.runner.test_sequential_runner.TestSeqentialRunnerBranchlessPipeline.test_no_datasets": [
+        "kedro.pipeline.pipeline.Pipeline.datasets"
+    ],
+    "tests.runner.test_sequential_runner.TestSeqentialRunnerBranchlessPipeline.test_no_feed": [
+        "kedro.pipeline.pipeline.Pipeline.nodes"
+    ],
+    "tests.runner.test_sequential_runner.TestSeqentialRunnerBranchlessPipeline.test_no_input_seq": [
+        "kedro.runner.sequential_runner.SequentialRunner.__init__"
+    ],
+    "tests.runner.test_sequential_runner.TestSeqentialRunnerBranchlessPipeline.test_node_returning_none": [
+        "kedro.runner.sequential_runner.SequentialRunner.__init__"
+    ],
+    "tests.runner.test_sequential_runner.TestSeqentialRunnerBranchlessPipeline.test_result_saved_not_returned": [
+        "kedro.runner.sequential_runner.SequentialRunner.__init__",
+        "kedro.io.data_catalog.DataCatalog.__init__",
+        "kedro.io.lambda_dataset.LambdaDataset.__init__"
+    ],
+    "tests.runner.test_sequential_runner.TestSequentialRunnerBranchedPipeline.test_conflict_feed_catalog": [
+        "kedro.io.data_catalog.DataCatalog.add_feed_dict"
+    ],
+    "tests.runner.test_sequential_runner.TestSequentialRunnerBranchedPipeline.test_input_seq": [
+        "kedro.pipeline.pipeline.Pipeline.inputs"
+    ],
+    "tests.runner.test_sequential_runner.TestSequentialRunnerBranchedPipeline.test_unsatisfied_inputs": [
+        "kedro.pipeline.pipeline.Pipeline.inputs",
+        "kedro.pipeline.pipeline.Pipeline.datasets",
+        "kedro.runner.sequential_runner.SequentialRunner.__init__"
+    ],
+    "tests.runner.test_sequential_runner.TestSequentialRunnerRelease.test_confirms": [
+        "kedro.pipeline.node.Node.confirms",
+        "kedro.runner.sequential_runner.SequentialRunner.__init__",
+        "kedro.pipeline.pipeline.Pipeline.outputs",
+        "kedro.io.data_catalog.DataCatalog.__init__",
+        "kedro.runner.runner.AbstractRunner.run",
+        "kedro.pipeline.pipeline.Pipeline.inputs"
+    ],
+    "tests.runner.test_sequential_runner.TestSequentialRunnerRelease.test_count_multiple_loads": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.runner.test_sequential_runner.TestSequentialRunnerRelease.test_dont_release_inputs_and_outputs": [
+        "kedro.runner.sequential_runner.SequentialRunner.__init__",
+        "kedro.io.data_catalog.DataCatalog.__init__"
+    ],
+    "tests.runner.test_sequential_runner.TestSequentialRunnerRelease.test_release_at_earliest_opportunity": [
+        "kedro.runner.sequential_runner.SequentialRunner.__init__",
+        "kedro.io.data_catalog.DataCatalog.__init__"
+    ],
+    "tests.runner.test_sequential_runner.TestSequentialRunnerRelease.test_release_transcoded": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.runner.test_sequential_runner.TestSuggestResumeScenario.test_suggest_resume_scenario": [
+        "kedro.runner.runner.AbstractRunner._suggest_resume_scenario"
+    ],
+    "tests.runner.test_sequential_runner.TestValidSequentialRunner.test_log_not_using_async": [
+        "kedro.runner.sequential_runner.SequentialRunner.__init__"
+    ],
+    "tests.runner.test_sequential_runner.TestValidSequentialRunner.test_run_with_plugin_manager": [
+        "kedro.framework.hooks.manager._create_hook_manager"
+    ],
+    "tests.runner.test_sequential_runner.TestValidSequentialRunner.test_run_without_plugin_manager": [
+        "kedro.runner.sequential_runner.SequentialRunner.__init__"
+    ],
+    "tests.runner.test_thread_runner.TestInvalidThreadRunner.test_node_returning_none": [
+        "kedro.pipeline.modular_pipeline.pipeline",
+        "kedro.runner.thread_runner.ThreadRunner.__init__",
+        "kedro.pipeline.node.node",
+        "kedro.io.memory_dataset.MemoryDataset.__init__",
+        "kedro.io.data_catalog.DataCatalog.__init__"
+    ],
+    "tests.runner.test_thread_runner.TestInvalidThreadRunner.test_task_exception": [
+        "kedro.io.data_catalog.DataCatalog.add_feed_dict"
+    ],
+    "tests.runner.test_thread_runner.TestIsAsync.test_thread_run": [
+        "kedro.runner.runner.AbstractRunner.run"
+    ],
+    "tests.runner.test_thread_runner.TestMaxWorkers.test_init_with_negative_process_count": [
+        "kedro.runner.thread_runner.ThreadRunner.__init__"
+    ],
+    "tests.runner.test_thread_runner.TestMaxWorkers.test_specified_max_workers": [
+        "kedro.runner.thread_runner.ThreadRunner.__init__",
+        "kedro.io.data_catalog.DataCatalog.add_feed_dict"
+    ],
+    "tests.runner.test_thread_runner.TestThreadRunnerRelease.test_count_multiple_loads": [
+        "kedro.pipeline.modular_pipeline.pipeline"
+    ],
+    "tests.runner.test_thread_runner.TestThreadRunnerRelease.test_dont_release_inputs_and_outputs": [
+        "kedro.runner.thread_runner.ThreadRunner.__init__",
+        "kedro.io.data_catalog.DataCatalog.__init__"
+    ],
+    "tests.runner.test_thread_runner.TestThreadRunnerRelease.test_release_at_earliest_opportunity": [
+        "kedro.runner.thread_runner.ThreadRunner.__init__",
+        "kedro.io.data_catalog.DataCatalog.__init__"
+    ],
+    "tests.runner.test_thread_runner.TestThreadRunnerRelease.test_release_transcoded": [
+        "kedro.pipeline.node.node"
+    ],
+    "tests.runner.test_thread_runner.TestValidThreadRunner.test_does_not_log_not_using_async": [
+        "kedro.runner.thread_runner.ThreadRunner.__init__"
+    ],
+    "tests.runner.test_thread_runner.TestValidThreadRunner.test_memory_dataset_input": [
+        "kedro.pipeline.pipeline.Pipeline.datasets"
+    ],
+    "tests.runner.test_thread_runner.TestValidThreadRunner.test_thread_run": [
+        "kedro.runner.runner.AbstractRunner.run"
+    ],
+    "tests.runner.test_thread_runner.TestValidThreadRunner.test_thread_run_with_plugin_manager": [
+        "kedro.framework.hooks.manager._create_hook_manager"
+    ],
+    "tests.test_import.test_import_kedro_with_no_official_support_emits_warning": [
+        "kedro.__init__.KedroPythonVersionWarning"
+    ],
+    "tests.test_import.test_import_kedro_with_no_official_support_raise_error": [
+        "kedro.__init__.KedroPythonVersionWarning"
+    ],
+    "tests.test_utils.TestExtractObject.test_load_obj": [
+        "kedro.utils.load_obj"
+    ],
+    "tests.test_utils.TestExtractObject.test_load_obj_default_path": [
+        "kedro.utils.load_obj"
+    ],
+    "tests.test_utils.TestExtractObject.test_load_obj_invalid_module": [
+        "kedro.utils.load_obj"
+    ],
+    "tests.tools.test_cli.TestCLITools.test_get_cli_structure_depth": [
+        "kedro.framework.cli.jupyter.JupyterCommandGroup.list_commands"
+    ],
+    "tests.tools.test_cli.TestCLITools.test_get_cli_structure_help": [
+        "kedro.framework.cli.jupyter.JupyterCommandGroup.list_commands"
+    ],
+    "tests.tools.test_cli.TestCLITools.test_get_cli_structure_raw": [
+        "kedro.framework.cli.jupyter.JupyterCommandGroup.list_commands"
+    ]
+}

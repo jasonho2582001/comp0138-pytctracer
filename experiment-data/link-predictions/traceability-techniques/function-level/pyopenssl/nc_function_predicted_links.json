@@ -1,0 +1,612 @@
+{
+    "tests.test_crypto.TestCRL.test_add_revoked_keyword": [],
+    "tests.test_crypto.TestCRL.test_construction": [],
+    "tests.test_crypto.TestCRL.test_convert_from_cryptography": [],
+    "tests.test_crypto.TestCRL.test_convert_from_cryptography_unsupported_type": [],
+    "tests.test_crypto.TestCRL.test_convert_to_cryptography_key": [],
+    "tests.test_crypto.TestCRL.test_dump_crl": [
+        "src.OpenSSL.crypto.dump_crl"
+    ],
+    "tests.test_crypto.TestCRL.test_export_custom_digest": [],
+    "tests.test_crypto.TestCRL.test_export_default_digest": [],
+    "tests.test_crypto.TestCRL.test_export_der": [],
+    "tests.test_crypto.TestCRL.test_export_invalid": [],
+    "tests.test_crypto.TestCRL.test_export_md5_digest": [],
+    "tests.test_crypto.TestCRL.test_export_pem": [],
+    "tests.test_crypto.TestCRL.test_export_text": [],
+    "tests.test_crypto.TestCRL.test_export_unknown_digest": [],
+    "tests.test_crypto.TestCRL.test_export_unknown_filetype": [],
+    "tests.test_crypto.TestCRL.test_export_wrong_args": [],
+    "tests.test_crypto.TestCRL.test_get_issuer": [
+        "src.OpenSSL.crypto.CRL.get_issuer"
+    ],
+    "tests.test_crypto.TestCRL.test_get_revoked": [
+        "src.OpenSSL.crypto.CRL.get_revoked"
+    ],
+    "tests.test_crypto.TestCRL.test_load_crl": [
+        "src.OpenSSL.crypto.load_crl"
+    ],
+    "tests.test_crypto.TestCRL.test_load_crl_bad_data": [],
+    "tests.test_crypto.TestCRL.test_load_crl_bad_filetype": [],
+    "tests.test_crypto.TestCRL.test_verify_with_missing_crl": [],
+    "tests.test_crypto.TestCRL.test_verify_with_revoked": [],
+    "tests.test_crypto.TestEllipticCurve.test_a_curve": [],
+    "tests.test_crypto.TestEllipticCurve.test_not_a_curve": [],
+    "tests.test_crypto.TestEllipticCurve.test_repr": [],
+    "tests.test_crypto.TestEllipticCurve.test_set": [],
+    "tests.test_crypto.TestEllipticCurve.test_to_EC_KEY": [],
+    "tests.test_crypto.TestEllipticCurveHash.test_contains": [],
+    "tests.test_crypto.TestEllipticCurveHash.test_does_not_contain": [],
+    "tests.test_crypto.TestFunction.test_dump_certificate": [
+        "src.OpenSSL.crypto.dump_certificate"
+    ],
+    "tests.test_crypto.TestFunction.test_dump_certificate_bad_type": [],
+    "tests.test_crypto.TestFunction.test_dump_certificate_request": [
+        "src.OpenSSL.crypto.dump_certificate_request"
+    ],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_asn1": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_invalid_filetype": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_invalid_passphrase_type": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_invalid_pkey": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_not_rsa_key": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_passphrase": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_passphraseCallbackLength": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_passphrase_callback": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_passphrase_exception": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_passphrase_wrong_type": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_pem": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_text": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_truncated": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_unknown_cipher": [],
+    "tests.test_crypto.TestFunction.test_dump_privatekey_wrong_args": [],
+    "tests.test_crypto.TestFunction.test_dump_publickey_asn1": [],
+    "tests.test_crypto.TestFunction.test_dump_publickey_invalid_type": [],
+    "tests.test_crypto.TestFunction.test_dump_publickey_pem": [],
+    "tests.test_crypto.TestFunction.test_load_privatekey_asn1": [],
+    "tests.test_crypto.TestFunction.test_load_privatekey_invalid_format": [],
+    "tests.test_crypto.TestFunction.test_load_privatekey_invalid_passphrase_type": [],
+    "tests.test_crypto.TestFunction.test_load_privatekey_passphrase": [],
+    "tests.test_crypto.TestFunction.test_load_privatekey_passphraseCallback": [],
+    "tests.test_crypto.TestFunction.test_load_privatekey_passphraseWrongType": [],
+    "tests.test_crypto.TestFunction.test_load_privatekey_passphrase_callback_length": [],
+    "tests.test_crypto.TestFunction.test_load_privatekey_passphrase_exception": [],
+    "tests.test_crypto.TestFunction.test_load_privatekey_passphrase_wrong_return_type": [],
+    "tests.test_crypto.TestFunction.test_load_privatekey_truncated": [],
+    "tests.test_crypto.TestFunction.test_load_privatekey_wrongPassphrase": [],
+    "tests.test_crypto.TestFunction.test_load_privatekey_wrongPassphraseCallback": [],
+    "tests.test_crypto.TestLoadCertificate.test_bad_certificate": [],
+    "tests.test_crypto.TestLoadCertificate.test_bad_file_type": [],
+    "tests.test_crypto.TestLoadPublicKey.test_invalid_key_format": [],
+    "tests.test_crypto.TestLoadPublicKey.test_invalid_type": [],
+    "tests.test_crypto.TestLoadPublicKey.test_loading_works": [],
+    "tests.test_crypto.TestLoadPublicKey.test_tolerates_unicode_strings": [],
+    "tests.test_crypto.TestNetscapeSPKI.test_b64_encode": [
+        "src.OpenSSL.crypto.NetscapeSPKI.b64_encode"
+    ],
+    "tests.test_crypto.TestNetscapeSPKI.test_construction": [],
+    "tests.test_crypto.TestNetscapeSPKI.test_invalid_attribute": [],
+    "tests.test_crypto.TestNetscapeSPKI.test_type": [],
+    "tests.test_crypto.TestPKCS12.test_cert_only": [],
+    "tests.test_crypto.TestPKCS12.test_empty_construction": [],
+    "tests.test_crypto.TestPKCS12.test_export_without_args": [],
+    "tests.test_crypto.TestPKCS12.test_export_without_bytes": [],
+    "tests.test_crypto.TestPKCS12.test_export_without_mac": [],
+    "tests.test_crypto.TestPKCS12.test_friendly_name": [],
+    "tests.test_crypto.TestPKCS12.test_key_cert_mismatch": [],
+    "tests.test_crypto.TestPKCS12.test_key_only": [],
+    "tests.test_crypto.TestPKCS12.test_load_without_mac": [],
+    "tests.test_crypto.TestPKCS12.test_removing_ca_cert": [],
+    "tests.test_crypto.TestPKCS12.test_replace": [],
+    "tests.test_crypto.TestPKCS12.test_type": [],
+    "tests.test_crypto.TestPKCS12.test_type_errors": [],
+    "tests.test_crypto.TestPKCS12.test_various_empty_passphrases": [],
+    "tests.test_crypto.TestPKCS12.test_zero_len_list_for_ca": [],
+    "tests.test_crypto.TestPKey.test_check_pr_897": [],
+    "tests.test_crypto.TestPKey.test_check_public_key": [],
+    "tests.test_crypto.TestPKey.test_construction": [],
+    "tests.test_crypto.TestPKey.test_convert_from_cryptography_public_key": [],
+    "tests.test_crypto.TestPKey.test_convert_from_cryptography_unsupported_type": [],
+    "tests.test_crypto.TestPKey.test_convert_public_pkey_to_cryptography_key": [],
+    "tests.test_crypto.TestPKey.test_convert_roundtrip_cryptography_private_key": [],
+    "tests.test_crypto.TestPKey.test_dsa_generation": [],
+    "tests.test_crypto.TestPKey.test_failed_generation": [],
+    "tests.test_crypto.TestPKey.test_inconsistent_key": [],
+    "tests.test_crypto.TestPKey.test_pregeneration": [],
+    "tests.test_crypto.TestPKey.test_regeneration": [],
+    "tests.test_crypto.TestPKey.test_rsa_generation": [],
+    "tests.test_crypto.TestPKey.test_type": [],
+    "tests.test_crypto.TestRevoked.test_construction": [],
+    "tests.test_crypto.TestRevoked.test_date": [],
+    "tests.test_crypto.TestRevoked.test_ignores_unsupported_revoked_cert_extension_get_reason": [],
+    "tests.test_crypto.TestRevoked.test_ignores_unsupported_revoked_cert_extension_set_new_reason": [],
+    "tests.test_crypto.TestRevoked.test_reason": [],
+    "tests.test_crypto.TestRevoked.test_serial": [],
+    "tests.test_crypto.TestRevoked.test_set_reason_invalid_reason": [],
+    "tests.test_crypto.TestRevoked.test_set_reason_wrong_args": [],
+    "tests.test_crypto.TestSignVerify.test_sign_nulls": [],
+    "tests.test_crypto.TestSignVerify.test_sign_verify": [],
+    "tests.test_crypto.TestSignVerify.test_sign_verify_ecdsa": [],
+    "tests.test_crypto.TestSignVerify.test_sign_verify_with_text": [],
+    "tests.test_crypto.TestSignVerify.test_sign_with_large_key": [],
+    "tests.test_crypto.TestX509.test_construction": [],
+    "tests.test_crypto.TestX509.test_convert_from_cryptography": [],
+    "tests.test_crypto.TestX509.test_convert_from_cryptography_unsupported_type": [],
+    "tests.test_crypto.TestX509.test_convert_to_cryptography_key": [],
+    "tests.test_crypto.TestX509.test_digest": [
+        "src.OpenSSL.crypto.X509.digest"
+    ],
+    "tests.test_crypto.TestX509.test_extension_count": [],
+    "tests.test_crypto.TestX509.test_get_extension": [
+        "src.OpenSSL.crypto.X509.get_extension"
+    ],
+    "tests.test_crypto.TestX509.test_get_issuer": [
+        "src.OpenSSL.crypto.X509.get_issuer"
+    ],
+    "tests.test_crypto.TestX509.test_get_notAfter": [
+        "src.OpenSSL.crypto.X509.get_notAfter"
+    ],
+    "tests.test_crypto.TestX509.test_get_notBefore": [
+        "src.OpenSSL.crypto.X509.get_notBefore"
+    ],
+    "tests.test_crypto.TestX509.test_get_pubkey_uninitialized": [],
+    "tests.test_crypto.TestX509.test_get_signature_algorithm": [
+        "src.OpenSSL.crypto.X509.get_signature_algorithm"
+    ],
+    "tests.test_crypto.TestX509.test_get_subject": [
+        "src.OpenSSL.crypto.X509.get_subject"
+    ],
+    "tests.test_crypto.TestX509.test_get_undefined_signature_algorithm": [],
+    "tests.test_crypto.TestX509.test_gmtime_adj_notAfter": [
+        "src.OpenSSL.crypto.X509.gmtime_adj_notAfter"
+    ],
+    "tests.test_crypto.TestX509.test_gmtime_adj_notAfter_wrong_args": [],
+    "tests.test_crypto.TestX509.test_gmtime_adj_notBefore": [
+        "src.OpenSSL.crypto.X509.gmtime_adj_notBefore"
+    ],
+    "tests.test_crypto.TestX509.test_gmtime_adj_notBefore_wrong_args": [],
+    "tests.test_crypto.TestX509.test_has_expired": [
+        "src.OpenSSL.crypto.X509.has_expired"
+    ],
+    "tests.test_crypto.TestX509.test_has_expired_exception": [],
+    "tests.test_crypto.TestX509.test_has_not_expired": [],
+    "tests.test_crypto.TestX509.test_invalid_digest_algorithm": [],
+    "tests.test_crypto.TestX509.test_nullbyte_subjectAltName": [],
+    "tests.test_crypto.TestX509.test_root_has_not_expired": [],
+    "tests.test_crypto.TestX509.test_serial_number": [],
+    "tests.test_crypto.TestX509.test_set_issuer": [
+        "src.OpenSSL.crypto.X509.set_issuer"
+    ],
+    "tests.test_crypto.TestX509.test_set_issuer_wrong_args": [],
+    "tests.test_crypto.TestX509.test_set_notAfter": [
+        "src.OpenSSL.crypto.X509.set_notAfter"
+    ],
+    "tests.test_crypto.TestX509.test_set_notBefore": [
+        "src.OpenSSL.crypto.X509.set_notBefore"
+    ],
+    "tests.test_crypto.TestX509.test_set_pubkey_wrong_type": [],
+    "tests.test_crypto.TestX509.test_set_subject": [
+        "src.OpenSSL.crypto.X509.set_subject"
+    ],
+    "tests.test_crypto.TestX509.test_set_subject_wrong_args": [],
+    "tests.test_crypto.TestX509.test_set_version_wrong_args": [],
+    "tests.test_crypto.TestX509.test_sign_bad_pubkey_type": [],
+    "tests.test_crypto.TestX509.test_subject_name_hash": [
+        "src.OpenSSL.crypto.X509.subject_name_hash"
+    ],
+    "tests.test_crypto.TestX509.test_type": [],
+    "tests.test_crypto.TestX509.test_version": [],
+    "tests.test_crypto.TestX509Ext.test_construction": [],
+    "tests.test_crypto.TestX509Ext.test_get_critical": [
+        "src.OpenSSL.crypto.X509Extension.get_critical"
+    ],
+    "tests.test_crypto.TestX509Ext.test_get_data": [
+        "src.OpenSSL.crypto.X509Extension.get_data"
+    ],
+    "tests.test_crypto.TestX509Ext.test_get_short_name": [
+        "src.OpenSSL.crypto.X509Extension.get_short_name"
+    ],
+    "tests.test_crypto.TestX509Ext.test_invalid_extension": [],
+    "tests.test_crypto.TestX509Ext.test_invalid_issuer": [],
+    "tests.test_crypto.TestX509Ext.test_invalid_subject": [],
+    "tests.test_crypto.TestX509Ext.test_issuer": [],
+    "tests.test_crypto.TestX509Ext.test_missing_issuer": [],
+    "tests.test_crypto.TestX509Ext.test_missing_subject": [],
+    "tests.test_crypto.TestX509Ext.test_str": [],
+    "tests.test_crypto.TestX509Ext.test_subject": [],
+    "tests.test_crypto.TestX509Ext.test_type": [],
+    "tests.test_crypto.TestX509Ext.test_unused_issuer": [],
+    "tests.test_crypto.TestX509Ext.test_unused_subject": [],
+    "tests.test_crypto.TestX509Name.test_attributes": [],
+    "tests.test_crypto.TestX509Name.test_comparison": [],
+    "tests.test_crypto.TestX509Name.test_copy": [],
+    "tests.test_crypto.TestX509Name.test_der": [
+        "src.OpenSSL.crypto.X509Name.der"
+    ],
+    "tests.test_crypto.TestX509Name.test_get_components": [
+        "src.OpenSSL.crypto.X509Name.get_components"
+    ],
+    "tests.test_crypto.TestX509Name.test_hash": [
+        "src.OpenSSL.crypto.X509Name.hash"
+    ],
+    "tests.test_crypto.TestX509Name.test_load_nul_byte_attribute": [],
+    "tests.test_crypto.TestX509Name.test_load_nul_byte_components": [],
+    "tests.test_crypto.TestX509Name.test_only_string_attributes": [],
+    "tests.test_crypto.TestX509Name.test_repr": [],
+    "tests.test_crypto.TestX509Name.test_set_attribute_failure": [],
+    "tests.test_crypto.TestX509Name.test_set_invalid_attribute": [],
+    "tests.test_crypto.TestX509Name.test_type": [],
+    "tests.test_crypto.TestX509Req.test_add_extensions": [
+        "src.OpenSSL.crypto.X509Req.add_extensions"
+    ],
+    "tests.test_crypto.TestX509Req.test_add_extensions_wrong_args": [],
+    "tests.test_crypto.TestX509Req.test_construction": [],
+    "tests.test_crypto.TestX509Req.test_convert_from_cryptography": [],
+    "tests.test_crypto.TestX509Req.test_convert_from_cryptography_unsupported_type": [],
+    "tests.test_crypto.TestX509Req.test_convert_to_cryptography_key": [],
+    "tests.test_crypto.TestX509Req.test_get_extensions": [
+        "src.OpenSSL.crypto.X509Req.get_extensions"
+    ],
+    "tests.test_crypto.TestX509Req.test_get_subject": [
+        "src.OpenSSL.crypto.X509Req.get_subject"
+    ],
+    "tests.test_crypto.TestX509Req.test_type": [],
+    "tests.test_crypto.TestX509Req.test_undef_oid": [],
+    "tests.test_crypto.TestX509Req.test_verify_success": [],
+    "tests.test_crypto.TestX509Req.test_verify_uninitialized_key": [],
+    "tests.test_crypto.TestX509Req.test_verify_wrong_args": [],
+    "tests.test_crypto.TestX509Req.test_verify_wrong_key": [],
+    "tests.test_crypto.TestX509Req.test_version": [],
+    "tests.test_crypto.TestX509Req.test_version_wrong_args": [],
+    "tests.test_crypto.TestX509Store.test_add_cert": [
+        "src.OpenSSL.crypto.X509Store.add_cert"
+    ],
+    "tests.test_crypto.TestX509Store.test_add_cert_accepts_duplicate": [],
+    "tests.test_crypto.TestX509Store.test_add_cert_wrong_args": [],
+    "tests.test_crypto.TestX509Store.test_load_locations_fails_when_all_args_are_none": [],
+    "tests.test_crypto.TestX509Store.test_load_locations_parameters": [],
+    "tests.test_crypto.TestX509Store.test_load_locations_raises_error_on_failure": [],
+    "tests.test_crypto.TestX509Store.test_type": [],
+    "tests.test_crypto.TestX509StoreContext.test_chain_reference": [],
+    "tests.test_crypto.TestX509StoreContext.test_failure_building_untrusted_chain_raises": [],
+    "tests.test_crypto.TestX509StoreContext.test_get_verified_chain": [
+        "src.OpenSSL.crypto.X509StoreContext.get_verified_chain"
+    ],
+    "tests.test_crypto.TestX509StoreContext.test_get_verified_chain_invalid_chain_no_root": [],
+    "tests.test_crypto.TestX509StoreContext.test_invalid_chain_no_intermediate": [],
+    "tests.test_crypto.TestX509StoreContext.test_invalid_chain_no_root": [],
+    "tests.test_crypto.TestX509StoreContext.test_modification_pre_verify": [],
+    "tests.test_crypto.TestX509StoreContext.test_reuse": [],
+    "tests.test_crypto.TestX509StoreContext.test_trusted_self_signed": [],
+    "tests.test_crypto.TestX509StoreContext.test_untrusted_chain_wrong_args": [],
+    "tests.test_crypto.TestX509StoreContext.test_untrusted_self_signed": [],
+    "tests.test_crypto.TestX509StoreContext.test_valid": [],
+    "tests.test_crypto.TestX509StoreContext.test_valid_untrusted_chain_reuse": [],
+    "tests.test_crypto.TestX509StoreContext.test_verify_fail_with_chain": [],
+    "tests.test_crypto.TestX509StoreContext.test_verify_failure_with_empty_ca_directory": [],
+    "tests.test_crypto.TestX509StoreContext.test_verify_success_with_chain": [],
+    "tests.test_crypto.TestX509StoreContext.test_verify_with_ca_file_location": [],
+    "tests.test_crypto.TestX509StoreContext.test_verify_with_ca_path_location": [],
+    "tests.test_crypto.TestX509StoreContext.test_verify_with_cafile_and_capath": [],
+    "tests.test_crypto.TestX509StoreContext.test_verify_with_multiple_ca_files": [],
+    "tests.test_crypto.TestX509StoreContext.test_verify_with_partial_chain": [],
+    "tests.test_crypto.TestX509StoreContext.test_verify_with_time": [],
+    "tests.test_crypto._PKeyInteractionTestsMixin.test_sign": [
+        "src.OpenSSL.crypto.NetscapeSPKI.sign",
+        "src.OpenSSL.crypto.X509Req.sign",
+        "src.OpenSSL.crypto.X509.sign"
+    ],
+    "tests.test_crypto._PKeyInteractionTestsMixin.test_sign_with_public_key": [],
+    "tests.test_crypto._PKeyInteractionTestsMixin.test_sign_with_ungenerated": [],
+    "tests.test_crypto._PKeyInteractionTestsMixin.test_sign_with_unknown_digest": [],
+    "tests.test_debug.test_debug_info": [],
+    "tests.test_rand.TestRand.test_add": [
+        "src.OpenSSL.rand.add"
+    ],
+    "tests.test_rand.TestRand.test_add_wrong_args": [],
+    "tests.test_rand.TestRand.test_status": [
+        "src.OpenSSL.rand.status"
+    ],
+    "tests.test_ssl.TestApplicationLayerProtoNegotiation.test_alpn_call_failure": [],
+    "tests.test_ssl.TestApplicationLayerProtoNegotiation.test_alpn_callback_exception": [],
+    "tests.test_ssl.TestApplicationLayerProtoNegotiation.test_alpn_no_server": [],
+    "tests.test_ssl.TestApplicationLayerProtoNegotiation.test_alpn_no_server_overlap": [],
+    "tests.test_ssl.TestApplicationLayerProtoNegotiation.test_alpn_select_cb_returns_invalid_value": [],
+    "tests.test_ssl.TestApplicationLayerProtoNegotiation.test_alpn_server_fail": [],
+    "tests.test_ssl.TestApplicationLayerProtoNegotiation.test_alpn_set_on_connection": [],
+    "tests.test_ssl.TestApplicationLayerProtoNegotiation.test_alpn_success": [],
+    "tests.test_ssl.TestConnection.test_accept": [
+        "src.OpenSSL.SSL.Connection.accept"
+    ],
+    "tests.test_ssl.TestConnection.test_app_data": [],
+    "tests.test_ssl.TestConnection.test_bio_read_wrong_args": [],
+    "tests.test_ssl.TestConnection.test_bio_write": [
+        "src.OpenSSL.SSL.Connection.bio_write"
+    ],
+    "tests.test_ssl.TestConnection.test_bio_write_wrong_args": [],
+    "tests.test_ssl.TestConnection.test_buffer_size": [],
+    "tests.test_ssl.TestConnection.test_client_get_session": [],
+    "tests.test_ssl.TestConnection.test_client_set_session": [],
+    "tests.test_ssl.TestConnection.test_connect": [
+        "src.OpenSSL.SSL.Connection.connect"
+    ],
+    "tests.test_ssl.TestConnection.test_connect_ex": [
+        "src.OpenSSL.SSL.Connection.connect_ex"
+    ],
+    "tests.test_ssl.TestConnection.test_connect_refused": [],
+    "tests.test_ssl.TestConnection.test_connect_wrong_args": [],
+    "tests.test_ssl.TestConnection.test_get_certificate": [
+        "src.OpenSSL.SSL.Connection.get_certificate"
+    ],
+    "tests.test_ssl.TestConnection.test_get_certificate_none": [],
+    "tests.test_ssl.TestConnection.test_get_cipher_bits": [
+        "src.OpenSSL.SSL.Connection.get_cipher_bits"
+    ],
+    "tests.test_ssl.TestConnection.test_get_cipher_bits_before_connect": [],
+    "tests.test_ssl.TestConnection.test_get_cipher_name": [
+        "src.OpenSSL.SSL.Connection.get_cipher_name"
+    ],
+    "tests.test_ssl.TestConnection.test_get_cipher_name_before_connect": [],
+    "tests.test_ssl.TestConnection.test_get_cipher_version": [
+        "src.OpenSSL.SSL.Connection.get_cipher_version"
+    ],
+    "tests.test_ssl.TestConnection.test_get_cipher_version_before_connect": [],
+    "tests.test_ssl.TestConnection.test_get_context": [
+        "src.OpenSSL.SSL.Connection.get_context"
+    ],
+    "tests.test_ssl.TestConnection.test_get_finished": [
+        "src.OpenSSL.SSL.Connection.get_finished"
+    ],
+    "tests.test_ssl.TestConnection.test_get_finished_before_connect": [],
+    "tests.test_ssl.TestConnection.test_get_peer_cert_chain": [
+        "src.OpenSSL.SSL.Connection.get_peer_cert_chain"
+    ],
+    "tests.test_ssl.TestConnection.test_get_peer_cert_chain_none": [],
+    "tests.test_ssl.TestConnection.test_get_peer_finished": [
+        "src.OpenSSL.SSL.Connection.get_peer_finished"
+    ],
+    "tests.test_ssl.TestConnection.test_get_peer_finished_before_connect": [],
+    "tests.test_ssl.TestConnection.test_get_protocol_version": [
+        "src.OpenSSL.SSL.Connection.get_protocol_version"
+    ],
+    "tests.test_ssl.TestConnection.test_get_protocol_version_name": [
+        "src.OpenSSL.SSL.Connection.get_protocol_version_name"
+    ],
+    "tests.test_ssl.TestConnection.test_get_session_unconnected": [],
+    "tests.test_ssl.TestConnection.test_get_verified_chain": [
+        "src.OpenSSL.SSL.Connection.get_verified_chain"
+    ],
+    "tests.test_ssl.TestConnection.test_get_verified_chain_none": [],
+    "tests.test_ssl.TestConnection.test_get_verified_chain_unconnected": [],
+    "tests.test_ssl.TestConnection.test_makefile": [
+        "src.OpenSSL.SSL.Connection.makefile"
+    ],
+    "tests.test_ssl.TestConnection.test_peek": [],
+    "tests.test_ssl.TestConnection.test_pending": [
+        "src.OpenSSL.SSL.Connection.pending"
+    ],
+    "tests.test_ssl.TestConnection.test_server_get_session": [],
+    "tests.test_ssl.TestConnection.test_set_context": [
+        "src.OpenSSL.SSL.Connection.set_context"
+    ],
+    "tests.test_ssl.TestConnection.test_set_context_wrong_args": [],
+    "tests.test_ssl.TestConnection.test_set_session_wrong_args": [],
+    "tests.test_ssl.TestConnection.test_set_session_wrong_method": [],
+    "tests.test_ssl.TestConnection.test_set_shutdown": [
+        "src.OpenSSL.SSL.Connection.set_shutdown"
+    ],
+    "tests.test_ssl.TestConnection.test_set_tlsext_host_name_wrong_args": [],
+    "tests.test_ssl.TestConnection.test_set_verify_callback_reference": [],
+    "tests.test_ssl.TestConnection.test_set_verify_overrides_context": [],
+    "tests.test_ssl.TestConnection.test_shutdown": [
+        "src.OpenSSL.SSL.Connection.shutdown"
+    ],
+    "tests.test_ssl.TestConnection.test_shutdown_closed": [],
+    "tests.test_ssl.TestConnection.test_shutdown_truncated": [],
+    "tests.test_ssl.TestConnection.test_shutdown_wrong_args": [],
+    "tests.test_ssl.TestConnection.test_state_string": [],
+    "tests.test_ssl.TestConnection.test_tls_finished_message_symmetry": [],
+    "tests.test_ssl.TestConnection.test_type": [],
+    "tests.test_ssl.TestConnection.test_wantReadError": [],
+    "tests.test_ssl.TestConnection.test_wantWriteError": [],
+    "tests.test_ssl.TestConnection.test_wrong_args": [],
+    "tests.test_ssl.TestConnectionGetCipherList.test_result": [],
+    "tests.test_ssl.TestConnectionRecvInto.test_bytearray_doesnt_overfill": [],
+    "tests.test_ssl.TestConnectionRecvInto.test_bytearray_no_length": [],
+    "tests.test_ssl.TestConnectionRecvInto.test_bytearray_really_doesnt_overfill": [],
+    "tests.test_ssl.TestConnectionRecvInto.test_bytearray_respects_length": [],
+    "tests.test_ssl.TestConnectionRecvInto.test_memoryview_doesnt_overfill": [],
+    "tests.test_ssl.TestConnectionRecvInto.test_memoryview_no_length": [],
+    "tests.test_ssl.TestConnectionRecvInto.test_memoryview_really_doesnt_overfill": [],
+    "tests.test_ssl.TestConnectionRecvInto.test_memoryview_respects_length": [],
+    "tests.test_ssl.TestConnectionRecvInto.test_peek": [],
+    "tests.test_ssl.TestConnectionRenegotiate.test_renegotiate": [
+        "src.OpenSSL.SSL.Connection.renegotiate"
+    ],
+    "tests.test_ssl.TestConnectionRenegotiate.test_total_renegotiations": [
+        "src.OpenSSL.SSL.Connection.total_renegotiations"
+    ],
+    "tests.test_ssl.TestConnectionSend.test_buf_too_large": [],
+    "tests.test_ssl.TestConnectionSend.test_short_bytearray": [],
+    "tests.test_ssl.TestConnectionSend.test_short_bytes": [],
+    "tests.test_ssl.TestConnectionSend.test_short_memoryview": [],
+    "tests.test_ssl.TestConnectionSend.test_text": [],
+    "tests.test_ssl.TestConnectionSend.test_wrong_args": [],
+    "tests.test_ssl.TestConnectionSendall.test_closed": [],
+    "tests.test_ssl.TestConnectionSendall.test_long": [],
+    "tests.test_ssl.TestConnectionSendall.test_short": [],
+    "tests.test_ssl.TestConnectionSendall.test_short_memoryview": [],
+    "tests.test_ssl.TestConnectionSendall.test_text": [],
+    "tests.test_ssl.TestConnectionSendall.test_wrong_args": [],
+    "tests.test_ssl.TestConstants.test_op_cookie_exchange": [],
+    "tests.test_ssl.TestConstants.test_op_no_compression": [],
+    "tests.test_ssl.TestConstants.test_op_no_query_mtu": [],
+    "tests.test_ssl.TestConstants.test_op_no_ticket": [],
+    "tests.test_ssl.TestConstants.test_sess_cache_both": [],
+    "tests.test_ssl.TestConstants.test_sess_cache_client": [],
+    "tests.test_ssl.TestConstants.test_sess_cache_no_auto_clear": [],
+    "tests.test_ssl.TestConstants.test_sess_cache_no_internal": [],
+    "tests.test_ssl.TestConstants.test_sess_cache_no_internal_lookup": [],
+    "tests.test_ssl.TestConstants.test_sess_cache_no_internal_store": [],
+    "tests.test_ssl.TestConstants.test_sess_cache_off": [],
+    "tests.test_ssl.TestConstants.test_sess_cache_server": [],
+    "tests.test_ssl.TestContext.test_add_extra_chain_cert": [
+        "src.OpenSSL.SSL.Context.add_extra_chain_cert"
+    ],
+    "tests.test_ssl.TestContext.test_add_extra_chain_cert_invalid_cert": [],
+    "tests.test_ssl.TestContext.test_app_data": [],
+    "tests.test_ssl.TestContext.test_check_env_vars": [],
+    "tests.test_ssl.TestContext.test_check_privatekey_invalid": [],
+    "tests.test_ssl.TestContext.test_check_privatekey_valid": [],
+    "tests.test_ssl.TestContext.test_fallback_default_verify_paths": [],
+    "tests.test_ssl.TestContext.test_fallback_path_is_not_file_or_dir": [],
+    "tests.test_ssl.TestContext.test_get_cert_store": [
+        "src.OpenSSL.SSL.Context.get_cert_store"
+    ],
+    "tests.test_ssl.TestContext.test_load_client_ca": [
+        "src.OpenSSL.SSL.Context.load_client_ca"
+    ],
+    "tests.test_ssl.TestContext.test_load_client_ca_invalid": [],
+    "tests.test_ssl.TestContext.test_load_client_ca_unicode": [],
+    "tests.test_ssl.TestContext.test_load_tmp_dh_bytes": [],
+    "tests.test_ssl.TestContext.test_load_tmp_dh_missing_file": [],
+    "tests.test_ssl.TestContext.test_load_tmp_dh_unicode": [],
+    "tests.test_ssl.TestContext.test_load_tmp_dh_wrong_args": [],
+    "tests.test_ssl.TestContext.test_load_verify_bytes_cafile": [],
+    "tests.test_ssl.TestContext.test_load_verify_directory_capath": [],
+    "tests.test_ssl.TestContext.test_load_verify_invalid_file": [],
+    "tests.test_ssl.TestContext.test_load_verify_locations_wrong_args": [],
+    "tests.test_ssl.TestContext.test_load_verify_unicode_cafile": [],
+    "tests.test_ssl.TestContext.test_method": [],
+    "tests.test_ssl.TestContext.test_passwd_callback_exception": [],
+    "tests.test_ssl.TestContext.test_passwd_callback_false": [],
+    "tests.test_ssl.TestContext.test_passwd_callback_non_string": [],
+    "tests.test_ssl.TestContext.test_passwd_callback_too_long": [],
+    "tests.test_ssl.TestContext.test_session_cache_mode": [],
+    "tests.test_ssl.TestContext.test_set_cipher_list": [
+        "src.OpenSSL.SSL.Context.set_cipher_list"
+    ],
+    "tests.test_ssl.TestContext.test_set_cipher_list_no_cipher_match": [],
+    "tests.test_ssl.TestContext.test_set_cipher_list_wrong_type": [],
+    "tests.test_ssl.TestContext.test_set_default_verify_paths": [
+        "src.OpenSSL.SSL.Context.set_default_verify_paths"
+    ],
+    "tests.test_ssl.TestContext.test_set_info_callback": [
+        "src.OpenSSL.SSL.Context.set_info_callback"
+    ],
+    "tests.test_ssl.TestContext.test_set_keylog_callback": [
+        "src.OpenSSL.SSL.Context.set_keylog_callback"
+    ],
+    "tests.test_ssl.TestContext.test_set_mode": [
+        "src.OpenSSL.SSL.Context.set_mode"
+    ],
+    "tests.test_ssl.TestContext.test_set_mode_wrong_args": [],
+    "tests.test_ssl.TestContext.test_set_options": [
+        "src.OpenSSL.SSL.Context.set_options"
+    ],
+    "tests.test_ssl.TestContext.test_set_options_wrong_args": [],
+    "tests.test_ssl.TestContext.test_set_passwd_cb": [
+        "src.OpenSSL.SSL.Context.set_passwd_cb"
+    ],
+    "tests.test_ssl.TestContext.test_set_passwd_cb_wrong_args": [],
+    "tests.test_ssl.TestContext.test_set_proto_version": [],
+    "tests.test_ssl.TestContext.test_set_session_cache_mode_wrong_args": [],
+    "tests.test_ssl.TestContext.test_set_session_id": [
+        "src.OpenSSL.SSL.Context.set_session_id"
+    ],
+    "tests.test_ssl.TestContext.test_set_session_id_fail": [],
+    "tests.test_ssl.TestContext.test_set_session_id_unicode": [],
+    "tests.test_ssl.TestContext.test_set_timeout_wrong_args": [],
+    "tests.test_ssl.TestContext.test_set_tlsext_use_srtp_invalid_profile": [],
+    "tests.test_ssl.TestContext.test_set_tlsext_use_srtp_not_bytes": [],
+    "tests.test_ssl.TestContext.test_set_tlsext_use_srtp_valid": [],
+    "tests.test_ssl.TestContext.test_set_tmp_ecdh": [
+        "src.OpenSSL.SSL.Context.set_tmp_ecdh"
+    ],
+    "tests.test_ssl.TestContext.test_set_verify_callback_connection_argument": [],
+    "tests.test_ssl.TestContext.test_set_verify_callback_exception": [],
+    "tests.test_ssl.TestContext.test_set_verify_callback_reference": [],
+    "tests.test_ssl.TestContext.test_set_verify_default_callback": [],
+    "tests.test_ssl.TestContext.test_set_verify_depth_wrong_args": [],
+    "tests.test_ssl.TestContext.test_set_verify_mode": [],
+    "tests.test_ssl.TestContext.test_set_verify_wrong_callable_arg": [],
+    "tests.test_ssl.TestContext.test_set_verify_wrong_mode_arg": [],
+    "tests.test_ssl.TestContext.test_timeout": [],
+    "tests.test_ssl.TestContext.test_type": [],
+    "tests.test_ssl.TestContext.test_use_certificate_chain_file_bytes": [],
+    "tests.test_ssl.TestContext.test_use_certificate_chain_file_missing_file": [],
+    "tests.test_ssl.TestContext.test_use_certificate_chain_file_unicode": [],
+    "tests.test_ssl.TestContext.test_use_certificate_chain_file_wrong_args": [],
+    "tests.test_ssl.TestContext.test_use_certificate_file_bytes": [],
+    "tests.test_ssl.TestContext.test_use_certificate_file_missing": [],
+    "tests.test_ssl.TestContext.test_use_certificate_file_unicode": [],
+    "tests.test_ssl.TestContext.test_use_certificate_file_wrong_args": [],
+    "tests.test_ssl.TestContext.test_use_privatekey_file_bytes": [],
+    "tests.test_ssl.TestContext.test_use_privatekey_file_missing": [],
+    "tests.test_ssl.TestContext.test_use_privatekey_file_unicode": [],
+    "tests.test_ssl.TestContext.test_verify_depth": [],
+    "tests.test_ssl.TestContext.test_verify_no_fallback_if_env_vars_set": [],
+    "tests.test_ssl.TestContext.test_wrong_privatekey_file_wrong_args": [],
+    "tests.test_ssl.TestContext.test_x509_in_verify_works": [],
+    "tests.test_ssl.TestContextConnection.test_use_certificate": [
+        "src.OpenSSL.SSL.Connection.use_certificate",
+        "src.OpenSSL.SSL.Context.use_certificate"
+    ],
+    "tests.test_ssl.TestContextConnection.test_use_certificate_uninitialized": [],
+    "tests.test_ssl.TestContextConnection.test_use_certificate_wrong_args": [],
+    "tests.test_ssl.TestContextConnection.test_use_privatekey": [
+        "src.OpenSSL.SSL.Context.use_privatekey",
+        "src.OpenSSL.SSL.Connection.use_privatekey"
+    ],
+    "tests.test_ssl.TestContextConnection.test_use_privatekey_wrong_key": [],
+    "tests.test_ssl.TestDTLS.test_it_works_at_all": [],
+    "tests.test_ssl.TestDTLS.test_it_works_with_srtp": [],
+    "tests.test_ssl.TestDTLS.test_timeout": [],
+    "tests.test_ssl.TestError.test_type": [],
+    "tests.test_ssl.TestInfoConstants.test_integers": [],
+    "tests.test_ssl.TestMemoryBIO.test_add_client_ca_wrong_args": [],
+    "tests.test_ssl.TestMemoryBIO.test_memory_connect": [],
+    "tests.test_ssl.TestMemoryBIO.test_multiple_add_client_ca": [],
+    "tests.test_ssl.TestMemoryBIO.test_mutated_ca_list": [],
+    "tests.test_ssl.TestMemoryBIO.test_one_add_client_ca": [],
+    "tests.test_ssl.TestMemoryBIO.test_outgoing_overflow": [],
+    "tests.test_ssl.TestMemoryBIO.test_reset_ca_list": [],
+    "tests.test_ssl.TestMemoryBIO.test_set_after_add_client_ca": [],
+    "tests.test_ssl.TestMemoryBIO.test_set_and_add_client_ca": [],
+    "tests.test_ssl.TestMemoryBIO.test_set_client_ca_list_errors": [],
+    "tests.test_ssl.TestMemoryBIO.test_set_empty_ca_list": [],
+    "tests.test_ssl.TestMemoryBIO.test_set_multiple_ca_list": [],
+    "tests.test_ssl.TestMemoryBIO.test_set_one_ca_list": [],
+    "tests.test_ssl.TestMemoryBIO.test_shutdown": [],
+    "tests.test_ssl.TestMemoryBIO.test_socket_connect": [],
+    "tests.test_ssl.TestMemoryBIO.test_socket_overrides_memory": [],
+    "tests.test_ssl.TestMemoryBIO.test_unexpected_EOF": [],
+    "tests.test_ssl.TestOCSP.test_callbacks_are_invoked_with_connections": [],
+    "tests.test_ssl.TestOCSP.test_callbacks_arent_called_by_default": [],
+    "tests.test_ssl.TestOCSP.test_client_negotiates_without_server": [],
+    "tests.test_ssl.TestOCSP.test_client_receives_servers_data": [],
+    "tests.test_ssl.TestOCSP.test_client_returns_false_terminates_handshake": [],
+    "tests.test_ssl.TestOCSP.test_exceptions_in_client_bubble_up": [],
+    "tests.test_ssl.TestOCSP.test_exceptions_in_server_bubble_up": [],
+    "tests.test_ssl.TestOCSP.test_opaque_data_is_passed_through": [],
+    "tests.test_ssl.TestOCSP.test_server_must_return_bytes": [],
+    "tests.test_ssl.TestOCSP.test_server_returns_empty_string": [],
+    "tests.test_ssl.TestRequires.test_available": [],
+    "tests.test_ssl.TestRequires.test_unavailable": [],
+    "tests.test_ssl.TestServerNameCallback.test_no_servername": [],
+    "tests.test_ssl.TestServerNameCallback.test_old_callback_forgotten": [],
+    "tests.test_ssl.TestServerNameCallback.test_servername": [],
+    "tests.test_ssl.TestSession.test_construction": [],
+    "tests.test_ssl.TestVersion.test_OPENSSL_VERSION_NUMBER": [],
+    "tests.test_ssl.TestVersion.test_SSLeay_version": [],
+    "tests.test_util.TestErrors.test_exception_from_error_queue_nonexistent_reason": [],
+    "tests.util.EqualityTestsMixin.test_anotherTypeEq": [],
+    "tests.util.EqualityTestsMixin.test_anotherTypeNe": [],
+    "tests.util.EqualityTestsMixin.test_delegateNe": [],
+    "tests.util.EqualityTestsMixin.test_delegatedEq": [],
+    "tests.util.EqualityTestsMixin.test_differentEq": [],
+    "tests.util.EqualityTestsMixin.test_differentNe": [],
+    "tests.util.EqualityTestsMixin.test_identicalEq": [],
+    "tests.util.EqualityTestsMixin.test_identicalNe": [],
+    "tests.util.EqualityTestsMixin.test_sameEq": [],
+    "tests.util.EqualityTestsMixin.test_sameNe": []
+}

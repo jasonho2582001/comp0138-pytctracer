@@ -1,0 +1,4 @@
+experiment-data/trace-logs/pyopenssl/pyopenssl_pytest_tracer_logs.csv filter=lfs diff=lfs merge=lfs -text
+experiment-data/trace-logs/arrow/arrow_pytest_tracer_logs.csv filter=lfs diff=lfs merge=lfs -text
+experiment-data/trace-logs/kedro/kedro_pytest_tracer_logs.csv filter=lfs diff=lfs merge=lfs -text
+experiment-data/trace-logs/chartify/chartify_pytest_tracer_logs.csv filter=lfs diff=lfs merge=lfs -text

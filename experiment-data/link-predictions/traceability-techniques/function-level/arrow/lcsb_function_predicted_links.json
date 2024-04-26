@@ -1,0 +1,2497 @@
+{
+    "tests.test_api.TestModule.test_factory": [
+        "arrow.api.factory"
+    ],
+    "tests.test_api.TestModule.test_get": [
+        "arrow.api.get"
+    ],
+    "tests.test_api.TestModule.test_now": [
+        "arrow.api.now"
+    ],
+    "tests.test_api.TestModule.test_utcnow": [
+        "arrow.api.utcnow"
+    ],
+    "tests.test_arrow.TestArrowAttribute.test_float_timestamp": [
+        "arrow.arrow.Arrow.float_timestamp"
+    ],
+    "tests.test_arrow.TestArrowAttribute.test_getattr_ambiguous": [
+        "arrow.arrow.Arrow.ambiguous"
+    ],
+    "tests.test_arrow.TestArrowAttribute.test_getattr_base": [
+        "arrow.arrow.Arrow.__getattr__"
+    ],
+    "tests.test_arrow.TestArrowAttribute.test_getattr_dt_value": [
+        "arrow.arrow.Arrow.__getattr__"
+    ],
+    "tests.test_arrow.TestArrowAttribute.test_getattr_fold": [
+        "arrow.arrow.Arrow.fold"
+    ],
+    "tests.test_arrow.TestArrowAttribute.test_getattr_imaginary": [
+        "arrow.arrow.Arrow.imaginary"
+    ],
+    "tests.test_arrow.TestArrowAttribute.test_getattr_quarter": [
+        "arrow.arrow.Arrow.__getattr__"
+    ],
+    "tests.test_arrow.TestArrowAttribute.test_getattr_week": [
+        "arrow.arrow.Arrow.__getattr__"
+    ],
+    "tests.test_arrow.TestArrowAttribute.test_int_timestamp": [
+        "arrow.arrow.Arrow.int_timestamp"
+    ],
+    "tests.test_arrow.TestArrowAttribute.test_naive": [
+        "arrow.arrow.Arrow.naive"
+    ],
+    "tests.test_arrow.TestArrowAttribute.test_timestamp": [
+        "arrow.arrow.Arrow.timestamp"
+    ],
+    "tests.test_arrow.TestArrowAttribute.test_tzinfo": [
+        "arrow.arrow.Arrow.tzinfo"
+    ],
+    "tests.test_arrow.TestArrowComparison.test_eq": [
+        "arrow.arrow.Arrow.__eq__"
+    ],
+    "tests.test_arrow.TestArrowComparison.test_ge": [
+        "arrow.arrow.Arrow.__ge__"
+    ],
+    "tests.test_arrow.TestArrowComparison.test_gt": [
+        "arrow.arrow.Arrow.__gt__",
+        "arrow.arrow.Arrow.shift"
+    ],
+    "tests.test_arrow.TestArrowComparison.test_le": [
+        "arrow.arrow.Arrow.__le__"
+    ],
+    "tests.test_arrow.TestArrowComparison.test_lt": [
+        "arrow.arrow.Arrow.__lt__",
+        "arrow.arrow.Arrow.shift"
+    ],
+    "tests.test_arrow.TestArrowComparison.test_ne": [
+        "arrow.arrow.Arrow.__ne__"
+    ],
+    "tests.test_arrow.TestArrowConversion.test_anchorage_dst": [
+        "arrow.arrow.Arrow.utcoffset"
+    ],
+    "tests.test_arrow.TestArrowConversion.test_chicago_fall": [
+        "arrow.arrow.Arrow.utcoffset",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowConversion.test_sydney_gap": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.utcoffset",
+        "arrow.arrow.Arrow.datetime"
+    ],
+    "tests.test_arrow.TestArrowConversion.test_to": [
+        "arrow.arrow.Arrow.to"
+    ],
+    "tests.test_arrow.TestArrowConversion.test_to_amsterdam_then_utc": [
+        "arrow.arrow.Arrow.utcoffset",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowConversion.test_to_israel_same_offset": [
+        "arrow.arrow.Arrow.utcoffset",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.__eq__"
+    ],
+    "tests.test_arrow.TestArrowConversion.test_to_pacific_then_utc": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_datetime"
+    ],
+    "tests.test_arrow.TestArrowConversion.test_toronto_gap": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.utcoffset",
+        "arrow.arrow.Arrow.to",
+        "arrow.arrow.Arrow.datetime"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_astimezone": [
+        "arrow.arrow.Arrow.astimezone"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_ctime": [
+        "arrow.arrow.Arrow.ctime"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_date": [
+        "arrow.arrow.Arrow.date"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_dst": [
+        "arrow.arrow.Arrow.dst"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_isocalendar": [
+        "arrow.arrow.Arrow.isocalendar"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_isoformat": [
+        "arrow.arrow.Arrow.isoformat"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_isoformat_timespec": [
+        "arrow.arrow.Arrow.isoformat"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_isoweekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_simplejson": [
+        "arrow.arrow.Arrow.for_json"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_strftime": [
+        "arrow.arrow.Arrow.strftime"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_time": [
+        "arrow.arrow.Arrow.time"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_timetuple": [
+        "arrow.arrow.Arrow.timetuple"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_timetz": [
+        "arrow.arrow.Arrow.timetz"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_toordinal": [
+        "arrow.arrow.Arrow.toordinal"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_utcoffset": [
+        "arrow.arrow.Arrow.utcoffset"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_utctimetuple": [
+        "arrow.arrow.Arrow.utctimetuple"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface.test_weekday": [
+        "arrow.arrow.Arrow.weekday"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_czech_slovak": [
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.locales.get_locale",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.Locale.describe_multi"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_gt_than_10_years": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.locales.get_locale"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_hour": [
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.dehumanize"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_hours": [
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.dehumanize"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_minute": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.dehumanize"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_minutes": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.shift"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_mixed_granularity": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.Locale.describe_multi"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_mixed_granularity_day": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.locales.Locale.describe_multi"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_mixed_granularity_day_hour": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.humanize"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_mixed_granularity_hours": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.humanize.<locals>.gather_timeframes",
+        "arrow.locales.Locale.describe_multi"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_no_units_modified": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.locales.get_locale",
+        "arrow.arrow.Arrow.dehumanize"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_normalized_locale": [
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.get_locale",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_now": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.dehumanize"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_require_relative_unit": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.humanize"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_scrambled_input": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.shift",
+        "arrow.locales.EnglishLocale.describe",
+        "arrow.locales.Locale.describe",
+        "arrow.locales.GermanBaseLocale.describe",
+        "arrow.locales.LuxembourgishLocale.describe"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_seconds": [
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.locales.EnglishLocale.describe",
+        "arrow.locales.Locale.describe",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.GermanBaseLocale.describe",
+        "arrow.locales.LuxembourgishLocale.describe"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_slavic_locales": [
+        "arrow.locales.get_locale",
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.humanize.<locals>.gather_timeframes",
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.locales.Locale.describe_multi"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_unsupported_locale": [
+        "arrow.locales.get_locale",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.humanize"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_week": [
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.locales.EnglishLocale.describe",
+        "arrow.locales.Locale.describe",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.GermanBaseLocale.describe",
+        "arrow.locales.LuxembourgishLocale.describe"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_weeks": [
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.locales.EnglishLocale.describe",
+        "arrow.locales.Locale.describe",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.GermanBaseLocale.describe",
+        "arrow.locales.LuxembourgishLocale.describe"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_year": [
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.locales.EnglishLocale.describe",
+        "arrow.locales.Locale.describe",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.GermanBaseLocale.describe",
+        "arrow.locales.LuxembourgishLocale.describe"
+    ],
+    "tests.test_arrow.TestArrowDehumanize.test_years": [
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.dehumanize",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.locales.EnglishLocale.describe",
+        "arrow.locales.Locale.describe",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.GermanBaseLocale.describe",
+        "arrow.locales.LuxembourgishLocale.describe"
+    ],
+    "tests.test_arrow.TestArrowFalsePositiveDst.test_dst": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.__getattr__"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_arrow": [
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.arrow.Arrow.humanize"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_datetime_tzinfo": [
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_day": [
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_days": [
+        "arrow.arrow.Arrow.shift",
+        "arrow.locales.EnglishLocale.describe",
+        "arrow.arrow.Arrow.humanize"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_empty_granularity_list": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.get_locale"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_granularity": [
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.shift"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_hour": [
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.shift"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_hours": [
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.shift"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_invalid_locale": [
+        "arrow.locales.get_locale",
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_minute": [
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.shift"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_minutes": [
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.shift"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_month": [
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.shift"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_month_plus_4_days": [
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.get_locale"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_months": [
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.shift"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_multiple_granularity": [
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.Locale.describe_multi",
+        "arrow.arrow.Arrow.humanize.<locals>.gather_timeframes"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_no_floats": [
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.locales.get_locale",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_no_floats_multi_gran": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.humanize.<locals>.gather_timeframes",
+        "arrow.locales.Locale.describe_multi",
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.SlavicBaseLocale._format_timeframe",
+        "arrow.locales.get_locale",
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_none": [
+        "arrow.arrow.Arrow.utcnow",
+        "arrow.arrow.Arrow.humanize"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_other": [
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.arrow.Arrow.humanize"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_seconds": [
+        "arrow.arrow.Arrow.shift",
+        "arrow.locales.EnglishLocale.describe",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.get_locale",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_untranslated_granularity": [
+        "arrow.arrow.Arrow.humanize",
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.utcnow",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_week": [
+        "arrow.locales.EnglishLocale.describe",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.get_locale",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_week_limit": [
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.get_locale",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_weeks": [
+        "arrow.arrow.Arrow.shift",
+        "arrow.locales.EnglishLocale.describe",
+        "arrow.arrow.Arrow.humanize"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_year": [
+        "arrow.locales.EnglishLocale.describe",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.get_locale"
+    ],
+    "tests.test_arrow.TestArrowHumanize.test_years": [
+        "arrow.arrow.Arrow.shift",
+        "arrow.locales.EnglishLocale.describe",
+        "arrow.arrow.Arrow.humanize"
+    ],
+    "tests.test_arrow.TestArrowHumanizeTestsWithLocale.test_now": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.humanize"
+    ],
+    "tests.test_arrow.TestArrowHumanizeTestsWithLocale.test_seconds": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.locales.Locale.describe",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.get_locale"
+    ],
+    "tests.test_arrow.TestArrowHumanizeTestsWithLocale.test_years": [
+        "arrow.locales.Locale.describe",
+        "arrow.arrow.Arrow.humanize",
+        "arrow.locales.get_locale"
+    ],
+    "tests.test_arrow.TestArrowInterval.test_bounds_param_is_passed": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.interval"
+    ],
+    "tests.test_arrow.TestArrowInterval.test_correct": [
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.interval"
+    ],
+    "tests.test_arrow.TestArrowInterval.test_exact": [
+        "arrow.arrow.Arrow.interval",
+        "arrow.arrow.Arrow.__eq__"
+    ],
+    "tests.test_arrow.TestArrowInterval.test_incorrect_input": [
+        "arrow.arrow.Arrow.interval"
+    ],
+    "tests.test_arrow.TestArrowIsBetween.test_exclusive_exclusive_bounds": [
+        "arrow.util.validate_bounds",
+        "arrow.arrow.Arrow.is_between"
+    ],
+    "tests.test_arrow.TestArrowIsBetween.test_exclusive_exclusive_bounds_same_date": [
+        "arrow.arrow.Arrow.is_between",
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.util.validate_bounds"
+    ],
+    "tests.test_arrow.TestArrowIsBetween.test_exclusive_inclusive_bounds": [
+        "arrow.util.validate_bounds",
+        "arrow.arrow.Arrow.is_between"
+    ],
+    "tests.test_arrow.TestArrowIsBetween.test_inclusive_exclusive_bounds": [
+        "arrow.arrow.Arrow.is_between",
+        "arrow.util.validate_bounds"
+    ],
+    "tests.test_arrow.TestArrowIsBetween.test_inclusive_inclusive_bounds_same_date": [
+        "arrow.arrow.Arrow.is_between",
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.util.validate_bounds"
+    ],
+    "tests.test_arrow.TestArrowIsBetween.test_inclusive_inclusive_bounds_target_before_start": [
+        "arrow.arrow.Arrow.is_between",
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.util.validate_bounds",
+        "arrow.arrow.Arrow.float_timestamp"
+    ],
+    "tests.test_arrow.TestArrowIsBetween.test_start_before_end": [
+        "arrow.arrow.Arrow.is_between",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowIsBetween.test_type_error_exception": [
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.arrow.Arrow.is_between"
+    ],
+    "tests.test_arrow.TestArrowIsBetween.test_value_error_exception": [
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.arrow.Arrow.is_between",
+        "arrow.util.validate_bounds"
+    ],
+    "tests.test_arrow.TestArrowMath.test_add_other": [
+        "arrow.arrow.Arrow.__add__"
+    ],
+    "tests.test_arrow.TestArrowMath.test_add_timedelta": [
+        "arrow.arrow.Arrow.__add__",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowMath.test_radd": [
+        "arrow.arrow.Arrow.__radd__"
+    ],
+    "tests.test_arrow.TestArrowMath.test_rsub_datetime": [
+        "arrow.arrow.Arrow.__rsub__"
+    ],
+    "tests.test_arrow.TestArrowMath.test_rsub_other": [
+        "arrow.arrow.Arrow.__rsub__"
+    ],
+    "tests.test_arrow.TestArrowMath.test_sub_arrow": [
+        "arrow.arrow.Arrow.__sub__"
+    ],
+    "tests.test_arrow.TestArrowMath.test_sub_datetime": [
+        "arrow.arrow.Arrow.__sub__"
+    ],
+    "tests.test_arrow.TestArrowMath.test_sub_other": [
+        "arrow.arrow.Arrow.__sub__"
+    ],
+    "tests.test_arrow.TestArrowMath.test_sub_timedelta": [
+        "arrow.arrow.Arrow.__sub__"
+    ],
+    "tests.test_arrow.TestArrowPickling.test_pickle_and_unpickle": [
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.utcnow"
+    ],
+    "tests.test_arrow.TestArrowRange.test_arrow": [
+        "arrow.arrow.Arrow.range"
+    ],
+    "tests.test_arrow.TestArrowRange.test_aware_different_tz": [
+        "arrow.arrow.Arrow._get_tzinfo",
+        "arrow.arrow.Arrow._get_iteration_params",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow._get_frames",
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowRange.test_aware_same_tz": [
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow._get_tzinfo",
+        "arrow.arrow.Arrow._get_frames",
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowRange.test_aware_tz": [
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.arrow.Arrow._get_tzinfo"
+    ],
+    "tests.test_arrow.TestArrowRange.test_day": [
+        "arrow.arrow.Arrow.range"
+    ],
+    "tests.test_arrow.TestArrowRange.test_hour": [
+        "arrow.arrow.Arrow.range"
+    ],
+    "tests.test_arrow.TestArrowRange.test_imaginary": [
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow._get_iteration_params",
+        "arrow.arrow.Arrow._get_tzinfo",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowRange.test_minute": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.range"
+    ],
+    "tests.test_arrow.TestArrowRange.test_month": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.range"
+    ],
+    "tests.test_arrow.TestArrowRange.test_naive_tz": [
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow._get_tzinfo"
+    ],
+    "tests.test_arrow.TestArrowRange.test_quarter": [
+        "arrow.arrow.Arrow.range"
+    ],
+    "tests.test_arrow.TestArrowRange.test_range_over_months_ending_on_different_days": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow._get_iteration_params",
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._is_last_day_of_month",
+        "arrow.arrow.Arrow._get_frames"
+    ],
+    "tests.test_arrow.TestArrowRange.test_range_over_quarter_months_ending_on_different_days": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow._get_iteration_params",
+        "arrow.arrow.Arrow._is_last_day_of_month",
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow._get_tzinfo",
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.arrow.Arrow._get_frames"
+    ],
+    "tests.test_arrow.TestArrowRange.test_range_over_year_maintains_end_date_across_leap_year": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow._get_iteration_params",
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._is_last_day_of_month",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__getattr__"
+    ],
+    "tests.test_arrow.TestArrowRange.test_second": [
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowRange.test_unsupported": [
+        "arrow.arrow.Arrow.range"
+    ],
+    "tests.test_arrow.TestArrowRange.test_week": [
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.__eq__"
+    ],
+    "tests.test_arrow.TestArrowRange.test_year": [
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.__getattr__"
+    ],
+    "tests.test_arrow.TestArrowReplace.test_not_attr": [
+        "arrow.arrow.Arrow.utcnow",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowReplace.test_replace": [
+        "arrow.arrow.Arrow.replace"
+    ],
+    "tests.test_arrow.TestArrowReplace.test_replace_fold": [
+        "arrow.arrow.Arrow.replace",
+        "arrow.arrow.Arrow.fold"
+    ],
+    "tests.test_arrow.TestArrowReplace.test_replace_fold_and_other": [
+        "arrow.arrow.Arrow.replace",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowReplace.test_replace_other_kwargs": [],
+    "tests.test_arrow.TestArrowReplace.test_replace_quarter": [
+        "arrow.arrow.Arrow.replace"
+    ],
+    "tests.test_arrow.TestArrowReplace.test_replace_quarter_and_fold": [],
+    "tests.test_arrow.TestArrowReplace.test_replace_tzinfo": [
+        "arrow.arrow.Arrow.replace",
+        "arrow.arrow.Arrow._get_tzinfo",
+        "arrow.arrow.Arrow.datetime"
+    ],
+    "tests.test_arrow.TestArrowReplace.test_replace_week": [
+        "arrow.arrow.Arrow.replace"
+    ],
+    "tests.test_arrow.TestArrowShift.test_not_attr": [
+        "arrow.arrow.Arrow.utcnow",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowShift.test_shift": [
+        "arrow.arrow.Arrow.shift"
+    ],
+    "tests.test_arrow.TestArrowShift.test_shift_kiritimati": [
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowShift.test_shift_negative": [
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowShift.test_shift_negative_imaginary": [
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowShift.test_shift_positive_imaginary": [
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestArrowShift.test_shift_quarters_bug": [
+        "arrow.arrow.Arrow.shift",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.__eq__"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_all_parameters_specified": [
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.util.validate_bounds",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_frames",
+        "arrow.arrow.Arrow.span"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_bounds_are_validated": [
+        "arrow.util.validate_bounds"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_exact": [
+        "arrow.arrow.Arrow.span",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_datetime"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_exact_exclusive_exclusive": [
+        "arrow.util.validate_bounds",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_frames"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_exact_exclusive_inclusive": [
+        "arrow.util.validate_bounds",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_frames",
+        "arrow.arrow.Arrow.span"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_exact_inclusive_inclusive": [
+        "arrow.util.validate_bounds",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_frames",
+        "arrow.arrow.Arrow.span"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_floor": [
+        "arrow.arrow.Arrow.floor"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_attribute": [
+        "arrow.arrow.Arrow.span",
+        "arrow.util.validate_bounds"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_day": [
+        "arrow.arrow.Arrow.span"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_exclusive_exclusive": [
+        "arrow.arrow.Arrow.span",
+        "arrow.util.validate_bounds",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_frames"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_exclusive_inclusive": [
+        "arrow.arrow.Arrow.span",
+        "arrow.util.validate_bounds",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_hour": [
+        "arrow.arrow.Arrow.span"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_inclusive_inclusive": [
+        "arrow.arrow.Arrow.span",
+        "arrow.util.validate_bounds",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_microsecond": [
+        "arrow.arrow.Arrow.span",
+        "arrow.util.validate_bounds"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_minute": [
+        "arrow.arrow.Arrow.span"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_month": [
+        "arrow.arrow.Arrow.span"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_quarter": [
+        "arrow.arrow.Arrow.span"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_quarter_count": [
+        "arrow.arrow.Arrow.span",
+        "arrow.util.validate_bounds",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__getattr__"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_second": [
+        "arrow.arrow.Arrow.span"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_week": [
+        "arrow.arrow.Arrow.span",
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_year": [
+        "arrow.arrow.Arrow.span"
+    ],
+    "tests.test_arrow.TestArrowSpan.test_span_year_count": [
+        "arrow.arrow.Arrow.span",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.util.validate_bounds"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_aware_different_tz": [
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow._get_tzinfo"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_aware_same_tz": [
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow._get_tzinfo"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_aware_tz": [
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.arrow.Arrow._get_tzinfo"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_bounds_param_is_passed": [
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_day": [
+        "arrow.arrow.Arrow.span",
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.arrow.Arrow._get_datetime"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_days": [
+        "arrow.arrow.Arrow.span",
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.arrow.Arrow._get_datetime"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_exact_bound_exclude": [
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.__eq__"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_exact_bound_include": [
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__eq__"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_exact_floor_equals_end": [
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_hour": [
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.span_range"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_minute": [
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_month": [
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_naive_tz": [
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.arrow.Arrow._get_tzinfo"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_quarter": [
+        "arrow.arrow.Arrow.span_range"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_second": [
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow.span",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_small_interval_exact_open_bounds": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow.__eq__"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_week": [
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.range",
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_arrow.TestArrowSpanRange.test_year": [
+        "arrow.arrow.Arrow.span_range",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.span"
+    ],
+    "tests.test_arrow.TestArrowUtil.test_get_datetime": [
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.datetime"
+    ],
+    "tests.test_arrow.TestArrowUtil.test_get_iteration_params": [
+        "arrow.arrow.Arrow._get_iteration_params"
+    ],
+    "tests.test_arrow.TestArrowUtil.test_get_tzinfo": [
+        "arrow.arrow.Arrow._get_tzinfo"
+    ],
+    "tests.test_arrow.TestTestArrowFactory.test_fromdate": [
+        "arrow.arrow.Arrow.fromdate"
+    ],
+    "tests.test_arrow.TestTestArrowFactory.test_fromdatetime": [
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestTestArrowFactory.test_fromdatetime_dt_tzinfo": [
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestTestArrowFactory.test_fromdatetime_tzinfo_arg": [
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_arrow.TestTestArrowFactory.test_fromordinal": [
+        "arrow.arrow.Arrow.fromordinal",
+        "arrow.arrow.Arrow.toordinal"
+    ],
+    "tests.test_arrow.TestTestArrowFactory.test_fromtimestamp": [
+        "arrow.arrow.Arrow.fromtimestamp"
+    ],
+    "tests.test_arrow.TestTestArrowFactory.test_now": [
+        "arrow.arrow.Arrow.now"
+    ],
+    "tests.test_arrow.TestTestArrowFactory.test_strptime": [
+        "arrow.arrow.Arrow.strptime"
+    ],
+    "tests.test_arrow.TestTestArrowFactory.test_utcfromtimestamp": [
+        "arrow.arrow.Arrow.utcfromtimestamp"
+    ],
+    "tests.test_arrow.TestTestArrowFactory.test_utcnow": [
+        "arrow.arrow.Arrow.utcnow"
+    ],
+    "tests.test_arrow.TestTestArrowInit.test_init": [
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestTestArrowInit.test_init_bad_input": [
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestTestArrowInit.test_init_pytz_timezone": [
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestTestArrowInit.test_init_with_fold": [
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_arrow.TestTestArrowRepresentation.test_bare_format": [
+        "arrow.arrow.Arrow.format"
+    ],
+    "tests.test_arrow.TestTestArrowRepresentation.test_clone": [
+        "arrow.arrow.Arrow.clone"
+    ],
+    "tests.test_arrow.TestTestArrowRepresentation.test_format": [
+        "arrow.arrow.Arrow.__format__",
+        "arrow.arrow.Arrow.format"
+    ],
+    "tests.test_arrow.TestTestArrowRepresentation.test_format_no_format_string": [
+        "arrow.arrow.Arrow.__format__",
+        "arrow.arrow.Arrow.__str__"
+    ],
+    "tests.test_arrow.TestTestArrowRepresentation.test_hash": [
+        "arrow.arrow.Arrow.__hash__"
+    ],
+    "tests.test_arrow.TestTestArrowRepresentation.test_repr": [
+        "arrow.arrow.Arrow.__repr__"
+    ],
+    "tests.test_arrow.TestTestArrowRepresentation.test_str": [
+        "arrow.arrow.Arrow.__str__"
+    ],
+    "tests.test_factory.TestGet.test_full_kwargs": [
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.factory.ArrowFactory.get",
+        "arrow.arrow.Arrow._get_datetime"
+    ],
+    "tests.test_factory.TestGet.test_insufficient_kwargs": [
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_kwarg_normalize_whitespace": [
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.factory.ArrowFactory.get",
+        "arrow.parser.DateTimeParser._generate_choice_re",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser.__init__"
+    ],
+    "tests.test_factory.TestGet.test_kwarg_tzinfo": [
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_kwarg_tzinfo_string": [
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_locale": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.factory.ArrowFactory.get",
+        "arrow.locales.get_locale",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_factory.TestGet.test_locale_kwarg_only": [
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.arrow.Arrow.utcnow",
+        "arrow.factory.ArrowFactory.get",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_factory.TestGet.test_locale_with_tzinfo": [
+        "arrow.arrow.Arrow.tzinfo"
+    ],
+    "tests.test_factory.TestGet.test_no_args": [
+        "arrow.arrow.Arrow.__sub__",
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.arrow.Arrow.utcnow",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_arrow": [
+        "arrow.factory.ArrowFactory.utcnow",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_datetime"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_arrow_tzinfo_kwarg": [
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_bool": [
+        "arrow.util.is_timestamp",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_date": [
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.fromdate",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_date_tzinfo_kwarg": [
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.arrow.Arrow.__init__",
+        "arrow.arrow.Arrow.date"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_dateparser_datetime": [
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.util.is_timestamp",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_datetime": [
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.fromdatetime"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_datetime_tzinfo_kwarg": [
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.util.is_timestamp",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_decimal": [
+        "arrow.arrow.Arrow.fromtimestamp",
+        "arrow.util.is_timestamp",
+        "arrow.factory.ArrowFactory.get",
+        "arrow.util.normalize_timestamp"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_expanded_timestamp": [
+        "arrow.arrow.Arrow.fromtimestamp",
+        "arrow.util.is_timestamp",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.util.normalize_timestamp",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_iso_calendar": [
+        "arrow.util.iso_to_gregorian",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.util.is_timestamp",
+        "arrow.arrow.Arrow.fromdate",
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_iso_calendar_tzinfo_kwarg": [
+        "arrow.arrow.Arrow.__init__",
+        "arrow.util.iso_to_gregorian"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_iso_str": [
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.arrow.Arrow.__sub__",
+        "arrow.factory.ArrowFactory.get",
+        "arrow.parser.DateTimeParser.__init__"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_none": [
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_other": [
+        "arrow.factory.ArrowFactory.get",
+        "arrow.util.is_timestamp"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_timestamp": [
+        "arrow.arrow.Arrow.fromtimestamp",
+        "arrow.util.is_timestamp",
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_timestamp_with_tzinfo": [
+        "arrow.arrow.Arrow.fromtimestamp",
+        "arrow.util.is_timestamp",
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.util.normalize_timestamp",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_one_arg_tzinfo": [
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_struct_time": [
+        "arrow.util.is_timestamp",
+        "arrow.arrow.Arrow.utcfromtimestamp"
+    ],
+    "tests.test_factory.TestGet.test_three_args": [
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_datetime"
+    ],
+    "tests.test_factory.TestGet.test_three_args_with_tzinfo": [
+        "arrow.arrow.Arrow._get_datetime",
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.factory.ArrowFactory.get",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser._generate_pattern_re"
+    ],
+    "tests.test_factory.TestGet.test_three_kwargs": [
+        "arrow.arrow.Arrow.__eq__",
+        "arrow.arrow.Arrow._get_datetime"
+    ],
+    "tests.test_factory.TestGet.test_timestamp_one_arg_no_arg": [
+        "arrow.arrow.Arrow.timestamp"
+    ],
+    "tests.test_factory.TestGet.test_two_args_date_other": [
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_two_args_date_tz_str": [
+        "arrow.factory.ArrowFactory.get",
+        "arrow.arrow.Arrow.fromdate"
+    ],
+    "tests.test_factory.TestGet.test_two_args_date_tzinfo": [
+        "arrow.factory.ArrowFactory.get",
+        "arrow.arrow.Arrow.fromdate"
+    ],
+    "tests.test_factory.TestGet.test_two_args_datetime_other": [
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_two_args_datetime_tz_str": [
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_two_args_datetime_tzinfo": [
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_two_args_other": [
+        "arrow.factory.ArrowFactory.get"
+    ],
+    "tests.test_factory.TestGet.test_two_args_str_list": [
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.factory.ArrowFactory.get",
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_choice_re"
+    ],
+    "tests.test_factory.TestGet.test_two_args_str_str": [
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.factory.ArrowFactory.get",
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_pattern_re"
+    ],
+    "tests.test_factory.TestGet.test_two_args_str_tzinfo": [
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.factory.ArrowFactory.get",
+        "arrow.parser.DateTimeParser.__init__"
+    ],
+    "tests.test_factory.TestGet.test_two_args_twitter_format": [
+        "arrow.factory.ArrowFactory.get",
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_choice_re",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_factory.TestGet.test_two_args_unicode_unicode": [
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._generate_choice_re",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.factory.ArrowFactory.get",
+        "arrow.parser.DateTimeParser._build_datetime",
+        "arrow.parser.DateTimeParser._generate_pattern_re"
+    ],
+    "tests.test_factory.TestGet.test_tzinfo_string_kwargs": [
+        "arrow.arrow.Arrow.fromdatetime",
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_choice_re"
+    ],
+    "tests.test_factory.TestNow.test_no_tz": [
+        "arrow.factory.ArrowFactory.now"
+    ],
+    "tests.test_factory.TestNow.test_tz_str": [
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.arrow.Arrow.__sub__"
+    ],
+    "tests.test_factory.TestNow.test_tzinfo": [
+        "arrow.arrow.Arrow.tzinfo",
+        "arrow.factory.ArrowFactory.now"
+    ],
+    "tests.test_factory.TestUtcNow.test_utcnow": [
+        "arrow.factory.ArrowFactory.utcnow"
+    ],
+    "tests.test_formatter.TestFormatterBuiltinFormats.test_atom": [
+        "arrow.formatter.DateTimeFormatter.format"
+    ],
+    "tests.test_formatter.TestFormatterBuiltinFormats.test_cookie": [
+        "arrow.formatter.DateTimeFormatter.format"
+    ],
+    "tests.test_formatter.TestFormatterBuiltinFormats.test_rfc3339": [
+        "arrow.formatter.DateTimeFormatter.format"
+    ],
+    "tests.test_formatter.TestFormatterBuiltinFormats.test_rfc_1036": [
+        "arrow.formatter.DateTimeFormatter.format"
+    ],
+    "tests.test_formatter.TestFormatterBuiltinFormats.test_rfc_1123": [
+        "arrow.formatter.DateTimeFormatter.format"
+    ],
+    "tests.test_formatter.TestFormatterBuiltinFormats.test_rfc_2822": [
+        "arrow.formatter.DateTimeFormatter.format"
+    ],
+    "tests.test_formatter.TestFormatterBuiltinFormats.test_rfc_822": [
+        "arrow.formatter.DateTimeFormatter.format"
+    ],
+    "tests.test_formatter.TestFormatterBuiltinFormats.test_rfc_850": [
+        "arrow.formatter.DateTimeFormatter.format"
+    ],
+    "tests.test_formatter.TestFormatterBuiltinFormats.test_rss": [
+        "arrow.formatter.DateTimeFormatter.format"
+    ],
+    "tests.test_formatter.TestFormatterBuiltinFormats.test_w3c": [],
+    "tests.test_formatter.TestFormatterFormatToken.test_am_pm": [
+        "arrow.formatter.DateTimeFormatter._format_token"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_day": [
+        "arrow.locales.Locale.day_name"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_escape": [
+        "arrow.formatter.DateTimeFormatter.format"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_format": [
+        "arrow.formatter.DateTimeFormatter.format"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_hour": [
+        "arrow.formatter.DateTimeFormatter._format_token"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_minute": [
+        "arrow.formatter.DateTimeFormatter._format_token"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_month": [
+        "arrow.locales.Locale.month_name",
+        "arrow.formatter.DateTimeFormatter._format_token",
+        "arrow.locales.Locale.month_abbreviation"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_nonsense": [
+        "arrow.formatter.DateTimeFormatter._format_token"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_second": [
+        "arrow.formatter.DateTimeFormatter._format_token"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_sub_second": [
+        "arrow.formatter.DateTimeFormatter._format_token"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_timestamp": [
+        "arrow.formatter.DateTimeFormatter._format_token"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_timezone": [
+        "arrow.formatter.DateTimeFormatter._format_token"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_timezone_formatter": [
+        "arrow.formatter.DateTimeFormatter._format_token"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_week": [
+        "arrow.formatter.DateTimeFormatter._format_token"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken.test_year": [
+        "arrow.locales.Locale.year_full"
+    ],
+    "tests.test_locales.TestAlbanianLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestAlbanianLocale.test_weekday_and_month": [
+        "arrow.arrow.Arrow.isoweekday",
+        "arrow.locales.Locale.day_abbreviation",
+        "arrow.locales.Locale.day_name",
+        "arrow.locales.Locale.month_name",
+        "arrow.locales.Locale.month_abbreviation",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_locales.TestAmharicLocale.test_describe_am": [
+        "arrow.locales.AmharicLocale.describe"
+    ],
+    "tests.test_locales.TestAmharicLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestAmharicLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestAmharicLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestAmharicLocale.test_format_timeframe": [
+        "arrow.locales.AmharicLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestAmharicLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestAmharicLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestArabicLocale.test_timeframes": [
+        "arrow.locales.ArabicLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestArmenianLocale.test_describe": [
+        "arrow.locales.Locale.describe"
+    ],
+    "tests.test_locales.TestArmenianLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestArmenianLocale.test_meridians_hy": [
+        "arrow.locales.Locale.meridian"
+    ],
+    "tests.test_locales.TestArmenianLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestAzerbaijaniLocale.test_describe_mk": [
+        "arrow.locales.Locale.describe"
+    ],
+    "tests.test_locales.TestAzerbaijaniLocale.test_plurals_mk": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestAzerbaijaniLocale.test_relative_mk": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestAzerbaijaniLocale.test_singles_mk": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestBengaliLocale.test_ordinal_number": [
+        "arrow.locales.BengaliLocale._ordinal_number"
+    ],
+    "tests.test_locales.TestBrazilianPortugueseLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe",
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestBulgarianLocale.test_plurals2": [
+        "arrow.locales.SlavicBaseLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestChineseCNLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestChineseCNLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestChineseCNLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestChineseCNLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestChineseTWLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestChineseTWLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestChineseTWLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestChineseTWLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestCroatianLocale.test_format_timeframe": [
+        "arrow.locales.CroatianLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestCroatianLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestCustomLocale.test_custom_locale_subclass": [
+        "arrow.locales.get_locale",
+        "arrow.locales.Locale.__init_subclass__"
+    ],
+    "tests.test_locales.TestCzechLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestCzechLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestCzechLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestCzechLocale.test_format_timeframe": [
+        "arrow.locales.CzechLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestDanishLocale.test_describe": [
+        "arrow.locales.Locale.describe"
+    ],
+    "tests.test_locales.TestDanishLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestDanishLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestDanishLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestDanishLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestDanishLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestDanishLocale.test_plurals": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestDanishLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestDutchLocale.test_plurals": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestEnglishLocale.test_describe": [
+        "arrow.locales.EnglishLocale.describe"
+    ],
+    "tests.test_locales.TestEnglishLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestEnglishLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestEnglishLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestEnglishLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestEnglishLocale.test_meridian_invalid_token": [
+        "arrow.locales.Locale.meridian"
+    ],
+    "tests.test_locales.TestEnglishLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestEsperantoLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestEsperantoLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestEstonianLocale.test_format_timeframe": [
+        "arrow.locales.EstonianLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestFinnishLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestFinnishLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestFinnishLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestFinnishLocale.test_format_timeframe": [
+        "arrow.locales.FinnishLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestFinnishLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestFrenchCanadianLocale.test_month_abbreviation": [],
+    "tests.test_locales.TestFrenchLocale.test_month_abbreviation": [],
+    "tests.test_locales.TestFrenchLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestGeorgianLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestGeorgianLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestGermanLocale.test_define": [
+        "arrow.locales.GermanBaseLocale.describe"
+    ],
+    "tests.test_locales.TestGermanLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestGermanLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestHebrewLocale.test_couple_of_timeframe": [
+        "arrow.locales.HebrewLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestHebrewLocale.test_describe_multi": [
+        "arrow.locales.HebrewLocale.describe_multi"
+    ],
+    "tests.test_locales.TestHindiLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestHindiLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestHindiLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestHindiLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestHongKongLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestHongKongLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestHongKongLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestHongKongLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestHungarianLocale.test_format_timeframe": [
+        "arrow.locales.HungarianLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestIcelandicLocale.test_format_timeframe": [
+        "arrow.locales.IcelandicLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestIndonesianLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestIndonesianLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestIndonesianLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestIndonesianLocale.test_timeframes": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestItalianLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestJapaneseLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestKazakhLocale.test_describe_mk": [
+        "arrow.locales.Locale.describe"
+    ],
+    "tests.test_locales.TestKazakhLocale.test_plurals_mk": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestKazakhLocale.test_relative_mk": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestKazakhLocale.test_singles_mk": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestKoreanLocale.test_format_relative": [
+        "arrow.locales.KoreanLocale._format_relative"
+    ],
+    "tests.test_locales.TestKoreanLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestKoreanLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestLaotianLocale.test_format_relative_future": [
+        "arrow.locales.LaotianLocale._format_relative"
+    ],
+    "tests.test_locales.TestLaotianLocale.test_format_relative_now": [
+        "arrow.locales.LaotianLocale._format_relative"
+    ],
+    "tests.test_locales.TestLaotianLocale.test_format_relative_past": [
+        "arrow.locales.LaotianLocale._format_relative"
+    ],
+    "tests.test_locales.TestLaotianLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestLaotianLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestLaotianLocale.test_year_abbreviation": [
+        "arrow.locales.LaotianLocale.year_abbreviation"
+    ],
+    "tests.test_locales.TestLaotianLocale.test_year_full": [
+        "arrow.locales.LaotianLocale.year_full"
+    ],
+    "tests.test_locales.TestLatinLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestLatinLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestLatvianLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestLatvianLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestLithuanianLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestLithuanianLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestLocaleValidation.test_duplicated_locale_name": [
+        "arrow.locales.Locale.__init_subclass__"
+    ],
+    "tests.test_locales.TestLocaleValidation.test_locale_name_validation": [],
+    "tests.test_locales.TestLocaleValidation.test_locale_validation": [],
+    "tests.test_locales.TestLuxembourgishLocale.test_define": [
+        "arrow.locales.LuxembourgishLocale.describe"
+    ],
+    "tests.test_locales.TestLuxembourgishLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestLuxembourgishLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestMacedonianLocale.test_describe_mk": [
+        "arrow.locales.Locale.describe"
+    ],
+    "tests.test_locales.TestMacedonianLocale.test_meridians_mk": [
+        "arrow.locales.Locale.meridian"
+    ],
+    "tests.test_locales.TestMacedonianLocale.test_multi_describe_mk": [
+        "arrow.locales.Locale.describe_multi"
+    ],
+    "tests.test_locales.TestMacedonianLocale.test_plurals_mk": [
+        "arrow.locales.SlavicBaseLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestMacedonianLocale.test_relative_mk": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestMacedonianLocale.test_singles_mk": [
+        "arrow.locales.SlavicBaseLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestMalayLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestMalayLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestMalayalamLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestMalayalamLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestMalayalamLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestMalayalamLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestMalteseLocale.test_format_timeframe": [
+        "arrow.locales.MalteseLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestMalteseLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestMarathiLocale.test_dateCoreFunctionality": [
+        "arrow.locales.Locale.day_abbreviation",
+        "arrow.locales.Locale.month_abbreviation",
+        "arrow.locales.Locale.month_name"
+    ],
+    "tests.test_locales.TestMarathiLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestMarathiLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestMarathiLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestMarathiLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestMarathiLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestModule.test_get_locale": [
+        "arrow.locales.get_locale"
+    ],
+    "tests.test_locales.TestModule.test_get_locale_by_class_name": [
+        "arrow.locales.get_locale_by_class_name"
+    ],
+    "tests.test_locales.TestModule.test_locales": [],
+    "tests.test_locales.TestNepaliLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestNepaliLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestNepaliLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestNepaliLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestNewNorwegianLocale.test_describe": [
+        "arrow.locales.Locale.describe"
+    ],
+    "tests.test_locales.TestNewNorwegianLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestNewNorwegianLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestNewNorwegianLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestNewNorwegianLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestNewNorwegianLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestNewNorwegianLocale.test_plurals": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestNewNorwegianLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestNorwegianLocale.test_describe": [
+        "arrow.locales.Locale.describe"
+    ],
+    "tests.test_locales.TestNorwegianLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestNorwegianLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestNorwegianLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestNorwegianLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestNorwegianLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestNorwegianLocale.test_plurals": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestNorwegianLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestOdiaLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestOdiaLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestOdiaLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestOdiaLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestOdiaLocale.test_ordinal_number": [
+        "arrow.locales.OdiaLocale._ordinal_number"
+    ],
+    "tests.test_locales.TestPolishLocale.test_plurals": [
+        "arrow.locales.SlavicBaseLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestPortugueseLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestRomanianLocale.test_relative_timeframes": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestRomanianLocale.test_timeframes": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestRussianLocale.test_plurals2": [
+        "arrow.locales.SlavicBaseLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestRussianLocale.test_plurals_relative": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestRussianLocale.test_plurals_timeframe": [
+        "arrow.locales.SlavicBaseLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestRussianLocale.test_singles_relative": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestRussianLocale.test_singles_timeframe": [
+        "arrow.locales.SlavicBaseLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestSamiLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestSamiLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestSerbianLocale.test_format_timeframe": [
+        "arrow.locales.SerbianLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestSerbianLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestSinhalaLocale.test_describe_si": [
+        "arrow.locales.SinhalaLocale.describe"
+    ],
+    "tests.test_locales.TestSinhalaLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestSinhalaLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestSinhalaLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestSinhalaLocale.test_format_timeframe": [
+        "arrow.locales.SinhalaLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestSinhalaLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestSlovakLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestSlovakLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestSlovakLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestSlovakLocale.test_format_timeframe": [
+        "arrow.locales.SlovakLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestSpanishLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestSpanishLocale.test_ordinal_number": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestSwahiliLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestSwahiliLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestSwahiliLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestSwahiliLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestSwedishLocale.test_plurals": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestTagalogLocale.test_describe_tl": [
+        "arrow.locales.Locale.describe"
+    ],
+    "tests.test_locales.TestTagalogLocale.test_meridians_tl": [
+        "arrow.locales.Locale.meridian"
+    ],
+    "tests.test_locales.TestTagalogLocale.test_multi_describe_tl": [
+        "arrow.locales.Locale.describe_multi"
+    ],
+    "tests.test_locales.TestTagalogLocale.test_ordinal_number_tl": [
+        "arrow.locales.Locale.ordinal_number"
+    ],
+    "tests.test_locales.TestTagalogLocale.test_plurals_tl": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestTagalogLocale.test_relative_tl": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestTagalogLocale.test_singles_tl": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestTamilLocale.test_format_relative_future": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestTamilLocale.test_format_relative_now": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestTamilLocale.test_format_relative_past": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestTamilLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestTamilLocale.test_ordinal_number": [
+        "arrow.locales.TamilLocale._ordinal_number"
+    ],
+    "tests.test_locales.TestTamilLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_locales.TestThaiLocale.test_format_relative_future": [
+        "arrow.locales.ThaiLocale._format_relative"
+    ],
+    "tests.test_locales.TestThaiLocale.test_format_relative_now": [
+        "arrow.locales.ThaiLocale._format_relative"
+    ],
+    "tests.test_locales.TestThaiLocale.test_format_relative_past": [
+        "arrow.locales.ThaiLocale._format_relative"
+    ],
+    "tests.test_locales.TestThaiLocale.test_year_abbreviation": [
+        "arrow.locales.ThaiLocale.year_abbreviation"
+    ],
+    "tests.test_locales.TestThaiLocale.test_year_full": [
+        "arrow.locales.ThaiLocale.year_full"
+    ],
+    "tests.test_locales.TestTurkishLocale.test_describe_mk": [
+        "arrow.locales.Locale.describe"
+    ],
+    "tests.test_locales.TestTurkishLocale.test_meridians_mk": [
+        "arrow.locales.Locale.meridian"
+    ],
+    "tests.test_locales.TestTurkishLocale.test_plurals_mk": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestTurkishLocale.test_relative_mk": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestTurkishLocale.test_singles_mk": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestUrduLocale.test_format_timeframe": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestUrduLocale.test_weekday_and_month": [
+        "arrow.arrow.Arrow.isoweekday",
+        "arrow.locales.Locale.day_abbreviation",
+        "arrow.locales.Locale.day_name",
+        "arrow.locales.Locale.month_name",
+        "arrow.locales.Locale.month_abbreviation",
+        "arrow.arrow.Arrow.__init__"
+    ],
+    "tests.test_locales.TestUzbekLocale.test_describe_mk": [
+        "arrow.locales.Locale.describe"
+    ],
+    "tests.test_locales.TestUzbekLocale.test_plurals_mk": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestUzbekLocale.test_relative_mk": [
+        "arrow.locales.Locale._format_relative"
+    ],
+    "tests.test_locales.TestUzbekLocale.test_singles_mk": [
+        "arrow.locales.Locale._format_timeframe"
+    ],
+    "tests.test_locales.TestZuluLocale.test_format_timeframe": [
+        "arrow.locales.ZuluLocale._format_timeframe"
+    ],
+    "tests.test_locales.TestZuluLocale.test_weekday": [
+        "arrow.arrow.Arrow.isoweekday"
+    ],
+    "tests.test_parser.TestDateTimeParser.test_YY_and_YYYY_format_list": [
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParser.test_parse_multiformat": [
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParser.test_parse_multiformat_all_fail": [
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParser.test_parse_multiformat_unself_expected_fail": [
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParser.test_parse_token_invalid_meridians": [
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParser.test_parse_token_nonsense": [
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParser.test_parser_1_line_caching": [
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._generate_choice_re"
+    ],
+    "tests.test_parser.TestDateTimeParser.test_parser_multiple_line_caching": [
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._generate_choice_re",
+        "arrow.locales.get_locale"
+    ],
+    "tests.test_parser.TestDateTimeParser.test_parser_no_caching": [
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._generate_choice_re",
+        "arrow.locales.get_locale"
+    ],
+    "tests.test_parser.TestDateTimeParser.test_timestamp_format_list": [
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_pattern_re"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_W": [],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY": [],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_DDDD": [
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_DDDD_HH_mm_ssZ": [
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM": [
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DD": [
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DDDD": [
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DDTHH": [
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DDTHHZ": [
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DDTHH_mm": [
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DDTHH_mmZ": [
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DDTHH_mm_ss": [
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DDTHH_mm_ssZ": [
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DDTHH_mm_ss_S": [
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DDTHH_mm_ss_SZ": [
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DD_HH": [
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DD_HH_mm": [
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DD_HH_mmZ": [
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DD_HH_mm_ss": [
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DD_HH_mm_ssZ": [
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_gnu_date": [
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_invalid_Z": [
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_invalid_time": [
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_iso8601_basic_format": [
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_isoformat": [
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_midnight_end_day": [
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_parse_iso_normalize_whitespace": [
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_parse_iso_with_extra_words_at_start_and_end_invalid": [
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_parse_iso_with_leading_and_trailing_whitespace": [
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserISO.test_parse_subsecond": [
+        "arrow.parser.DateTimeParser.parse_iso"
+    ],
+    "tests.test_parser.TestDateTimeParserMeridians.test_es_meridians": [
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserMeridians.test_fr_meridians": [
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserMeridians.test_localized_meridians_capitalized": [
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._build_datetime",
+        "arrow.parser.DateTimeParser._generate_choice_re",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.locales.get_locale"
+    ],
+    "tests.test_parser.TestDateTimeParserMeridians.test_localized_meridians_lowercase": [
+        "arrow.parser.DateTimeParser._generate_choice_re",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._build_datetime",
+        "arrow.locales.get_locale",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserMeridians.test_meridians_capitalized": [
+        "arrow.parser.DateTimeParser._build_datetime",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserMeridians.test_meridians_lowercase": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._build_datetime",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthName.test_localized_month_abbreviation": [
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._build_datetime",
+        "arrow.parser.DateTimeParser._generate_choice_re",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.locales.get_locale",
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthName.test_localized_month_name": [
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._build_datetime",
+        "arrow.parser.DateTimeParser._generate_choice_re",
+        "arrow.locales.get_locale",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.locales.Locale.month_number"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthName.test_month_alllower": [
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.locales.Locale.month_number",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._build_datetime"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthName.test_month_allupper": [
+        "arrow.locales.Locale.month_number",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser._build_datetime"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthName.test_month_capitalized": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._build_datetime",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.locales.Locale.month_number"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthName.test_shortmonth_alllower": [
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.locales.Locale.month_number",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthName.test_shortmonth_allupper": [
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.locales.Locale.month_number",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthName.test_shortmonth_capitalized": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._build_datetime",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.locales.Locale.month_number"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthOrdinalDay.test_english": [
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthOrdinalDay.test_french": [
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthOrdinalDay.test_italian": [
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.locales.get_locale",
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthOrdinalDay.test_spanish": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser.__init__"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_DDDD_only": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_DDD_only": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_HH_24": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_W": [
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_YYYY_DDD": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_YYYY_DDDD": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_YYYY_MM_DDDD": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_am": [
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_ddd_and_dddd": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_ddd_and_dddd_ignore_case": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._build_datetime"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_ddd_and_dddd_then_format": [
+        "arrow.formatter.DateTimeFormatter.format",
+        "arrow.formatter.DateTimeFormatter.__init__",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._build_datetime"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_expanded_timestamp": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._build_datetime",
+        "arrow.util.normalize_timestamp"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_list": [
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_long_year": [
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_names": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_negative_timestamp": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._build_datetime",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_normalize_whitespace": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser._build_datetime"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_numbers": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_parse_no_match": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_pattern_re"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_pm": [
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_separators": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_pattern_re"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_subsecond": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_subsecond_rounding": [
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_multiformat"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_subsecond_rounding_overflow": [
+        "arrow.parser.DateTimeParser.parse_iso",
+        "arrow.parser.DateTimeParser._parse_multiformat",
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_timestamp": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser._build_datetime"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_tz_hours_only": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser._generate_pattern_re"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_tz_name_zzz": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_tz_zz": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_unrecognized_token": [
+        "arrow.parser.DateTimeParser._generate_choice_re",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._generate_pattern_re"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_with_extra_words_at_start_and_end_invalid": [
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_with_extra_words_at_start_and_end_valid": [
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._build_datetime"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_with_leading_and_trailing_whitespace": [
+        "arrow.parser.DateTimeParser._build_datetime",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_with_punctuation_fences": [
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._build_datetime"
+    ],
+    "tests.test_parser.TestDateTimeParserParse.test_parse_year_two_digit": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser._generate_pattern_re"
+    ],
+    "tests.test_parser.TestDateTimeParserRegex.test_digits": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_escape": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_format_am_pm": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_format_day": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_format_hour": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_format_minute": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_format_month": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_format_second": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_format_subsecond": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_format_timestamp": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_format_timestamp_milli": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_format_tz": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_format_year": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_month_abbreviations": [
+        "arrow.parser.DateTimeParser._generate_choice_re",
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.locales.get_locale"
+    ],
+    "tests.test_parser.TestDateTimeParserRegex.test_month_names": [
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.locales.get_locale"
+    ],
+    "tests.test_parser.TestDateTimeParserRegex.test_time": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_timestamp": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_timestamp_milli": [],
+    "tests.test_parser.TestDateTimeParserRegex.test_tz": [],
+    "tests.test_parser.TestDateTimeParserSearchDate.test_escape": [
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserSearchDate.test_parse_search": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token"
+    ],
+    "tests.test_parser.TestDateTimeParserSearchDate.test_parse_search_fails": [
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestDateTimeParserSearchDate.test_parse_search_locale_with_names": [
+        "arrow.parser.DateTimeParser._generate_choice_re",
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser.__init__",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.locales.get_locale",
+        "arrow.parser.DateTimeParser._build_datetime"
+    ],
+    "tests.test_parser.TestDateTimeParserSearchDate.test_parse_search_with_names": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser._build_datetime"
+    ],
+    "tests.test_parser.TestDateTimeParserSearchDate.test_parse_search_with_numbers": [
+        "arrow.parser.DateTimeParser.parse",
+        "arrow.parser.DateTimeParser._parse_token",
+        "arrow.parser.DateTimeParser._generate_pattern_re"
+    ],
+    "tests.test_parser.TestFuzzInput.test_no_match_group": [
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestFuzzInput.test_regex_module_error": [
+        "arrow.parser.DateTimeParser._generate_pattern_re",
+        "arrow.parser.DateTimeParser.parse"
+    ],
+    "tests.test_parser.TestTzinfoParser.test_parse_fails": [
+        "arrow.parser.TzinfoParser.parse"
+    ],
+    "tests.test_parser.TestTzinfoParser.test_parse_iso": [
+        "arrow.parser.TzinfoParser.parse"
+    ],
+    "tests.test_parser.TestTzinfoParser.test_parse_local": [
+        "arrow.parser.TzinfoParser.parse"
+    ],
+    "tests.test_parser.TestTzinfoParser.test_parse_str": [
+        "arrow.parser.TzinfoParser.parse"
+    ],
+    "tests.test_parser.TestTzinfoParser.test_parse_utc": [
+        "arrow.parser.TzinfoParser.parse"
+    ],
+    "tests.test_parser.TestTzinfoParser.test_parse_utc_withoffset": [
+        "arrow.parser.TzinfoParser.parse"
+    ],
+    "tests.test_util.TestUtil.test_is_timestamp": [
+        "arrow.util.is_timestamp"
+    ],
+    "tests.test_util.TestUtil.test_iso_gregorian": [
+        "arrow.util.iso_to_gregorian"
+    ],
+    "tests.test_util.TestUtil.test_next_weekday": [
+        "arrow.util.next_weekday"
+    ],
+    "tests.test_util.TestUtil.test_normalize_timestamp": [
+        "arrow.util.normalize_timestamp"
+    ],
+    "tests.test_util.TestUtil.test_validate_ordinal": [
+        "arrow.util.validate_ordinal"
+    ]
+}

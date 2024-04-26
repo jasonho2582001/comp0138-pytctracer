@@ -1,0 +1,321 @@
+{
+    "tests.test_arrow.TestArrowDatetimeInterface.test_weekday": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.arrow.Arrow.weekday"
+        ]
+    },
+    "tests.test_arrow.TestArrowHumanize.test_week": {
+        "False Negatives": [
+            "arrow.arrow.Arrow.humanize"
+        ],
+        "False Positives": [
+            "arrow.locales.EnglishLocale.describe"
+        ],
+        "True Positives": []
+    },
+    "tests.test_arrow.TestArrowInterval.test_exact": {
+        "False Negatives": [],
+        "False Positives": [
+            "arrow.arrow.Arrow.__init__"
+        ],
+        "True Positives": [
+            "arrow.arrow.Arrow.interval"
+        ]
+    },
+    "tests.test_arrow.TestArrowMath.test_rsub_other": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.arrow.Arrow.__rsub__"
+        ]
+    },
+    "tests.test_arrow.TestArrowMath.test_sub_timedelta": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.arrow.Arrow.__sub__"
+        ]
+    },
+    "tests.test_arrow.TestArrowRange.test_arrow": {
+        "False Negatives": [
+            "arrow.arrow.Arrow.range"
+        ],
+        "False Positives": [
+            "arrow.arrow.Arrow._get_iteration_params",
+            "arrow.arrow.Arrow.__getattr__",
+            "arrow.arrow.Arrow._get_frames"
+        ],
+        "True Positives": []
+    },
+    "tests.test_arrow.TestArrowRange.test_aware_same_tz": {
+        "False Negatives": [],
+        "False Positives": [
+            "arrow.arrow.Arrow.__init__"
+        ],
+        "True Positives": [
+            "arrow.arrow.Arrow.range"
+        ]
+    },
+    "tests.test_arrow.TestArrowRange.test_naive_tz": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.arrow.Arrow.range"
+        ]
+    },
+    "tests.test_arrow.TestArrowReplace.test_replace_tzinfo": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.arrow.Arrow.replace"
+        ]
+    },
+    "tests.test_arrow.TestArrowShift.test_shift": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.arrow.Arrow.shift"
+        ]
+    },
+    "tests.test_arrow.TestArrowSpanRange.test_hour": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.arrow.Arrow.span_range"
+        ]
+    },
+    "tests.test_factory.TestGet.test_no_args": {
+        "False Negatives": [
+            "arrow.arrow.Arrow.utcnow",
+            "arrow.factory.ArrowFactory.get"
+        ],
+        "False Positives": [],
+        "True Positives": []
+    },
+    "tests.test_factory.TestGet.test_two_args_date_tzinfo": {
+        "False Negatives": [
+            "arrow.arrow.Arrow.fromdate"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.factory.ArrowFactory.get"
+        ]
+    },
+    "tests.test_factory.TestGet.test_two_args_datetime_tzinfo": {
+        "False Negatives": [
+            "arrow.factory.ArrowFactory.get"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.arrow.Arrow.fromdatetime"
+        ]
+    },
+    "tests.test_factory.TestGet.test_two_args_other": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.factory.ArrowFactory.get"
+        ]
+    },
+    "tests.test_factory.TestGet.test_tzinfo_string_kwargs": {
+        "False Negatives": [
+            "arrow.arrow.Arrow.fromdatetime",
+            "arrow.factory.ArrowFactory.get"
+        ],
+        "False Positives": [
+            "arrow.parser.DateTimeParser.__init__"
+        ],
+        "True Positives": []
+    },
+    "tests.test_formatter.TestFormatterFormatToken.test_am_pm": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.formatter.DateTimeFormatter._format_token"
+        ]
+    },
+    "tests.test_locales.TestAmharicLocale.test_format_relative_future": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale._format_relative"
+        ]
+    },
+    "tests.test_locales.TestAmharicLocale.test_format_relative_past": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale._format_relative"
+        ]
+    },
+    "tests.test_locales.TestChineseTWLocale.test_format_relative_now": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale._format_relative"
+        ]
+    },
+    "tests.test_locales.TestEnglishLocale.test_format_timeframe": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale._format_timeframe"
+        ]
+    },
+    "tests.test_locales.TestEsperantoLocale.test_ordinal_number": {
+        "False Negatives": [
+            "arrow.locales.EsperantoLocale._ordinal_number"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale.ordinal_number"
+        ]
+    },
+    "tests.test_locales.TestFinnishLocale.test_format_relative_future": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale._format_relative"
+        ]
+    },
+    "tests.test_locales.TestFrenchLocale.test_ordinal_number": {
+        "False Negatives": [
+            "arrow.locales.FrenchBaseLocale._ordinal_number"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale.ordinal_number"
+        ]
+    },
+    "tests.test_locales.TestHindiLocale.test_format_relative_now": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale._format_relative"
+        ]
+    },
+    "tests.test_locales.TestHongKongLocale.test_format_relative_now": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale._format_relative"
+        ]
+    },
+    "tests.test_locales.TestLuxembourgishLocale.test_weekday": {
+        "False Negatives": [
+            "arrow.locales.Locale.day_abbreviation",
+            "arrow.locales.Locale.day_name"
+        ],
+        "False Positives": [
+            "arrow.arrow.Arrow.isoweekday"
+        ],
+        "True Positives": []
+    },
+    "tests.test_locales.TestMarathiLocale.test_format_timeframe": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale._format_timeframe"
+        ]
+    },
+    "tests.test_locales.TestNewNorwegianLocale.test_format_relative_now": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale._format_relative"
+        ]
+    },
+    "tests.test_locales.TestSlovakLocale.test_format_relative_now": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale._format_relative"
+        ]
+    },
+    "tests.test_locales.TestTamilLocale.test_format_relative_future": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale._format_relative"
+        ]
+    },
+    "tests.test_locales.TestTurkishLocale.test_singles_mk": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.locales.Locale._format_timeframe"
+        ]
+    },
+    "tests.test_parser.TestDateTimeParserISO.test_W": {
+        "False Negatives": [
+            "arrow.parser.DateTimeParser._parse_token",
+            "arrow.parser.DateTimeParser.parse_iso"
+        ],
+        "False Positives": [],
+        "True Positives": []
+    },
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DD": {
+        "False Negatives": [
+            "arrow.parser.DateTimeParser._parse_token",
+            "arrow.parser.DateTimeParser.parse_iso"
+        ],
+        "False Positives": [
+            "arrow.parser.DateTimeParser._parse_multiformat"
+        ],
+        "True Positives": []
+    },
+    "tests.test_parser.TestDateTimeParserISO.test_YYYY_MM_DD_HH_mm": {
+        "False Negatives": [
+            "arrow.parser.DateTimeParser._parse_token"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.parser.DateTimeParser.parse_iso"
+        ]
+    },
+    "tests.test_parser.TestDateTimeParserISO.test_parse_iso_with_extra_words_at_start_and_end_invalid": {
+        "False Negatives": [
+            "arrow.parser.DateTimeParser._parse_multiformat"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.parser.DateTimeParser.parse_iso"
+        ]
+    },
+    "tests.test_parser.TestDateTimeParserMonthName.test_shortmonth_capitalized": {
+        "False Negatives": [
+            "arrow.parser.DateTimeParser._parse_token"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.parser.DateTimeParser.parse"
+        ]
+    },
+    "tests.test_parser.TestDateTimeParserMonthOrdinalDay.test_italian": {
+        "False Negatives": [],
+        "False Positives": [
+            "arrow.locales.get_locale"
+        ],
+        "True Positives": [
+            "arrow.parser.DateTimeParser.parse"
+        ]
+    },
+    "tests.test_parser.TestDateTimeParserParse.test_parse_timestamp": {
+        "False Negatives": [
+            "arrow.parser.DateTimeParser._parse_token"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.parser.DateTimeParser.parse"
+        ]
+    },
+    "tests.test_parser.TestTzinfoParser.test_parse_utc_withoffset": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "arrow.parser.TzinfoParser.parse"
+        ]
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "tests.test_crypto.TestCRL": [
+        "src.OpenSSL.crypto.CRL"
+    ],
+    "tests.test_crypto.TestEllipticCurve": [],
+    "tests.test_crypto.TestEllipticCurveHash": [],
+    "tests.test_crypto.TestFunction": [],
+    "tests.test_crypto.TestLoadCertificate": [],
+    "tests.test_crypto.TestLoadPublicKey": [],
+    "tests.test_crypto.TestNetscapeSPKI": [
+        "src.OpenSSL.crypto.NetscapeSPKI"
+    ],
+    "tests.test_crypto.TestPKCS12": [
+        "src.OpenSSL.crypto.PKCS12"
+    ],
+    "tests.test_crypto.TestPKey": [
+        "src.OpenSSL.crypto.PKey"
+    ],
+    "tests.test_crypto.TestRevoked": [
+        "src.OpenSSL.crypto.Revoked"
+    ],
+    "tests.test_crypto.TestSignVerify": [],
+    "tests.test_crypto.TestX509": [
+        "src.OpenSSL.crypto.X509"
+    ],
+    "tests.test_crypto.TestX509Ext": [],
+    "tests.test_crypto.TestX509Name": [
+        "src.OpenSSL.crypto.X509Name"
+    ],
+    "tests.test_crypto.TestX509Req": [
+        "src.OpenSSL.crypto.X509Req"
+    ],
+    "tests.test_crypto.TestX509Store": [
+        "src.OpenSSL.crypto.X509Store"
+    ],
+    "tests.test_crypto.TestX509StoreContext": [
+        "src.OpenSSL.crypto.X509StoreContext"
+    ],
+    "tests.test_crypto._PKeyInteractionTestsMixin": [],
+    "tests.test_debug": [],
+    "tests.test_rand.TestRand": [],
+    "tests.test_ssl.TestApplicationLayerProtoNegotiation": [],
+    "tests.test_ssl.TestConnection": [
+        "src.OpenSSL.SSL.Connection"
+    ],
+    "tests.test_ssl.TestConnectionGetCipherList": [],
+    "tests.test_ssl.TestConnectionRecvInto": [],
+    "tests.test_ssl.TestConnectionRenegotiate": [],
+    "tests.test_ssl.TestConnectionSend": [],
+    "tests.test_ssl.TestConnectionSendall": [],
+    "tests.test_ssl.TestConstants": [],
+    "tests.test_ssl.TestContext": [
+        "src.OpenSSL.SSL.Context"
+    ],
+    "tests.test_ssl.TestContextConnection": [],
+    "tests.test_ssl.TestDTLS": [],
+    "tests.test_ssl.TestError": [],
+    "tests.test_ssl.TestInfoConstants": [],
+    "tests.test_ssl.TestMemoryBIO": [],
+    "tests.test_ssl.TestOCSP": [],
+    "tests.test_ssl.TestRequires": [],
+    "tests.test_ssl.TestServerNameCallback": [],
+    "tests.test_ssl.TestSession": [],
+    "tests.test_ssl.TestVersion": [],
+    "tests.test_util.TestErrors": [],
+    "tests.util.EqualityTestsMixin": []
+}

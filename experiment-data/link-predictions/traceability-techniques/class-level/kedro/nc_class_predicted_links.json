@@ -1,0 +1,175 @@
+{
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader": [
+        "kedro.config.omegaconf_config.OmegaConfigLoader"
+    ],
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone": [],
+    "tests.framework.cli.hooks.test_manager": [],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageCommand": [],
+    "tests.framework.cli.micropkg.test_micropkg_package.TestMicropkgPackageFromManifest": [],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand": [],
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullFromManifest": [],
+    "tests.framework.cli.micropkg.test_micropkg_requirements.TestMicropkgRequirements": [],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineCreateCommand": [],
+    "tests.framework.cli.pipeline.test_pipeline.TestPipelineDeleteCommand": [],
+    "tests.framework.cli.pipeline.test_pipeline.TestSyncDirs": [],
+    "tests.framework.cli.test_catalog": [
+        "kedro.framework.cli.catalog"
+    ],
+    "tests.framework.cli.test_catalog.TestCatalogCreateCommand": [],
+    "tests.framework.cli.test_catalog.TestCatalogListCommand": [],
+    "tests.framework.cli.test_cli.TestCliCommands": [],
+    "tests.framework.cli.test_cli.TestCliUtils": [],
+    "tests.framework.cli.test_cli.TestCommandCollection": [
+        "kedro.framework.cli.utils.CommandCollection"
+    ],
+    "tests.framework.cli.test_cli.TestEntryPoints": [],
+    "tests.framework.cli.test_cli.TestForwardCommand": [],
+    "tests.framework.cli.test_cli.TestKedroCLI": [
+        "kedro.framework.cli.cli.KedroCLI"
+    ],
+    "tests.framework.cli.test_cli.TestRunCommand": [],
+    "tests.framework.cli.test_cli_hooks.TestKedroCLIHooks": [],
+    "tests.framework.cli.test_jupyter.TestCreateKernel": [],
+    "tests.framework.cli.test_jupyter.TestJupyterLabCommand": [],
+    "tests.framework.cli.test_jupyter.TestJupyterNotebookCommand": [],
+    "tests.framework.cli.test_jupyter.TestJupyterSetupCommand": [],
+    "tests.framework.cli.test_project.TestIpythonCommand": [],
+    "tests.framework.cli.test_project.TestPackageCommand": [],
+    "tests.framework.cli.test_registry": [
+        "kedro.framework.cli.registry"
+    ],
+    "tests.framework.cli.test_registry.TestRegistryDescribeCommand": [],
+    "tests.framework.cli.test_starters": [
+        "kedro.framework.cli.starters"
+    ],
+    "tests.framework.cli.test_starters.TestConvertToolNamesToNumbers": [],
+    "tests.framework.cli.test_starters.TestFlagsNotAllowed": [],
+    "tests.framework.cli.test_starters.TestNameFromCLI": [],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileInvalid": [],
+    "tests.framework.cli.test_starters.TestNewFromConfigFileValid": [],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsInvalid": [],
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsValid": [],
+    "tests.framework.cli.test_starters.TestNewWithStarterInvalid": [],
+    "tests.framework.cli.test_starters.TestNewWithStarterValid": [],
+    "tests.framework.cli.test_starters.TestParseToolsInput": [],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromCLI": [],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromConfigFile": [],
+    "tests.framework.cli.test_starters.TestToolsAndExampleFromUserPrompts": [],
+    "tests.framework.cli.test_starters.TestValidateSelection": [],
+    "tests.framework.context.test_context": [
+        "kedro.framework.context.context"
+    ],
+    "tests.framework.context.test_context.TestKedroContext": [
+        "kedro.framework.context.context.KedroContext"
+    ],
+    "tests.framework.hooks.test_manager": [
+        "kedro.framework.hooks.manager"
+    ],
+    "tests.framework.project.test_logging": [],
+    "tests.framework.project.test_pipeline_discovery": [],
+    "tests.framework.project.test_pipeline_registry": [],
+    "tests.framework.project.test_settings": [],
+    "tests.framework.session.test_session": [
+        "kedro.framework.session.session"
+    ],
+    "tests.framework.session.test_session.TestKedroSession": [
+        "kedro.framework.session.session.KedroSession"
+    ],
+    "tests.framework.session.test_session_extension_hooks.TestAsyncNodeDatasetHooks": [],
+    "tests.framework.session.test_session_extension_hooks.TestBeforeNodeRunHookWithInputUpdates": [],
+    "tests.framework.session.test_session_extension_hooks.TestCatalogHooks": [],
+    "tests.framework.session.test_session_extension_hooks.TestDatasetHooks": [],
+    "tests.framework.session.test_session_extension_hooks.TestKedroContextSpecsHook": [],
+    "tests.framework.session.test_session_extension_hooks.TestNodeHooks": [],
+    "tests.framework.session.test_session_extension_hooks.TestPipelineHooks": [],
+    "tests.framework.session.test_session_hook_manager.TestSessionHookManager": [],
+    "tests.framework.session.test_store.TestBaseStore": [],
+    "tests.framework.session.test_store.TestShelveStore": [
+        "kedro.framework.session.shelvestore.ShelveStore"
+    ],
+    "tests.framework.test_startup.TestBootstrapProject": [],
+    "tests.framework.test_startup.TestGetProjectMetadata": [],
+    "tests.framework.test_startup.TestIsProject": [],
+    "tests.framework.test_startup.TestValidateSourcePath": [],
+    "tests.io.test_cached_dataset.TestCachedDataset": [
+        "kedro.io.cached_dataset.CachedDataset"
+    ],
+    "tests.io.test_core.TestAbstractVersionedDataset": [
+        "kedro.io.core.AbstractVersionedDataset"
+    ],
+    "tests.io.test_core.TestCoreFunctions": [],
+    "tests.io.test_data_catalog.TestDataCatalog": [
+        "kedro.io.data_catalog.DataCatalog"
+    ],
+    "tests.io.test_data_catalog.TestDataCatalogDatasetFactories": [],
+    "tests.io.test_data_catalog.TestDataCatalogFromConfig": [],
+    "tests.io.test_data_catalog.TestDataCatalogVersioned": [],
+    "tests.io.test_lambda_dataset": [],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetExists": [],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetLoad": [],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetRelease": [],
+    "tests.io.test_lambda_dataset.TestLambdaDatasetSave": [],
+    "tests.io.test_memory_dataset": [
+        "kedro.io.memory_dataset"
+    ],
+    "tests.io.test_memory_dataset.TestMemoryDataset": [
+        "kedro.io.memory_dataset.MemoryDataset"
+    ],
+    "tests.io.test_shared_memory_dataset.TestSharedMemoryDataset": [
+        "kedro.io.shared_memory_dataset.SharedMemoryDataset"
+    ],
+    "tests.ipython.test_ipython.TestLoadIPythonExtension": [],
+    "tests.ipython.test_ipython.TestLoadKedroObjects": [],
+    "tests.ipython.test_ipython.TestLoadNodeMagic": [],
+    "tests.ipython.test_ipython.TestProjectPathResolution": [],
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper": [],
+    "tests.pipeline.test_node": [
+        "kedro.pipeline.node"
+    ],
+    "tests.pipeline.test_node.TestNames": [],
+    "tests.pipeline.test_node.TestNodeComparisons": [],
+    "tests.pipeline.test_node.TestTag": [],
+    "tests.pipeline.test_node.TestValidNode": [],
+    "tests.pipeline.test_node_run": [],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidInput": [],
+    "tests.pipeline.test_node_run.TestNodeRunInvalidOutput": [],
+    "tests.pipeline.test_pipeline": [
+        "kedro.pipeline.pipeline"
+    ],
+    "tests.pipeline.test_pipeline.TestInvalidPipeline": [],
+    "tests.pipeline.test_pipeline.TestPipelineDescribe": [],
+    "tests.pipeline.test_pipeline.TestPipelineFilter": [],
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers": [],
+    "tests.pipeline.test_pipeline.TestPipelineOperators": [],
+    "tests.pipeline.test_pipeline.TestPipelineRunnerHelpers": [],
+    "tests.pipeline.test_pipeline.TestPipelineTags": [],
+    "tests.pipeline.test_pipeline.TestTranscodeHelpers": [],
+    "tests.pipeline.test_pipeline.TestValidPipeline": [],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineMissing": [],
+    "tests.pipeline.test_pipeline_from_missing.TestPipelineUnregistered": [],
+    "tests.pipeline.test_pipeline_integration.TestTransformPipelineIntegration": [],
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding": [],
+    "tests.pipeline.test_pipeline_with_transcoding.TestGetTranscodeCompatibleName": [],
+    "tests.pipeline.test_pipeline_with_transcoding.TestInvalidPipeline": [],
+    "tests.pipeline.test_pipeline_with_transcoding.TestValidPipeline": [],
+    "tests.runner.test_parallel_runner.TestInvalidParallelRunner": [],
+    "tests.runner.test_parallel_runner.TestMaxWorkers": [],
+    "tests.runner.test_parallel_runner.TestParallelRunnerRelease": [],
+    "tests.runner.test_parallel_runner.TestRunNodeSynchronisationHelper": [],
+    "tests.runner.test_parallel_runner.TestValidParallelRunner": [],
+    "tests.runner.test_run_node.TestRunGeneratorNode": [],
+    "tests.runner.test_sequential_runner.TestMemoryDatasetBehaviour": [],
+    "tests.runner.test_sequential_runner.TestSeqentialRunnerBranchlessPipeline": [],
+    "tests.runner.test_sequential_runner.TestSequentialRunnerBranchedPipeline": [],
+    "tests.runner.test_sequential_runner.TestSequentialRunnerRelease": [],
+    "tests.runner.test_sequential_runner.TestSuggestResumeScenario": [],
+    "tests.runner.test_sequential_runner.TestValidSequentialRunner": [],
+    "tests.runner.test_thread_runner.TestInvalidThreadRunner": [],
+    "tests.runner.test_thread_runner.TestIsAsync": [],
+    "tests.runner.test_thread_runner.TestMaxWorkers": [],
+    "tests.runner.test_thread_runner.TestThreadRunnerRelease": [],
+    "tests.runner.test_thread_runner.TestValidThreadRunner": [],
+    "tests.test_import": [],
+    "tests.test_utils.TestExtractObject": [],
+    "tests.tools.test_cli.TestCLITools": []
+}

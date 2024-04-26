@@ -1,0 +1,315 @@
+{
+    "tests.test_api.TestModule": [
+        "arrow.api"
+    ],
+    "tests.test_arrow.TestArrowAttribute": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowComparison": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowConversion": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowDatetimeInterface": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowDehumanize": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowFalsePositiveDst": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowHumanize": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowHumanizeTestsWithLocale": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowInterval": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowIsBetween": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowMath": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowPickling": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowRange": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowReplace": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowShift": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowSpan": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowSpanRange": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestArrowUtil": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestTestArrowFactory": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestTestArrowInit": [
+        "arrow.arrow.Arrow"
+    ],
+    "tests.test_arrow.TestTestArrowRepresentation": [
+        "arrow.formatter.DateTimeFormatter"
+    ],
+    "tests.test_factory.TestGet": [
+        "arrow.parser.DateTimeParser"
+    ],
+    "tests.test_factory.TestNow": [
+        "arrow.factory.ArrowFactory"
+    ],
+    "tests.test_factory.TestUtcNow": [
+        "arrow.factory.ArrowFactory"
+    ],
+    "tests.test_formatter.TestFormatterBuiltinFormats": [
+        "arrow.formatter.DateTimeFormatter"
+    ],
+    "tests.test_formatter.TestFormatterFormatToken": [
+        "arrow.formatter.DateTimeFormatter"
+    ],
+    "tests.test_locales.TestAlbanianLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestAmharicLocale": [
+        "arrow.locales.AmharicLocale"
+    ],
+    "tests.test_locales.TestArabicLocale": [
+        "arrow.locales.ArabicLocale"
+    ],
+    "tests.test_locales.TestArmenianLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestAzerbaijaniLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestBengaliLocale": [
+        "arrow.locales.BengaliLocale"
+    ],
+    "tests.test_locales.TestBrazilianPortugueseLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestBulgarianLocale": [
+        "arrow.locales.SlavicBaseLocale"
+    ],
+    "tests.test_locales.TestChineseCNLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestChineseTWLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestCroatianLocale": [
+        "arrow.locales.CroatianLocale"
+    ],
+    "tests.test_locales.TestCustomLocale": [
+        "arrow.locales"
+    ],
+    "tests.test_locales.TestCzechLocale": [
+        "arrow.locales.CzechLocale"
+    ],
+    "tests.test_locales.TestDanishLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestDutchLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestEnglishLocale": [
+        "arrow.locales.EnglishLocale"
+    ],
+    "tests.test_locales.TestEsperantoLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestEstonianLocale": [
+        "arrow.locales.EstonianLocale"
+    ],
+    "tests.test_locales.TestFinnishLocale": [
+        "arrow.locales.FinnishLocale"
+    ],
+    "tests.test_locales.TestFrenchCanadianLocale": [],
+    "tests.test_locales.TestFrenchLocale": [
+        "arrow.locales.FrenchBaseLocale"
+    ],
+    "tests.test_locales.TestGeorgianLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestGermanLocale": [
+        "arrow.locales.GermanBaseLocale"
+    ],
+    "tests.test_locales.TestHebrewLocale": [
+        "arrow.locales.HebrewLocale"
+    ],
+    "tests.test_locales.TestHindiLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestHongKongLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestHungarianLocale": [
+        "arrow.locales.HungarianLocale"
+    ],
+    "tests.test_locales.TestIcelandicLocale": [
+        "arrow.locales.IcelandicLocale"
+    ],
+    "tests.test_locales.TestIndonesianLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestItalianLocale": [
+        "arrow.locales.ItalianLocale"
+    ],
+    "tests.test_locales.TestJapaneseLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestKazakhLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestKoreanLocale": [
+        "arrow.locales.KoreanLocale"
+    ],
+    "tests.test_locales.TestLaotianLocale": [
+        "arrow.locales.LaotianLocale"
+    ],
+    "tests.test_locales.TestLatinLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestLatvianLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestLithuanianLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestLocaleValidation": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestLuxembourgishLocale": [
+        "arrow.locales.LuxembourgishLocale"
+    ],
+    "tests.test_locales.TestMacedonianLocale": [
+        "arrow.locales.SlavicBaseLocale"
+    ],
+    "tests.test_locales.TestMalayLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestMalayalamLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestMalteseLocale": [
+        "arrow.locales.MalteseLocale"
+    ],
+    "tests.test_locales.TestMarathiLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestModule": [
+        "arrow.locales"
+    ],
+    "tests.test_locales.TestNepaliLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestNewNorwegianLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestNorwegianLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestOdiaLocale": [
+        "arrow.locales.OdiaLocale"
+    ],
+    "tests.test_locales.TestPolishLocale": [
+        "arrow.locales.SlavicBaseLocale"
+    ],
+    "tests.test_locales.TestPortugueseLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestRomanianLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestRussianLocale": [
+        "arrow.locales.SlavicBaseLocale"
+    ],
+    "tests.test_locales.TestSamiLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestSerbianLocale": [
+        "arrow.locales.SerbianLocale"
+    ],
+    "tests.test_locales.TestSinhalaLocale": [
+        "arrow.locales.SinhalaLocale"
+    ],
+    "tests.test_locales.TestSlovakLocale": [
+        "arrow.locales.SlovakLocale"
+    ],
+    "tests.test_locales.TestSpanishLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestSwahiliLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestSwedishLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestTagalogLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestTamilLocale": [
+        "arrow.locales.TamilLocale"
+    ],
+    "tests.test_locales.TestThaiLocale": [
+        "arrow.locales.ThaiLocale"
+    ],
+    "tests.test_locales.TestTurkishLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestUrduLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestUzbekLocale": [
+        "arrow.locales.Locale"
+    ],
+    "tests.test_locales.TestZuluLocale": [
+        "arrow.locales.ZuluLocale"
+    ],
+    "tests.test_parser.TestDateTimeParser": [
+        "arrow.parser.DateTimeParser"
+    ],
+    "tests.test_parser.TestDateTimeParserISO": [
+        "arrow.parser.DateTimeParser"
+    ],
+    "tests.test_parser.TestDateTimeParserMeridians": [
+        "arrow.parser.DateTimeParser"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthName": [
+        "arrow.parser.DateTimeParser"
+    ],
+    "tests.test_parser.TestDateTimeParserMonthOrdinalDay": [
+        "arrow.parser.DateTimeParser"
+    ],
+    "tests.test_parser.TestDateTimeParserParse": [
+        "arrow.parser.DateTimeParser"
+    ],
+    "tests.test_parser.TestDateTimeParserRegex": [
+        "arrow.parser.DateTimeParser"
+    ],
+    "tests.test_parser.TestDateTimeParserSearchDate": [
+        "arrow.parser.DateTimeParser"
+    ],
+    "tests.test_parser.TestFuzzInput": [
+        "arrow.parser.DateTimeParser"
+    ],
+    "tests.test_parser.TestTzinfoParser": [
+        "arrow.parser.TzinfoParser"
+    ],
+    "tests.test_util.TestUtil": [
+        "arrow.util"
+    ]
+}

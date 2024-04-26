@@ -1,0 +1,50 @@
+{
+    "tests.test_axes.TestBaseAxes": [
+        "chartify._core.axes.BaseAxes"
+    ],
+    "tests.test_callout.TestBaseAxes": [
+        "chartify._core.axes.BaseAxes"
+    ],
+    "tests.test_chart.TestChart": [
+        "chartify._core.chart.Chart"
+    ],
+    "tests.test_chart.TestLegend": [],
+    "tests.test_chart.TestSecondYChart": [
+        "chartify._core.chart.Chart"
+    ],
+    "tests.test_color_palettes_config": [],
+    "tests.test_colors.TestColor": [
+        "chartify._core.colour.Color"
+    ],
+    "tests.test_colors.TestColorPalettes": [
+        "chartify._core.colour.Color",
+        "chartify._core.colors.ColorPalette",
+        "chartify._core.colors.Color",
+        "chartify._core.colors.ColorPalettes"
+    ],
+    "tests.test_colors_config": [
+        "chartify._core.colors"
+    ],
+    "tests.test_examples": [
+        "chartify.examples"
+    ],
+    "tests.test_options_config": [
+        "chartify._core.options"
+    ],
+    "tests.test_plots": [],
+    "tests.test_plots.TestAreaPlot": [],
+    "tests.test_plots.TestAxisFormatPrecision": [],
+    "tests.test_plots.TestBarLollipopParallel": [],
+    "tests.test_plots.TestBarNumericSort": [],
+    "tests.test_plots.TestBoxplot": [],
+    "tests.test_plots.TestCategoricalOrderBy": [],
+    "tests.test_plots.TestHeatmap": [],
+    "tests.test_plots.TestHexbin": [],
+    "tests.test_plots.TestHistogram": [],
+    "tests.test_plots.TestLine": [],
+    "tests.test_plots.TestScatter": [],
+    "tests.test_plots.TestText": [],
+    "tests.test_style_settings_config": [
+        "chartify._core.style"
+    ]
+}

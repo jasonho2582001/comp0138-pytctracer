@@ -1,0 +1,129 @@
+{
+    "tests.test_crypto.TestCRL": [
+        "src.OpenSSL.crypto.X509StoreContext",
+        "src.OpenSSL.crypto.Revoked",
+        "src.OpenSSL.crypto.CRL"
+    ],
+    "tests.test_crypto.TestEllipticCurve": [
+        "src.OpenSSL.crypto._EllipticCurve"
+    ],
+    "tests.test_crypto.TestEllipticCurveHash": [
+        "src.OpenSSL.crypto"
+    ],
+    "tests.test_crypto.TestFunction": [
+        "src.OpenSSL.crypto.PKey"
+    ],
+    "tests.test_crypto.TestLoadCertificate": [
+        "src.OpenSSL.crypto"
+    ],
+    "tests.test_crypto.TestLoadPublicKey": [
+        "src.OpenSSL.crypto.PKey"
+    ],
+    "tests.test_crypto.TestNetscapeSPKI": [
+        "src.OpenSSL.crypto.NetscapeSPKI"
+    ],
+    "tests.test_crypto.TestPKCS12": [
+        "src.OpenSSL.crypto.PKCS12"
+    ],
+    "tests.test_crypto.TestPKey": [
+        "src.OpenSSL.crypto.PKey"
+    ],
+    "tests.test_crypto.TestRevoked": [
+        "src.OpenSSL.crypto.Revoked",
+        "src.OpenSSL.crypto.CRL"
+    ],
+    "tests.test_crypto.TestSignVerify": [
+        "src.OpenSSL.crypto"
+    ],
+    "tests.test_crypto.TestX509": [
+        "src.OpenSSL.crypto.X509Extension"
+    ],
+    "tests.test_crypto.TestX509Ext": [
+        "src.OpenSSL.crypto.X509Extension"
+    ],
+    "tests.test_crypto.TestX509Name": [
+        "src.OpenSSL.crypto.X509Name"
+    ],
+    "tests.test_crypto.TestX509Req": [
+        "src.OpenSSL.crypto.X509Req"
+    ],
+    "tests.test_crypto.TestX509Store": [
+        "src.OpenSSL.crypto.X509Store"
+    ],
+    "tests.test_crypto.TestX509StoreContext": [
+        "src.OpenSSL.crypto.X509StoreContext"
+    ],
+    "tests.test_crypto._PKeyInteractionTestsMixin": [
+        "src.OpenSSL.crypto.NetscapeSPKI",
+        "src.OpenSSL.crypto.X509Req"
+    ],
+    "tests.test_debug": [],
+    "tests.test_rand.TestRand": [
+        "src.OpenSSL.rand"
+    ],
+    "tests.test_ssl.TestApplicationLayerProtoNegotiation": [
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL.Connection"
+    ],
+    "tests.test_ssl.TestConnection": [
+        "src.OpenSSL.crypto.X509Store"
+    ],
+    "tests.test_ssl.TestConnectionGetCipherList": [
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL.Connection"
+    ],
+    "tests.test_ssl.TestConnectionRecvInto": [
+        "src.OpenSSL.SSL.Connection"
+    ],
+    "tests.test_ssl.TestConnectionRenegotiate": [
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL.Connection"
+    ],
+    "tests.test_ssl.TestConnectionSend": [
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL.Connection"
+    ],
+    "tests.test_ssl.TestConnectionSendall": [
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL.Connection"
+    ],
+    "tests.test_ssl.TestConstants": [],
+    "tests.test_ssl.TestContext": [
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL.Connection"
+    ],
+    "tests.test_ssl.TestContextConnection": [
+        "src.OpenSSL.crypto.PKey"
+    ],
+    "tests.test_ssl.TestDTLS": [
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL.Connection"
+    ],
+    "tests.test_ssl.TestError": [],
+    "tests.test_ssl.TestInfoConstants": [],
+    "tests.test_ssl.TestMemoryBIO": [
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL.Connection"
+    ],
+    "tests.test_ssl.TestOCSP": [
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL.Connection"
+    ],
+    "tests.test_ssl.TestRequires": [
+        "src.OpenSSL.SSL"
+    ],
+    "tests.test_ssl.TestServerNameCallback": [
+        "src.OpenSSL.SSL.Context",
+        "src.OpenSSL.SSL.Connection"
+    ],
+    "tests.test_ssl.TestSession": [],
+    "tests.test_ssl.TestVersion": [
+        "src.OpenSSL.SSL"
+    ],
+    "tests.test_util.TestErrors": [
+        "src.OpenSSL._util"
+    ],
+    "tests.util.EqualityTestsMixin": [
+        "src.OpenSSL.crypto._EllipticCurve"
+    ]
+}

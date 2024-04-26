@@ -1,0 +1,334 @@
+{
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_env_resolver_is_cleared_after_loading": {
+        "False Negatives": [
+            "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+        ],
+        "False Positives": [
+            "kedro.config.omegaconf_config.OmegaConfigLoader.load_and_merge_dir_config",
+            "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+        ],
+        "True Positives": []
+    },
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoader.test_pattern_key_not_found": {
+        "False Negatives": [
+            "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.config.omegaconf_config.OmegaConfigLoader.__getitem__"
+        ]
+    },
+    "tests.config.test_omegaconf_config.TestOmegaConfigLoaderStandalone.test_globals_default_none": {
+        "False Negatives": [
+            "kedro.config.omegaconf_config.OmegaConfigLoader.__init__"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.config.omegaconf_config.OmegaConfigLoader._get_globals_value"
+        ]
+    },
+    "tests.framework.cli.micropkg.test_micropkg_pull.TestMicropkgPullCommand.test_path_traversal": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.cli.micropkg.safe_extract"
+        ]
+    },
+    "tests.framework.cli.test_starters.TestConvertToolNamesToNumbers.test_convert_tool_short_names_to_numbers_with_valid_tools": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.cli.starters._convert_tool_short_names_to_numbers"
+        ]
+    },
+    "tests.framework.cli.test_starters.TestFlagsNotAllowed.test_directory_flag_with_starter_alias": {
+        "False Negatives": [
+            "kedro.framework.cli.utils._update_verbose_flag",
+            "kedro.framework.cli.starters.new",
+            "kedro.framework.cli.starters._validate_flag_inputs"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.cli.utils.KedroCliError.show"
+        ]
+    },
+    "tests.framework.cli.test_starters.TestNewFromConfigFileValid.test_no_prompts": {
+        "False Negatives": [
+            "kedro.framework.cli.starters._validate_config_file_against_prompts"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.cli.starters.new"
+        ]
+    },
+    "tests.framework.cli.test_starters.TestNewFromUserPromptsInvalid.test_invalid_project_name_special_characters": {
+        "False Negatives": [
+            "kedro.framework.cli.utils._update_verbose_flag",
+            "kedro.framework.cli.starters._Prompt.validate",
+            "kedro.framework.cli.starters._fetch_validate_parse_config_from_user_prompts"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.cli.starters.new"
+        ]
+    },
+    "tests.framework.cli.test_starters.TestParseToolsInput.test_parse_tools_invalid_selection": {
+        "False Negatives": [
+            "kedro.framework.cli.starters._parse_tools_input"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.cli.starters._validate_tool_selection"
+        ]
+    },
+    "tests.framework.project.test_logging.test_project_logging_in_default_logging_config": {
+        "False Negatives": [
+            "kedro.framework.project.__init__._ProjectLogging.set_project_logging",
+            "kedro.framework.project.__init__.configure_project"
+        ],
+        "False Positives": [
+            "kedro.framework.project.__init__._get_default_class.<locals>.validator_func"
+        ],
+        "True Positives": []
+    },
+    "tests.framework.project.test_pipeline_discovery.test_find_pipelines_skips_regular_files_within_the_pipelines_folder": {
+        "False Negatives": [
+            "kedro.framework.project.__init__.find_pipelines"
+        ],
+        "False Positives": [
+            "kedro.framework.project.__init__._get_default_class.<locals>.validator_func"
+        ],
+        "True Positives": []
+    },
+    "tests.framework.session.test_session.TestKedroSession.test_default_store": {
+        "False Negatives": [
+            "kedro.framework.session.session.KedroSession.store"
+        ],
+        "False Positives": [
+            "kedro.framework.session.session.KedroSession.close"
+        ],
+        "True Positives": []
+    },
+    "tests.framework.session.test_session_extension_hooks.TestCatalogHooks.test_after_catalog_created_hook": {
+        "False Negatives": [
+            "kedro.framework.session.session.KedroSession._get_config_loader",
+            "kedro.framework.context.context.KedroContext.catalog"
+        ],
+        "False Positives": [
+            "kedro.framework.context.context._convert_paths_to_absolute_posix"
+        ],
+        "True Positives": []
+    },
+    "tests.framework.session.test_store.TestShelveStore.test_save": {
+        "False Negatives": [
+            "kedro.framework.session.shelvestore.ShelveStore.save"
+        ],
+        "False Positives": [
+            "kedro.framework.session.shelvestore.ShelveStore._location"
+        ],
+        "True Positives": []
+    },
+    "tests.framework.test_startup.TestGetProjectMetadata.test_invalid_version_for_kedro_version": {
+        "False Negatives": [
+            "kedro.framework.startup._version_mismatch_error"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.startup._get_project_metadata"
+        ]
+    },
+    "tests.framework.test_startup.TestGetProjectMetadata.test_source_dir_specified_in_toml": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.framework.startup._get_project_metadata"
+        ]
+    },
+    "tests.io.test_core.TestCoreFunctions.test_get_protocol_and_path_http_with_version": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.io.core.get_protocol_and_path"
+        ]
+    },
+    "tests.io.test_data_catalog.TestDataCatalog.test_exists": {
+        "False Negatives": [
+            "kedro.io.core.AbstractVersionedDataset.exists"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.io.data_catalog.DataCatalog.exists"
+        ]
+    },
+    "tests.io.test_data_catalog.TestDataCatalog.test_feed_dict": {
+        "False Negatives": [
+            "kedro.io.data_catalog.DataCatalog.add_feed_dict"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.io.data_catalog.DataCatalog.load"
+        ]
+    },
+    "tests.io.test_data_catalog.TestDataCatalogVersioned.test_from_sane_config_versioned_warn": {
+        "False Negatives": [
+            "kedro.io.data_catalog.DataCatalog.from_config",
+            "kedro.io.core.AbstractDataset.from_config"
+        ],
+        "False Positives": [
+            "kedro.io.core.parse_dataset_definition.<locals>.<genexpr>"
+        ],
+        "True Positives": []
+    },
+    "tests.io.test_lambda_dataset.TestLambdaDatasetExists.test_exists_raises_error": {
+        "False Negatives": [
+            "kedro.io.lambda_dataset.LambdaDataset._exists"
+        ],
+        "False Positives": [
+            "kedro.io.lambda_dataset.LambdaDataset._describe.<locals>._to_str",
+            "kedro.io.lambda_dataset.LambdaDataset.__init__"
+        ],
+        "True Positives": [
+            "kedro.io.core.AbstractDataset.exists"
+        ]
+    },
+    "tests.ipython.test_ipython.TestLoadKedroObjects.test_ipython_lazy_load_pipeline": {
+        "False Negatives": [
+            "kedro.framework.project.__init__._ProjectPipelines._load_data"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.ipython.__init__.reload_kedro"
+        ]
+    },
+    "tests.pipeline.test_modular_pipeline.TestPipelineHelper.test_parameters_updated_with_dict": {
+        "False Negatives": [
+            "kedro.pipeline.modular_pipeline._validate_datasets_exist",
+            "kedro.pipeline.modular_pipeline.pipeline",
+            "kedro.pipeline.pipeline.Pipeline.nodes"
+        ],
+        "False Positives": [
+            "kedro.pipeline.node._to_list"
+        ],
+        "True Positives": []
+    },
+    "tests.pipeline.test_node.TestNodeComparisons.test_node_invalid_less_than": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.pipeline.node.Node.__lt__"
+        ]
+    },
+    "tests.pipeline.test_node.TestTag.test_tag_nodes_single_tag": {
+        "False Negatives": [
+            "kedro.pipeline.node.Node.tag",
+            "kedro.pipeline.node.node"
+        ],
+        "False Positives": [
+            "kedro.pipeline.node._to_list"
+        ],
+        "True Positives": [
+            "kedro.pipeline.node.Node.tags"
+        ]
+    },
+    "tests.pipeline.test_node_run.TestNodeRunInvalidOutput.test_node_not_list_output": {
+        "False Negatives": [
+            "kedro.pipeline.node.node",
+            "kedro.pipeline.node.Node.run"
+        ],
+        "False Positives": [
+            "kedro.pipeline.node.Node.__str__",
+            "kedro.pipeline.node._to_list"
+        ],
+        "True Positives": []
+    },
+    "tests.pipeline.test_node_run.test_run_got_dataframe": {
+        "False Negatives": [
+            "kedro.pipeline.node.node"
+        ],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.pipeline.node.Node.run"
+        ]
+    },
+    "tests.pipeline.test_pipeline.TestInvalidPipeline.test_duplicate_free_nodes": {
+        "False Negatives": [
+            "kedro.pipeline.modular_pipeline.pipeline",
+            "kedro.pipeline.pipeline._validate_duplicate_nodes"
+        ],
+        "False Positives": [
+            "kedro.pipeline.node._to_list"
+        ],
+        "True Positives": []
+    },
+    "tests.pipeline.test_pipeline.TestPipelineDescribe.test_full": {
+        "False Negatives": [
+            "kedro.pipeline.pipeline.Pipeline.all_inputs",
+            "kedro.pipeline.modular_pipeline.pipeline",
+            "kedro.pipeline.pipeline.Pipeline.all_outputs",
+            "kedro.pipeline.pipeline.Pipeline.describe"
+        ],
+        "False Positives": [
+            "kedro.pipeline.node._to_list"
+        ],
+        "True Positives": []
+    },
+    "tests.pipeline.test_pipeline.TestPipelineFilter.test_namespace_filter": {
+        "False Negatives": [
+            "kedro.pipeline.pipeline.Pipeline.filter"
+        ],
+        "False Positives": [
+            "kedro.pipeline.node.Node.name",
+            "kedro.pipeline.node.Node.namespace"
+        ],
+        "True Positives": []
+    },
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_from_nodes": {
+        "False Negatives": [
+            "kedro.pipeline.pipeline.Pipeline.from_nodes"
+        ],
+        "False Positives": [
+            "kedro.pipeline.node.Node.name",
+            "kedro.pipeline.pipeline._strip_transcoding"
+        ],
+        "True Positives": []
+    },
+    "tests.pipeline.test_pipeline.TestPipelineFilterHelpers.test_only_nodes_with_namespacing_and_invalid_args": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.pipeline.pipeline.Pipeline.only_nodes"
+        ]
+    },
+    "tests.pipeline.test_pipeline_with_transcoding.TestComplexPipelineWithTranscoding.test_from_inputs_traverses_transcoded": {
+        "False Negatives": [
+            "kedro.pipeline.pipeline.Pipeline.from_inputs",
+            "kedro.pipeline.pipeline.Pipeline._get_nodes_with_inputs_transcode_compatible",
+            "kedro.pipeline.pipeline.Pipeline._transcode_compatible_names",
+            "kedro.pipeline.pipeline._validate_transcoded_inputs_outputs"
+        ],
+        "False Positives": [
+            "kedro.pipeline.node.Node.__hash__"
+        ],
+        "True Positives": []
+    },
+    "tests.runner.test_parallel_runner.TestRunNodeSynchronisationHelper.test_package_name_and_logging_provided": {
+        "False Negatives": [],
+        "False Positives": [],
+        "True Positives": [
+            "kedro.runner.parallel_runner._run_node_synchronization"
+        ]
+    },
+    "tests.runner.test_parallel_runner.TestValidParallelRunner.test_parallel_run_with_plugin_manager": {
+        "False Negatives": [
+            "kedro.framework.hooks.manager._create_hook_manager",
+            "kedro.runner.runner.AbstractRunner.run",
+            "kedro.runner.parallel_runner.ParallelRunner._run"
+        ],
+        "False Positives": [
+            "kedro.pipeline.node._to_list",
+            "kedro.pipeline.node.Node.inputs",
+            "kedro.pipeline.node.Node.outputs"
+        ],
+        "True Positives": []
+    }
+}

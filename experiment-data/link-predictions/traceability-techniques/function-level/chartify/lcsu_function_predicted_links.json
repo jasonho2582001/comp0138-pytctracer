@@ -1,0 +1,226 @@
+{
+    "tests.test_axes.TestBaseAxes.test_datetime_set_xaxis_range": [
+        "chartify._core.axes.DatetimeXMixin.set_xaxis_range"
+    ],
+    "tests.test_axes.TestBaseAxes.test_numeric_set_xaxis_range": [
+        "chartify._core.axes.NumericalXMixin.set_xaxis_range"
+    ],
+    "tests.test_axes.TestBaseAxes.test_vertical": [
+        "chartify._core.axes.BaseAxes._vertical"
+    ],
+    "tests.test_axes.TestBaseAxes.test_xaxis_tick_orientation": [
+        "chartify._core.axes.BaseAxes.set_xaxis_tick_orientation",
+        "chartify._core.axes.CategoricalYMixin.set_yaxis_tick_orientation",
+        "chartify._core.plot.PlotMixedTypeXY.bar"
+    ],
+    "tests.test_callout.TestBaseAxes.test_datetime_callouts": [
+        "chartify._core.callout.Callout.text"
+    ],
+    "tests.test_chart.TestChart.test_data": [
+        "chartify._core.chart.Chart.data"
+    ],
+    "tests.test_chart.TestChart.test_save": [
+        "chartify._core.chart.Chart.save"
+    ],
+    "tests.test_chart.TestLegend.test_legen_with_grouping_and_color": [
+        "chartify._core.chart.Chart.__init__"
+    ],
+    "tests.test_chart.TestLegend.test_reverse_vertical_legend_area": [
+        "chartify._core.plot.PlotNumericXY.area"
+    ],
+    "tests.test_chart.TestLegend.test_reverse_vertical_legend_bar": [
+        "chartify._core.chart.Chart.set_legend_location",
+        "chartify._core.plot.PlotMixedTypeXY.bar_stacked",
+        "chartify.examples.example_data",
+        "chartify._core.axes.BaseAxes._vertical",
+        "chartify._core.chart.Chart.__init__"
+    ],
+    "tests.test_chart.TestLegend.test_set_legend_location": [
+        "chartify._core.chart.Chart.set_legend_location"
+    ],
+    "tests.test_chart.TestSecondYChart.test_axes": [
+        "chartify._core.axes.YAxisMixin.yaxis_label"
+    ],
+    "tests.test_chart.TestSecondYChart.test_init": [
+        "chartify._core.chart.Chart.__init__"
+    ],
+    "tests.test_chart.TestSecondYChart.test_single_numeric_line": [
+        "chartify._core.plot.PlotNumericXY.line"
+    ],
+    "tests.test_color_palettes_config.test_color_palettes_config": [
+        "chartify._core.colors.ColorPalettes.__getitem__",
+        "chartify._core.colors.ColorPalette.to_hex_list"
+    ],
+    "tests.test_colors.TestColor.test_color": [
+        "chartify._core.colour.Color.__getattr__"
+    ],
+    "tests.test_colors.TestColorPalettes.test_create_palette": [
+        "chartify._core.colors.ColorPalettes.create_palette"
+    ],
+    "tests.test_colors.TestColorPalettes.test_getitem": [
+        "chartify._core.colors.ColorPalettes.__getitem__"
+    ],
+    "tests.test_colors.TestColorPalettes.test_shift_palette": [
+        "chartify._core.colors.ColorPalette.shift_palette"
+    ],
+    "tests.test_colors_config.test_colors_config": [
+        "chartify._core.colors.<listcomp>",
+        "chartify._core.colors.Color",
+        "chartify._core.colors.CustomColors.__init__",
+        "chartify._core.colors.ColorPalettes.__init__",
+        "chartify._core.colors.ColorPalette.__init__",
+        "chartify._core.options.ChartifyOptions.__init__",
+        "chartify._core.colors.CustomColors.overwrite_colors"
+    ],
+    "tests.test_examples.test_examples": [
+        "chartify.examples.example_data"
+    ],
+    "tests.test_options_config.test_options_config": [
+        "chartify._core.options.ChartifyOptions.get_option"
+    ],
+    "tests.test_plots.TestAreaPlot.test_multi_series_interval": [
+        "chartify._core.plot.PlotNumericXY.area",
+        "chartify._core.chart.Chart.__init__"
+    ],
+    "tests.test_plots.TestAreaPlot.test_multi_series_zero_baseline_stacked": [
+        "chartify._core.plot.PlotNumericXY.area",
+        "chartify._core.chart.Chart.__init__"
+    ],
+    "tests.test_plots.TestAreaPlot.test_multi_series_zero_baseline_stacked_missing": [
+        "chartify._core.plot.PlotNumericXY.area",
+        "chartify._core.chart.Chart.__init__"
+    ],
+    "tests.test_plots.TestAreaPlot.test_multi_series_zero_baseline_unstacked": [
+        "chartify._core.plot.PlotNumericXY.area",
+        "chartify._core.chart.Chart.__init__"
+    ],
+    "tests.test_plots.TestAreaPlot.test_multi_series_zero_baseline_unstacked_missing": [
+        "chartify._core.plot.PlotNumericXY.area",
+        "chartify._core.chart.Chart.__init__"
+    ],
+    "tests.test_plots.TestAreaPlot.test_single_series_interval": [
+        "chartify._core.plot.PlotNumericXY.area",
+        "chartify._core.chart.Chart.__init__"
+    ],
+    "tests.test_plots.TestAreaPlot.test_single_series_zero_baseline": [
+        "chartify._core.plot.PlotNumericXY.area",
+        "chartify._core.chart.Chart.__init__"
+    ],
+    "tests.test_plots.TestAxisFormatPrecision.test_axis_format_precision": [
+        "chartify._core.plot.BasePlot._axis_format_precision"
+    ],
+    "tests.test_plots.TestBarLollipopParallel.test_bar_color": [
+        "chartify._core.plot.PlotMixedTypeXY.bar"
+    ],
+    "tests.test_plots.TestBarLollipopParallel.test_bar_color_column": [
+        "chartify._core.plot.PlotMixedTypeXY.bar"
+    ],
+    "tests.test_plots.TestBarLollipopParallel.test_bar_parallel_color_column": [
+        "chartify._core.plot.PlotMixedTypeXY.parallel"
+    ],
+    "tests.test_plots.TestBarLollipopParallel.test_grouped_categorical": [
+        "chartify._core.plot.PlotMixedTypeXY.bar",
+        "chartify._core.plot.PlotMixedTypeXY.parallel"
+    ],
+    "tests.test_plots.TestBarLollipopParallel.test_grouping_error": [
+        "chartify._core.plot.PlotMixedTypeXY.lollipop",
+        "chartify._core.chart.Chart.__init__",
+        "chartify._core.plot.PlotMixedTypeXY.bar"
+    ],
+    "tests.test_plots.TestBarLollipopParallel.test_horizontal": [
+        "chartify._core.plot.PlotMixedTypeXY.lollipop",
+        "chartify._core.plot.PlotMixedTypeXY.parallel",
+        "chartify._core.chart.Chart.__init__",
+        "chartify._core.plot.PlotMixedTypeXY.bar"
+    ],
+    "tests.test_plots.TestBarLollipopParallel.test_lollipop_color_column": [
+        "chartify._core.plot.PlotMixedTypeXY.lollipop"
+    ],
+    "tests.test_plots.TestBarLollipopParallel.test_vertical": [
+        "chartify._core.axes.BaseAxes._vertical",
+        "chartify._core.plot.PlotMixedTypeXY.parallel",
+        "chartify._core.plot.PlotMixedTypeXY.bar"
+    ],
+    "tests.test_plots.TestBarNumericSort.test_bar_sort": [
+        "chartify._core.plot.PlotMixedTypeXY.bar"
+    ],
+    "tests.test_plots.TestBoxplot.test_color": [
+        "chartify._core.plot.PlotMixedTypeXY.boxplot"
+    ],
+    "tests.test_plots.TestBoxplot.test_default": [
+        "chartify._core.chart.Chart.data"
+    ],
+    "tests.test_plots.TestBoxplot.test_error": [
+        "chartify._core.plot.PlotMixedTypeXY.boxplot"
+    ],
+    "tests.test_plots.TestBoxplot.test_grouped_horizontal": [
+        "chartify._core.chart.Chart.data",
+        "chartify._core.plot.PlotMixedTypeXY.boxplot"
+    ],
+    "tests.test_plots.TestBoxplot.test_grouped_vertical": [
+        "chartify._core.chart.Chart.data"
+    ],
+    "tests.test_plots.TestCategoricalOrderBy.test_error": [
+        "chartify._core.plot.PlotMixedTypeXY.bar",
+        "chartify._core.plot.PlotMixedTypeXY.scatter"
+    ],
+    "tests.test_plots.TestCategoricalOrderBy.test_order_by_array_like": [
+        "chartify._core.plot.PlotMixedTypeXY.bar"
+    ],
+    "tests.test_plots.TestCategoricalOrderBy.test_order_by_count": [
+        "chartify._core.chart.Chart.__init__"
+    ],
+    "tests.test_plots.TestCategoricalOrderBy.test_order_by_labels": [
+        "chartify._core.plot.PlotMixedTypeXY.bar"
+    ],
+    "tests.test_plots.TestCategoricalOrderBy.test_order_by_values": [
+        "chartify._core.plot.PlotMixedTypeXY.bar"
+    ],
+    "tests.test_plots.TestHeatmap.test_heatmap": [
+        "chartify._core.plot.PlotCategoricalXY.heatmap"
+    ],
+    "tests.test_plots.TestHexbin.test_hexbin": [
+        "chartify._core.plot.PlotDensityXY.hexbin"
+    ],
+    "tests.test_plots.TestHistogram.test_grouped_histogram": [
+        "chartify._core.plot.PlotNumericDensityXY.histogram"
+    ],
+    "tests.test_plots.TestHistogram.test_histogram": [
+        "chartify._core.plot.PlotNumericDensityXY.histogram"
+    ],
+    "tests.test_plots.TestLine.test_multi_numeric_line": [
+        "chartify._core.plot.PlotNumericXY.line"
+    ],
+    "tests.test_plots.TestLine.test_single_datetime_line": [
+        "chartify._core.plot.PlotNumericXY.line"
+    ],
+    "tests.test_plots.TestLine.test_single_numeric_line": [
+        "chartify._core.plot.PlotNumericXY.line"
+    ],
+    "tests.test_plots.TestScatter.test_multi_numeric_scatter": [
+        "chartify._core.plot.PlotNumericXY.scatter"
+    ],
+    "tests.test_plots.TestScatter.test_single_datetime_scatter": [
+        "chartify._core.plot.PlotNumericXY.scatter"
+    ],
+    "tests.test_plots.TestScatter.test_single_numeric_scatter": [
+        "chartify._core.plot.PlotNumericXY.scatter"
+    ],
+    "tests.test_plots.TestText.test_multi_numeric_text": [
+        "chartify._core.plot.PlotNumericXY.text"
+    ],
+    "tests.test_plots.TestText.test_single_datetime_text": [
+        "chartify._core.plot.PlotNumericXY.text"
+    ],
+    "tests.test_plots.TestText.test_single_numeric_text": [
+        "chartify._core.plot.PlotNumericXY.text"
+    ],
+    "tests.test_plots.test_categorical_axis_type_casting": [
+        "chartify._core.plot.PlotMixedTypeXY.bar",
+        "chartify._core.plot.PlotMixedTypeXY.bar_stacked",
+        "chartify._core.chart.Chart.__init__"
+    ],
+    "tests.test_style_settings_config.test_style_settings_config": [
+        "chartify._core.style.Style.__init__"
+    ]
+}
