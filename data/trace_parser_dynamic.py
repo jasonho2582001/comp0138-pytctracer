@@ -672,7 +672,7 @@ def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_pa
     # print_dict_results(lcba_dict, "LCBA", tests_to_create_links_for, 10)
     # print_dict_results(tarantula_dict, "Tarauntula", tests_to_create_links_for, 10)
     # print_dict_results(tfidf_dict, "Tarauntula", tests_to_create_links_for, 10)z
-    # print_dict_results(average_dict, "Simple Average", tests_to_create_links_for, 10)
+    # print_dict_results(average_dict, "Combined", tests_to_create_links_for, 10)
 
     # PRODUCING PREDICTIONS
     combined_evaluation_dict = {}
@@ -710,7 +710,7 @@ def analyse_trace(file_path: str, ground_truth_path: str, analysis_log_output_pa
     combined_evaluation_dict["Tarantula"] = evaluation_dict_for_tarauntula
     combined_evaluation_dict["TF-IDF"] = evaluation_dict_for_tfidf
     combined_evaluation_dict["TF-IDF (Multiset)"] = evaluation_dict_for_tfidf_count
-    combined_evaluation_dict["Simple Average"] = evaluation_dict_for_average
+    combined_evaluation_dict["Combined"] = evaluation_dict_for_average
     combined_evaluation_dict["Copilot"] = evaluation_dict_for_copilot
 
     # OUTPUT
@@ -763,7 +763,7 @@ def analyse_trace_class_level(file_path: str, ground_truth_path: str, analysis_l
     # print_dict_results(lcba_dict, "LCBA", tests_to_create_links_for, 10)
     # print_dict_results(tarantula_dict, "Tarauntula", tests_to_create_links_for, 10)
     # print_dict_results(tfidf_dict, "Tarauntula", tests_to_create_links_for, 10)z
-    # print_dict_results(average_dict, "Simple Average", tests_to_create_links_for, 10)
+    # print_dict_results(average_dict, "Combined", tests_to_create_links_for, 10)
 
     # PRODUCING PREDICTIONS
     combined_evaluation_dict = {}
@@ -800,7 +800,7 @@ def analyse_trace_class_level(file_path: str, ground_truth_path: str, analysis_l
     combined_evaluation_dict["Tarantula"] = evaluation_dict_for_tarauntula
     combined_evaluation_dict["TF-IDF"] = evaluation_dict_for_tfidf
     combined_evaluation_dict["TF-IDF (Multiset)"] = evaluation_dict_for_tfidf_count
-    combined_evaluation_dict["Simple Average"] = evaluation_dict_for_average
+    combined_evaluation_dict["Combined"] = evaluation_dict_for_average
     combined_evaluation_dict["Copilot"] = evaluation_dict_for_copilot
 
     # OUTPUT
