@@ -15,7 +15,7 @@ def find_function_class_names_tuple(
 
     Args:
         trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
-    
+
     Returns:
         Set[Tuple[str, str]]: A set of tuples where the first element of each
         tuple is the fully qualified (full path) name of a function class, and the second

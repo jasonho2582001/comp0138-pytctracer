@@ -20,7 +20,7 @@ def classify_predictions(
             the fully qualified names of the unit tests, and the values are lists
             of fully qualified names of the functions that are actually linked
             to the unit test.
-        
+
     Returns:
         Dict[str, Dict[str, List[str]]]: A dictionary where the keys are the fully
         qualified names of the unit tests, and the values are dictionaries

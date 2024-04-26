@@ -2,6 +2,7 @@ class Config:
     """
     Class storing configuration variables for the package.
     """
+
     SELECTABLE_TECHNIQUE_NAMES = [
         "nc",
         "ncc",
@@ -54,5 +55,6 @@ class Config:
         "tfidf_multiset": 0.9,
         "combined": 0.85,
     }
+
 
 __all__ = ["Config"]

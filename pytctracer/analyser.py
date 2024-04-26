@@ -35,6 +35,7 @@ class Analyser:
     Class which handles the the generation, evaluation and comparison
     of test-to-code traceability links.
     """
+
     def __init__(self) -> None:
         self.arg_name_to_technique_map = ArgNameToTechniqueMapper()
         self.arg_name_to_metric_map = ArgNameToMetricMapper()
@@ -97,10 +98,10 @@ class Analyser:
     ) -> None:
         """
         Produces traceability links for a given dynamic trace log, and then
-        evaluates them against a specified ground truth. Allows for choosing 
+        evaluates them against a specified ground truth. Allows for choosing
         the technique names to evaluate predictions for, the metric names to
-        compute, and whether to add a combined technique as well as output 
-        paths for the classifications and metrics. 
+        compute, and whether to add a combined technique as well as output
+        paths for the classifications and metrics.
 
         Args:
             trace_csv_log_path (str): The path to the dynamic trace log CSV file.
@@ -248,7 +249,6 @@ class Analyser:
                 raise ValueError(
                     f"Test '{test}' in ground truth but not in predicted links"
                 )
-
 
     def _write_classifications_for_techniques(
         self,

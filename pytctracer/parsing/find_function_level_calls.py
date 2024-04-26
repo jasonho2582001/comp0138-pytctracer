@@ -8,13 +8,15 @@ from pytctracer.config.constants import (
 )
 
 
-def find_functions_called_by_test(trace_data: List[Dict[str, str]]) -> Dict[str, Set[str]]:
+def find_functions_called_by_test(
+    trace_data: List[Dict[str, str]]
+) -> Dict[str, Set[str]]:
     """
     Find the functions called by each test in the trace data.
 
     Args:
         trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
-    
+
     Returns:
         Dict[str, Set[str]]: A dictionary where the keys are the fully qualified
         names of the unit test, and the values are sets containing the
@@ -51,7 +53,7 @@ def find_functions_called_by_test_count(
 
     Args:
         trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
-    
+
     Returns:
         Dict[str, Dict[str, int]]: A dictionary where the keys are the fully
         qualified names of the unit test, and the values are dictionaries
@@ -81,13 +83,15 @@ def find_functions_called_by_test_count(
     return functions_called_by_test_count_dict
 
 
-def find_tests_that_call_function(trace_data: List[Dict[str, str]]) -> Dict[str, Set[str]]:
+def find_tests_that_call_function(
+    trace_data: List[Dict[str, str]]
+) -> Dict[str, Set[str]]:
     """
     Find the tests that call each function in the trace data.
 
     Args:
         trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
-    
+
     Returns:
         Dict[str, Set[str]]: A dictionary where the keys are the fully qualified
         names of the function, and the values are sets containing the fully
@@ -125,7 +129,7 @@ def find_functions_called_by_test_depth(
 
     Args:
         trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
-    
+
     Returns:
         Dict[str, Dict[str, int]]: A dictionary where the keys are the fully
         qualified names of the unit test, and the values are dictionaries

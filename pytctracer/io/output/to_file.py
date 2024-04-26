@@ -21,13 +21,14 @@ def write_dict_to_json(
     try:
         with open(file_path, "w", encoding="utf8") as file:
             json.dump(dict_to_write, file, indent=4, sort_keys=sort_keys)
-    
+
     except FileNotFoundError:
         raise FileNotFoundError(f"File not found at path: {file_path}")
-    
-    except:
-        raise ValueError(f"An error occurred while writing to the JSON file with path: {file_path}.")
 
+    except:
+        raise ValueError(
+            f"An error occurred while writing to the JSON file with path: {file_path}."
+        )
 
 
 def write_evaluation_metrics_to_csv(
@@ -51,14 +52,18 @@ def write_evaluation_metrics_to_csv(
             for technique, evaluation_dict in combined_evaluation_dict.items():
                 row = {TECHNIQUE: technique}
                 for metric, score in evaluation_dict.items():
-                    row[metric] = score if not isinstance(score, float) else round(score, 1)
+                    row[metric] = (
+                        score if not isinstance(score, float) else round(score, 1)
+                    )
                 csv_writer.writerow(row)
 
     except FileNotFoundError:
         raise FileNotFoundError(f"File not found at path: {csv_name}")
 
     except:
-        raise ValueError(f"An error occurred while writing to the CSV file with path: {csv_name}.")
+        raise ValueError(
+            f"An error occurred while writing to the CSV file with path: {csv_name}."
+        )
 
 
 __all__ = ["write_classifications_to_json", "write_evaluation_metrics_to_csv"]

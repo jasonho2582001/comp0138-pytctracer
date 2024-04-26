@@ -113,7 +113,7 @@ class Technique(ABC):
                 scores for each test and source code pair.
             tests_to_create_links_for (Optional[Set[str]], optional): A set of test names to
                 generate links for. If None, links will be generated for all tests. Defaults to None.
-            
+
         Returns:
             Dict[str, Set[str]]: A dictionary of predicted links for each test.
         """

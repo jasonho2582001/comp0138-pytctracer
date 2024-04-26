@@ -17,7 +17,7 @@ def read_trace_csv_log(file_path: str) -> List[Dict[str, str]]:
 
     Args:
         file_path (str): The path to the CSV file.
-    
+
     Returns:
         List[Dict[str, str]]: A list of dictionaries where each dictionary represents
         a row in the CSV file, with the keys being the column names and the values
@@ -41,7 +41,9 @@ def read_trace_csv_log(file_path: str) -> List[Dict[str, str]]:
         raise FileNotFoundError(f"Trace log not found at path: {file_path}")
 
     except:
-        raise ValueError(f"An error occurred while reading the trace log at path: {file_path}.")
+        raise ValueError(
+            f"An error occurred while reading the trace log at path: {file_path}."
+        )
 
 
 def load_link_json(link_path: str) -> Dict[str, List[str]]:
@@ -50,7 +52,7 @@ def load_link_json(link_path: str) -> Dict[str, List[str]]:
 
     Args:
         link_path (str): The path to the JSON file containing test-to-code links.
-    
+
     Returns:
         Dict[str, List[str]]: A dictionary where the keys are the fully qualified names
         of the test or test classes, and the values are lists containing the fully
@@ -64,7 +66,9 @@ def load_link_json(link_path: str) -> Dict[str, List[str]]:
         raise FileNotFoundError(f"Link file not found at path: {link_path}")
 
     except:
-        raise ValueError(f"An error occurred while reading the link file at path: {link_path}.")
+        raise ValueError(
+            f"An error occurred while reading the link file at path: {link_path}."
+        )
 
     return link_dict
 

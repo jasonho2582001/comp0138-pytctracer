@@ -17,7 +17,7 @@ def find_functions_called_before_assert_for_each_test(
 
     Args:
         trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
-    
+
     Returns:
         Dict[str, Set[str]]: A dictionary where the keys are the fully qualified
         names of the unit test, and the values are sets containing the
@@ -65,10 +65,10 @@ def find_classes_called_before_assert_for_each_test(
     """
     Finds the fully qualified names of the classes called before an assert
     statement for each test class.
-    
+
     Args:
         trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
-    
+
     Returns:
         Dict[str, Set[str]]: A dictionary where the keys are the fully qualified
         names of thetest class, and the values are sets containing the

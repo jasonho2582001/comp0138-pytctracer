@@ -8,15 +8,15 @@ from pytctracer.config.constants import (
 
 def find_function_names_tuple(trace_data: List[Dict[str, str]]) -> Set[Tuple[str, str]]:
     """
-    Find the function and fully qualified names of the functions found in the 
+    Find the function and fully qualified names of the functions found in the
     trace data.
 
     Args:
         trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
-    
+
     Returns:
         Set[Tuple[str, str]]: A set of tuples where the first element of each
-        tuple is the fully qualified (full path) name of a function, and the second 
+        tuple is the fully qualified (full path) name of a function, and the second
         element is the short name of the function.
     """
     function_names_tuple = set()
@@ -39,7 +39,7 @@ def find_test_names_tuple(trace_data: List[Dict[str, str]]) -> Set[Tuple[str, st
 
     Args:
         trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
-    
+
     Returns:
         Set[Tuple[str, str]]: A set of tuples where the first element of each
         tuple is the fully qualified (full path) name of a test, and the second

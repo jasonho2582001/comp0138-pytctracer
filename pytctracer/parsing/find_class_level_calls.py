@@ -16,7 +16,7 @@ def find_function_classes_called_by_test(
 
     Args:
         trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
-    
+
     Returns:
         Dict[str, Set[str]]: A dictionary where the keys are the fully qualified
         names of the unit test, and the values are sets containing the
@@ -54,7 +54,7 @@ def find_function_classes_called_by_test_count(
 
     Args:
         trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
-    
+
     Returns:
         Dict[str, Dict[str, int]]: A dictionary where the keys are the fully
         qualified names of the unit test, and the values are dictionaries
@@ -93,7 +93,7 @@ def find_tests_that_call_function_classes(
 
     Args:
         trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
-    
+
     Returns:
         Dict[str, Set[str]]: A dictionary where the keys are the fully qualified
         names of the function class, and the values are sets containing the
@@ -127,12 +127,12 @@ def find_function_classes_called_by_test_depth(
 ) -> Dict[str, Dict[str, int]]:
     """
     Find the function classes called by each test in the trace data, along with the
-    depth at which each function class was called. If a function class is called 
+    depth at which each function class was called. If a function class is called
     multiple times by a test class, the lowest depth is recorded.
 
     Args:
         trace_data (List[Dict[str, str]]): The tracing CSV log as a dictionary.
-    
+
     Returns:
         Dict[str, Dict[str, int]]: A dictionary where the keys are the fully
         qualified names of the unit test, and the values are dictionaries

@@ -17,17 +17,17 @@ class Combined(Technique):
         arg_name (str): The argument name of the technique
         (the string used to invoke the technique through the CLI).
         description (str): A description of the technique.
-        required_parameters (Dict[str, str]): A dictionary of 
+        required_parameters (Dict[str, str]): A dictionary of
         required parameters for the technique.
-        uses_threshold (bool): A boolean indicating whether the technique 
+        uses_threshold (bool): A boolean indicating whether the technique
         uses a threshold.
         threshold (int): The threshold value for the technique.
         normalise (bool): A boolean indicating whether the technique normalises scores.
-        call_depth_discount (bool): A boolean indicating whether the technique 
+        call_depth_discount (bool): A boolean indicating whether the technique
         discounts scores based on call depth.
     """
 
-    full_name = "Combined (Simple Average)"
+    full_name = "Combined"
     short_name = "Combined"
     arg_name = "combined"
     description = "TBC"
@@ -46,12 +46,12 @@ class Combined(Technique):
         them.
 
         Args:
-            traceability_scores_for_techniques (Dict[str, Dict[str, Dict[str, float]]]): 
-            A dictionary where the keys are the names of the techniques, and the values 
-            are dictionaries where thekeys are the fully qualified names of the test or 
+            traceability_scores_for_techniques (Dict[str, Dict[str, Dict[str, float]]]):
+            A dictionary where the keys are the names of the techniques, and the values
+            are dictionaries where thekeys are the fully qualified names of the test or
             test classes, and the values are dictionaries containing the traceability scores
             for each function or function class.
-        
+
         Returns:
             Dict[str, Dict[str, float]]: A dictionary where the keys are the fully qualified
             names of the testor test classes, and the values are dictionaries containing the

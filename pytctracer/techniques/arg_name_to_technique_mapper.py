@@ -14,10 +14,11 @@ from .combined import Combined
 
 class ArgNameToTechniqueMapper:
     """
-    Class providing mappings between the argument name of each technique to 
+    Class providing mappings between the argument name of each technique to
     some relevant properties, including the technique's class, full name and
     short name.
     """
+
     def __init__(self):
         self._arg_name_to_technique = {
             LevenshteinDistance.arg_name: LevenshteinDistance,
@@ -60,7 +61,7 @@ class ArgNameToTechniqueMapper:
     def get_arg_names(self) -> List[str]:
         """
         Return the list of valid technique argument names.
-        
+
         Returns:
             List[str]: List of valid technique argument names.
         """

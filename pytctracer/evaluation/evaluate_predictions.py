@@ -34,7 +34,7 @@ def evaluate_predictions(
         uses_threshold (bool, optional): Whether the technique uses a threshold value
             to generate predicted links (Used if an evaluation is for predictions generated
             from a technique class). Defaults to True.
-    
+
     Returns:
         Dict[str, float]: A dictionary where the keys are the argument names of the
             selected metrics, and the values are the scores for the metrics.

@@ -212,7 +212,7 @@ def evaluate_links(
 )
 @click.option(
     "--classifications-output-path",
-    type=click.Path(exists=True),
+    type=click.Path(exists=False),
     help="""Path to write the JSON containing the classifications to.""",
 )
 @click.option(
@@ -241,6 +241,7 @@ def compare_links(
         )
     except Exception as e:
         raise click.ClickException(str(e))
+
 
 if __name__ == "__main__":
     cli()

@@ -30,6 +30,7 @@ class PytestTracer:
     capturing and storing dynamic information, and writing of the information
     to a CSV format.
     """
+
     def __init__(
         self,
         project_root: str,
@@ -74,7 +75,9 @@ class PytestTracer:
         self._handle_in_line_functions = False
         self._in_line_function_calls = 0
 
-    def trace(self, frame: FrameType, event: str, arg: Optional[Any]=None) -> Callable:
+    def trace(
+        self, frame: FrameType, event: str, arg: Optional[Any] = None
+    ) -> Callable:
         """
         Trace function to be used by `sys.settrace` to capture the tracing of Python code
         during a Pytest test suite invocation.
@@ -83,7 +86,7 @@ class PytestTracer:
             frame (FrameType): The current frame.
             event (str): The event type.
             arg (Optional[Any]): The argument associated with the event.
-        
+
         Returns:
             Callable: The trace function.
         """
@@ -183,7 +186,7 @@ class PytestTracer:
                     # Keep track of the last function that was last returned
                     self._current_depth -= 1
                     self._function_stack.pop()
-                    
+
                     if (
                         function_type.startswith(TEST_PREFIX.upper())
                         or function_type == FunctionType.ASSERT
@@ -230,7 +233,7 @@ class PytestTracer:
 
                 elif event == SetTraceEventType.EXCEPTION:
                     exc_type, exc_value, exc_traceback = arg
-            
+
                     self._add_csv_row_data(
                         depth=self._current_depth,
                         function_type=function_type,
@@ -277,10 +280,10 @@ class PytestTracer:
     def our_frame(self, frame: FrameType) -> bool:
         """
         Checks whether the current code being traced is the PytestTracer class itself.
-        
+
         Args:
             frame (FrameType): The current frame.
-        
+
         Returns:
             bool: True if the current code being traced is the PytestTracer class itself,
             False otherwise.
@@ -336,7 +339,7 @@ class PytestTracer:
             # Remove last element, which should be the function name
             class_name_list.pop()
 
-            # Check current last element is not <locals>. If it is, we need to remove it, 
+            # Check current last element is not <locals>. If it is, we need to remove it,
             # and the previous element.
             # This represents an inner function, so we need to remove it as well to get the actual class
             while class_name_list and class_name_list[-1] == LOCALS:
