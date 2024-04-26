@@ -407,7 +407,7 @@ class Analyser:
         traceability_scores_for_techniques: Dict[str, Dict[str, Dict[str, float]]],
         tests_to_create_links_for: Optional[Set[str]] = None,
     ) -> Dict[str, Dict[str, List[str]]]:
-        link_predictions_for_technqiues = {}
+        link_predictions_for_techniques = {}
         for (
             technique_arg_name,
             traceability_scores,
@@ -419,9 +419,9 @@ class Analyser:
                 traceability_score_dict=traceability_scores,
                 tests_to_create_links_for=tests_to_create_links_for,
             )
-            link_predictions_for_technqiues[technique_arg_name] = link_predictions
+            link_predictions_for_techniques[technique_arg_name] = link_predictions
 
-        return link_predictions_for_technqiues
+        return link_predictions_for_techniques
 
     def _run_technique_scoring(
         self,
